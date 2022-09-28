@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>后端返回的数据会带一个换行符（“↵”），前端如何根据该符号进行换行展示</title>
+      <link href="/2022/09/28/%E6%96%87%E7%AB%A0/"/>
+      <url>/2022/09/28/%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<p>方法一：textarea赋值</p><p>　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。</p><p>方法二：使用v-html输出文本</p><p>　　“↵”符号在html中会识别别为\r,\n等转义字符，所以我们可以使用\r\n去替换（.replace(&#x2F;(\r\n|\n|\r)&#x2F;gm, ‘ &lt; br &#x2F;&gt; ‘)）</p><h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;span v-html=<span class="string">&quot;detail.replace(/(\r\n|\n|\r)/gm, &#x27;&lt;br /&gt;&#x27;)&quot;</span>&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> HTML5 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/09/26/hello-world/"/>
       <url>/2022/09/26/hello-world/</url>
