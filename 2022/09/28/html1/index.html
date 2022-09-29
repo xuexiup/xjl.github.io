@@ -8,10 +8,8 @@
   <meta name="author" content="xjl">
   
   <meta name="description"
-    content="方法一：textarea赋值
-　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。
-方法二：使用v-html输出文本
-　　“↵”符号在html中会识别别为\r,\n">
+    content="方法一：textarea赋值　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。
+方法二：使用v-html输出文本　　“↵”符号在html中会识别别为\r,\n等转">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -56,12 +54,6 @@
   <![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
-  
-  <script src="/js/marked.js"></script>
-  <script src="/js/comment.js"></script>
-  <script src="/js/timeago.min.js"></script>
-  <script src="/js/highlight.min.js"></script>
-  <script src="/js/spin.min.js"></script>
   
   <!-- analytics -->
   
@@ -139,10 +131,8 @@
 	<div class="mypage">		
 	  		
 
-	  <p>方法一：textarea赋值</p>
-<p>　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。</p>
-<p>方法二：使用v-html输出文本</p>
-<p>　　“↵”符号在html中会识别别为\r,\n等转义字符，所以我们可以使用\r\n去替换（.replace(&#x2F;(\r\n|\n|\r)&#x2F;gm, ‘ &lt; br &#x2F;&gt; ‘)）</p>
+	  <h3 id="方法一：textarea赋值"><a href="#方法一：textarea赋值" class="headerlink" title="方法一：textarea赋值"></a>方法一：textarea赋值</h3><p>　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。</p>
+<h3 id="方法二：使用v-html输出文本"><a href="#方法二：使用v-html输出文本" class="headerlink" title="方法二：使用v-html输出文本"></a>方法二：使用v-html输出文本</h3><p>　　“↵”符号在html中会识别别为\r,\n等转义字符，所以我们可以使用\r\n去替换（.replace(&#x2F;(\r\n|\n|\r)&#x2F;gm, ‘ &lt; br &#x2F;&gt; ‘)）</p>
 <h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;span v-html=<span class="string">&quot;detail.replace(/(\r\n|\n|\r)/gm, &#x27;&lt;br /&gt;&#x27;)&quot;</span>&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>	  
 	</div>
 
@@ -198,26 +188,6 @@
 	
 <section id="comment">
   <h2 class="title">Comments</h2>
-    	 
-	 <div id="comment-thread"></div>
-	 <div id="loading-spin"></div>
-	 <script type="text/javascript">
-	   getComments({
-           type: "github" ? "github" : "github",       
-	       user: "wzpan",
-	       repo: "hexo-theme-freemind-blog",
-		   client_id: "bf7d4ba11877db88543e",
-           client_secret: "bff8a6b06b745c0bfcdccbe225623ea8e2a057bb",
-		   no_comment: "No comments yet. Press the button and go to comment now!",
-		   go_to_comment: "Go to comment",
-		   no_issue: "no_issue",
-		   issue_title: "后端返回的数据会带一个换行符（“↵”），前端如何根据该符号进行换行展示",
-		   issue_id: "",
-		   btn_class: "btn btn-primary",
-		   comments_target: "#comment-thread",
-		   loading_target: "#loading_spin"
-		   });
-	 </script>
   
 </section>
 
@@ -238,6 +208,17 @@
 
 	<!-- categories -->
     
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>2</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
 
 	<!-- tags -->
 	
@@ -245,7 +226,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
+  <li><a href="/tags/HTML5/">HTML5<span>1</span></a></li> <li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
     </ul>
 	</div>
 	
@@ -312,22 +293,6 @@
 
 
 <!-- syntax highlighting -->
-
-  <script>
-  marked.setOptions({
-    highlight: function (code, lang) {
-        return hljs.highlightAuto(code).value;
-    }
-  });
-  function Highlighting(){
-    var markdowns = document.getElementsByClassName('markdown');
-    for(var i=0;i<markdowns.length;i++){
-        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
-    }
-  }
-  window.addEventListener('DOMContentLoaded', Highlighting, false);
-  window.addEventListener('load', Highlighting, false);
-  </script>
 
 
 </body>

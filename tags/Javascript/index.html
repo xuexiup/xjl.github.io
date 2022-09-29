@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2022 | 寒山飞鹰</title>
+  <title>Javascript | 寒山飞鹰</title>
   
   <meta name="author" content="xjl">
   
@@ -105,7 +105,7 @@
 
 <!-- title -->
 <div class="page-header page-header-inverse ">
-  <h1 class="archive-title title title-inverse ">2022</h1>
+  <h1 class="archive-title-tag title title-inverse ">Javascript</h1>
 </div>
 
 <div class="row page">
@@ -117,44 +117,44 @@
 	  <div id="top_search"></div>
 
       
-	  <div class="archive">
-		
-		
-		
-			
-			
-			<h4 class="archive-ul" data-toggle="collapse" data-target="#2022">2022<b class="caret"></b></h4>
-			<ul id="2022" class="collapse in">
-			
-		
-		<li class="listing-item">
-		<span class="date_class"> 2022-09-29 </span> &raquo;
-		
-		   <span class="title"><a href="/2022/09/29/vue1/"  title="此篇文章信息来源于自己实践查阅资料所得。" >封装axios，添加拦截器</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2022-09-28 </span> &raquo;
-		
-		   <span class="title"><a href="/2022/09/28/electron1/"  title="此篇文章信息来源于Electron官网资料和自己实践查阅资料所得。" >Electron学习之路 - Processes</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2022-09-28 </span> &raquo;
-		
-		   <span class="title"><a href="/2022/09/28/html1/" >后端返回的数据会带一个换行符（“↵”），前端如何根据该符号进行换行展示</a></span>
-		
-		</li>			
-		
-		</ul>
-		</div>
-        
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-09-28 </div>
+			<div class="article-title"><a href="/2022/09/28/html1/" >后端返回的数据会带一个换行符（“↵”），前端如何根据该符号进行换行展示</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="方法一：textarea赋值"><a href="#方法一：textarea赋值" class="headerlink" title="方法一：textarea赋值"></a>方法一：textarea赋值</h3><p>　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。</p>
+<h3 id="方法二：使用v-html输出文本"><a href="#方法二：使用v-html输出文本" class="headerlink" title="方法二：使用v-html输出文本"></a>方法二：使用v-html输出文本</h3><p>　　“↵”符号在html中会识别别为\r,\n等转义字符，所以我们可以使用\r\n去替换（.replace(&#x2F;(\r\n|\n|\r)&#x2F;gm, ‘ &lt; br &#x2F;&gt; ‘)）</p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;span v-html=<span class="string">&quot;detail.replace(/(\r\n|\n|\r)/gm, &#x27;&lt;br /&gt;&#x27;)&quot;</span>&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/09/28/html1/#more" class="btn btn-default more">Read More</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
 
 </div> <!-- col-md-9/col-md-12 -->
 
@@ -193,13 +193,13 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
 			<li><a href="/tags/Vue/">Vue<span>1</span></a></li>
 		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
 		
 		 
 		</ul>
