@@ -384,7 +384,7 @@ h2 {
 	color: rgb(255, 255, 255);
 	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
 	font-weight: bold;
-	text-rendering: optimizelegibility;
+	text-rendering: optimizelegibility;		
 }
 
 h3 {
