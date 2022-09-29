@@ -1,146 +1,192 @@
-/* Code, Pre [landscape](http://goo.gl/hnwXeD) */
-
-/* highlight */
-
-pre, .highlight {  
-  background: #333 !important;
-  margin: 0.5em 0;
-  padding: 1em 2%;
-  overflow: auto;
-  color: #ccc!important;
-  font-size: 14px;
-  text-shadow: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;  
-  border-style: solid;
-  border-color: #ddd;
-  border-width: 1px 0;
-  line-height: 20px;
+pre {
+	background: rgb(51, 51, 51); border-width: 1px 0px; border-style: solid; border-color: rgb(221, 221, 221); margin: 1em 0px; padding: 1em 2%; border-radius: 4px; color: rgb(204, 204, 204); line-height: 20px; overflow: auto; font-size: 14px; text-shadow: none; -webkit-border-radius: 4px; -moz-border-radius: 4px;
 }
-
+.highlight {
+	background: rgb(51, 51, 51); border-width: 1px 0px; border-style: solid; border-color: rgb(221, 221, 221); margin: 1em 0px; padding: 1em 2%; border-radius: 4px; color: rgb(204, 204, 204); line-height: 20px; overflow: auto; font-size: 14px; text-shadow: none; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+.gist {
+	background: rgb(51, 51, 51); border-width: 1px 0px; border-style: solid; border-color: rgb(221, 221, 221); margin: 1em 0px; padding: 1em 2%; border-radius: 4px; color: rgb(204, 204, 204); line-height: 20px; overflow: auto; font-size: 14px; text-shadow: none; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
 code {
-  background: #eee;
-  border: 1px solid #d6d6d6;
-  padding: 0 5px;
-  margin: 0 2px;
-  font-size: 90%;
-  text-shadow: 0 1px #fff;  
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: normal;
+	background: rgb(238, 238, 238); margin: 0px 2px; padding: 0px 5px; border: 1px solid rgb(214, 214, 214); border-image: none; font-size: 90%; white-space: normal; -ms-word-break: break-all; -ms-word-wrap: break-word; text-shadow: 0px 1px #fff;
 }
-
-.highlight .gutter pre{
-  text-align: left;
-  padding-right: 20px;
-  width: 100%;
-  color: #666;  
+.highlight .gutter pre {
+	width: 100%; text-align: left; color: rgb(102, 102, 102); padding-right: 20px;
 }
-
-pre,
+pre {
+	font-family: Menlo,"Bitstream Vera Sans Mono","DejaVu Sans Mono",Monaco,Consolas,monospace;
+}
 code {
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;  
+	font-family: Menlo,"Bitstream Vera Sans Mono","DejaVu Sans Mono",Monaco,Consolas,monospace;
 }
-
 pre code {
-  background: none;
-  text-shadow: none;
-  padding: 0;
+	background: 0px; padding: 0px; text-shadow: none;
 }
-
 .highlight pre {
-  border: none;
-  margin: 0;
-  padding: 0;
-  white-space: pre;
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; white-space: pre;
 }
-
 .highlight table {
-  margin: 0;
-  width: auto;  
+	margin: 0px; width: auto;
 }
-
 .highlight td {
-  border: none;
-  padding: 0;  
+	padding: 0px; border: 0px currentColor; border-image: none;
 }
-
-
-/* figcaption */
-
+.container .gist .gist-file {
+	margin: 0px; border: 0px currentColor; border-image: none; font-family: Menlo,"Bitstream Vera Sans Mono","DejaVu Sans Mono",Monaco,Consolas,monospace;
+}
+.container .gist .gist-file .gist-data {
+	background: 0px; border: 0px currentColor; border-image: none;
+}
+.container .gist .gist-file .gist-data .line-numbers {
+	background: 0px; border: 0px currentColor; border-image: none; text-align: left; color: rgb(102, 102, 102); padding-right: 20px;
+}
+.container .gist .gist-file .gist-data .line-data {
+	padding: 0px !important;
+}
+.container .gist .gist-file .highlight {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+.container .gist .gist-file .gist-meta {
+	background: rgb(51, 51, 51); font: 0.85em/normal "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 0px; color: rgb(153, 153, 153); margin-top: 1em; margin-left: 20px; font-size-adjust: none; font-stretch: normal;
+}
+.container .gist .gist-file .gist-meta a {
+	color: rgb(37, 143, 184); font-weight: normal;
+}
+.container .gist .gist-file .gist-meta a:hover {
+	text-decoration: underline;
+}
 .highlight figcaption {
-  zoom: 1;
-  font-size: 0.85em;
-  color: #999;
-  line-height: 1em;
-  margin-bottom: 1em;
+	color: rgb(153, 153, 153); line-height: 1em; font-size: 0.85em; margin-bottom: 1em; -ms-zoom: 1;
 }
-.highlight figcaption:before,
-.highlight figcaption:after {
-  content: "";
-  display: table;
+.highlight figcaption::before {
+	display: table; content: "";
 }
-.highlight figcaption:after {
-  clear: both;
+.highlight figcaption::after {
+	display: table; content: "";
+}
+.highlight figcaption::after {
+	clear: both;
 }
 .highlight figcaption a {
-  float: right;
+	float: right;
 }
-
-pre .comment,
+pre .comment {
+	color: rgb(153, 153, 153);
+}
 pre .title {
-  color: #999;
+	color: rgb(153, 153, 153);
 }
-pre .variable,
-pre .attribute,
-pre .tag,
-pre .regexp,
-pre .ruby .constant,
-pre .xml .tag .title,
-pre .xml .pi,
-pre .xml .doctype,
-pre .html .doctype,
-pre .css .id,
-pre .css .class,
+pre .variable {
+	color: rgb(242, 119, 122);
+}
+pre .attribute {
+	color: rgb(242, 119, 122);
+}
+pre .tag {
+	color: rgb(242, 119, 122);
+}
+pre .regexp {
+	color: rgb(242, 119, 122);
+}
+pre .ruby .constant {
+	color: rgb(242, 119, 122);
+}
+pre .xml .tag .title {
+	color: rgb(242, 119, 122);
+}
+pre .xml .pi {
+	color: rgb(242, 119, 122);
+}
+pre .xml .doctype {
+	color: rgb(242, 119, 122);
+}
+pre .html .doctype {
+	color: rgb(242, 119, 122);
+}
+pre .css .id {
+	color: rgb(242, 119, 122);
+}
+pre .css .class {
+	color: rgb(242, 119, 122);
+}
 pre .css .pseudo {
-  color: #f2777a!important;
+	color: rgb(242, 119, 122);
 }
-pre .number,
-pre .preprocessor,
-pre .built_in,
-pre .literal,
-pre .params,
+pre .number {
+	color: rgb(249, 145, 87);
+}
+pre .preprocessor {
+	color: rgb(249, 145, 87);
+}
+pre .built_in {
+	color: rgb(249, 145, 87);
+}
+pre .literal {
+	color: rgb(249, 145, 87);
+}
+pre .params {
+	color: rgb(249, 145, 87);
+}
 pre .constant {
-  color: #f99157!important;
+	color: rgb(249, 145, 87);
 }
-pre .class,
-pre .ruby .class .title,
+pre .class {
+	color: rgb(153, 204, 153);
+}
+pre .ruby .class .title {
+	color: rgb(153, 204, 153);
+}
 pre .css .rules .attribute {
-  color: #9c9!important;
+	color: rgb(153, 204, 153);
 }
-pre .string,
-pre .value,
-pre .inheritance,
-pre .header,
-pre .ruby .symbol,
+pre .string {
+	color: rgb(153, 204, 153);
+}
+pre .value {
+	color: rgb(153, 204, 153);
+}
+pre .inheritance {
+	color: rgb(153, 204, 153);
+}
+pre .header {
+	color: rgb(153, 204, 153);
+}
+pre .ruby .symbol {
+	color: rgb(153, 204, 153);
+}
 pre .xml .cdata {
-  color: #9c9!important;
+	color: rgb(153, 204, 153);
 }
 pre .css .hexcolor {
-  color: #6cc!important;
+	color: rgb(102, 204, 204);
 }
-pre .function,
-pre .python .decorator,
-pre .python .title,
-pre .ruby .function .title,
-pre .ruby .title .keyword,
-pre .perl .sub,
-pre .javascript .title,
+pre .function {
+	color: rgb(102, 153, 204);
+}
+pre .python .decorator {
+	color: rgb(102, 153, 204);
+}
+pre .python .title {
+	color: rgb(102, 153, 204);
+}
+pre .ruby .function .title {
+	color: rgb(102, 153, 204);
+}
+pre .ruby .title .keyword {
+	color: rgb(102, 153, 204);
+}
+pre .perl .sub {
+	color: rgb(102, 153, 204);
+}
+pre .javascript .title {
+	color: rgb(102, 153, 204);
+}
 pre .coffeescript .title {
-  color: #69c!important;
+	color: rgb(102, 153, 204);
 }
-pre .keyword,
+pre .keyword {
+	color: rgb(204, 153, 204);
+}
 pre .javascript .function {
-  color: #c9c!important;
+	color: rgb(204, 153, 204);
 }

@@ -1,552 +1,673 @@
-/* =============================================================================
-   container
-   ========================================================================== */
-
 .container-narrow {
-  margin: 0 auto;
-  max-width:970px;
+	margin: 0px auto;
+	max-width: 970px;
 }
 
-.container-narrow > footer {
-  margin-top: 20px;
-  text-align: center;
-}
-.container-narrow > footer p {
-  padding: 5px;
-  display: inline-block;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+.container-narrow>footer {
+	text-align: center;
+	margin-top: 20px;
 }
 
-/* =============================================================================
-   Body and structure
-   ========================================================================== */
+.container-narrow>footer p {
+	padding: 5px;
+	border-radius: 6px;
+	display: inline-block;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
 
 body {
-  position: relative;
-  padding-top: 40px;
-  background-color: #fff;
-  background-image: url(../img/grid-18px-masked.png);
-  background-repeat: repeat-x;
-  background-position: 0 40px;
-  padding-bottom: 70px;
+	padding-top: 40px;
+	padding-bottom: 70px;
+	position: relative;
 }
 
 .content {
-  padding: 20px;
-  margin-left: -20px; /* negative indent the amount of the padding to maintain the grid system */
-  margin-right: -20px; /* negative indent the amount of the padding to maintain the grid system */
-  -webkit-border-radius: 6px 6px 6px 6px;
-  -moz-border-radius: 6px 6px 6px 6px;
-  border-radius: 6px 6px 6px 6px;
-  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.75);
-  -moz-box-shadow: 0 2px 102px rgba(0,0,0,.75);
-  box-shadow: 0 2px 10px rgba(0,0,0,.75);
+	margin: 20px -20px;
+	padding: 20px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px 6px 6px 6px;
+	-moz-border-radius: 6px 6px 6px 6px;
+	
 }
 
 #sidebar {
-  font-size: 0.9em;
+	font-size: 0.9em;
 }
 
-a {
-    word-break: break-word;
+.post {
+	font-size: 1em;
 }
 
-/* =============================================================================
-   page, post
-   ========================================================================== */
-
-.post{
-  font-size: 1.2em;
+.page {
+	font-size: 16px;
 }
 
-.page{
-  font-size: 16px;
+.page {
+	line-height: 1.5em;
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-.page, .post{
-  line-height: 1.5em;
-  font-family: 'Open Sans',"Helvetica Neue", "Helvetica","Microsoft YaHei", "WenQuanYi Micro Hei",Arial, sans-serif;
+.post {
+	line-height: 1.5em;
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+.page .more {
+	text-pull: right;
 }
 
 .post .date {
-  margin-bottom:20px;
-  font-weight:bold;
+	font-weight: bold;
+	margin-bottom: 20px;
 }
 
 .mypage {
-  padding-bottom: 30px;
-  border-bottom: 1px solid #ccc;
+	padding-bottom: 30px;
+	border-bottom-color: rgb(255, 255, 255);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
 }
 
-/* =============================================================================
-   navbar
-   ========================================================================== */
-
 .navbar-brand {
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-          transition: all .2s linear;
+	transition: 0.2s linear;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 0px 30px rgba(255, 255, 255, 0.125);
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
 }
 
 .navbar-brand:hover {
-  text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+	text-decoration: none;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 0px 30px rgba(255, 255, 255, 0.4);
 }
-
-
-/* =============================================================================
-   pagination
-   ========================================================================== */
 
 .pagination {
-  margin: 10px 0;
+	margin: 10px 0px;
 }
 
-.pagination a{
-  color:#555;  
+.pagination a {
+	color: rgb(85, 85, 85);
 }
-
-
-/* =============================================================================
-   List
-   ========================================================================== */
 
 li i {
-  margin-right: 5px;
-  margin-left: 5px;  
+	margin-right: 5px;
+	margin-left: 5px;
 }
 
 .listing-item {
-  line-height: 24px;
+	line-height: 24px;
 }
-
-/* =============================================================================
-   widget and tag box
-   ========================================================================== */
 
 .meta-widget {
-  margin: 10px 0;
+	margin: 10px 0px;
 }
 
-.meta-widget a{
-  color:#555;
+.meta-widget a {
+	color: rgb(254, 254, 84);
 }
 
 .tag_box {
-  margin:0;
-  overflow:hidden;
+	margin: 0px;
+	overflow: hidden;
 }
+
 .tag_box li {
-  line-height:28px;
+	line-height: 28px;
 }
+
 .tag_box li i {
-  opacity:0.9;
+	opacity: 0.9;
 }
+
 .tag_box.inline li {
-  float:left;
+	float: left;
 }
+
 .tag_box a {
-  padding: 2px 6px;
-  margin: 2px;
-  background: #e5e5e5;
-  color:#555;
-  border-radius: 3px;
-  text-decoration:none;
-  border:1px dashed #bbb;
+	background: rgb(229, 229, 229);
+	margin: 2px;
+	padding: 2px 6px;
+	border-radius: 3px;
+	border: 1px dashed rgb(187, 187, 187);
+	border-image: none;
+	color: rgb(85, 85, 85);
+	text-decoration: none;
 }
-.tag_box a span{
-  vertical-align:super;
-  font-size:0.8em;
+
+.tag_box a span {
+	font-size: 0.8em;
+	vertical-align: super;
 }
+
 .tag_box a:hover {
-  background-color:#397bdd;
-  color:#FFF;
+	color: rgb(255, 255, 255);
+	background-color: rgb(57, 123, 221);
 }
+
 .tag_box a.active {
-  background:#57A957;
-  border:1px solid #4C964D;
-  color:#FFF;
+	background: rgb(87, 169, 87);
+	border: 1px solid rgb(76, 150, 77);
+	border-image: none;
+	color: rgb(255, 255, 255);
 }
 
 .widget {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #e0e0e0; 
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom-color: rgb(224, 224, 224);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+#local-search-input {
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+	text-fill-color: #bbb;
+	-webkit-text-fill-color: #bbb;
 }
 
 #local-search-result {
-  scroll:auto;
-  overflow:auto;
-  max-height:3in;
+	overflow: auto;
+	max-height: 3in;
+	background-color: rgb(0, 0, 0);
+	scroll: auto;
 }
 
 ul.search-result-list {
-  padding-left: 10px;
+	padding-left: 10px;
 }
 
 a.search-result-title {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 p.search-result {
-  color=#555;
+	color: rgb(85, 85, 85);
 }
 
 em.search-keyword {
-  border-bottom: 1px dashed #4088b8;
-  font-weight: bold;
+	font-weight: bold;
+	border-bottom-color: rgb(64, 136, 184);
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
 }
 
-.tagcloud .entry{
-  width: 100%;  
+.tagcloud .entry {
+	width: 100%;
 }
 
-.archive-title:before {
-  font-family: FontAwesome;
-  content: '\f187  ';
+a {
+	color: rgb(254, 254, 84);
 }
 
-.archive-title-tag:before {
-  font-family: FontAwesome;
-  content: '\f02c  ';
+a:focus {
+	background: rgb(170, 85, 0);
+	color: rgb(254, 254, 84);
 }
 
-.archive-title-category:before {
-  font-family: FontAwesome;
-  content: '\f07b  ';
+a:hover {
+	background: rgb(170, 85, 0);
+	color: rgb(254, 254, 84);
 }
 
-/* =============================================================================
-   hyper links
-   ========================================================================== */
+a:active {
+	background: rgb(170, 85, 0);
+	color: rgb(254, 254, 84);
+}
 
 a.label-anchor {
-  position: relative;
-  display: block;
-  text-align: right;
-  width: 200px;
-  left: -210px;
-  font-family: 'PT Sans', sans-serif;
+	left: -210px;
+	width: 200px;
+	text-align: right;
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
+	display: block;
+	position: relative;
 }
-a.label-anchor:target span {
-  background-color: #b94a48;
+
+a:target.label-anchor span {
+	background-color: rgb(185, 74, 72);
 }
+
 a.label-anchor:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
+
 a.label-anchor span {
-  font-weight: bold;
-  line-height: 0px;
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  white-space: nowrap;
-  background-color: #666;
-  padding: 1px 4px 2px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+	padding: 1px 4px 2px;
+	border-radius: 3px;
+	color: rgb(255, 255, 255);
+	line-height: 0;
+	font-weight: bold;
+	white-space: nowrap;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+	background-color: rgb(102, 102, 102);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 }
 
 a.inline-ref {
-  border-bottom: dotted 1px #333;
-  color: black;
+	color: black;
+	border-bottom-color: rgb(51, 51, 51);
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
 }
+
 a.inline-ref:hover {
-  text-decoration: none;
-  border-bottom: solid 1px #000;
+	text-decoration: none;
+	border-bottom-color: rgb(0, 0, 0);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
 }
 
-/* =============================================================================
-  blockquote
-   ========================================================================== */
-
-blockquote p, blockquote ol, blockquote ul, blockquote li, .slogan{
-  font-family: 'Open Sans',"Helvetica Neue", Helvetica, "Segoe UI", Ubuntu, "Hiragino Sans GB", '楷体', 'STKaiti';
+blockquote {
+	font-size: 0.9em;
+	border-left-color: rgb(204, 204, 204);
+	border-left-width: 5px;
+	border-left-style: solid;
+	background-color: rgb(0, 128, 0);
 }
 
-/* =============================================================================
-   img
-   ========================================================================== */
-
-img, video {
-  max-width: 97.5%;
-  margin: 15px auto;
-  display: block;
-  height: auto;
+blockquote p {
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-/* =============================================================================
-   slogan
-   ========================================================================== */
-
-.slogan .icon-heart{
-  opacity: 0.5;
-  margin-right: 5px;
-  margin-top: 3px;
+blockquote ol {
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-.slogan .icon-heart:hover{
-  opacity: 1;
+blockquote ul {
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-.slogan{
-  font-size: 1.2em;
-  color: #888;  
-  display:block;
-  margin-bottom: 1em;
+blockquote li {
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-/* =============================================================================
-   scroll to top
-   ========================================================================== */
-
-#gotop{ 
-  display:block;  
-  width:36px; 
-  height:36px;
-  position:fixed;  
-  bottom:40px;  
-  right:30px; 
-  border-radius:7px;
-  text-decoration:none;  
-  display:none;  
-}
-#gotop span{ 
-  display:block; 
-} 
-#gotop span{ 
-  font-size:24px; 
-  text-align:center; 
+.slogan {
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-/* =============================================================================
-   Headers
-   ========================================================================== */
-
-header h1{
-  font-weight:normal;
-  line-height:1.2em;
-  margin-bottom:0.6667em;
+img {
+	margin: 15px auto;
+	height: auto;
+	display: block;
+	max-width: 97.5%;
 }
 
-h1{
-  font-size:2.6em;
-  line-height:1.2em;
-  margin-bottom:0.6667em;
+video {
+	margin: 15px auto;
+	height: auto;
+	display: block;
+	max-width: 97.5%;
 }
 
-h1,h2,h3,h4,h5,h6{
-  text-rendering:optimizelegibility;
-  font-weight:bold;
-  font-family: 'Open Sans', "Helvetica Neue", "Helvetica","Microsoft YaHei", "WenQuanYi Micro Hei",Arial, sans-serif;
+.slogan .icon-heart {
+	margin-top: 3px;
+	margin-right: 5px;
+	opacity: 0.5;
 }
 
-h2{
-  margin: 0.83em 0;
-  color: green;
-  padding-top: 40px;
-  margin-top: -25px;
+.slogan .icon-heart:hover {
+	opacity: 1;
+}
+
+.slogan {
+	color: rgb(255, 255, 255);
+	font-size: 1.2em;
+	margin-bottom: 1.2em;
+	display: block;
+}
+
+.blink-fast {
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+.blink-slow {
+	animation-name: blink;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+#gotop {
+	width: 90px;
+	height: 36px;
+	right: 50px;
+	bottom: 40px;
+	text-decoration: none;
+	display: none;
+	position: fixed;
+	background-color: rgb(0, 0, 0);
+}
+
+#gotop span {
+	color: rgb(255, 255, 255);
+	display: block;
+}
+
+#gotop span:hover {
+	color: rgb(170, 170, 170);
+}
+
+#gotop span {
+	text-align: center;
+	line-height: 35px;
+	font-size: 24px;
+	vertical-align: bottom;
+}
+
+header h1 {
+	line-height: 1.2em;
+	font-weight: normal;
+	margin-bottom: 0.66em;
+}
+
+h1 {
+	line-height: 1.2em;
+	font-size: 1.5em;
+	margin-bottom: 0.66em;
+}
+
+h1 {
+	color: rgb(255, 255, 255);
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-weight: bold;
+	text-rendering: optimizelegibility;
+}
+
+h2 {
+	color: rgb(255, 255, 255);
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-weight: bold;
+	text-rendering: optimizelegibility;
 }
 
 h3 {
-  color: #9C4C17;
+	color: rgb(255, 255, 255);
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-weight: bold;
+	text-rendering: optimizelegibility;
 }
 
 h4 {
-  color: #B94A48;
+	color: rgb(255, 255, 255);
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-weight: bold;
+	text-rendering: optimizelegibility;
+}
+
+h5 {
+	color: rgb(255, 255, 255);
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-weight: bold;
+	text-rendering: optimizelegibility;
+}
+
+h6 {
+	color: rgb(255, 255, 255);
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-weight: bold;
+	text-rendering: optimizelegibility;
+}
+
+h2 {
+	margin: -25px 0px 0.83em;
+	color: rgb(255, 255, 255);
+	padding-top: 40px;
 }
 
 .page-header {
-  -webkit-background-clip: border-box;
-  -webkit-background-origin: padding-box;
-  -webkit-background-size: cover;
-  /* background-color: #f5f5f5; */
-  padding: 10px 20px 0px 20px;
-  margin: -20px -20px 20px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;  
+	margin: -20px -20px 20px;
+	padding: 10px 20px 0px;
+	border-radius: 6px 6px 0px 0px;
+	color: rgb(255, 255, 255);
+	font-size: 1.3em;
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: cover;
 }
 
-/* =============================================================================
-   entry
-   ========================================================================== */
-
-.page .entry{
-  padding-top: 10px 0;
+.page .entry {
+	padding-top: 10px;
+	padding-bottom: 25px;
 }
 
-.page .entry .row{
-  padding-left: 20px;
-  padding-right: 5px;
+.page .entry .row {
+	padding-right: 5px;
+	padding-left: 20px;
 }
 
-.page .entry h2{
-  display:block; overflow: hidden; width: 0; height: 0;
-  margin: -20px 0;
+.page .entry h2 {
+	margin: -20px 0px;
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	display: block;
 }
 
-.page .entry h3{
-  display:block; overflow: hidden; width: 0; height: 0;
+.page .entry h3 {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	display: block;
 }
 
-.page .entry .col-md-8{
-  margin: 10px 0;
+.page .entry .col-md-8 {
+	margin: 10px 0px;
 }
 
-.page .entry .thumbnail{
-  margin: 10px;
+.page .entry .thumbnail {
+	margin: 10px;
 }
 
-.page h3.title, .page h3.title-top {
-  position:relative;
-  padding: 2px 5px 5px 5px;
-  font-size: 1.9em;
-  font-weight: normal;
-  font-family: 'PT Sans Narrow', '雅黑', '文泉驿微米黑', '黑体', sans-serif;
+.page h3.title {
+	padding: 5px;
+	line-height: 1.3em;
+	font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-size: 1.5em;
+	font-weight: bold;
+	position: relative;
 }
 
-.page h3.title a, .page h3.title-top a {
-  color: black;
+.page h3.title div.article-title {
+	width: 80%;
 }
 
-.page h3.title div.article-title, .page h3.title-top div-article-title {
-    width:80%;    
+.page h3.title div.date {
+	color: rgb(119, 119, 119);
+	font-size: 0.7em;
+	float: right;
 }
 
-.article-title-text{
-    padding-right: 6px;
-}    
-
-.page h3.title div.date, .page h3.title-top div.date {
-  /* position:absolute; */
-  /* right:5px; */
-  float: right;
-  font-size:0.7em;
-  color: #777;
-  padding-top: 6px;
+.archive-ul>.caret {
+	margin-left: 5px;
+	vertical-align: 7px;
+	opacity: 0.3;
 }
 
-
-/* =============================================================================
-   Archives list
-   ========================================================================== */
-
-.archive-ul > .caret {
-  vertical-align: 7px;
-  margin-left: 5px;
-  opacity: 0.3;
+.archive-ul:hover>.caret {
+	opacity: 1;
 }
 
-.archive-ul:hover > .caret {
-  opacity: 1;
+.toc {
+	background: rgb(0, 0, 0);
+	padding: 10px;
+	width: auto;
+	font-size: 10pt;
 }
 
-/* =============================================================================
-   ToC
-   ========================================================================== */
-
-.toc{
-  font-size:10pt;
-  width:auto;
-  padding:10px;
-  background: #eee;
-  border:solid 1px #ccc;
-}
- 
-.toc .toc-title{
-  font-weight:bold;
-  font-size:125%
+.toc .toc-title {
+	font-size: 125%;
 }
 
-.toc-article{
-  list-style:circle;
-  line-height: 1em;
-  margin-bottom: 0px;
-  padding: 10px 20px;
+.toc-article {
+	list-style: circle;
+	padding: 10px 20px;
+	line-height: 1em;
+	margin-bottom: 0px;
 }
 
-.toc-article li{
-  margin-left:5px !important;
-  padding:0 !important  
+.toc-article li {
+	padding: 0px !important;
+	margin-left: 5px !important;
 }
 
-.toc-article ol{
-  list-style:square;
-  padding: 5px 20px;
+.toc-article ol {
+	list-style: square;
+	padding: 5px 20px;
 }
 
-.toc-article ol ol{
-  list-style:circle;
-  padding: 5px 20px;
+.toc-article ol ol {
+	list-style: circle;
+	padding: 5px 20px;
 }
 
-/* =============================================================================
-   Codes
-   ========================================================================== */
-
-.line{
-  height: 20px;
+.line {
+	height: 20px;
 }
-
-pre code{
-  border: none!important;
-}
-
-.comment-widget-content pre {
-  margin-left: 30px;
-}
-
-/* =============================================================================
-   Tables
-   ========================================================================== */
 
 table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
+	vertical-align: middle;
+	border-collapse: separate;
+	border-spacing: 0;
 }
 
 th {
-  padding: 12px 10px 12px 10px;
-  border-bottom: 1px dashed #4088b8;
+	padding: 12px 10px;
+	border-bottom-color: rgb(64, 136, 184);
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
 }
 
 td {
-  padding: 7px 10px 7px 10px;
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+	padding: 7px 10px;
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle;
 }
 
-/**
- * 
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.cf:before,
-.cf:after {
-  content: ""; /* 1 */
-  display: table; /* 2 */
+.cf::before {
+	display: table;
+	content: "";
 }
 
-.cf:after {
-  clear: both;
+.cf::after {
+	display: table;
+	content: "";
 }
 
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-  *zoom: 1;
+.cf::after {
+	clear: both;
 }
 
+.cf {}
+
+hr {
+	border-top-color: rgb(255, 255, 255);
+	border-top-width: 2px;
+	border-top-style: solid;
+}
+
+.btn {
+	margin-bottom: 10px;
+}
+
+.btn:active {
+	background: rgb(187, 187, 187) !important;
+	margin: 10px 0px 0px 10px;
+	outline: rgb(0, 0, 0);
+	box-shadow: 0px 0px 0px 0px #000;
+	-webkit-box-shadow: #000 0 0 0 0;
+}
+
+.ds-thread {
+	font-size: 0.8em;
+}
+
+.logo {
+	background: url("../favicon.png") no-repeat left top / 5em;
+}
+
+.logo>h1 {
+	line-height: 2em;
+	padding-left: 2.4em;
+	font-size: 1.5em;
+}
+
+.fa-heart::before {
+	color: rgb(255, 0, 0);
+}
+
+pre code {
+	border-width: 0px !important;
+}
+
+pre {
+	border-width: 0px !important;
+	font-size: 16px !important;
+}
+
+pre {
+	background: rgb(0, 0, 0) !important;
+	border-radius: 0px !important;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.highlight {
+	background: rgb(0, 0, 0) !important;
+	border-radius: 0px !important;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.gist {
+	background: rgb(0, 0, 0) !important;
+	border-radius: 0px !important;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+figure {
+	border-width: 0px !important;
+}
+
+.alert-success {
+	color: rgb(254, 254, 84);
+}
+
+.thumbnail {
+	border: 0px currentColor;
+	border-image: none;
+}
+
+.date {
+	text-align: right;
+	color: rgb(255, 255, 255);
+	line-height: 3em;
+}
+
+pre {
+	font-family: DOS-en, DOS, Monaco, Menlo, Consolas, "Courier New", monospace !important;
+}
+
+code {
+	font-family: DOS-en, DOS, Monaco, Menlo, Consolas, "Courier New", monospace !important;
+}
+
+.fancybox-close:hover {
+	background: url("../fancybox/fancybox_sprite.png");
+}
+
+.fancybox-close:focus {
+	background: url("../fancybox/fancybox_sprite.png");
+}
+
+.fancybox-close:active {
+	background: url("../fancybox/fancybox_sprite.png");
+}
