@@ -134,7 +134,8 @@
 		 </div> <!-- alert -->
 	  		
 
-	  <h3 id="1-安装axios"><a href="#1-安装axios" class="headerlink" title="1.安装axios"></a>1.安装axios</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios</span><br></pre></td></tr></table></figure>
+	  <h3 id="1-安装axios"><a href="#1-安装axios" class="headerlink" title="1.安装axios"></a>1.安装axios</h3><span id="more"></span>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-封装axios"><a href="#2-封装axios" class="headerlink" title="2.封装axios"></a>2.封装axios</h3><p>在src下新建文件夹：axios，添加http.js，内容如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import axios from <span class="string">&quot;axios&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default axios</span><br><span class="line">/* post 请求方法 */</span><br><span class="line"><span class="built_in">export</span> <span class="keyword">function</span> post(url, data = &#123;&#125;) &#123;</span><br><span class="line">    <span class="built_in">return</span> new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        axios.post(url, data)</span><br><span class="line">            .<span class="keyword">then</span>(res =&gt; &#123;</span><br><span class="line">                resolve(res)</span><br><span class="line">            &#125;)</span><br><span class="line">            .catch(err =&gt; &#123;</span><br><span class="line">                reject(err)</span><br><span class="line">            &#125;)</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* get 请求方法 */</span><br><span class="line"><span class="built_in">export</span> <span class="keyword">function</span> get(url, params = &#123;&#125;) &#123;</span><br><span class="line">    <span class="built_in">return</span> new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        axios</span><br><span class="line">            .get(url, &#123;</span><br><span class="line">                params: params</span><br><span class="line">            &#125;)</span><br><span class="line">            .<span class="keyword">then</span>(res =&gt; &#123;</span><br><span class="line">                resolve(res)</span><br><span class="line">            &#125;)</span><br><span class="line">            .catch(err =&gt; &#123;</span><br><span class="line">                reject(err)</span><br><span class="line">            &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -159,9 +160,9 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-		
-          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
-        
+				
+    	<li class="prev"><a href="/2022/10/03/hexo1/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 

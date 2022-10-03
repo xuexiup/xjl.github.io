@@ -123,6 +123,34 @@
         
 		
             
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title-top">
+			<div class="date"> 2022-09-28 </div>
+			<div class="article-title"><a href="/2022/09/28/electron1/" title="此篇文章信息来源于Electron官网资料和自己实践查阅资料所得。" class="article-title-text">Electron学习之路 - Processes</span></a><span class="badge">Pin</div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h4> 阅读本文前建议先看：<a href="https://www.romanticlife.top/blog/0/236" title="" target="">基础教程</a></h4>
+<h4> 你也可以查看：<a href="https://www.electronjs.org/zh/docs/latest/tutorial/process-model" title="" target="">官网资料</a></h4>
+
+<h3 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h3><p>Electron从Chromium继承了它的多进程架构，这使得该框架在架构上非常类似于现代web浏览器。本文将扩展 <a href="https://www.romanticlife.top/blog/0/236" title="" target="">教程</a> 中应用的概念。<br>为什么不是单进程》？</p>
+<p>Web浏览器是非常复杂的应用程序。除了显示网页内容的主要功能之外，他们还有许多次要职责，比如管理多个窗口(或标签)和加载第三方扩展。</p>
+<p>在早期，浏览器通常使用一个进程来实现所有这些功能。虽然这种模式意味着你打开的每个标签的开销更小，但它也意味着一个网站的崩溃或挂起会影响整个浏览器。</p>
+	
+	</div>
+  <a type="button" href="/2022/09/28/electron1/#more" class="btn btn-default more">Read More</a>
+</div>
+
+            
+		
+            
 		
             
 		
@@ -131,6 +159,32 @@
         
         <!-- render other articles -->
         
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-03 </div>
+			<div class="article-title"><a href="/2022/10/03/hexo1/" title="为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。">如何设置hexo首页只显示部分摘要而不是全部内容？</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="实现的方法有两种"><a href="#实现的方法有两种" class="headerlink" title="实现的方法有两种"></a>实现的方法有两种</h2><h3 id="方法1：添加概述（description）-属性"><a href="#方法1：添加概述（description）-属性" class="headerlink" title="方法1：添加概述（description） 属性"></a>方法1：添加概述（description） 属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">description:  为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。</span><br></pre></td></tr></table></figure>
+<p>这种方法比较繁琐，因为这种情况下我们并不会花费太多的时间去写描述，由此会降低我们文章的质量。</p>
+<h3 id="方法2：添加文章阶段特性"><a href="#方法2：添加文章阶段特性" class="headerlink" title="方法2：添加文章阶段特性"></a>方法2：添加文章阶段特性</h3><p>在我们需要隐藏内容的起始行添加以下内容即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/03/hexo1/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
            
 			  
 	
@@ -146,21 +200,7 @@
   <div class="row">
 	
 	
-		<h3 id="1-安装axios"><a href="#1-安装axios" class="headerlink" title="1.安装axios"></a>1.安装axios</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-封装axios"><a href="#2-封装axios" class="headerlink" title="2.封装axios"></a>2.封装axios</h3><p>在src下新建文件夹：axios，添加http.js，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import axios from <span class="string">&quot;axios&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default axios</span><br><span class="line">/* post 请求方法 */</span><br><span class="line"><span class="built_in">export</span> <span class="keyword">function</span> post(url, data = &#123;&#125;) &#123;</span><br><span class="line">    <span class="built_in">return</span> new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        axios.post(url, data)</span><br><span class="line">            .<span class="keyword">then</span>(res =&gt; &#123;</span><br><span class="line">                resolve(res)</span><br><span class="line">            &#125;)</span><br><span class="line">            .catch(err =&gt; &#123;</span><br><span class="line">                reject(err)</span><br><span class="line">            &#125;)</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* get 请求方法 */</span><br><span class="line"><span class="built_in">export</span> <span class="keyword">function</span> get(url, params = &#123;&#125;) &#123;</span><br><span class="line">    <span class="built_in">return</span> new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        axios</span><br><span class="line">            .get(url, &#123;</span><br><span class="line">                params: params</span><br><span class="line">            &#125;)</span><br><span class="line">            .<span class="keyword">then</span>(res =&gt; &#123;</span><br><span class="line">                resolve(res)</span><br><span class="line">            &#125;)</span><br><span class="line">            .catch(err =&gt; &#123;</span><br><span class="line">                reject(err)</span><br><span class="line">            &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;* patch 请求方法 *&#x2F;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> <span class="keyword">function</span> patch(url, data = &#123;&#125;) &#123;</span><br><span class="line">    <span class="built_in">return</span> new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        axios.patch(url, data).<span class="keyword">then</span>(</span><br><span class="line">            res =&gt; &#123;</span><br><span class="line">                resolve(res)</span><br><span class="line">            &#125;,</span><br><span class="line">            err =&gt; &#123;</span><br><span class="line">                reject(err)</span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* put 请求方法 */</span><br><span class="line"><span class="built_in">export</span> <span class="keyword">function</span> put(url, data = &#123;&#125;) &#123;</span><br><span class="line">    <span class="built_in">return</span> new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        axios.put(url, data).<span class="keyword">then</span>(</span><br><span class="line">            res =&gt; &#123;</span><br><span class="line">                resolve(res)</span><br><span class="line">            &#125;,</span><br><span class="line">            err =&gt; &#123;</span><br><span class="line">                reject(err)</span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-从main-js引入，并加入拦截器"><a href="#3-从main-js引入，并加入拦截器" class="headerlink" title="3.从main.js引入，并加入拦截器"></a>3.从main.js引入，并加入拦截器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import http from <span class="string">&quot;./axios/http&quot;</span>//封装axios方法:post,get,patch,put</span><br><span class="line"></span><br><span class="line">Vue.prototype.<span class="variable">$post</span> = http.post</span><br><span class="line"></span><br><span class="line">Vue.prototype.<span class="variable">$get</span> = http.get</span><br><span class="line"></span><br><span class="line">Vue.prototype.<span class="variable">$patch</span> = http.patch</span><br><span class="line"></span><br><span class="line">Vue.prototype.<span class="variable">$put</span> = http.put</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/***********配置axios--begin***********/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//基础参数</span><br><span class="line"></span><br><span class="line">Axios.create(&#123;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">timeout</span>: 1000 * 30,</span><br><span class="line"></span><br><span class="line">  withCredentials: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 添加请求拦截器</span><br><span class="line"></span><br><span class="line">Axios.interceptors.request.use(<span class="keyword">function</span> (config) &#123;</span><br><span class="line"></span><br><span class="line">  config.headers = &#123; <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span> &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> config;</span><br><span class="line"></span><br><span class="line">&#125;, <span class="keyword">function</span> (error) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> Promise.reject(error);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 添加响应拦截器</span><br><span class="line"></span><br><span class="line">Axios.interceptors.response.use(<span class="keyword">function</span> (res) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (res.status === 200) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (res.data.code == <span class="string">&quot;5002&quot;</span>) &#123;</span><br><span class="line"></span><br><span class="line">      Message(res.data.msg);</span><br><span class="line"></span><br><span class="line">      setTimeout(() =&gt; &#123;</span><br><span class="line"></span><br><span class="line">        router.push(&#123;</span><br><span class="line"></span><br><span class="line">          path: `/`,</span><br><span class="line"></span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">      &#125;, 2000);</span><br><span class="line"></span><br><span class="line">      <span class="built_in">return</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line"></span><br><span class="line">      <span class="built_in">return</span> res;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> Message.error(res.statusText);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;, <span class="keyword">function</span> (error) &#123;</span><br><span class="line"></span><br><span class="line">  const status =</span><br><span class="line"></span><br><span class="line">    (error.response &amp;&amp;</span><br><span class="line"></span><br><span class="line">      error.response.status &amp;&amp;</span><br><span class="line"></span><br><span class="line">      error.response.status) ||</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  var msg = <span class="string">&#x27;未知错误&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (</span><br><span class="line"></span><br><span class="line">    error.code == <span class="string">&#x27;ECONNABORTED&#x27;</span> &amp;&amp;</span><br><span class="line"></span><br><span class="line">    error.message.indexOf(<span class="string">&#x27;timeout&#x27;</span>) != -1</span><br><span class="line"></span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line">    msg = <span class="string">&#x27;请求超时...&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (status === 404)</span><br><span class="line"></span><br><span class="line">    msg = error.response.data.path + <span class="string">&#x27; 接口404报错。&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (status === 500)</span><br><span class="line"></span><br><span class="line">    msg = <span class="string">&#x27;网络已断开或服务器错误...&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (status === 504)</span><br><span class="line"></span><br><span class="line">    msg = <span class="string">&#x27;数据响应超时，请重新登录操作...&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  Message(msg);</span><br><span class="line"></span><br><span class="line">  /*</span><br><span class="line"></span><br><span class="line">  //控制台打印错误</span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> Promise.reject(msg);</span><br><span class="line"></span><br><span class="line">  */</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/***********配置axios--end***********/</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="4-调用"><a href="#4-调用" class="headerlink" title="4.调用"></a>4.调用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">selectinfo</span></span>() &#123;</span><br><span class="line"></span><br><span class="line">  this.<span class="variable">$post</span>(</span><br><span class="line"></span><br><span class="line">   apiUrl,</span><br><span class="line"></span><br><span class="line">    JSON.stringify(this.selectParameters)</span><br><span class="line"></span><br><span class="line">  ).<span class="keyword">then</span>((res) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">    this.selectParameters.totalElements = res.data.data.totalElements;</span><br><span class="line"></span><br><span class="line">    this.listinfo =res.data.data.list;</span><br><span class="line"></span><br><span class="line">  &#125;).catch(err=&gt;&#123;console.log(err)&#125;);</span><br><span class="line"></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
+		<h3 id="1-安装axios"><a href="#1-安装axios" class="headerlink" title="1.安装axios"></a>1.安装axios</h3>
 	
 	</div>
   <a type="button" href="/2022/09/29/vue1/#more" class="btn btn-default more">Read More</a>
@@ -168,50 +208,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-09-28 </div>
-			<div class="article-title"><a href="/2022/09/28/electron1/" title="此篇文章信息来源于Electron官网资料和自己实践查阅资料所得。">Electron学习之路 - Processes</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h4> 阅读本文前建议先看：<a href="https://www.romanticlife.top/blog/0/236" title="" target="">基础教程</a></h4>
-<h4> 你也可以查看：<a href="https://www.electronjs.org/zh/docs/latest/tutorial/process-model" title="" target="">官网资料</a></h4>
-<br>
-
-<h3 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h3><p>Electron从Chromium继承了它的多进程架构，这使得该框架在架构上非常类似于现代web浏览器。本文将扩展 <a href="https://www.romanticlife.top/blog/0/236" title="" target="">教程</a> 中应用的概念。<br>为什么不是单进程》？</p>
-<p>Web浏览器是非常复杂的应用程序。除了显示网页内容的主要功能之外，他们还有许多次要职责，比如管理多个窗口(或标签)和加载第三方扩展。</p>
-<p>在早期，浏览器通常使用一个进程来实现所有这些功能。虽然这种模式意味着你打开的每个标签的开销更小，但它也意味着一个网站的崩溃或挂起会影响整个浏览器。</p>
-<h3 id="多进程模型"><a href="#多进程模型" class="headerlink" title="多进程模型"></a>多进程模型</h3><p>为了解决这个问题，Chrome团队决定每个标签将在自己的过程中呈现，以限制网页上的漏洞或恶意代码可能对整个应用程序造成的伤害。然后，一个单一的浏览器进程控制这些进程，以及应用程序的整个生命周期。</p>
-<p>Electron应用的结构与此非常相似。</p>
-<p>作为一个应用程序开发者，你控制两种类型的进程:main和renderer。</p>
-<p>这些过程类似于Chrome自己的浏览器及其渲染过程。</p>
-<h3 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h3><p>每个Electron应用程序都有一个单独的主进程，它充当应用程序的入口点。主进程运行在Node.js环境中，这意味着它能够require模块并使用所有Node.js api。</p>
-<h3 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h3><p>主进程的主要目的是使用 <a href="https://www.electronjs.org/zh/docs/latest/api/browser-window" title="" target="">BrowserWindow</a> 模块创建和管理应用程序窗口。</p>
-<p>BrowserWindow类的每个实例都会创建一个应用程序窗口，在一个单独的渲染进程中加载一个网页。你可以在主进程中使用窗口的 <a href="https://www.electronjs.org/zh/docs/latest/api/web-contents" title="" target="">webContents</a> 对象与这些web内容进行交互。</p>
-<blockquote><p>main.js</p>
-</blockquote>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const &#123; BrowserWindow &#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line"></span><br><span class="line">const win = new BrowserWindow(&#123; width: 800, height: 1500 &#125;)</span><br><span class="line">win.loadURL(<span class="string">&#x27;https://github.com&#x27;</span>)</span><br><span class="line"></span><br><span class="line">const contents = win.webContents</span><br><span class="line">console.log(contents)</span><br></pre></td></tr></table></figure>
-<p>注意:渲染器进程也会为  <a href="https://www.electronjs.org/zh/docs/latest/tutorial/web-embeds" title="" target="">web embeds</a> 创建，比如BrowserView模块。webContents对象也可以访问嵌入的web内容。</p>
-<p>因为BrowserWindow模块是一个  <a href="https://nodejs.org/api/events.html#events_class_eventemitter" title="" target="">EventEmitter</a> ，您还可以为各种用户事件添加处理程序(例如，最小化或最大化窗口)。</p>
-<p>当BrowserWindow实例被销毁时，它对应的渲染进程也会终止。</p>
-<h3 id="应用的声明周期"><a href="#应用的声明周期" class="headerlink" title="应用的声明周期"></a>应用的声明周期</h3><p>主进程还通过Electron的 <a href="https://www.electronjs.org/zh/docs/latest/api/app" title="" target="">app</a> 模块控制应用程序的生命周期。此模块提供了大量事件和方法，您可以使用它们来添加自定义应用程序行为(例如，以编程方式退出应用程序、修改应用程序停靠或显示关于面板)。</p>
-<p>作为一个实际的例子，在快速入门指南中显示的应用程序使用应用程序api来创建一个更原生的应用程序窗口体验。</p>
-
-	
-	</div>
-  <a type="button" href="/2022/09/28/electron1/#more" class="btn btn-default more">Read More</a>
-</div>
-
            
 		
            
@@ -293,13 +289,17 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
+			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
+		
 			<li><a href="/tags/Vue/">Vue<span>1</span></a></li>
 		
-			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
 		
 			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
-			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -311,6 +311,10 @@
 <div class="widget">
   <h4>Recent Posts</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/10/03/hexo1/"  title="为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。" ><i class="fa fa-file-o"></i>如何设置hexo首页只显示部分摘要而不是全部内容？</a>
+      </li>
     
       <li>
         <a href="/2022/09/29/vue1/"  title="此篇文章信息来源于自己实践查阅资料所得。" ><i class="fa fa-file-o"></i>封装axios，添加拦截器</a>
