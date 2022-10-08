@@ -163,7 +163,21 @@
 <p>index.js下build节点中以下属性改为绝对路径</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">assetsPublicPath:<span class="string">&#x27;/&#x27;</span>,</span><br></pre></td></tr></table></figure>
 <p>这样刷新就正常了。</p>
-	  
+<h3 id="ue-cli-·-Failed-to-download-repo-vuejs-templates-x2F-webpack-connect-ECONNREFUSED-127-0-0-1-443"><a href="#ue-cli-·-Failed-to-download-repo-vuejs-templates-x2F-webpack-connect-ECONNREFUSED-127-0-0-1-443" class="headerlink" title="ue-cli · Failed to download repo vuejs-templates&#x2F;webpack: connect ECONNREFUSED 127.0.0.1:443"></a>ue-cli · Failed to download repo vuejs-templates&#x2F;webpack: connect ECONNREFUSED 127.0.0.1:443</h3><p>创建一个新的vue项目（vue init webpack “项目名称”）时出现以上错误提示。<br>有想过重新按住webpack，可能安装后会增加或修改一些配置信息。<br>但实际上我现在还在用webpack打包项目呢，于是没有这么去试。<br>与此同时ping github.com不通，所以问题点大概是访问不了github导致的。<br>于是查阅资料，做了一些配置就能成功创建vue项目了。<br>当然是为了帮助访问github用的，下面就是我本次的配置方法（同时也将是访问不了github网站时的推荐方案）；</p>
+<!--more-->
+<p>1.点击左下角的window图标》搜索“记事本”</p>
+<blockquote><p>这里我们不直接打开；右键》以管理员身份运行；<br>因为接下来我们将要修改的文件需要以管理员身份才能修改成功。</p>
+</blockquote>
+<p>2.点击记事本“文件”》打开</p>
+<blockquote><p>在文件弹窗的顶部可操作文件地址框中输入：<br>C:\Windows\System32\drivers\etc<br>然后回车</p>
+</blockquote>
+<p>这里我的win10电脑下是空的，不着急；我们将文件弹窗右下角的选择项由“文本文档”调整为“所有文件”；发现多了包括hosts在内的几个文件；<br>如果是win7能直接看到hosts.txt文件；</p>
+<p>3.双击hosts(.txt)，在文档的末尾添加以下内容</p>
+<blockquote><p>192.30.255.112 github.com git<br>185.31.16.184 github.global.ssl.fastly.net </p>
+</blockquote>
+<p>最后保存。</p>
+<p>接下来就是验证我们的配置是否解决了问题；</p>
+<h2 id="在cmd中输入：ping-github-com-（OK）"><a href="#在cmd中输入：ping-github-com-（OK）" class="headerlink" title="在cmd中输入：ping github.com    （OK）"></a>在cmd中输入：ping github.com    （OK）</h2><h2 id="新建vue项目：vue-init-webpack-“项目名称”-（OK）"><a href="#新建vue项目：vue-init-webpack-“项目名称”-（OK）" class="headerlink" title="新建vue项目：vue init webpack “项目名称”  （OK）"></a>新建vue项目：vue init webpack “项目名称”  （OK）</h2>	  
 	</div>
 
 	<!-- recommended posts -->
@@ -245,7 +259,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/IT/">IT<span>22</span></a></li>
+    <li><a href="/categories/IT/">IT<span>28</span></a></li>
   </li>
 
     </ul>
@@ -258,7 +272,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Vue/">Vue<span>21</span></a></li>
+  <li><a href="/tags/Vue/">Vue<span>27</span></a></li>
     </ul>
 	</div>
 	

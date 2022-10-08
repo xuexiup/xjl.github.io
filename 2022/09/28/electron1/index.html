@@ -157,7 +157,19 @@
 <p>当BrowserWindow实例被销毁时，它对应的渲染进程也会终止。</p>
 <h3 id="应用的声明周期"><a href="#应用的声明周期" class="headerlink" title="应用的声明周期"></a>应用的声明周期</h3><p>主进程还通过Electron的 <a href="https://www.electronjs.org/zh/docs/latest/api/app" title="" target="">app</a> 模块控制应用程序的生命周期。此模块提供了大量事件和方法，您可以使用它们来添加自定义应用程序行为(例如，以编程方式退出应用程序、修改应用程序停靠或显示关于面板)。</p>
 <p>作为一个实际的例子，在快速入门指南中显示的应用程序使用应用程序api来创建一个更原生的应用程序窗口体验。</p>
-	  
+<h3 id="VUE项目js-base64不兼容IE"><a href="#VUE项目js-base64不兼容IE" class="headerlink" title="VUE项目js-base64不兼容IE"></a>VUE项目js-base64不兼容IE</h3><p>一般我们直接通过指令：</p>
+<blockquote><p>npm install –save js-base64 </p>
+</blockquote>
+
+<p>安装base64插件，但是是默认安装高版本（3或以上），它的问题就是不兼容ie11</p>
+<p>解决办法：</p>
+<p>1）卸载已经安装的base64插件（未安装则跳过此步）</p>
+<blockquote><p>npm uninstall js-base64</p>
+</blockquote>
+
+<p>2）安装指定版本（安装2.x.x版本）</p>
+<blockquote><p>npm install <a href="mailto:&#106;&#x73;&#x2d;&#98;&#97;&#115;&#101;&#54;&#52;&#64;&#x32;&#x2e;&#x36;&#46;&#x32;">&#106;&#x73;&#x2d;&#98;&#97;&#115;&#101;&#54;&#52;&#64;&#x32;&#x2e;&#x36;&#46;&#x32;</a> –save</p>
+</blockquote>	  
 	</div>
 
 	<!-- recommended posts -->

@@ -125,7 +125,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue14/" title="注意：以下三个方案中，方案一，方案二皆为不兼容IE【网站无法访问】的失败方案；方案三为兼容IE的可行方案；">Vue中引入highlight.js实现代码高亮，兼容IE</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue20/" >Vue中UI库Ant Design Vue 回到顶部（BackTop）组件的使用</a></div>						
 		</h3>
 	
 
@@ -134,16 +134,11 @@
   <div class="row">
 	
 	
-		<p>【方案一】</p>
-<p>根据highlight.js官网的介绍，我们在main.js文件中通过import的方式引入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import hljs from <span class="string">&quot;highlight.js&quot;</span>;</span><br><span class="line">import <span class="string">&quot;highlight.js/styles/monokai-sublime.css&quot;</span>;</span><br><span class="line">Vue.use(hljs)</span><br></pre></td></tr></table></figure>
-<p>这里用到了富文本框WandEditor，引入高亮；</p>
-<blockquote><p>this.editor.highlight &#x3D; hljs</p>
-</blockquote>
-<p>以上测试环境和打包后在IE上都不兼容，其它浏览器正常运行；</p>
+		<p>首先看下官方文档的使用说明，写出了以下范例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;components-back-top-demo-custom&quot;</span>&gt;</span><br><span class="line">      &lt;a-back-top&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;ant-back-top-inner&quot;</span>&gt;</span><br><span class="line">          &lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;up&quot;</span>&gt;&lt;/a-icon&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/a-back-top&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/template&gt;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue14/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue20/#more" class="btn btn-default more">Read More</a>
 </div>
 
 	       
@@ -196,7 +191,7 @@
 		<h4>Categories</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>22</span></a></li>
+			<li><a href="/categories/IT/">IT<span>28</span></a></li>
 		
 		</ul>
 	</div>
@@ -209,23 +204,25 @@
 		
 			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
+			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
+		
 			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
 		
 			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>21</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/Vue/">Vue<span>27</span></a></li>
 		
 			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
 			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -239,23 +236,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2022/10/08/vue21/" ><i class="fa fa-file-o"></i>Vue项目中加入百度统计</a>
+        <a href="/2022/10/08/vue27/" ><i class="fa fa-file-o"></i>Vue 常用的UI组件与框架总结</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue20/" ><i class="fa fa-file-o"></i>Vue中UI库Ant Design Vue 回到顶部（...</a>
+        <a href="/2022/10/08/vue26/" ><i class="fa fa-file-o"></i>Vue2和Vue3的区别</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue19/" ><i class="fa fa-file-o"></i>vue项目中使用分享插件social-share</a>
+        <a href="/2022/10/08/vue25/" ><i class="fa fa-file-o"></i>使用vite创建Vue3项目</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue18/" ><i class="fa fa-file-o"></i>Vue中实现页面刷新的几种方式</a>
+        <a href="/2022/10/08/vue24/"  title="本文档适用于Vue2的项目创建，不适用于Vue3" ><i class="fa fa-file-o"></i>Vue 2.x项目完整搭建步骤</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue17/" ><i class="fa fa-file-o"></i>Vue中使用AOS动画插件，让你的网页更酷炫</a>
+        <a href="/2022/10/08/vue23/" ><i class="fa fa-file-o"></i>Vue实现通过npm启动和打包时自动切换assetsP...</a>
       </li>
     
   </ul>

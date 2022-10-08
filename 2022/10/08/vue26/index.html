@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Vue2和Vue3的区别 | 寒山飞鹰</title>
+  
+  <meta name="author" content="xjl">
+  
+  <meta name="description" content="一、vue2和vue3双向数据绑定原理的区别？vue2 的双向数据绑定是利用ES5 的一个 API Object.definePropert()对数据进行劫持 结合 发布订阅模式的方式来实现的vue3发生了改变，使用proxy替换Object.defineProerty,使用Proxy的优势：可直接监听数组类型的数据变化性能的提升监听的目标为对象本身，不需要像Object.defineProperty一样遍历每个属性，有一定的性能提升可直接实现对象属性的新增&amp;#x2F;删除
+二、根节点的不同vue2只接受一个跟几点，而vue3在组件中支持多个根节点.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="Vue2和Vue3的区别" />
+  <meta property="og:site_name" content="寒山飞鹰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+  
+  <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Vue2和Vue3的区别</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h3 id="一、vue2和vue3双向数据绑定原理的区别？"><a href="#一、vue2和vue3双向数据绑定原理的区别？" class="headerlink" title="一、vue2和vue3双向数据绑定原理的区别？"></a>一、vue2和vue3双向数据绑定原理的区别？</h3><p>vue2 的双向数据绑定是利用ES5 的一个 API Object.definePropert()对数据进行劫持 结合 发布订阅模式的方式来实现的<br>vue3发生了改变，使用proxy替换Object.defineProerty,使用Proxy的优势：<br>可直接监听数组类型的数据变化<br>性能的提升<br>监听的目标为对象本身，不需要像Object.defineProperty一样遍历每个属性，有一定的性能提升<br>可直接实现对象属性的新增&#x2F;删除</p>
+<h3 id="二、根节点的不同"><a href="#二、根节点的不同" class="headerlink" title="二、根节点的不同"></a>二、根节点的不同</h3><p>vue2只接受一个跟几点，而vue3在组件中支持多个根节点.</p>
+<span id="more"></span>
+<blockquote><p>vue2</p>
+</blockquote>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;&lt;/h1&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+<blockquote><p>vue3</p>
+</blockquote>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;&lt;/h1&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span&gt;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、Composition-API-组合api"><a href="#三、Composition-API-组合api" class="headerlink" title="三、Composition API (组合api)"></a>三、Composition API (组合api)</h3><p>vue2和vue3最大的区别就是:</p>
+<p>vue2中是使用的Options API，这种写法不方便我们的阅读和交流，逻辑过于分散。</p>
+<p>vue3中是使用的Composition API (组合api)</p>
+<blockquote><p>vue2</p>
+</blockquote>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">	// 数据</span><br><span class="line">    <span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> &#123;&#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">mounted</span></span>() &#123;&#125;,</span><br><span class="line">    // 方法</span><br><span class="line">    methods: &#123;&#125;,</span><br><span class="line">    computed: &#123;&#125;,</span><br><span class="line">    components:&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<blockquote><p>vue3</p>
+</blockquote>
+
+<p>这样代码会更加简介和整洁</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">    <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line">        // 数据 和 方法都在setup里面使用</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、生命周期的变化"><a href="#四、生命周期的变化" class="headerlink" title="四、生命周期的变化"></a>四、生命周期的变化</h3><blockquote><p>vu2————————–&gt;vue3</p>
+<p>beforeCreate  -&gt; setup()	开始创建组件之前，创建的是data和method<br>created       -&gt; setup()<br>beforeMount   -&gt; onBeforeMount	组件挂载到节点上之前执行的函数。<br>mounted       -&gt; onMounted	组件挂载完成后执行的函数<br>beforeUpdate  -&gt; onBeforeUpdate	组件更新之前执行的函数。<br>updated       -&gt; onUpdated	组件更新完成之后执行的函数。<br>beforeDestroy -&gt; onBeforeUnmount	组件挂载到节点上之前执行的函数。<br>destroyed     -&gt; onUnmounted	组件卸载之前执行的函数。dszhuoyi<br>activated     -&gt; onActivated	组件卸载完成后执行的函数<br>deactivated   -&gt; onDeactivated</p>
+</blockquote>
+
+<p>注意:如果想要在vue中获取dom节点在created中用this.$nexttick</p>
+<h3 id="五、-vue2和vue3的diff算法"><a href="#五、-vue2和vue3的diff算法" class="headerlink" title="五、 vue2和vue3的diff算法"></a>五、 vue2和vue3的diff算法</h3><blockquote><p>vue2</p>
+</blockquote>
+
+<p>vue2 diff算法就是进行虚拟节点对比，并返回一个patch对象，用来存储两个节点不同的地方，最后用patch记录的消息去局部更新Dom。<br>vue2 diff算法会比较每一个vnode,而对于一些不参与更新的元素，进行比较是有点消耗性能的。</p>
+<blockquote><p>vue3</p>
+</blockquote>
+<p>vue3 diff算法在初始化的时候会给每个虚拟节点添加一个patchFlags，patchFlags就是优化的标识。<br>只会比较patchFlags发生变化的vnode,进行更新视图，对于没有变化的元素做静态标记，在渲染的时候直接复用</p>
+<h3 id="六、-v-if-和-v-for的优先级"><a href="#六、-v-if-和-v-for的优先级" class="headerlink" title="六、 v-if 和 v-for的优先级"></a>六、 v-if 和 v-for的优先级</h3><blockquote><p>vue2</p>
+</blockquote>
+
+<p>我们最好不要把v-if和v-for同时用在一个元素上，这样会带来性能的浪费(每次都要先渲染才会进行条件判断)</p>
+<p>v-for 优先于 v-if 生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-if=<span class="string">&quot;index == 1&quot;</span> v-for=<span class="string">&quot;(item,index) in arr&quot;</span> :key=<span class="string">&quot;index&quot;</span>&gt;&#123;&#123;item&#125;&#125;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<blockquote><p>vue3</p>
+</blockquote>
+
+<p>v-if 优先于 v-for 生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-if=<span class="string">&quot;index == 1&quot;</span> v-for=<span class="string">&quot;(item,index) in arr&quot;</span> :key=<span class="string">&quot;index&quot;</span>&gt;&#123;&#123;item&#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>vue中会给我们报警告：<br>意思就是：属性“index”在渲染期间被访问，但未在实例上定义(v-if先进行判断，但是这时候v-for还没有渲染，所以index是找不到的)</p>
+<a href="https://blog.csdn.net/m0_64969829/article/details/123047804" title="" target="">文章来源</a>
+
+
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2022/10/08/vue27/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2022/10/08/vue25/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">Comments</h2>
+  
+</section> -->
+
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2022-10-08 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>28</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Vue/">Vue<span>27</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 xjl
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

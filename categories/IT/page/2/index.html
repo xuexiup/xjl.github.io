@@ -125,7 +125,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue20/" >Vue中UI库Ant Design Vue 回到顶部（BackTop）组件的使用</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue26/" >Vue2和Vue3的区别</a></div>						
 		</h3>
 	
 
@@ -134,11 +134,11 @@
   <div class="row">
 	
 	
-		<p>首先看下官方文档的使用说明，写出了以下范例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;components-back-top-demo-custom&quot;</span>&gt;</span><br><span class="line">      &lt;a-back-top&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;ant-back-top-inner&quot;</span>&gt;</span><br><span class="line">          &lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;up&quot;</span>&gt;&lt;/a-icon&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/a-back-top&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/template&gt;</span><br></pre></td></tr></table></figure>
+		<h3 id="一、vue2和vue3双向数据绑定原理的区别？"><a href="#一、vue2和vue3双向数据绑定原理的区别？" class="headerlink" title="一、vue2和vue3双向数据绑定原理的区别？"></a>一、vue2和vue3双向数据绑定原理的区别？</h3><p>vue2 的双向数据绑定是利用ES5 的一个 API Object.definePropert()对数据进行劫持 结合 发布订阅模式的方式来实现的<br>vue3发生了改变，使用proxy替换Object.defineProerty,使用Proxy的优势：<br>可直接监听数组类型的数据变化<br>性能的提升<br>监听的目标为对象本身，不需要像Object.defineProperty一样遍历每个属性，有一定的性能提升<br>可直接实现对象属性的新增&#x2F;删除</p>
+<h3 id="二、根节点的不同"><a href="#二、根节点的不同" class="headerlink" title="二、根节点的不同"></a>二、根节点的不同</h3><p>vue2只接受一个跟几点，而vue3在组件中支持多个根节点.</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue20/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue26/#more" class="btn btn-default more">Read More</a>
 </div>
 
 	       
@@ -191,7 +191,7 @@
 		<h4>Categories</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>22</span></a></li>
+			<li><a href="/categories/IT/">IT<span>28</span></a></li>
 		
 		</ul>
 	</div>
@@ -202,25 +202,27 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
-		
 			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
 		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>21</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
 			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>27</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
 			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -234,23 +236,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2022/10/08/vue21/" ><i class="fa fa-file-o"></i>Vue项目中加入百度统计</a>
+        <a href="/2022/10/08/vue27/" ><i class="fa fa-file-o"></i>Vue 常用的UI组件与框架总结</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue20/" ><i class="fa fa-file-o"></i>Vue中UI库Ant Design Vue 回到顶部（...</a>
+        <a href="/2022/10/08/vue26/" ><i class="fa fa-file-o"></i>Vue2和Vue3的区别</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue19/" ><i class="fa fa-file-o"></i>vue项目中使用分享插件social-share</a>
+        <a href="/2022/10/08/vue25/" ><i class="fa fa-file-o"></i>使用vite创建Vue3项目</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue18/" ><i class="fa fa-file-o"></i>Vue中实现页面刷新的几种方式</a>
+        <a href="/2022/10/08/vue24/"  title="本文档适用于Vue2的项目创建，不适用于Vue3" ><i class="fa fa-file-o"></i>Vue 2.x项目完整搭建步骤</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue17/" ><i class="fa fa-file-o"></i>Vue中使用AOS动画插件，让你的网页更酷炫</a>
+        <a href="/2022/10/08/vue23/" ><i class="fa fa-file-o"></i>Vue实现通过npm启动和打包时自动切换assetsP...</a>
       </li>
     
   </ul>
