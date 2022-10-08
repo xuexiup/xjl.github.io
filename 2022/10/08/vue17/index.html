@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Vue中使用AOS动画插件，让你的网页更酷炫 | 寒山飞鹰</title>
+  
+  <meta name="author" content="xjl">
+  
+  <meta name="description" content="根据官方文档，使用此插件可以通过直接引用的方式，也可以是下载安装本地包；1.直接使用
+12345&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://unpkg.com/aos@next/dist/aos.css&amp;quot;/&amp;gt;&amp;lt;script src=&amp;quot;https://unpkg.com/aos@next/dist/aos.js”&amp;lt;script&amp;gt;AOS.init();&amp;lt;/script&amp;gt;
+这种引入方式如果是在Vue项目中，自然是从首页（index.html）中引入。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="Vue中使用AOS动画插件，让你的网页更酷炫" />
+  <meta property="og:site_name" content="寒山飞鹰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+  
+  <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Vue中使用AOS动画插件，让你的网页更酷炫</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>根据官方文档，使用此插件可以通过直接引用的方式，也可以是下载安装本地包；<br>1.直接使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.css&quot;</span>/&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.js”</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">AOS.init();</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这种引入方式如果是在Vue项目中，自然是从首页（index.html）中引入。</p>
+<span id="more"></span>
+<p>2.npm或者yarn安装</p>
+<p>Vue项目自然是推荐这种方式</p>
+<blockquote><p>npm install –save aos@next</p>
+<p>or<br>yarn add aos@next</p>
+</blockquote>
+
+<p>然后在main.js引入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import AOS from <span class="string">&#x27;aos&#x27;</span>;</span><br><span class="line">import <span class="string">&#x27;aos/dist/aos.css&#x27;</span></span><br><span class="line">AOS.init();</span><br></pre></td></tr></table></figure>
+<p>以上AOS.init()  实际上是默认了以下配置（详细功能配置可查看官方文档）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">AOS.init(&#123;</span><br><span class="line">  // Global settings:</span><br><span class="line">  <span class="built_in">disable</span>: <span class="literal">false</span>, // accepts following values: <span class="string">&#x27;phone&#x27;</span>, <span class="string">&#x27;tablet&#x27;</span>, <span class="string">&#x27;mobile&#x27;</span>, boolean, expression or <span class="keyword">function</span></span><br><span class="line">  startEvent: <span class="string">&#x27;DOMContentLoaded&#x27;</span>, // name of the event dispatched on the document, that AOS should initialize on</span><br><span class="line">  initClassName: <span class="string">&#x27;aos-init&#x27;</span>, // class applied after initialization</span><br><span class="line">  animatedClassName: <span class="string">&#x27;aos-animate&#x27;</span>, // class applied on animation</span><br><span class="line">  useClassNames: <span class="literal">false</span>, // <span class="keyword">if</span> <span class="literal">true</span>, will add content of `data-aos` as classes on scroll</span><br><span class="line">  disableMutationObserver: <span class="literal">false</span>, // disables automatic mutations<span class="string">&#x27; detections (advanced)</span></span><br><span class="line"><span class="string">  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)</span></span><br><span class="line"><span class="string">  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:</span></span><br><span class="line"><span class="string">  offset: 120, // offset (in px) from the original trigger point</span></span><br><span class="line"><span class="string">  delay: 0, // values from 0 to 3000, with step 50ms</span></span><br><span class="line"><span class="string">  duration: 400, // values from 0 to 3000, with step 50ms</span></span><br><span class="line"><span class="string">  easing: &#x27;</span>ease<span class="string">&#x27;, // default easing for AOS animations</span></span><br><span class="line"><span class="string">  once: false, // whether animation should happen only once - while scrolling down</span></span><br><span class="line"><span class="string">  mirror: false, // whether elements should animate out while scrolling past them</span></span><br><span class="line"><span class="string">  anchorPlacement: &#x27;</span>top-bottom<span class="string">&#x27;, // defines which position of the element regarding to window should trigger the animation</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#125;);</span></span><br></pre></td></tr></table></figure>
+<p>接下来就是如何在网页中实现功能渲染了。</p>
+<p>不得不说还是挺简单的：只要将特性绑定到控件上即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div</span><br><span class="line">   <span class="built_in">id</span>=<span class="string">&quot;blog_left&quot;</span></span><br><span class="line">   class=<span class="string">&quot;csleft&quot;</span></span><br><span class="line">   data-aos=<span class="string">&quot;slide-down&quot;</span></span><br><span class="line">   data-aos-duration=<span class="string">&quot;1500&quot;</span></span><br><span class="line">   data-aos-easing=<span class="string">&quot;ease-in-out&quot;</span></span><br><span class="line">   data-aos-mirror=<span class="string">&quot;true&quot;</span></span><br><span class="line">   data-aos-once=<span class="string">&quot;false&quot;</span></span><br><span class="line">   data-aos-anchor-placement=<span class="string">&quot;top-center&quot;</span></span><br><span class="line"> &gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>  这样一个初始化1500ms的下拉做菜单动画效果就完成。</p>
+<p>当然了这是比较简单的用法，更酷炫的用法参考官方文档结合自己的项目去实现咯。</p>
+<p>这里附上常用的属性（特效名、锚点位置、缓动方法）：</p>
+<h3 id="Animations"><a href="#Animations" class="headerlink" title="Animations"></a>Animations</h3><h2 id="Fade-animations"><a href="#Fade-animations" class="headerlink" title="Fade animations"></a>Fade animations</h2><p>fade<br>fade-up<br>fade-down<br>fade-left<br>fade-right<br>fade-up-right<br>fade-up-left<br>fade-down-right<br>fade-down-left</p>
+<h2 id="Flip-animations"><a href="#Flip-animations" class="headerlink" title="Flip animations"></a>Flip animations</h2><p>flip-up<br>flip-down<br>flip-left<br>flip-right</p>
+<h2 id="Slide-animations"><a href="#Slide-animations" class="headerlink" title="Slide animations"></a>Slide animations</h2><p>slide-up<br>slide-down<br>slide-left<br>slide-right</p>
+<h2 id="Zoom-animations"><a href="#Zoom-animations" class="headerlink" title="Zoom animations"></a>Zoom animations</h2><p>zoom-in<br>zoom-in-up<br>zoom-in-down<br>zoom-in-left<br>zoom-in-right<br>zoom-out<br>zoom-out-up<br>zoom-out-down<br>zoom-out-left<br>zoom-out-right</p>
+<h3 id="Anchor-placements"><a href="#Anchor-placements" class="headerlink" title="Anchor placements"></a>Anchor placements</h3><p>top-bottom<br>top-center<br>top-top<br>center-bottom<br>center-center<br>center-top<br>bottom-bottom<br>bottom-center<br>bottom-top</p>
+<h3 id="Easing-functions"><a href="#Easing-functions" class="headerlink" title="Easing functions"></a>Easing functions</h3><p>linear<br>ease<br>ease-in<br>ease-out<br>ease-in-out<br>ease-in-back<br>ease-out-back<br>ease-in-out-back<br>ease-in-sine<br>ease-out-sine<br>ease-in-out-sine<br>ease-in-quad<br>ease-out-quad<br>ease-in-out-quad<br>ease-in-cubic<br>ease-out-cubic<br>ease-in-out-cubic<br>ease-in-quart<br>ease-out-quart<br>ease-in-out-quart</p>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2022/10/08/vue18/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2022/10/08/vue16/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">Comments</h2>
+  
+</section> -->
+
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2022-10-08 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>22</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Vue/">Vue<span>21</span></a></li> <li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 xjl
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

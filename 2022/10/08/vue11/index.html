@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Vue的生命周期 | 寒山飞鹰</title>
+  
+  <meta name="author" content="xjl">
+  
+  <meta name="description" content="什么是Vue的生命周期 ？Vue 的实例从创建到销毁的过程 ，就是生命周期 ，也就是从开始创建 ，初始化数据 ，编译模板 ，挂载Dom到渲染DOM ，更新数据再到渲染 ，卸载等一系列的过程 ，我们称这是Vue的生命周期。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="Vue的生命周期" />
+  <meta property="og:site_name" content="寒山飞鹰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+  
+  <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Vue的生命周期</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h3 id="什么是Vue的生命周期-？"><a href="#什么是Vue的生命周期-？" class="headerlink" title="什么是Vue的生命周期 ？"></a>什么是Vue的生命周期 ？</h3><blockquote><p>Vue 的实例从创建到销毁的过程 ，就是生命周期 ，也就是从开始创建 ，初始化数据 ，编译模板 ，挂载Dom到渲染DOM ，更新数据再到渲染 ，卸载等一系列的过程 ，我们称这是Vue的生命周期。</p>
+</blockquote>
+<span id="more"></span>
+<p>每个 Vue 实例在被创建时都要经过一系列的初始化过程——例如，需要设置数据监听、编译模板、将实例挂载到 DOM 并在数据变化时更新 DOM 等。同时在这个过程中也会运行一些叫做生命周期钩子的函数，这给了用户在不同阶段添加自己的代码的机会。</p>
+<blockquote><p>从创建到销毁顺序执行的生命周期函数 :beforeCreate、created、 beforeMount、mounted、beforeUpdate、 updated、beforeDestroy、destroyed<br>而这些Vue生命周期过程中会伴随着一些函数的自调用。我们称这些函数为钩子函数。</p>
+</blockquote>
+<h3 id="Vue生命周期的作用是什么？"><a href="#Vue生命周期的作用是什么？" class="headerlink" title="Vue生命周期的作用是什么？"></a>Vue生命周期的作用是什么？</h3><p>Vue生命周期过程中会伴随着多个事件钩子 ，这些钩子函数让我们在控制整个Vue实例的过程时更容易形成好的逻辑<br>Vue生命周期总共分8个阶段：创建前&#x2F;后 ，载入前&#x2F;后 ，更新前&#x2F;后 ，销毁前&#x2F;后</p>
+<p>各个生命周期函数的作用：</p>
+<h2 id="创建前-x2F-后-beforeCreate-x2F-created"><a href="#创建前-x2F-后-beforeCreate-x2F-created" class="headerlink" title="创建前&#x2F;后(beforeCreate &#x2F; created)"></a>创建前&#x2F;后(beforeCreate &#x2F; created)</h2><blockquote><p>在beforeCreate阶段 ，vue实例的挂载元素el和数据对象data都为undefined ，还未初始化 ，也就是说此时我们还拿不到数据</p>
+<p>在created阶段 ，vue实例的数据对象data有了 ，但是实例对象el还没有 ，也就是说可以拿到数据 ，但是无法获取Dom节点 ，此时data 和 methods已经可以使用 但是页面还没有渲染出来</p>
+<p>created阶段data有了才能拿到数据</p>
+<p>所以我们在开发中 ，的一些获取数据的逻辑都可以写在created钩子函数中</p>
+</blockquote>
+
+<h2 id="载入前-x2F-后-（beforeMount-x2F-mounted）"><a href="#载入前-x2F-后-（beforeMount-x2F-mounted）" class="headerlink" title="载入前&#x2F;后 （beforeMount &#x2F; mounted）"></a>载入前&#x2F;后 （beforeMount &#x2F; mounted）</h2><blockquote><p>在beforeMount阶段 ，vue实例的$el和data都初始化了 ，但还是挂载之前的虚拟DOM节点 ，此时实例尚未挂载完成 ，此时页面上还看不到真实数据 只是一个模板页面而已</p>
+<p>在mounted阶段 ，vue实例挂载完成 ，页面成功渲染数据已经真实渲染到页面上 在这个钩子函数里面我们可以使用一些第三方的插件</p>
+<p>mounted页面才真正渲染完成</p>
+<p>created拿不到elDom节点<br>注意：在beforeMount阶段 可以拿到el实例但是只是挂载的el虚拟DOM节点 ，在mounted阶段 el被新创建的vm.$el替换，并挂载到实例上此时才能操作页面上的DOM元素。</p>
+</blockquote>
+
+<p><b>以上四个钩子函数都是在Vue生命周期过程中自动调用。</b></p>
+<h2 id="更新前-x2F-后-（beforeUpdate-x2F-updated）"><a href="#更新前-x2F-后-（beforeUpdate-x2F-updated）" class="headerlink" title="更新前&#x2F;后 （beforeUpdate &#x2F; updated）"></a>更新前&#x2F;后 （beforeUpdate &#x2F; updated）</h2><blockquote><p>在beforeUpdate 阶段 ，数据更新时调用，发生在虚拟DOM打补丁之前 页面上数据还是旧的。</p>
+<p>在updated阶段 ，由于数据更改导致的虚拟DOM重新渲染和打补丁，在这之后会调用该钩子。 页面上数据已经替换成最新的，只有在数据改变后才调用。</p>
+</blockquote>
+
+<h2 id="销毁前-x2F-后-（beforeDestroy-x2F-destroyed）"><a href="#销毁前-x2F-后-（beforeDestroy-x2F-destroyed）" class="headerlink" title="销毁前&#x2F;后 （beforeDestroy &#x2F; destroyed）"></a>销毁前&#x2F;后 （beforeDestroy &#x2F; destroyed）</h2><blockquote><p>beforeDestroy在实例销毁之前调用 ，在这一步，实例仍然完全可用。</p>
+<p>destroyed 实例销毁后调用。该钩子被调用后，对应 Vue 实例的所有指令都被解绑，所有的事件监听器被移除，所有的子实例也都被销毁。</p>
+</blockquote>
+
+<p>页面第一次加载只会调用触发 beforeCreate created beforeMount mounted</p>
+<p>每个阶段对应的钩子函数 ，我们都可以在其内部做一些对应的逻辑。</p>
+<p>【常用钩子函数的运用场景】</p>
+<p>【beforeCreate 】此时页面开始创建 ，可以加loading等事件</p>
+<p>【created 】加载实列触发或 一些异步请求调用 ，loading结束等事件</p>
+<p>【mounted 】获取Dom节点操作DOM ，在这个钩子函数里面我们可以使用一些第三方的插件实例写在这个函数内</p>
+<p>【updated】 做一些数据统一更新处理的相应函数</p>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2022/10/08/vue12/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2022/10/08/vue10/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">Comments</h2>
+  
+</section> -->
+
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2022-10-08 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>22</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Vue/">Vue<span>21</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 xjl
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

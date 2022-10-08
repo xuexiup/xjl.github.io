@@ -125,7 +125,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue3/" >Vue中引入Jquery</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue17/" >Vue中使用AOS动画插件，让你的网页更酷炫</a></div>						
 		</h3>
 	
 
@@ -134,11 +134,12 @@
   <div class="row">
 	
 	
-		<p>1.首先在依赖中填写要引入jquery版本信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;@babel/polyfill&quot;</span>: <span class="string">&quot;^7.12.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;ant-design-vue&quot;</span>: <span class="string">&quot;^1.6.5&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;axios&quot;</span>: <span class="string">&quot;^0.20.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;element-ui&quot;</span>: <span class="string">&quot;^2.13.2&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;hexo-helper-live2d&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;jquery&quot;</span>: <span class="string">&quot;^3.6.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;view-design&quot;</span>: <span class="string">&quot;^4.4.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue&quot;</span>: <span class="string">&quot;^2.5.2&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-axios&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-resource&quot;</span>: <span class="string">&quot;^1.5.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-router&quot;</span>: <span class="string">&quot;^3.4.7&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;wangeditor&quot;</span>: <span class="string">&quot;^4.7.10&quot;</span></span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+		<p>根据官方文档，使用此插件可以通过直接引用的方式，也可以是下载安装本地包；<br>1.直接使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.css&quot;</span>/&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.js”</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">AOS.init();</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这种引入方式如果是在Vue项目中，自然是从首页（index.html）中引入。</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue3/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue17/#more" class="btn btn-default more">Read More</a>
 </div>
 
 	       
@@ -191,7 +192,7 @@
 		<h4>Categories</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>8</span></a></li>
+			<li><a href="/categories/IT/">IT<span>22</span></a></li>
 		
 		</ul>
 	</div>
@@ -202,15 +203,23 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>7</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
 			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
 			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>21</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
 			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
 		
@@ -226,23 +235,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2022/10/08/vue7/" ><i class="fa fa-file-o"></i>Vue Router的封装配置</a>
+        <a href="/2022/10/08/vue21/" ><i class="fa fa-file-o"></i>Vue项目中加入百度统计</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue6/" ><i class="fa fa-file-o"></i>Vue错误笔记集合</a>
+        <a href="/2022/10/08/vue20/" ><i class="fa fa-file-o"></i>Vue中UI库Ant Design Vue 回到顶部（...</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue5/" ><i class="fa fa-file-o"></i>cnpm 安装指定版本的脚手架vue-cli</a>
+        <a href="/2022/10/08/vue19/" ><i class="fa fa-file-o"></i>vue项目中使用分享插件social-share</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue4/" ><i class="fa fa-file-o"></i>vue-cli更新</a>
+        <a href="/2022/10/08/vue18/" ><i class="fa fa-file-o"></i>Vue中实现页面刷新的几种方式</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue3/" ><i class="fa fa-file-o"></i>Vue中引入Jquery</a>
+        <a href="/2022/10/08/vue17/" ><i class="fa fa-file-o"></i>Vue中使用AOS动画插件，让你的网页更酷炫</a>
       </li>
     
   </ul>

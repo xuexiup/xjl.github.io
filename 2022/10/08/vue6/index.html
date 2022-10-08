@@ -7,14 +7,12 @@
   
   <meta name="author" content="xjl">
   
-  <meta name="description"
-    content="Vue is not defined在使用HTML button：
+  <meta name="description" content="Vue is not defined在使用HTML button：
 1&amp;lt;button @click=&amp;quot;login()&amp;quot;&amp;gt;登录&amp;lt;/button&amp;gt;
 出现了错误提示：
 1Vue is not defined
 
-解决办法：
-1231）&amp;lt;button type">
+解决办法：">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -136,14 +134,35 @@
 	<div class="mypage">		
 	  		
 
-	  <h2 id="Vue-is-not-defined"><a href="#Vue-is-not-defined" class="headerlink" title="Vue is not defined"></a>Vue is not defined</h2><p>在使用HTML button：</p>
+	  <h3 id="Vue-is-not-defined"><a href="#Vue-is-not-defined" class="headerlink" title="Vue is not defined"></a>Vue is not defined</h3><p>在使用HTML button：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=<span class="string">&quot;login()&quot;</span>&gt;登录&lt;/button&gt;</span><br></pre></td></tr></table></figure>
 <p>出现了错误提示：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue is not defined</span><br></pre></td></tr></table></figure>
 
 <p>解决办法：</p>
+<span id="more"></span>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1）&lt;button <span class="built_in">type</span>=<span class="string">&quot;button&quot;</span> @click=<span class="string">&quot;login()&quot;</span>&gt;登录&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">2)&lt;button @click.prevent=<span class="string">&quot;login()&quot;</span>&gt;登录&lt;/button&gt;</span><br></pre></td></tr></table></figure>
 
+<h3 id="Vue项目渲染模式为history时刷新异常"><a href="#Vue项目渲染模式为history时刷新异常" class="headerlink" title="Vue项目渲染模式为history时刷新异常"></a>Vue项目渲染模式为history时刷新异常</h3><p>图片显示异常、以及控制台出现js引入路径错误：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;static/live2d-widget/lib/L2Dwidget.min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line"> &lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;static/js/fireworks.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line"> headimg: <span class="string">&quot;./static/img/head.jpg&quot;</span>,</span><br></pre></td></tr></table></figure>
+<p>以上三个路径改为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;/static/live2d-widget/lib/L2Dwidget.min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"> &lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;/static/js/fireworks.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"> headimg: <span class="string">&quot;/static/img/head.jpg&quot;</span>,</span><br></pre></td></tr></table></figure>
+<p>就可以了。</p>
+<p>这是因为：</p>
+<blockquote><p>.&#x2F;     是当前所在目录（相对路径）</p>
+<p>&#x2F;      是项目根目录（绝对路径）</p>
+<p>hash模式的根路径即项目的根目录，是固定的，而history模式以&#x2F;开头的路径会被当做是根路径，所以以 .&#x2F; 在hisorty模式下引入文件自然是无效的。</p>
+</blockquote>
+<p>所以，其实无论是哪种模式，只要以    &#x2F;    引入静态文件都是可以的。</p>
+<h3 id="nginx配置的网页刷新-404"><a href="#nginx配置的网页刷新-404" class="headerlink" title="nginx配置的网页刷新 404"></a>nginx配置的网页刷新 404</h3><p>如果我们在nginx下添加以下配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html</span><br></pre></td></tr></table></figure>
+<p>刷新虽然没有出现404，但是页面还是没有正常显示（白屏），打开控制台发现以下错误</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Uncaught SyntaxError:Unexpected token &lt;</span><br></pre></td></tr></table></figure>
+<p>这是由于：nginx配置与代码静态资源打包方式不匹配</p>
+<p>需要修改：</p>
+<p>index.js下build节点中以下属性改为绝对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">assetsPublicPath:<span class="string">&#x27;/&#x27;</span>,</span><br></pre></td></tr></table></figure>
+<p>这样刷新就正常了。</p>
 	  
 	</div>
 
@@ -226,7 +245,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/IT/">IT<span>8</span></a></li>
+    <li><a href="/categories/IT/">IT<span>22</span></a></li>
   </li>
 
     </ul>
@@ -239,7 +258,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Vue/">Vue<span>7</span></a></li>
+  <li><a href="/tags/Vue/">Vue<span>21</span></a></li>
     </ul>
 	</div>
 	

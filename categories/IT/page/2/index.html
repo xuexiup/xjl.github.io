@@ -125,7 +125,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue6/" >Vue错误笔记集合</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue20/" >Vue中UI库Ant Design Vue 回到顶部（BackTop）组件的使用</a></div>						
 		</h3>
 	
 
@@ -134,18 +134,11 @@
   <div class="row">
 	
 	
-		<h2 id="Vue-is-not-defined"><a href="#Vue-is-not-defined" class="headerlink" title="Vue is not defined"></a>Vue is not defined</h2><p>在使用HTML button：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=<span class="string">&quot;login()&quot;</span>&gt;登录&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<p>出现了错误提示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue is not defined</span><br></pre></td></tr></table></figure>
-
-<p>解决办法：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1）&lt;button <span class="built_in">type</span>=<span class="string">&quot;button&quot;</span> @click=<span class="string">&quot;login()&quot;</span>&gt;登录&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">2)&lt;button @click.prevent=<span class="string">&quot;login()&quot;</span>&gt;登录&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-
-
+		<p>首先看下官方文档的使用说明，写出了以下范例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;components-back-top-demo-custom&quot;</span>&gt;</span><br><span class="line">      &lt;a-back-top&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;ant-back-top-inner&quot;</span>&gt;</span><br><span class="line">          &lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;up&quot;</span>&gt;&lt;/a-icon&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/a-back-top&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/template&gt;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue6/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue20/#more" class="btn btn-default more">Read More</a>
 </div>
 
 	       
@@ -198,7 +191,7 @@
 		<h4>Categories</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>8</span></a></li>
+			<li><a href="/categories/IT/">IT<span>22</span></a></li>
 		
 		</ul>
 	</div>
@@ -211,15 +204,23 @@
 		
 			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
 		
 			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>7</span></a></li>
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
+			<li><a href="/tags/Vue/">Vue<span>21</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -233,23 +234,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2022/10/08/vue7/" ><i class="fa fa-file-o"></i>Vue Router的封装配置</a>
+        <a href="/2022/10/08/vue21/" ><i class="fa fa-file-o"></i>Vue项目中加入百度统计</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue6/" ><i class="fa fa-file-o"></i>Vue错误笔记集合</a>
+        <a href="/2022/10/08/vue20/" ><i class="fa fa-file-o"></i>Vue中UI库Ant Design Vue 回到顶部（...</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue5/" ><i class="fa fa-file-o"></i>cnpm 安装指定版本的脚手架vue-cli</a>
+        <a href="/2022/10/08/vue19/" ><i class="fa fa-file-o"></i>vue项目中使用分享插件social-share</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue4/" ><i class="fa fa-file-o"></i>vue-cli更新</a>
+        <a href="/2022/10/08/vue18/" ><i class="fa fa-file-o"></i>Vue中实现页面刷新的几种方式</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue3/" ><i class="fa fa-file-o"></i>Vue中引入Jquery</a>
+        <a href="/2022/10/08/vue17/" ><i class="fa fa-file-o"></i>Vue中使用AOS动画插件，让你的网页更酷炫</a>
       </li>
     
   </ul>

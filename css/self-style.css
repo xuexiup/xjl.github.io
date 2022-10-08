@@ -1,7 +1,14 @@
 h2 {
-    color: #468847ed !important;
+    color: #C09853 !important;   
 }
 
 h3 {
-    color: #C09853 !important;
+     color: #FEFE54 !important; 
+}
+blockquote{
+    background-color: #E6F7FF;
+    color: #F29766;
+    border-radius: 3px;    
+    border-left:none;
+    box-shadow: -2px 2px 2px gray;
 }

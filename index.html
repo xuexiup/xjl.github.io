@@ -123,10 +123,6 @@
         
 		
             
-		
-            
-		
-            
 			  
 	
 	<!-- display as entry -->	
@@ -168,6 +164,38 @@
 		
             
 		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
+            
+		
         
         <!-- render other articles -->
         
@@ -177,7 +205,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue7/" >Vue Router的封装配置</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue21/" >Vue项目中加入百度统计</a></div>						
 		</h3>
 	
 
@@ -186,12 +214,15 @@
   <div class="row">
 	
 	
-		<p>1.安装（如果在创建项目的时候没有确认安装）</p>
-<p>cnpm install vue-router –save</p>
-<p>之后在src下会生成一个文件夹router，这里我们删除这个文件夹。（安装好就行了，不用它的默认文件夹，我们自己封装）</p>
+		<p>原本我用的是CNZZ插件来做访客统计的功能，但是现在不免费了，一年最低要近1000块大洋才能使用，我只能呵呵。</p>
+<p>主要是网站没人气嘛没必要花这笔钱，而且还穷。</p>
+<p>那就这样吧，再用下下去，就不划算了！！！</p>
+<p>于是在百度搜罗资料，寻求一个Vue项目能做访客统计的插件。</p>
+<p>最终选中了百度统计这款插件，话不多说，用起来先！</p>
+<p>1.申请百度统计的账号（已有账号请跳过此步。）</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue7/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue21/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -202,7 +233,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue6/" >Vue错误笔记集合</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue20/" >Vue中UI库Ant Design Vue 回到顶部（BackTop）组件的使用</a></div>						
 		</h3>
 	
 
@@ -211,18 +242,11 @@
   <div class="row">
 	
 	
-		<h2 id="Vue-is-not-defined"><a href="#Vue-is-not-defined" class="headerlink" title="Vue is not defined"></a>Vue is not defined</h2><p>在使用HTML button：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=<span class="string">&quot;login()&quot;</span>&gt;登录&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<p>出现了错误提示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue is not defined</span><br></pre></td></tr></table></figure>
-
-<p>解决办法：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1）&lt;button <span class="built_in">type</span>=<span class="string">&quot;button&quot;</span> @click=<span class="string">&quot;login()&quot;</span>&gt;登录&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">2)&lt;button @click.prevent=<span class="string">&quot;login()&quot;</span>&gt;登录&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-
-
+		<p>首先看下官方文档的使用说明，写出了以下范例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;components-back-top-demo-custom&quot;</span>&gt;</span><br><span class="line">      &lt;a-back-top&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;ant-back-top-inner&quot;</span>&gt;</span><br><span class="line">          &lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;up&quot;</span>&gt;&lt;/a-icon&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/a-back-top&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/template&gt;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue6/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue20/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -233,7 +257,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue5/" >cnpm 安装指定版本的脚手架vue-cli</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue19/" >vue项目中使用分享插件social-share</a></div>						
 		</h3>
 	
 
@@ -242,13 +266,14 @@
   <div class="row">
 	
 	
-		<p>1.安装npm</p>
-<p>去Node.js官网下载安装Node.js，npm也就安装上了。</p>
-<p>2.安装国内淘宝镜像，以后就可以通过cnpm代替npm指令，使用国内源，执行效率更高：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+		<p>老规矩先安装依赖：</p>
+<blockquote><p>cnpm install vue-social-share -S</p>
+</blockquote>
+<p>安装完后从main.js中引入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Share from <span class="string">&#x27;vue-social-share&#x27;</span></span><br><span class="line">import <span class="string">&#x27;vue-social-share/dist/client.css&#x27;</span>;</span><br><span class="line">Vue.use(Share)</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue5/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue19/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -259,7 +284,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue4/" >vue-cli更新</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue18/" >Vue中实现页面刷新的几种方式</a></div>						
 		</h3>
 	
 
@@ -268,11 +293,14 @@
   <div class="row">
 	
 	
-		<p>1.卸载旧版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall vue-cli -g  </span><br><span class="line"></span><br><span class="line">或</span><br><span class="line"></span><br><span class="line">yarn global remove vue-cli</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+		<p>1.原页面刷新，类似于F5</p>
+<blockquote><p>this.$router.go(0)<br>或者<br>location.reload()</p>
+</blockquote>
+
+<p>2.创建一个空白页面（blank.vue），通过路由的方式先跳转到空白页面再跳转回来</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue4/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue18/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -283,7 +311,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue3/" >Vue中引入Jquery</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue17/" >Vue中使用AOS动画插件，让你的网页更酷炫</a></div>						
 		</h3>
 	
 
@@ -292,11 +320,12 @@
   <div class="row">
 	
 	
-		<p>1.首先在依赖中填写要引入jquery版本信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;@babel/polyfill&quot;</span>: <span class="string">&quot;^7.12.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;ant-design-vue&quot;</span>: <span class="string">&quot;^1.6.5&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;axios&quot;</span>: <span class="string">&quot;^0.20.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;element-ui&quot;</span>: <span class="string">&quot;^2.13.2&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;hexo-helper-live2d&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;jquery&quot;</span>: <span class="string">&quot;^3.6.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;view-design&quot;</span>: <span class="string">&quot;^4.4.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue&quot;</span>: <span class="string">&quot;^2.5.2&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-axios&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-resource&quot;</span>: <span class="string">&quot;^1.5.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-router&quot;</span>: <span class="string">&quot;^3.4.7&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;wangeditor&quot;</span>: <span class="string">&quot;^4.7.10&quot;</span></span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+		<p>根据官方文档，使用此插件可以通过直接引用的方式，也可以是下载安装本地包；<br>1.直接使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.css&quot;</span>/&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.js”</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">AOS.init();</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这种引入方式如果是在Vue项目中，自然是从首页（index.html）中引入。</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue3/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue17/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -307,7 +336,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue2/" >vue 打包后图片显示，或因为路径原因，显示白屏？</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue16/" >Ant Design Vue icon 图标的使用方法</a></div>						
 		</h3>
 	
 
@@ -316,11 +345,14 @@
   <div class="row">
 	
 	
-		<p>打包后由于路径不对，导致资源文件加载不到，需要调整：</p>
-<p>1.config&#x2F;index.js 修改以下两个地方</p>
+		<p>先看<a href="https://2x.antdv.com/components/icon-cn" title="" target="">官方文档</a><br>直接点击Outlined栏相应的图标会自动将图标名称复制到你的剪切板上,这里我们点击一个类似菜单的图标：<menu-fold-outlined /></p>
+<p>通常我们会这样去使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;menu-fold-outlined&quot;</span>&gt;&lt;/a-icon&gt;</span><br></pre></td></tr></table></figure>
+<p>但是并不会显示出来</p>
+<p>正确的用法应该是：我们在调用的时候标签要去掉分类词</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue2/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue16/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -330,8 +362,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-03 </div>
-			<div class="article-title"><a href="/2022/10/03/hexo1/" title="为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。">如何设置hexo首页只显示部分摘要而不是全部内容？</a></div>						
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue15/" >Ant Design Vue 菜单（Menu）的用法介绍</a></div>						
 		</h3>
 	
 
@@ -340,13 +372,10 @@
   <div class="row">
 	
 	
-		<h2 id="实现的方法有两种"><a href="#实现的方法有两种" class="headerlink" title="实现的方法有两种"></a>实现的方法有两种</h2><h3 id="方法1：添加概述（description）-属性"><a href="#方法1：添加概述（description）-属性" class="headerlink" title="方法1：添加概述（description） 属性"></a>方法1：添加概述（description） 属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">description:  为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。</span><br></pre></td></tr></table></figure>
-<p>这种方法比较繁琐，因为这种情况下我们并不会花费太多的时间去写描述，由此会降低我们文章的质量。</p>
-<h3 id="方法2：添加文章阶段特性"><a href="#方法2：添加文章阶段特性" class="headerlink" title="方法2：添加文章阶段特性"></a>方法2：添加文章阶段特性</h3><p>在我们需要隐藏内容的起始行添加以下内容即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+		<h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
 	
 	</div>
-  <a type="button" href="/2022/10/03/hexo1/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue15/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -356,8 +385,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-09-29 </div>
-			<div class="article-title"><a href="/2022/09/29/vue1/" title="此篇文章信息来源于自己实践查阅资料所得。">封装axios，添加拦截器</a></div>						
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue14/" title="注意：以下三个方案中，方案一，方案二皆为不兼容IE【网站无法访问】的失败方案；方案三为兼容IE的可行方案；">Vue中引入highlight.js实现代码高亮，兼容IE</a></div>						
 		</h3>
 	
 
@@ -366,14 +395,18 @@
   <div class="row">
 	
 	
-		<h3 id="1-安装axios"><a href="#1-安装axios" class="headerlink" title="1.安装axios"></a>1.安装axios</h3>
+		<p>【方案一】</p>
+<p>根据highlight.js官网的介绍，我们在main.js文件中通过import的方式引入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import hljs from <span class="string">&quot;highlight.js&quot;</span>;</span><br><span class="line">import <span class="string">&quot;highlight.js/styles/monokai-sublime.css&quot;</span>;</span><br><span class="line">Vue.use(hljs)</span><br></pre></td></tr></table></figure>
+<p>这里用到了富文本框WandEditor，引入高亮；</p>
+<blockquote><p>this.editor.highlight &#x3D; hljs</p>
+</blockquote>
+<p>以上测试环境和打包后在IE上都不兼容，其它浏览器正常运行；</p>
 	
 	</div>
-  <a type="button" href="/2022/09/29/vue1/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue14/#more" class="btn btn-default more">Read More</a>
 </div>
 
-           
-		
            
 		
            
@@ -381,8 +414,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-09-28 </div>
-			<div class="article-title"><a href="/2022/09/28/html1/" >后端返回的数据会带一个换行符（“↵”），前端如何根据该符号进行换行展示</a></div>						
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue13/" >在Vue中引入静态图片</a></div>						
 		</h3>
 	
 
@@ -391,12 +424,46 @@
   <div class="row">
 	
 	
-		<h3 id="方法一：textarea赋值"><a href="#方法一：textarea赋值" class="headerlink" title="方法一：textarea赋值"></a>方法一：textarea赋值</h3><p>　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。</p>
-<h3 id="方法二：使用v-html输出文本"><a href="#方法二：使用v-html输出文本" class="headerlink" title="方法二：使用v-html输出文本"></a>方法二：使用v-html输出文本</h3><p>　　“↵”符号在html中会识别别为\r,\n等转义字符，所以我们可以使用\r\n去替换（.replace(&#x2F;(\r\n|\n|\r)&#x2F;gm, ‘ &lt; br &#x2F;&gt; ‘)）</p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;span v-html=<span class="string">&quot;detail.replace(/(\r\n|\n|\r)/gm, &#x27;&lt;br /&gt;&#x27;)&quot;</span>&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+		<p>1.将图片放在assets或其某文件下</p>
+<p>2.通过以下两种方法引入</p>
+<p>1).import  img1 from ‘..&#x2F;assets&#x2F;images&#x2F;img1.jpg’</p>
+<p>在data中定义地址变量：pic:img1</p>
+<p>2)直接在data中通过require引入:</p>
+<p>pic: require(“..&#x2F;assets&#x2F;images&#x2F;img1.jpg”) </p>
+
 	
 	</div>
-  <a type="button" href="/2022/09/28/html1/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2022/10/08/vue13/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue12/" >Visual Studio Code常用的扩展插件</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<ol>
+<li><p>Vetur<br>vue 代码?亮插件,vue开发神器</p>
+</li>
+<li><p>Auto Close Tag<br>html?动闭合标签插件</p>
+</li>
+<li><p>Beautify<br>格式化插件</p>
+</li>
+<li><p>Chinese (Simplified) vscode<br>汉化插件</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue12/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -410,6 +477,16 @@
 		<div class="pagination">
 <ul class="pagination">
 	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
+
+        <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+
+		
+		   <li class="next"> <a href="/page/2/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
+        
+	
 </ul>
 </div>
 
@@ -444,7 +521,7 @@
 		<h4>Categories</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>8</span></a></li>
+			<li><a href="/categories/IT/">IT<span>22</span></a></li>
 		
 		</ul>
 	</div>
@@ -455,17 +532,25 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>7</span></a></li>
+			<li><a href="/tags/Vue/">Vue<span>21</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
 			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
 		
 			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -479,23 +564,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2022/10/08/vue7/" ><i class="fa fa-file-o"></i>Vue Router的封装配置</a>
+        <a href="/2022/10/08/vue21/" ><i class="fa fa-file-o"></i>Vue项目中加入百度统计</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue6/" ><i class="fa fa-file-o"></i>Vue错误笔记集合</a>
+        <a href="/2022/10/08/vue20/" ><i class="fa fa-file-o"></i>Vue中UI库Ant Design Vue 回到顶部（...</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue5/" ><i class="fa fa-file-o"></i>cnpm 安装指定版本的脚手架vue-cli</a>
+        <a href="/2022/10/08/vue19/" ><i class="fa fa-file-o"></i>vue项目中使用分享插件social-share</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue4/" ><i class="fa fa-file-o"></i>vue-cli更新</a>
+        <a href="/2022/10/08/vue18/" ><i class="fa fa-file-o"></i>Vue中实现页面刷新的几种方式</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue3/" ><i class="fa fa-file-o"></i>Vue中引入Jquery</a>
+        <a href="/2022/10/08/vue17/" ><i class="fa fa-file-o"></i>Vue中使用AOS动画插件，让你的网页更酷炫</a>
       </li>
     
   </ul>

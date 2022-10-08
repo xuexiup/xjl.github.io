@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Ant Design Vue 菜单（Menu）的用法介绍 | 寒山飞鹰</title>
+  
+  <meta name="author" content="xjl">
+  
+  <meta name="description" content="根据：Ant DesiGN Vue 官网 文档，常用属性参考如下：">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="Ant Design Vue 菜单（Menu）的用法介绍" />
+  <meta property="og:site_name" content="寒山飞鹰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+  
+  <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Ant Design Vue 菜单（Menu）的用法介绍</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
+
+<span id="more"></span>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-menu</span><br><span class="line">      mode=<span class="string">&quot;horizontal&quot;</span></span><br><span class="line">      triggerSubMenuAction=<span class="string">&quot;click&quot;</span></span><br><span class="line">      :overflowedIndicator=<span class="string">&quot;hideico&quot;</span></span><br><span class="line">    &gt;</span><br><span class="line">      &lt;a-menu-item @click=<span class="string">&quot;removekind()&quot;</span>&gt;</span><br><span class="line">        &lt;img class=<span class="string">&quot;loginimg&quot;</span> v-bind:src=<span class="string">&quot;headimg&quot;</span> alt=<span class="string">&quot;&quot;</span> /&gt;</span><br><span class="line">      &lt;a-menu-item&gt;</span><br><span class="line">        &lt;span&gt;</span><br><span class="line">          &lt;audio</span><br><span class="line">            style=<span class="string">&quot;height: 0px; width: 0px&quot;</span></span><br><span class="line">            <span class="built_in">id</span>=<span class="string">&quot;audio&quot;</span></span><br><span class="line">            ref=<span class="string">&quot;audio&quot;</span></span><br><span class="line">            controls</span><br><span class="line">            muted</span><br><span class="line">            :src=<span class="string">&quot;musicsrc&quot;</span></span><br><span class="line">            <span class="built_in">type</span>=<span class="string">&quot;audio/mpeg&quot;</span></span><br><span class="line">          &gt;&lt;/audio&gt;</span><br><span class="line">        &lt;/span&gt;</span><br><span class="line">        &lt;i</span><br><span class="line">          class=<span class="string">&quot;el-icon-caret-left&quot;</span></span><br><span class="line">          @click=<span class="string">&quot;musicplay(2)&quot;</span></span><br><span class="line">          style=<span class="string">&quot;color: white; margin-right: 1em&quot;</span></span><br><span class="line">        &gt;&lt;/i&gt;</span><br><span class="line">        &lt;i</span><br><span class="line">          class=<span class="string">&quot;el-icon-headset&quot;</span></span><br><span class="line">          @click=<span class="string">&quot;musicplay(0)&quot;</span></span><br><span class="line">          style=<span class="string">&quot;color: white; margin-right: 1em&quot;</span></span><br><span class="line">        &gt;&lt;/i&gt;</span><br><span class="line">        &lt;i</span><br><span class="line">          class=<span class="string">&quot;el-icon-caret-right&quot;</span></span><br><span class="line">          @click=<span class="string">&quot;musicplay(1)&quot;</span></span><br><span class="line">          style=<span class="string">&quot;color: white; margin-right: 1em&quot;</span></span><br><span class="line">        &gt;&lt;/i&gt;</span><br><span class="line">        &lt;span v-text=<span class="string">&quot;musicname&quot;</span> class=<span class="string">&quot;musicname&quot;</span>&gt;&lt;/span&gt;</span><br><span class="line">      &lt;/a-menu-item&gt;</span><br><span class="line">      &lt;a-menu-item&gt;</span><br><span class="line">        &lt;a-switch</span><br><span class="line">          checked-children=<span class="string">&quot;Light&quot;</span></span><br><span class="line">          un-checked-children=<span class="string">&quot;Dark&quot;</span></span><br><span class="line">          default-checked</span><br><span class="line">          @click=<span class="string">&quot;toggleDark&quot;</span></span><br><span class="line">        /&gt;</span><br><span class="line">      &lt;/a-menu-item&gt;</span><br><span class="line">      &lt;a-menu-item @click=<span class="string">&quot;writeblog()&quot;</span>&gt;</span><br><span class="line">        &lt;i class=<span class="string">&quot;el-icon-edit-outline&quot;</span>&gt;&lt;/i&gt;&lt;span&gt; 文章发布&lt;/span&gt;</span><br><span class="line">      &lt;/a-menu-item&gt;</span><br><span class="line"></span><br><span class="line">      &lt;a-menu-item @click=<span class="string">&quot;writemessage()&quot;</span>&gt;</span><br><span class="line">        &lt;i class=<span class="string">&quot;el-icon-position&quot;</span>&gt; &lt;/i&gt;</span><br><span class="line">        &lt;span class=<span class="string">&quot;csdot&quot;</span>&gt; 留言板块&lt;/span&gt;</span><br><span class="line">      &lt;/a-menu-item&gt;</span><br><span class="line">      &lt;a-menu-item&gt;</span><br><span class="line">        &lt;a-input-search</span><br><span class="line">          <span class="built_in">id</span>=<span class="string">&quot;searchtxt&quot;</span></span><br><span class="line">          clearable</span><br><span class="line">          placeholder=<span class="string">&quot;Search...&quot;</span></span><br><span class="line">          @search=<span class="string">&quot;onSearch&quot;</span></span><br><span class="line">          class=<span class="string">&quot;border_radius1&quot;</span></span><br><span class="line">        /&gt;</span><br><span class="line">      &lt;/a-menu-item&gt;</span><br><span class="line">    &lt;/a-menu&gt;</span><br></pre></td></tr></table></figure>
+<p>mode:为菜单的呈现方式有3个</p>
+<blockquote><p>vertical：竖直【默认】</p>
+<p>horizontal：水平</p>
+<p>inline：内联</p>
+</blockquote>
+
+<p>theme：主题颜色(light&#x2F;dark)2种，其中默认为： light</p>
+<p>multiple：菜单是否可多选，默认为：false</p>
+<p>selectedKeys(v-model)：当前选中菜单key集合</p>
+<p>style：菜单的样式</p>
+<p>defaultOpenKeys：初始展开菜单key集合</p>
+<p>defaultSelectedKeys：初始选中菜单key集合</p>
+<p>triggerSubMenuAction：导航栏缩放时的图标样式（默认为3个黑色的小圆点）</p>
+<p>使用方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:overflowedIndicator=<span class="string">&quot;hideico&quot;</span></span><br></pre></td></tr></table></figure>
+<p>对应的hideico为一个slot样式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">   <span class="built_in">return</span> &#123;</span><br><span class="line">     headimg: <span class="string">&quot;/static/img/head1.png&quot;</span>,</span><br><span class="line">     musicname: <span class="string">&quot;正在播放:无&quot;</span>,</span><br><span class="line">     palyflag: <span class="literal">false</span>,</span><br><span class="line">     musicindex: 0,</span><br><span class="line">     musicsrc: require(<span class="string">&quot;../assets/music/烟花再美也不及你-三暮雨.mp3&quot;</span>),</span><br><span class="line">     userinfo: &#123; account: <span class="string">&quot;&quot;</span>, password: <span class="string">&quot;&quot;</span> &#125;,</span><br><span class="line">     SelfSearch: <span class="string">&quot;&quot;</span>,</span><br><span class="line">     Islogin: <span class="literal">false</span>,</span><br><span class="line">     dialogFormVisible: <span class="literal">false</span>,</span><br><span class="line">     hideico:&lt;i class=<span class="string">&#x27;el-icon-s-fold&#x27;</span> style=<span class="string">&#x27;border:1px solid white;&#x27;</span>&gt;&lt;/i&gt;</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure>
+<p>这里用的是elementui的一个图标，如果是Ant Design Vue 的icon就是：</p>
+<pre><code class="bash">hideico:&quot;&lt;a-icon type=&#39;menu&#39; /&gt;&quot;
+</code></pre>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2022/10/08/vue16/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2022/10/08/vue14/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">Comments</h2>
+  
+</section> -->
+
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2022-10-08 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>22</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Vue/">Vue<span>21</span></a></li> <li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 xjl
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>
