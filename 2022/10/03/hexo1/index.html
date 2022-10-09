@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>如何设置hexo首页只显示部分摘要而不是全部内容？ | 寒山飞鹰</title>
+  <title>hexo 使用大全 | 寒山飞鹰</title>
   
   <meta name="author" content="xjl">
   
-  <meta name="description" content="为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。">
+  <meta name="description" content="内容来源于官网、实践、搜索">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:title" content="如何设置hexo首页只显示部分摘要而不是全部内容？" />
+  <meta property="og:title" content="hexo 使用大全" />
   <meta property="og:site_name" content="寒山飞鹰" />
 
   
@@ -109,7 +109,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> 如何设置hexo首页只显示部分摘要而不是全部内容？</h1>
+			<h1 class="title title-inverse "> hexo 使用大全</h1>
 		</div>		
 	
 
@@ -129,15 +129,29 @@
 	<div class="mypage">		
 	  
 		 <div class="alert alert-success description">
-			<i class="fa fa-info-circle"></i> <p>为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。</p>
+			<i class="fa fa-info-circle"></i> <p>内容来源于官网、实践、搜索</p>
 			
 		 </div> <!-- alert -->
 	  		
 
-	  <h2 id="实现的方法有两种"><a href="#实现的方法有两种" class="headerlink" title="实现的方法有两种"></a>实现的方法有两种</h2><h3 id="方法1：添加概述（description）-属性"><a href="#方法1：添加概述（description）-属性" class="headerlink" title="方法1：添加概述（description） 属性"></a>方法1：添加概述（description） 属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">description:  为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。</span><br></pre></td></tr></table></figure>
+	  <blockquote><p>1.如何设置hexo首页只显示部分摘要而不是全部内容？</p>
+</blockquote>
+<h2 id="为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。"><a href="#为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。" class="headerlink" title="为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。"></a>为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。</h2><h2 id="实现的方法有两种："><a href="#实现的方法有两种：" class="headerlink" title="实现的方法有两种："></a>实现的方法有两种：</h2><h3 id="方法1：添加概述（description）-属性"><a href="#方法1：添加概述（description）-属性" class="headerlink" title="方法1：添加概述（description） 属性"></a>方法1：添加概述（description） 属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">description:  为了便于检索和页面美观，首页的文章可以显示部分或者隐藏正文内容。</span><br></pre></td></tr></table></figure>
 <p>这种方法比较繁琐，因为这种情况下我们并不会花费太多的时间去写描述，由此会降低我们文章的质量。</p>
 <h3 id="方法2：添加文章阶段特性"><a href="#方法2：添加文章阶段特性" class="headerlink" title="方法2：添加文章阶段特性"></a>方法2：添加文章阶段特性</h3><p>在我们需要隐藏内容的起始行添加以下内容即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>	  
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<blockquote><p>2.如何引入在线代码编辑工具codepen？</p>
+</blockquote>
+
+<h3 id="安装-codepen"><a href="#安装-codepen" class="headerlink" title="安装 codepen"></a>安装 codepen</h3><h2 id="npm-安装："><a href="#npm-安装：" class="headerlink" title="npm 安装："></a>npm 安装：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-codepen --save</span><br></pre></td></tr></table></figure>
+<h2 id="yarn-安装："><a href="#yarn-安装：" class="headerlink" title="yarn 安装："></a>yarn 安装：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add hexo-codepen</span><br></pre></td></tr></table></figure>
+<h3 id="md-语法结构"><a href="#md-语法结构" class="headerlink" title="md 语法结构"></a>md 语法结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codepen userId|anonymous|anon slugHash theme [defaultTab [height [width]]] %&#125;</span><br></pre></td></tr></table></figure>
+<p>userId：对应codepen官网注册的用户id（也可以是直接是github账号）<br>anonymous：data-slug-hash   对应codepen官网生成的示例id<br>theme：主题<br>defaultTab： 默认展示的tab，包括 html,css,result<br>height: 高<br>width： 宽<br>注意这里的宽默认百分之百，高没有默认；如果要修改宽高不要加一个%,否则有误。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codepen xuexiup dyegQKa dark [css,result  [265]] %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实际效果"><a href="#实际效果" class="headerlink" title="实际效果"></a>实际效果</h3><iframe id="cp_embed_dyegQKa" src="//codepen.io/xuexiup/embed/dyegQKa?height=[265]]&theme-id=dark&slug-hash=dyegQKa&default-tab=[css,result" scrolling="no" frameborder="no" height="[265]]" allowTransparency="true" allowfullscreen="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe>
+
+<h3 id="对应可直接引用的html"><a href="#对应可直接引用的html" class="headerlink" title="对应可直接引用的html"></a>对应可直接引用的html</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class=<span class="string">&quot;codepen&quot;</span> data-height=<span class="string">&quot;300&quot;</span> data-default-tab=<span class="string">&quot;html,result&quot;</span> data-slug-hash=<span class="string">&quot;dyegQKa&quot;</span> data-user=<span class="string">&quot;xuexiup&quot;</span> style=<span class="string">&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;</span>&gt;</span><br><span class="line">  &lt;span&gt;See the Pen &lt;a href=<span class="string">&quot;https://codepen.io/xuexiup/pen/dyegQKa&quot;</span>&gt;</span><br><span class="line">  Untitled&lt;/a&gt; by xuexiup (&lt;a href=<span class="string">&quot;https://codepen.io/xuexiup&quot;</span>&gt;@xuexiup&lt;/a&gt;)</span><br><span class="line">  on &lt;a href=<span class="string">&quot;https://codepen.io&quot;</span>&gt;CodePen&lt;/a&gt;.&lt;/span&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script async src=<span class="string">&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>	  
 	</div>
 
 	<!-- recommended posts -->
