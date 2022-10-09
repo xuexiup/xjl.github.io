@@ -1,14 +1,29 @@
 h2 {
-    color: #C09853 !important;   
+    color: #C09853 !important;
 }
 
 h3 {
-     color: #FEFE54 !important; 
+    color: #FEFE54 !important;
 }
-blockquote{
+
+blockquote {
     background-color: #E6F7FF;
     color: #F29766;
-    border-radius: 3px;    
-    border-left:none;
+    border-radius: 3px;
+    border-left: none;
     box-shadow: -2px 2px 2px gray;
+}
+
+.writer-name {
+    color: white;
+}
+
+#login-name-text{
+    color:red !important;
+}
+.i-drop-b{
+    color:red !important;
+}
+.reply-content{
+    color:orange !important;
 }
