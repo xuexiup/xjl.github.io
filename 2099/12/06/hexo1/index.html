@@ -189,7 +189,16 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="keyword">if</span> (theme.livere_uid) &#123; %&gt;</span><br><span class="line">		&lt;%- partial(<span class="string">&#x27;post/livere&#x27;</span>) %&gt;</span><br><span class="line">	  &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 
 <h3 id="6-最后就是部署到github上"><a href="#6-最后就是部署到github上" class="headerlink" title="6.最后就是部署到github上"></a>6.最后就是部署到github上</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-	  
+
+<blockquote><p>6.如何在 hexo 网站中引入图片</p>
+</blockquote>
+
+<h3 id="1-首先安装插件：hexo-renderer-marked"><a href="#1-首先安装插件：hexo-renderer-marked" class="headerlink" title="1.首先安装插件：hexo-renderer-marked"></a>1.首先安装插件：hexo-renderer-marked</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-marked --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-修改-config-yml配置文件"><a href="#2-修改-config-yml配置文件" class="headerlink" title="2.修改_config.yml配置文件"></a>2.修改_config.yml配置文件</h3><p>增加以下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br><span class="line">marked:</span><br><span class="line">  prependRoot: true</span><br><span class="line">  postAsset: true</span><br><span class="line">  </span><br></pre></td></tr></table></figure>  
+<h3 id="3-在项目根据路source文件夹下新建一个文件夹：img"><a href="#3-在项目根据路source文件夹下新建一个文件夹：img" class="headerlink" title="3.在项目根据路source文件夹下新建一个文件夹：img"></a>3.在项目根据路source文件夹下新建一个文件夹：img</h3><p>这个文件夹存图片资源；比如我这里放了一个theme.gif的动态图；</p>
+<h3 id="4-使用方法"><a href="#4-使用方法" class="headerlink" title="4.使用方法"></a>4.使用方法</h3><h2 id="记住我的路径的使用方式相对路径（相对路径）；"><a href="#记住我的路径的使用方式相对路径（相对路径）；" class="headerlink" title="记住我的路径的使用方式相对路径（相对路径）；"></a>记住我的路径的使用方式相对路径（相对路径）；</h2><h2 id="以下这种引入图片的方式也可以修改图片的样式。"><a href="#以下这种引入图片的方式也可以修改图片的样式。" class="headerlink" title="以下这种引入图片的方式也可以修改图片的样式。"></a>以下这种引入图片的方式也可以修改图片的样式。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">&quot;/img/theme.gif&quot;</span>&gt;&lt;/img&gt;</span><br></pre></td></tr></table></figure>	  
 	</div>
 
 	<!-- recommended posts -->
