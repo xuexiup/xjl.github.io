@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>per_page 5 | </title>
+  <title>per_page 5 | 寒山飞鹰</title>
   
   <meta name="author" content="南疆">
   
@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:site_name" content="" />
+  <meta property="og:site_name" content="寒山飞鹰" />
 
   
   <meta property="og:image" content="" />
@@ -23,7 +23,7 @@
   
 
   <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
-  <!-- <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css"> -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
 
 
 
@@ -65,7 +65,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-       <a class="navbar-brand" href="/"></a>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
       <div class="collapse navbar-collapse nav-menu">
 		<ul class="nav navbar-nav">
 		  
@@ -108,9 +108,16 @@
   <div class="container">
     <div class="content">
       <div class="page-header page-header-inverse ">
-  <h1 class="title title-inverse ">
-    <!-- <img src="source/images/eagle.gif" alt="" srcset=""> -->
-    </h1>
+  <div style="display: flex;flex-direction:row;flex-wrap:nowrap">
+    <div>
+      <img style="width:100px;height:100px;margin-top:-50px;" src="./img/theme.gif"></img>
+    </div>
+    <div>
+      <h1 class="title title-inverse ">
+        寒山飞鹰
+      </h1>
+    </div>
+  </div>
 </div>
 
 <div class="row page">
@@ -137,7 +144,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue7/" >Vue Router的封装配置</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue24/" title="本文档适用于Vue2的项目创建，不适用于Vue3">Vue 2.x项目完整搭建步骤</a></div>						
 		</h3>
 	
 
@@ -146,115 +153,15 @@
   <div class="row">
 	
 	
-		<p>1.安装（如果在创建项目的时候没有确认安装）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install vue-router --save</span><br></pre></td></tr></table></figure>
-
-<p>之后在src下会生成一个文件夹router，这里我们删除这个文件夹。（安装好就行了，不用它的默认文件夹，我们自己封装）</p>
+		<p>1）安装Node（转淘宝镜像）和2.x版本的vue-cli</p>
+<blockquote><p>安装node后可通过指令：node –version</p>
+<p>查看版本号</p>
+<p>安装vue-cli后可通过指令：vue –version 或 vue -V</p>
+<p>查看版本号</p>
+</blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue7/#more" class="btn btn-default more">更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue6/" >Vue错误笔记集合</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="Vue-is-not-defined"><a href="#Vue-is-not-defined" class="headerlink" title="Vue is not defined"></a>Vue is not defined</h3><p>在使用HTML button：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=<span class="string">&quot;login()&quot;</span>&gt;登录&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<p>出现了错误提示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue is not defined</span><br></pre></td></tr></table></figure>
-
-<p>解决办法：</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue6/#more" class="btn btn-default more">更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue5/" >cnpm 安装指定版本的脚手架vue-cli</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.安装npm</p>
-<p>去Node.js官网下载安装Node.js，npm也就安装上了。</p>
-<p>2.安装国内淘宝镜像，以后就可以通过cnpm代替npm指令，使用国内源，执行效率更高：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue5/#more" class="btn btn-default more">更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue4/" >vue-cli更新</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.卸载旧版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall vue-cli -g  </span><br><span class="line"></span><br><span class="line">或</span><br><span class="line"></span><br><span class="line">yarn global remove vue-cli</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue4/#more" class="btn btn-default more">更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue3/" >Vue中引入Jquery</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.首先在依赖中填写要引入jquery版本信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;@babel/polyfill&quot;</span>: <span class="string">&quot;^7.12.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;ant-design-vue&quot;</span>: <span class="string">&quot;^1.6.5&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;axios&quot;</span>: <span class="string">&quot;^0.20.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;element-ui&quot;</span>: <span class="string">&quot;^2.13.2&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;hexo-helper-live2d&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;jquery&quot;</span>: <span class="string">&quot;^3.6.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;view-design&quot;</span>: <span class="string">&quot;^4.4.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue&quot;</span>: <span class="string">&quot;^2.5.2&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-axios&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-resource&quot;</span>: <span class="string">&quot;^1.5.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-router&quot;</span>: <span class="string">&quot;^3.4.7&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;wangeditor&quot;</span>: <span class="string">&quot;^4.7.10&quot;</span></span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue3/#more" class="btn btn-default more">更多</a>
+  <a type="button" href="/2022/10/08/vue24/#more" class="btn btn-default more">更多</a>
 </div>
 
            
@@ -269,13 +176,13 @@
 <ul class="pagination">
 	 
 		
-    	<li class="prev"><a href="/page/4/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i> 往前</a></li>
+    	<li class="prev"><a href="/page/4/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i> 上一页</a></li>
   		
 
         <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
 
 		
-		   <li class="next"> <a href="/page/6/" class="alignright next">往后<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
+		   <li class="next"> <a href="/page/6/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
         
 	
 </ul>
@@ -323,27 +230,27 @@
 		<h4>所有标签</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
 			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>27</span></a></li>
 		
 			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>27</span></a></li>
+		
 			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
 			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
 		
 			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
 		
 			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -355,6 +262,10 @@
 <div class="widget">
   <h4>最新发布</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2099/12/06/hexo1/"  title="内容来源于官网、实践、搜索" ><i class="fa fa-file-o"></i>hexo 使用大全</a>
+      </li>
     
       <li>
         <a href="/2022/10/08/vue27/" ><i class="fa fa-file-o"></i>Vue 常用的UI组件与框架总结</a>
@@ -370,10 +281,6 @@
     
       <li>
         <a href="/2022/10/08/vue24/"  title="本文档适用于Vue2的项目创建，不适用于Vue3" ><i class="fa fa-file-o"></i>Vue 2.x项目完整搭建步骤</a>
-      </li>
-    
-      <li>
-        <a href="/2022/10/08/vue23/" ><i class="fa fa-file-o"></i>Vue实现通过npm启动和打包时自动切换assetsP...</a>
       </li>
     
   </ul>
