@@ -27,3 +27,7 @@ blockquote {
 .reply-content{
     color:orange !important;
 }
+
+.more:hover{
+    cursor: pointer;
+}
