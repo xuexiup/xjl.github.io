@@ -11,23 +11,41 @@ blockquote {
     color: #F29766;
     border-radius: 3px;
     border-left: none;
-    box-shadow: -2px 2px 2px gray; 
+    box-shadow: -2px 2px 2px gray;
 }
 
 .writer-name {
     color: white;
 }
 
-#login-name-text{
-    color:red !important;
-}
-.i-drop-b{
-    color:red !important;
-}
-.reply-content{
-    color:orange !important;
+#login-name-text {
+    color: red !important;
 }
 
-.more:hover{
+.i-drop-b {
+    color: red !important;
+}
+
+.reply-content {
+    color: orange !important;
+}
+
+.more:hover {
     cursor: pointer;
+}
+
+.reply-content {
+    color: orange !important;
+}
+
+.reply-content p {
+    color: orange !important;
+}
+
+#list {
+    background-color: white !important;
+}
+
+.reply-wrapper {
+    background-color: white !important;
 }
