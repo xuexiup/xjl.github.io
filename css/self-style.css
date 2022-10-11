@@ -1,9 +1,33 @@
 h2 {
     color: #C09853 !important;
+    overflow-x: scroll;
+    word-wrap: break-word !important;
+}
+
+.headerlink {
+    word-break: break-all !important;
 }
 
 h3 {
     color: #FEFE54 !important;
+}
+
+
+.container{
+    /* padding:10px;           */
+}
+.navbar-header{
+    margin-right:0px !important; 
+    line-height:20px !important ;   
+}
+.icon-bar{    
+    height:4px !important;
+}
+.content {    
+    margin: 0px;
+    width: 100%;
+    padding:10px;
+    margin-top:1.5em;
 }
 
 blockquote {
@@ -49,3 +73,14 @@ blockquote {
 .reply-wrapper {
     background-color: white !important;
 }
+
+/* h2,
+h3 {
+    overflow-wrap: break-word !important;
+    word-break:break-all !important;
+}
+
+a {
+    overflow-wrap: break-word !important;
+    word-break:break-all !important;
+} */
