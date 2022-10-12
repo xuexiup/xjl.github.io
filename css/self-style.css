@@ -40,42 +40,6 @@ blockquote {
     box-shadow: -2px 2px 2px gray;
 }
 
-.writer-name {
-    color: white;
-}
-
-#login-name-text {
-    color: red !important;
-}
-
-.i-drop-b {
-    color: red !important;
-}
-
-.reply-content {
-    color: orange !important;
-}
-
-.more:hover {
-    cursor: pointer;
-}
-
-.reply-content {
-    color: orange !important;
-}
-
-.reply-content p {
-    color: orange !important;
-}
-
-#list {
-    background-color: white !important;
-}
-
-.reply-wrapper {
-    background-color: white !important;
-}
-
 
 @media screen and (max-width: 68px) {
     h2 {
@@ -102,6 +66,111 @@ h3::after {
     content: none;
 }
 
-/* .more{
+/*修改样式--begin*/
+
+body {
+    background-color: #E9E9E9;
+    color: #31332E !important;
+}
+
+.navbar {
+    background-color: #607339 !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar li a {
+    color: white !important;
+}
+.navbar-brand:hover,.navbar li a:Hover{
+    color:#607339 !important;
+    background-color: white !important;
+
+}
+
+.widget h4 {
+    color: #31332E;
+}
+
+
+footer a {
+    color: #7AA621 !important;
+}
+
+footer a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.list-unstyled li a {
+    color: black
+}
+
+blockquote {
+    background-color: white;
+    color: #F29766;
+    border-radius: 3px;
+    border-left: none;
+    box-shadow: none;
+}
+
+h3 {
+    color: black !important;
+}
+
+
+.widget {
+    background-color: #EAF2DA;
+}
+
+.widget {
+    background-color: white;
+    padding-left: .5em;
+}
+
+.tag_box li a {
+    background-color: #EAF2DA;
+}
+
+.widget li a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    color: black;
+}
+
+.slogan {
+    color: #7AA621;
+    text-shadow: 1px -1px rgba(0, 0, 0, .05);
+}
+
+.article-title a {
+    color: rgba(0, 0, 0, .75);
+}
+
+.article-title a:hover {
+    background-color: transparent;
+}
+
+.title {
+    height: 50px;
+    line-height: 50px !important;
+    color: #7AA621 !important;    
+}
+
+
+.more {
     float: right;
-} 
+}
+.st-search-input{
+    background-color: white !important;
+    height: 35px;
+    border:1px groove #7AA621;
+    padding-left: 2px;
+}
+.st-search-input:focus{
+    box-shadow: 1px 2px gray;
+}
+
+/*修改样式end*/
