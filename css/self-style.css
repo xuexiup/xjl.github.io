@@ -1,8 +1,7 @@
 h2 {
     color: #C09853 !important;
-    overflow-x: scroll;
-    word-wrap: break-word !important;
 }
+
 
 .headerlink {
     word-break: break-all !important;
@@ -13,21 +12,24 @@ h3 {
 }
 
 
-.container{
-    padding:10px;
+.container {
+    padding: 10px;
 }
-.navbar-header{
-    margin-right:0px !important; 
-    line-height:20px !important ;   
+
+.navbar-header {
+    margin-right: 0px !important;
+    line-height: 20px !important;
 }
-.icon-bar{    
-    height:4px !important;
+
+.icon-bar {
+    height: 4px !important;
 }
-.content {    
+
+.content {
     margin: 0px;
     width: 100%;
-    padding:10px;
-    margin-top:1.5em;
+    padding: 10px;
+    margin-top: 1.5em;
 }
 
 blockquote {
@@ -74,13 +76,9 @@ blockquote {
     background-color: white !important;
 }
 
-/* h2,
-h3 {
-    overflow-wrap: break-word !important;
-    word-break:break-all !important;
-}
 
-a {
-    overflow-wrap: break-word !important;
-    word-break:break-all !important;
-} */
+@media screen and (max-width: 68px) {
+    h2 {
+        overflow-x: scroll;
+    }
+}

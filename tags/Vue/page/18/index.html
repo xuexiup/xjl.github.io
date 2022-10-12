@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   
-  <title>per_page 18 | Vue | 寒山飞鹰</title>
+  <title>第 18 页 | Vue | 寒山飞鹰</title>
   
   <meta name="author" content="南疆">
+  
+  <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -144,7 +146,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> getIteminfo(<span class="built_in">id</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">id</span> == null) <span class="built_in">id</span> = getPara();//获取页面参数</span><br><span class="line"></span><br><span class="line">    var item_options = [];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> await axios(&#123;</span><br><span class="line"></span><br><span class="line">        url: dev_proxyftpname + <span class="string">&quot;/api/findOneById&quot;</span>,</span><br><span class="line"></span><br><span class="line">        method: <span class="string">&quot;post&quot;</span>,</span><br><span class="line"></span><br><span class="line">        data: JSON.stringify(&#123; <span class="built_in">id</span>: <span class="built_in">id</span> &#125;),</span><br><span class="line"></span><br><span class="line">        headers: &#123; <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span> &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="built_in">timeout</span>: 1000 * 30,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">        .<span class="keyword">then</span>((res) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (res.data) &#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (res.data.data != null) &#123;</span><br><span class="line"></span><br><span class="line">                    <span class="built_in">return</span> res.data.data;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue10/#more" class="btn btn-default more">更多</a>
+  <a type="button" href="/2022/10/08/vue10/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -180,7 +182,7 @@
 			
   <div id="site_search">
    <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
    </div>  
   <div id="local-search-result"></div>
   </div>
@@ -205,30 +207,30 @@
 		
 			
 	<div class="widget">
-		<h4>所有标签</h4>
+		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
+			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
+		
 			<li><a href="/tags/Vue/">Vue<span>27</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
 			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -238,7 +240,7 @@
 		
 			
 <div class="widget">
-  <h4>最新发布</h4>
+  <h4>最新文章</h4>
   <ul class="entry list-unstyled">
     
       <li>
@@ -267,7 +269,7 @@
 		
 			
 <div class="widget">
-	<h4>友链</h4>
+	<h4>链接</h4>
 	<ul class="blogroll list-unstyled">
 	
 		<li><i class="fa fa-github-alt"></i><a href="https://www.romanticlife.top" title="之郎的个人博客空间" target="_blank"]);">月落晨星</a></li>
