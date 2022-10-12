@@ -34,14 +34,14 @@ h3 {
 
 blockquote {
     background-color: #E6F7FF;
-    color: #F29766;
+    color: #F29766;    
     border-radius: 3px;
     border-left: none;
     box-shadow: -2px 2px 2px gray;
 }
 
 
-@media screen and (max-width: 68px) {
+@media screen and (max-width: 768px) {
     h2 {
         overflow-x: scroll;
     }
@@ -84,8 +84,10 @@ body {
 .navbar li a {
     color: white !important;
 }
-.navbar-brand:hover,.navbar li a:Hover{
-    color:#607339 !important;
+
+.navbar-brand:hover,
+.navbar li a:Hover {
+    color: #607339 !important;
     background-color: white !important;
 
 }
@@ -108,12 +110,12 @@ footer a:hover {
     color: black
 }
 
-blockquote {
-    background-color: white;
-    color: #F29766;
+blockquote {        
     border-radius: 3px;
     border-left: none;
-    box-shadow: none;
+    box-shadow: none;    
+    color:black;
+    border:1px solid rgba(0,0,0,.05);    
 }
 
 h3 {
@@ -156,21 +158,31 @@ h3 {
 .title {
     height: 50px;
     line-height: 50px !important;
-    color: #7AA621 !important;    
+    color: #7AA621 !important;
 }
 
 
 .more {
     float: right;
 }
-.st-search-input{
+
+.st-search-input {
     background-color: white !important;
     height: 35px;
-    border:1px groove #7AA621;
-    padding-left: 2px;
+    border: 1px solid rgba(0, 0, 0, .05);
+    padding-left: 5px;
 }
-.st-search-input:focus{
-    box-shadow: 1px 2px gray;
+
+.st-search-input:focus {
+    box-shadow: 0px 2px gray;
 }
+
+.content {
+    background-color: white;    
+}
+
+
+
+
 
 /*修改样式end*/
