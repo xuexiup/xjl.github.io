@@ -13,7 +13,12 @@ h3 {
 
 
 .container {
-    padding: 10px;
+    padding: 0px;
+}
+
+#main-nav .container {
+    height: 40px;    
+    padding-top:8px;
 }
 
 .navbar-header {
@@ -45,6 +50,9 @@ blockquote {
 @media screen and (max-width: 768px) {
     h2 {
         overflow-x: scroll;
+    }
+    body{
+        background-color: white !important;
     }
 }
 
@@ -121,10 +129,10 @@ h3 {
 
 .widget {
     background-color: white;
-    padding-left: .5em;           
+    padding-left: .5em;
 }
 
-.widget h4 {    
+.widget h4 {
     text-shadow: -2px -2px rgba(0, 0, 0, .025);
 }
 
@@ -225,6 +233,11 @@ p a:hover {
 .row h4 a:hover {
     background-color: transparent;
     text-decoration: underline;
+}
+
+.navbar-toggle {
+    border: 2px solid white !important;
+    padding: 1px;
 }
 
 /*修改样式end*/
