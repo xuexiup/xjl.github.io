@@ -82,3 +82,26 @@ blockquote {
         overflow-x: scroll;
     }
 }
+
+:not(.fa) {
+    /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 微软雅黑; */
+    /* font-family: Trebuchet MS; */
+    /* font-family: Tahoma;
+    font-family: Verdana; */
+    /* font-family: Helvetica; */
+    /* font-family: Arial; */
+    font-family: Lucida Family;
+}
+
+h3::before {
+    content: none;
+}
+
+h3::after {
+    content: none;
+}
+
+/* .more{
+    float: right;
+} 
