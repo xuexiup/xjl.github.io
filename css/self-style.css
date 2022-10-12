@@ -34,10 +34,11 @@ h3 {
 
 blockquote {
     background-color: #E6F7FF;
-    color: #F29766;    
+    color: #F29766;
     border-radius: 3px;
     border-left: none;
     box-shadow: -2px 2px 2px gray;
+    background-color: rgba(0, 0, 0, .025);
 }
 
 
@@ -110,12 +111,12 @@ footer a:hover {
     color: black
 }
 
-blockquote {        
+blockquote {
     border-radius: 3px;
     border-left: none;
-    box-shadow: none;    
-    color:black;
-    border:1px solid rgba(0,0,0,.05);    
+    box-shadow: none;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, .05);
 }
 
 h3 {
@@ -149,10 +150,13 @@ h3 {
 
 .article-title a {
     color: rgba(0, 0, 0, .75);
+    text-shadow: -2px -2px #E9E9E9;
 }
 
 .article-title a:hover {
     background-color: transparent;
+    padding-left: 1px;
+    text-decoration: underline;
 }
 
 .title {
@@ -178,11 +182,23 @@ h3 {
 }
 
 .content {
-    background-color: white;    
+    background-color: white;
 }
 
+.page-header {
+    border-bottom: 3px dotted rgba(0, 0, 0, .2);
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+}
 
+#gotop {
+    background-color: #00AA00;
+}
 
+#gotop span:hover {
+    color: white;
+}
 
 
 /*修改样式end*/
