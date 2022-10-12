@@ -200,5 +200,35 @@ h3 {
     color: white;
 }
 
+.listing-item span a {
+    color: black;
+}
+
+.listing-item span a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #E5975C;
+}
+
+p a {
+    color: #AA5500;
+}
+
+p a:hover {
+    background-color: transparent;
+}
+
+.row h4 {
+    color: #00AA00;
+}
+
+.row h4 a {
+    color: #AA5500;
+}
+
+.row h4 a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
 
 /*修改样式end*/
