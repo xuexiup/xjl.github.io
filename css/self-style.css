@@ -93,11 +93,6 @@ body {
 
 }
 
-.widget h4 {
-    color: #31332E;
-}
-
-
 footer a {
     color: #7AA621 !important;
 }
@@ -125,13 +120,14 @@ h3 {
 
 
 .widget {
-    background-color: #EAF2DA;
+    background-color: white;
+    padding-left: .5em;           
 }
 
-.widget {
-    background-color: white;
-    padding-left: .5em;
+.widget h4 {    
+    text-shadow: -2px -2px rgba(0, 0, 0, .025);
 }
+
 
 .tag_box li a {
     background-color: #EAF2DA;
