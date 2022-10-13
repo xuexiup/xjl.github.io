@@ -17,8 +17,8 @@ h3 {
 }
 
 #main-nav .container {
-    height: 40px;    
-    padding-top:8px;
+    height: 40px;
+    padding-top: 8px;
 }
 
 .navbar-header {
@@ -51,8 +51,30 @@ blockquote {
     h2 {
         overflow-x: scroll;
     }
-    body{
+
+    body {
         background-color: white !important;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 120%;
+        padding-left: 1em;
+    }
+
+    .navbar-nav li {
+        padding: .5em;
+        padding-bottom: .5em;
+    }
+
+    .navbar-nav li:first-child {
+        padding-top: 1em;
+    }
+
+    .navbar-nav li:last-child {
+        padding-bottom: 1em;
     }
 }
 
@@ -112,6 +134,10 @@ footer a:hover {
 
 .list-unstyled li a {
     color: black
+}
+
+.navbar-nav li {
+    background-color: #607339;
 }
 
 blockquote {
@@ -212,6 +238,7 @@ h3 {
     background-color: transparent;
     text-decoration: underline;
     color: #E5975C;
+    padding-left: 1px;
 }
 
 p a {
@@ -238,6 +265,20 @@ p a:hover {
 .navbar-toggle {
     border: 2px solid white !important;
     padding: 1px;
+}
+
+tr td a {
+    color: #E5A4BB;
+}
+
+* {
+    /* cursor: url(../assets/img/mouse.png), auto; */
+    transition: height 1s ease-in, background-color 1s ease-in, filter 1s ease-in, height .5s ease-out, width .5s ease-out, box-shadow .3s ease-out, color .1s ease-in, margin-left .3s ease-out, margin.3s ease-out, padding.3s ease-out;
+    ;
+}
+
+.meta-widget .fa {
+    color: #E5975C;
 }
 
 /*修改样式end*/
