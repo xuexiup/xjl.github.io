@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>MongoDB 常用的数据库命令 | 寒山飞鹰</title>
+  
+  <meta name="author" content="南疆">
+  
+  <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
+  
+  
+  <meta name="keywords" content="MongoDB、数据库">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="MongoDB 常用的数据库命令" />
+  <meta property="og:site_name" content="寒山飞鹰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有发表记录">
+			  <i class="fa fa-archive"></i>档案
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/note" title="我的速记">
+			  <i class="fa fa-user"></i>速记
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/message" title="messagebord">
+			  <i class="fa fa-book"></i>访客留言
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="关于我">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> MongoDB 常用的数据库命令</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h2 id="1、切换数据库-x2F-如果数据库不存在则创建数据库-test是具体的数据库名称"><a href="#1、切换数据库-x2F-如果数据库不存在则创建数据库-test是具体的数据库名称" class="headerlink" title="1、切换数据库&#x2F;如果数据库不存在则创建数据库[test是具体的数据库名称]"></a>1、切换数据库&#x2F;如果数据库不存在则创建数据库[test是具体的数据库名称]</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2、如果你想查看所有数据库，可以使用-show-dbs-命令"><a href="#2、如果你想查看所有数据库，可以使用-show-dbs-命令" class="headerlink" title="2、如果你想查看所有数据库，可以使用 show dbs 命令"></a>2、如果你想查看所有数据库，可以使用 show dbs 命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、MongoDB-删除数据库的语法"><a href="#3、MongoDB-删除数据库的语法" class="headerlink" title="3、MongoDB 删除数据库的语法"></a>3、MongoDB 删除数据库的语法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.dropDatabase()</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、写入一条记录【如果表不存在会自动创建"><a href="#4、写入一条记录【如果表不存在会自动创建" class="headerlink" title="4、写入一条记录【如果表不存在会自动创建"></a>4、写入一条记录【如果表不存在会自动创建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table2.insertOne(&#123; o1: <span class="string">&quot;1&quot;</span> &#125;)</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="5、写入多条记录"><a href="#5、写入多条记录" class="headerlink" title="5、写入多条记录"></a>5、写入多条记录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.insertMany([&#123; o1: <span class="string">&quot;4&quot;</span> &#125;, &#123; o1: <span class="string">&quot;5&quot;</span>, o2: <span class="string">&quot;6&quot;</span> &#125;, &#123; o2: <span class="string">&quot;7&quot;</span> &#125;])</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、查询所有"><a href="#6、查询所有" class="headerlink" title="6、查询所有"></a>6、查询所有</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.find()</span><br></pre></td></tr></table></figure>
+
+<h2 id="7、查找指定条件的记录-field（字段）o1-值-为”3”"><a href="#7、查找指定条件的记录-field（字段）o1-值-为”3”" class="headerlink" title="7、查找指定条件的记录[field（字段）o1 值 为”3”]"></a>7、查找指定条件的记录[field（字段）o1 值 为”3”]</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.find(&#123; o1: <span class="string">&quot;3&quot;</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="8、查找出符合前者条件的一条记录，然后以后者替换前者"><a href="#8、查找出符合前者条件的一条记录，然后以后者替换前者" class="headerlink" title="8、查找出符合前者条件的一条记录，然后以后者替换前者"></a>8、查找出符合前者条件的一条记录，然后以后者替换前者</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.replaceOne(&#123; o1: <span class="string">&quot;1&quot;</span> &#125;, &#123; o1: <span class="string">&quot;3&quot;</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="9、MongoDB-使用-update-和-save-方法来更新集合中的文档。"><a href="#9、MongoDB-使用-update-和-save-方法来更新集合中的文档。" class="headerlink" title="9、MongoDB 使用 update() 和 save() 方法来更新集合中的文档。"></a>9、MongoDB 使用 update() 和 save() 方法来更新集合中的文档。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.update(&#123; o1: <span class="string">&quot;1&quot;</span> &#125;, &#123; <span class="variable">$set</span>: &#123; o1: <span class="string">&quot;mongodb&quot;</span> &#125; &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="10、写入文档"><a href="#10、写入文档" class="headerlink" title="10、写入文档"></a>10、写入文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db.table3.insert(&#123;</span><br><span class="line">    title: <span class="string">&#x27;mongodb教程&#x27;</span>,</span><br><span class="line">    description: <span class="string">&#x27;一个nosql数据库&#x27;</span>,</span><br><span class="line">    by: <span class="string">&#x27;菜鸟教程&#x27;</span>,</span><br><span class="line">    url: <span class="string">&#x27;http://www.runoob.com&#x27;</span>,</span><br><span class="line">    tags: [<span class="string">&#x27;mongodb&#x27;</span>, <span class="string">&#x27;database&#x27;</span>, <span class="string">&#x27;NoSQL&#x27;</span>],</span><br><span class="line">    likes: 100</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="11、将数据定义成一个变量，然后insert"><a href="#11、将数据定义成一个变量，然后insert" class="headerlink" title="11、将数据定义成一个变量，然后insert"></a>11、将数据定义成一个变量，然后insert</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">document = (&#123;</span><br><span class="line">    title: <span class="string">&#x27;mongodb教程&#x27;</span>,</span><br><span class="line">    description: <span class="string">&#x27;一个nosql数据库&#x27;</span>,</span><br><span class="line">    by: <span class="string">&#x27;菜鸟教程&#x27;</span>,</span><br><span class="line">    url: <span class="string">&#x27;http://www.runoob.com&#x27;</span>,</span><br><span class="line">    tags: [<span class="string">&#x27;mongodb&#x27;</span>, <span class="string">&#x27;database&#x27;</span>, <span class="string">&#x27;NoSQL&#x27;</span>],</span><br><span class="line">    likes: 100</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">db.table3.insert(document);</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="12、从集合中查询特定数据"><a href="#12、从集合中查询特定数据" class="headerlink" title="12、从集合中查询特定数据"></a>12、从集合中查询特定数据</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.table1.find(&#123; o1: <span class="string">&#x27;mongodb&#x27;</span> &#125;)</span><br><span class="line">//db.table3.find().pretty()</span><br></pre></td></tr></table></figure>
+
+<h2 id="13、从集合中删除某文档"><a href="#13、从集合中删除某文档" class="headerlink" title="13、从集合中删除某文档"></a>13、从集合中删除某文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.deleteOne(&#123; o1: <span class="string">&#x27;7&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="14、删除集合中所有的文档"><a href="#14、删除集合中所有的文档" class="headerlink" title="14、删除集合中所有的文档"></a>14、删除集合中所有的文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table2.deleteMany(&#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="15、filter-查询过滤文档"><a href="#15、filter-查询过滤文档" class="headerlink" title="15、filter 查询过滤文档"></a>15、filter 查询过滤文档</h2><h2 id="16、删除集合中符合条件的所有文档"><a href="#16、删除集合中符合条件的所有文档" class="headerlink" title="16、删除集合中符合条件的所有文档"></a>16、删除集合中符合条件的所有文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.deleteMany(&#123; o1: <span class="string">&#x27;5&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="17、删除单个文档或与指定过滤器匹配的所有文档。"><a href="#17、删除单个文档或与指定过滤器匹配的所有文档。" class="headerlink" title="17、删除单个文档或与指定过滤器匹配的所有文档。"></a>17、删除单个文档或与指定过滤器匹配的所有文档。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.remove(&#123; o2: <span class="string">&#x27;7&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="18、删除指定order排序的第一个文档"><a href="#18、删除指定order排序的第一个文档" class="headerlink" title="18、删除指定order排序的第一个文档"></a>18、删除指定order排序的第一个文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table3.findOneAndDelete(&#123; url: <span class="string">&#x27;http://www.runoob.com&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="19、批量写入、更新、删除操作【有序、无序】-默认情况下，bulkWrite-执行有序的写入。"><a href="#19、批量写入、更新、删除操作【有序、无序】-默认情况下，bulkWrite-执行有序的写入。" class="headerlink" title="19、批量写入、更新、删除操作【有序、无序】;默认情况下，bulkWrite() 执行有序的写入。"></a>19、批量写入、更新、删除操作【有序、无序】;默认情况下，bulkWrite() 执行有序的写入。</h2><h3 id="要指定无序的写入，请在选项文档中设置ordered-false"><a href="#要指定无序的写入，请在选项文档中设置ordered-false" class="headerlink" title="要指定无序的写入，请在选项文档中设置ordered:false"></a>要指定无序的写入，请在选项文档中设置ordered:false</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">    db.table1.bulkWrite(</span><br><span class="line">        [</span><br><span class="line">            &#123;</span><br><span class="line">                insertOne: &#123;</span><br><span class="line">                    <span class="string">&quot;document&quot;</span>:</span><br><span class="line">                        &#123;</span><br><span class="line">                            o1: <span class="string">&quot;4&quot;</span></span><br><span class="line">                        &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                updateOne: &#123;</span><br><span class="line">                    <span class="string">&quot;filter&quot;</span>: &#123; o1: <span class="string">&quot;4&quot;</span> &#125;,</span><br><span class="line">                    <span class="string">&quot;update&quot;</span>: &#123; o1: <span class="string">&#x27;3&#x27;</span> &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                deleteOne: &#123;</span><br><span class="line">                    <span class="string">&quot;filter&quot;</span>: &#123; o1: <span class="string">&#x27;4&#x27;</span> &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                replaceOne: &#123;</span><br><span class="line">                    <span class="string">&quot;filter&quot;</span>: &#123; o1: <span class="string">&#x27;3&#x27;</span> &#125;,</span><br><span class="line">                    <span class="string">&quot;replacement&quot;</span>: &#123; o1: <span class="string">&#x27;5&#x27;</span>, o2: <span class="string">&#x27;6&#x27;</span> &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line">catch (e) &#123; <span class="built_in">print</span>(e) &#125;</span><br><span class="line">db.table1.insertOne(&#123; o3: <span class="string">&#x27;这是一句话&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="20、使用-text查询操作符对具有文本索引的集合执行文本索引。"><a href="#20、使用-text查询操作符对具有文本索引的集合执行文本索引。" class="headerlink" title="20、使用$text查询操作符对具有文本索引的集合执行文本索引。"></a>20、使用$text查询操作符对具有文本索引的集合执行文本索引。</h2><h3 id="查询后排序：sort-1（升序）-x2F-1-降序"><a href="#查询后排序：sort-1（升序）-x2F-1-降序" class="headerlink" title="查询后排序：sort:1（升序）&#x2F;	-1(降序)"></a>查询后排序：sort:1（升序）&#x2F;	-1(降序)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.find().<span class="built_in">sort</span>(&#123;o1:1&#125;)</span><br></pre></td></tr></table></figure>	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2022/10/13/mongodb2/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
+
+		
+		   <li class="next"><a href="/2022/10/13/ui3/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">留言</h2>
+  
+</section> -->
+
+
+
+	
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2022-10-13 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>64</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li> <li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

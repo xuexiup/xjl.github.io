@@ -142,7 +142,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css4/" >css中的块元素与行内（内联元素）</a></div>						
+			<div class="article-title"><a href="/2022/10/13/ui3/" >el-dialog 问题</a></div>						
 		</h3>
 	
 
@@ -151,16 +151,11 @@
   <div class="row">
 	
 	
-		<h3 id="块元素–常见元素div"><a href="#块元素–常见元素div" class="headerlink" title="块元素–常见元素div"></a>块元素–常见元素div</h3><blockquote><p>1.独占一行<br>2.默认宽度是父元素的宽度（即撑满父元素）<br>3.默认高度由其内容撑开，所以无内容时候（若没有其它样式，height…）就消失了</p>
-</blockquote>
-
-<h3 id="行内元素–常见元素span"><a href="#行内元素–常见元素span" class="headerlink" title="行内元素–常见元素span"></a>行内元素–常见元素span</h3><blockquote><p>1.只占本身内容大小（设定width,height不会生效）<br>如果源代码两个span，换行排列（存在换行），而浏览器对其识别成一个空格出现两个元素水平排列，之间存在缝隙。<br>2.多个行内元素渲染呈现从左往右依次排列，无法容纳时自动换行<br>3.默认宽高都是由内容撑开（行内元素是无法设置宽高的，若无内容区就消失了）</p>
-</blockquote>
-
-
+		<h3 id="1-弹出层被遮罩挡住"><a href="#1-弹出层被遮罩挡住" class="headerlink" title="1.弹出层被遮罩挡住"></a>1.弹出层被遮罩挡住</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:modal-append-to-body=<span class="string">&quot;false&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-点击取消或确定，弹窗关闭后会再次打开一下，又关闭"><a href="#2-点击取消或确定，弹窗关闭后会再次打开一下，又关闭" class="headerlink" title="2.点击取消或确定，弹窗关闭后会再次打开一下，又关闭"></a>2.点击取消或确定，弹窗关闭后会再次打开一下，又关闭</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v-if=<span class="string">&quot;dialogFormVisible&quot;</span></span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/13/css4/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/ui3/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -171,7 +166,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css3/" >css 省略号表示溢出文本</a></div>						
+			<div class="article-title"><a href="/2022/10/13/ui2/" >ElementUI控件el-tree方法renderContent的使用</a></div>						
 		</h3>
 	
 
@@ -180,13 +175,12 @@
   <div class="row">
 	
 	
-		<h2 id="1-先强制一行内显示文本"><a href="#1-先强制一行内显示文本" class="headerlink" title="1.先强制一行内显示文本"></a>1.先强制一行内显示文本</h2><p>white-space: nowrap;</p>
-<h2 id="2-超出部分隐藏"><a href="#2-超出部分隐藏" class="headerlink" title="2.超出部分隐藏"></a>2.超出部分隐藏</h2><p>overflow: hidden;</p>
-<h2 id="3-文字用省略号替代超出的部分"><a href="#3-文字用省略号替代超出的部分" class="headerlink" title="3.文字用省略号替代超出的部分"></a>3.文字用省略号替代超出的部分</h2><p>text-overflow: ellipsis;</p>
-
+		<p>renderContent并不会影响代码中既定tree数据层结构渲染加载；</p>
+<p>这里的作用是根据tree的特定level调整其样式：</p>
+<h2 id="el-tree"><a href="#el-tree" class="headerlink" title="el-tree"></a>el-tree</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tree</span><br><span class="line"></span><br><span class="line">                :render-content=<span class="string">&quot;renderContent&quot;</span></span><br><span class="line"></span><br><span class="line">                :data=<span class="string">&quot;treedata&quot;</span></span><br><span class="line"></span><br><span class="line">                default-expand-all</span><br><span class="line"></span><br><span class="line">                :show-checkbox=<span class="string">&quot;showcheckbox&quot;</span></span><br><span class="line"></span><br><span class="line">                highlight-current</span><br><span class="line"></span><br><span class="line">                node-key=<span class="string">&quot;itemId&quot;</span></span><br><span class="line"></span><br><span class="line">                :expand-on-click-node=<span class="string">&quot;false&quot;</span></span><br><span class="line"></span><br><span class="line">                @node-click=<span class="string">&quot;handleNodeClick&quot;</span></span><br><span class="line"></span><br><span class="line">                :props=<span class="string">&quot;ItemProps&quot;</span></span><br><span class="line"></span><br><span class="line">                v-loading=<span class="string">&quot;ISload&quot;</span></span><br><span class="line"></span><br><span class="line">                ref=<span class="string">&quot;tree&quot;</span></span><br><span class="line"></span><br><span class="line">                @check-change=<span class="string">&quot;itemCheckChange&quot;</span></span><br><span class="line"></span><br><span class="line">                style=<span class="string">&quot;margin-top: 1em;&quot;</span></span><br><span class="line"></span><br><span class="line">              &gt;&lt;/el-tree&gt;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/13/css3/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/ui2/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -197,7 +191,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css2/" >如何用css3画一个冰墩墩</a></div>						
+			<div class="article-title"><a href="/2022/10/13/ui1/" >ElementUI栅格系统布局与偏移</a></div>						
 		</h3>
 	
 
@@ -206,10 +200,11 @@
   <div class="row">
 	
 	
-		<p>文章来源：<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1724607815488021505&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1724607815488021505&amp;wfr=spider&amp;for=pc</a></p>
+		<p>以下内容参照 <a href="https://element.eleme.io/#/zh-CN/component/layout#col-attributes" title="" target="">官方文档</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line"></span><br><span class="line">&lt;el-col</span><br><span class="line">        :xs=<span class="string">&quot;&#123; span: 24, offset: 0 &#125;&quot;</span></span><br><span class="line">        :sm=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :md=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :lg=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :xl=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :xxl=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">      &gt;</span><br><span class="line">&lt;/el-col&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/13/css2/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/ui1/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -220,7 +215,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css1/" >CSS3中特殊字符的用法</a></div>						
+			<div class="article-title"><a href="/2022/10/13/netnote2/" >电脑开启VT的方法</a></div>						
 		</h3>
 	
 
@@ -229,19 +224,12 @@
   <div class="row">
 	
 	
-		<p>首先找出特殊字符的编码，例如：9650 25B2 【正黑三角】  </p>
-<p>使用方法：after(伪类)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;tempble&quot;</span>&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>样式为：</p>
-<blockquote><p>.tempble:after{<br>　　content: “&#x2F;9650 25B2”;&#x2F;&#x2F;特殊字符或形状<br>}</p>
-</blockquote>
-
-
-<p>这便会在样式为tempble的对象后渲染出一个特殊符号。</p>
-
+		<p>
+<a href="https://support.yeshen.com/zh-CN/often/vt" title="" target="">点我查看详情</a>
+</p>
 	
 	</div>
-  <a type="button" href="/2022/10/13/css1/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/netnote2/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -252,7 +240,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/html7/" >HTML5基本元素</a></div>						
+			<div class="article-title"><a href="/2022/10/13/netnote1/" >软件版本号释意</a></div>						
 		</h3>
 	
 
@@ -261,26 +249,13 @@
   <div class="row">
 	
 	
-		<h3 id="New-HTML5-新属性："><a href="#New-HTML5-新属性：" class="headerlink" title="New : HTML5 新属性："></a>New : HTML5 新属性：</h3><blockquote><p>accesskey 设置访问元素的键盘快捷键。</p>
-<p>class 规定元素的类名（classname）</p>
-<p>contenteditableNew 规定是否可编辑元素的内容。</p>
-<p>contextmenuNew 指定一个元素的上下文菜单。当用户右击该元素，出   现上下文菜单 </p>
-<p>data-*New 用于存储页面的自定义数据</p>
-<p>dir 设置元素中内容的文本方向。</p>
-<p>draggableNew 指定某个元素是否可以拖动</p>
-<p>dropzoneNew 指定是否将数据复制，移动，或链接，或删除</p>
-<p>hiddenNew hidden 属性规定对元素进行隐藏。</p>
-<p>id 规定元素的唯一 id</p>
-<p>lang 设置元素中内容的语言代码。</p>
-<p>spellcheckNew 检测元素是否拼写错误</p>
-<p>style 规定元素的行内样式（inline style）</p>
-<p>tabindex 设置元素的 Tab 键控制次序。</p>
-<p>title 规定元素的额外信息（可在工具提示中显示）</p>
-<p>translateNew 指定是否一个元素的值在页面载入时是否需要翻译 </p>
-</blockquote>
+		<h3 id="1、软件版本阶段说明"><a href="#1、软件版本阶段说明" class="headerlink" title="1、软件版本阶段说明"></a>1、软件版本阶段说明</h3><h2 id="Alpha版"><a href="#Alpha版" class="headerlink" title="*Alpha版"></a>*Alpha版</h2><p>此版本表示该软件在此阶段主要是以实现软件功能为主，通常只在软件开发者内部交流，一般而言，该版本软件的Bug较多，需要继续修改。</p>
+<h2 id="Beta版"><a href="#Beta版" class="headerlink" title="*Beta版"></a>*Beta版</h2><p>该版本相对于α版已有了很大的改进，消除了严重的错误，但还是存在着一些缺陷，需要经过多次测试来进一步消除，此版本主要的修改对像是软件的UI。</p>
+<h2 id="RC版"><a href="#RC版" class="headerlink" title="*RC版"></a>*RC版</h2><p>该版本已经相当成熟了，基本上不存在导致错误的BUG，与即将发行的正式版相差无几。</p>
+<h2 id="Release版"><a href="#Release版" class="headerlink" title="*Release版"></a>*Release版</h2><p>该版本意味“最终版本”，在前面版本的一系列测试版之后，终归会有一个正式版本，是最终交付用户使用的一个版本。该版本有时也称为标准版。一般情况下，Release不会以单词形式出现在软件封面上，取而代之的是符号(R)。</p>
 	
 	</div>
-  <a type="button" href="/2022/10/13/html7/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/netnote1/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -338,7 +313,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>55</span></a></li>
+			<li><a href="/categories/IT/">IT<span>64</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -353,48 +328,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/winform/">winform<span>1</span></a></li>
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
 		
 			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
 		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
 		
 			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
 		
-			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+			<li><a href="/tags/winform/">winform<span>1</span></a></li>
 		
 			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
 			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/JavaScript/">JavaScript<span>5</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>29</span></a></li>
+		   <li><a href="/tags">...<span>32</span></a></li>
 		 
 		</ul>
 	</div>
@@ -411,19 +386,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/ui3/" ><i class="fa fa-file-o"></i>el-dialog 问题</a>
+        <a href="/2022/10/13/javascript5/" ><i class="fa fa-file-o"></i>js数组的5种查询方式[find(),findInde...</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/ui2/" ><i class="fa fa-file-o"></i>ElementUI控件el-tree方法renderC...</a>
+        <a href="/2022/10/13/javascript4/" ><i class="fa fa-file-o"></i>Js给数组对象（每个）添加一个新元素/字段并赋值</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/ui1/" ><i class="fa fa-file-o"></i>ElementUI栅格系统布局与偏移</a>
+        <a href="/2022/10/13/javascript3/" ><i class="fa fa-file-o"></i>Vue中使用base64</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/netnote2/" ><i class="fa fa-file-o"></i>电脑开启VT的方法</a>
+        <a href="/2022/10/13/javascript2/" ><i class="fa fa-file-o"></i>Typscript与Javascript的对比</a>
       </li>
     
   </ul>

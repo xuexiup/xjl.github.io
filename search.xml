@@ -25,6 +25,241 @@
     
     
     <entry>
+      <title>js数组的5种查询方式[find(),findIndex(),indexOf(),lastIndexOf(),include()]</title>
+      <link href="/2022/10/13/javascript5/"/>
+      <url>/2022/10/13/javascript5/</url>
+      
+        <content type="html"><![CDATA[<p>1.find() 返回数组中第一个满足条件的数据</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.find((item, index) =&gt; &#123; <span class="built_in">return</span>...&#125;)</span><br></pre></td></tr></table></figure><p>2.findIndex() 返回数组中第一个满足条件的索引(从0开始), 不满足返回-1</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.findIndex((item, index) =&gt; &#123; <span class="built_in">return</span>...&#125;)</span><br></pre></td></tr></table></figure><span id="more"></span><p>3.indexOf() 返回数组中第一个满足条件的索引(从0开始), 不满足返回-1</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.indexOf(searchElement[, fromIndex = 0])</span><br></pre></td></tr></table></figure><p>4.lastIndexOf() 返回数组中最后一个满足条件的索引(从0开始), 不满足返回-1</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.lastIndexOf(searchElement[, fromIndex = arr.length - 1])</span><br></pre></td></tr></table></figure><p>5.include() 判断数组宏是否包含某值，返回 true 或 false</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.includes(searchElement[, fromIndex])</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Js给数组对象（每个）添加一个新元素/字段并赋值</title>
+      <link href="/2022/10/13/javascript4/"/>
+      <url>/2022/10/13/javascript4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-数组-map"><a href="#1-数组-map" class="headerlink" title="1.数组.map"></a>1.数组.map</h2><p>map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。</p><p>map() 方法按照原始数组元素顺序依次处理元素。</p><p>注意： map() 不会对空数组进行检测。</p><p>注意： map() 不会改变原始数组。</p><p>用法：array.map(function(currentValue,index,arr), thisValue)</p><p>currentValue必须。当前元素的值<br>index可选。当前元素的索引值<br>arr可选。当前元素属于的数组对象</p><span id="more"></span><h2 id="2-数组-forEach-方法"><a href="#2-数组-forEach-方法" class="headerlink" title="2.数组.forEach()方法"></a>2.数组.forEach()方法</h2><p>用法：array.forEach(function(currentValue, index, arr), thisValue)</p><p>注意：forEach() 方法用于调用数组的每个元素，并将元素传递给回调函数。</p><p>forEach() 对于空数组是不会执行回调函数的。</p><p>使用举例：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.orderlist.forEach((value, index) =&gt; &#123;</span><br><span class="line">    value[<span class="string">&quot;fmoduleName&quot;</span>] = fmoduleName;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vue中使用base64</title>
+      <link href="/2022/10/13/javascript3/"/>
+      <url>/2022/10/13/javascript3/</url>
+      
+        <content type="html"><![CDATA[<p>1.安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save js-base64</span><br></pre></td></tr></table></figure><p>2.在项目文件中引入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> Base64 = require(<span class="string">&quot;js-base64&quot;</span>).Base64;</span><br></pre></td></tr></table></figure><p>3.使用</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Base64.encode(<span class="string">&#x27;之郎&#x27;</span>) // 5LmL6YOO</span><br><span class="line"></span><br><span class="line">Base64.decode(<span class="string">&#x27;5LmL6YOO&#x27;</span>) // 之郎</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Typscript与Javascript的对比</title>
+      <link href="/2022/10/13/javascript2/"/>
+      <url>/2022/10/13/javascript2/</url>
+      
+        <content type="html"><![CDATA[<p>Typescript（文件后缀名.ts）是Javascript(文件后缀名.js)的超集，可以在ts中使用原生js语法，即向下兼容。<br>Typescript简称“TS”，Javascript简称“JS”</p><span id="more"></span><blockquote><p>TS引入了 js中没有的“类”概念<br>TS中引入了模块的概念，可以把声明、数据、函数和类封装在模块中。<br>TS没有重载概念，TypeScript可使用重载<br>TS对比js基础类型上，增加了 void&#x2F;never&#x2F;any&#x2F;元组&#x2F;枚举&#x2F;以及一些高级类型<br>TS需要静态编译，它提供了强类型与更多面向对象的内容。<br>TS最终仍要编译为弱类型的js文件，基于对象的原生的js，再运行。故ts相较java&#x2F;C#这样天生面向对象语言是有区别和局限的<br>TS是由微软牵头主导的，主要来自C#<br>TS是一个应用程序级的JS开发语言，可以开发或者说更适合开发大型应用。<br>TS是的超集，可以编译成纯JS这个和我们CSS中的Less或者Sass是很像的，<br>我们用更好的代码编写方式来进行编写，最后编译成原生的JS语言。<br>TS跨浏览器、跨操作系统、跨主机、且开源。由于最后编译成了JavaScript所以只要能运行JS的地方，都可以运行我们写的程序，这个设置在node.js里（TypeScript始于JavaScript，终于JavaScript。遵循JavaScript的语法和语义）<br>TS可以重用JS代码，调用流行的JS库。<br>TS提供了类、模块和接口，更易于构建组件和维护。</p></blockquote><h2 id="JS和TS的区别"><a href="#JS和TS的区别" class="headerlink" title="JS和TS的区别"></a>JS和TS的区别</h2><table><thead><tr><th>JS</th><th>TS</th></tr></thead><tbody><tr><td>运行时类型</td><td>静态类型</td></tr><tr><td>程序运行时进行类型检查</td><td>编译期进行类型检查</td></tr><tr><td>开发环境无法提供给帮助</td><td>开发环境能提供丰富的信息</td></tr><tr><td>需要进行大量测试，消耗时间覆盖测试场景，</td><td>大部分检查有语言自身完成</td></tr><tr><td>才能保证代码的覆盖率</td><td></td></tr><tr><td>class扩展较弱</td><td>拥有很强class扩展</td></tr><tr><td>仅支持版本等级较高浏览器</td><td>支持所有的浏览器</td></tr><tr><td>无访问控制权限</td><td>拥有完整的成员访问控制权限</td></tr><tr><td>无高级特性</td><td>静态成员等特性</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table><h2 id="系统设计能力"><a href="#系统设计能力" class="headerlink" title="系统设计能力"></a>系统设计能力</h2><table><thead><tr><th>JS</th><th>TS</th></tr></thead><tbody><tr><td>无</td><td>完备的系统设计能力</td></tr><tr><td>无</td><td>拥有interface接口规范</td></tr><tr><td>无</td><td>拥有abstrace抽象类</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript中 数组的几个用法</title>
+      <link href="/2022/10/13/javascript1/"/>
+      <url>/2022/10/13/javascript1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-array-push"><a href="#1-array-push" class="headerlink" title="1.array.push()"></a>1.array.push()</h2><p>在数组尾部添加新的元素，并返回新的数组长度。</p><h2 id="2-array-unshift"><a href="#2-array-unshift" class="headerlink" title="2.array.unshift()"></a>2.array.unshift()</h2><p>在数组头部添加新的元素，并返回新的数组长度。[IE不支持]</p><h2 id="3-array-pop"><a href="#3-array-pop" class="headerlink" title="3.array.pop()"></a>3.array.pop()</h2><p>删除并返回数组最后一个元素。</p><h2 id="4-array-shift"><a href="#4-array-shift" class="headerlink" title="4.array.shift()"></a>4.array.shift()</h2><p>删除并返回数组第一个元素。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mongodb的下载与安装</title>
+      <link href="/2022/10/13/mongodb4/"/>
+      <url>/2022/10/13/mongodb4/</url>
+      
+        <content type="html"><![CDATA[<p>1.去<a href="https://www.mongodb.com/try/download" title="" target="">Mongodb官网</a>下载安装包，选择Community版本就行</p><p>2.下载后解压【建议不放到C盘，节省C盘空间】</p><p>3.由于Mongodb不会自动创建存放数据以及配置文件和日志等路径，需要我们手动创建文件夹：</p><blockquote><p>1）data:用于存放数据库文件数据，并在其下创建一个名为 db 的文件夹<br>2）log:用于存放日志文件</p></blockquote><p>data以及log文件夹可以是其它名字，文件夹路径也不一定是在mongodb解压的根路径下【配置文件中指定关联】</p><p>这里我是在解压后的bin目录同级创建的以上文件夹。</p><span id="more"></span><p>4.创建配置文件信息，将Mongodb加入Window自启动服务</p><p>在这之前呢我们需要将Mongodb加入计算机环境变量：path的路径，就是解压后的bin目录路径；之后我们可以通过：</p><p>1）在cmd中输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod -dbpath D:\softcommon\mongodb-win32-x86_64-windows-5.0.8\data </span><br></pre></td></tr></table></figure><p>执行此命令，用以指定mongodb数据存放的路径（这个路径为实际创建路径，并非通用）；至此可在浏览器访问：<a href="http://localhost:27017/">http://localhost:27017</a>   （mongodb 默认连接端口27017）</p><p>2）在cmd中输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod -dbpath D:\softcommon\mongodb-win32-x86_64-windows-5.0.8\<span class="built_in">log</span>\mongodb.log</span><br></pre></td></tr></table></figure><p>用于指定日志存放路径。这样访问日志或者出错等日志都会有记录。</p><p>3）最后在bin目录打开cmd输入：Mongo</p><p>就可以进入mongodb数据库，不过这样做每次都要启动一次比较麻烦</p><p>所以我们采用下面的方法：</p><p>创建配置文件信息，将Mongodb加入Window自启动服务</p><p>具体的做法就是：</p><p>在bin目录同级创建一个config文件夹，并在其下创建配置文件脚本：mongo.conf</p><p>脚本信息及含义如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#数据库的路径</span></span><br><span class="line">dbpath=D:\softcommon\mongodb-win32-x86_64-windows-5.0.8\data</span><br><span class="line"><span class="comment">#日志输出文件路径</span></span><br><span class="line">logpath=D:\softcommon\mongodb-win32-x86_64-windows-5.0.8\<span class="built_in">log</span>\mongodb.log</span><br><span class="line"><span class="comment">#错误输出日志采用追加模式</span></span><br><span class="line">logappend=<span class="literal">true</span></span><br><span class="line"><span class="comment">#启用日志文件，默认启用</span></span><br><span class="line">journal=<span class="literal">true</span></span><br><span class="line"><span class="comment">#过滤掉无用的日志信息，若需要调试使用设置为false</span></span><br><span class="line">quiet=<span class="literal">true</span></span><br><span class="line"><span class="comment">#bind ip=0.0.0.0</span></span><br><span class="line"><span class="comment">#端口号默认为27017</span></span><br><span class="line">port=27017</span><br></pre></td></tr></table></figure><p>5.启动Mongodb配置服务</p><p>在bin目录下打开cmd，并输入以下【配置文件路径根据实际情况填充】</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config D:\softcommon\mongodb-win32-x86_64-windows-5.0.8\config\mongo.conf --install -serviceName <span class="string">&quot;MongoDB&quot;</span></span><br></pre></td></tr></table></figure><p>然后回车，将mongodb作为系统服务；</p><p>如何自启动服务这个服务呢？</p><blockquote><p>在cmd中输入热键命令：services.msc</p></blockquote><p>回车，找到我们刚刚创建的名为:MongoDB的服务</p><p>双击选择面板中启动类型：自动</p><p>这样，mongodb服务就可以在电脑每次开机时自启动了</p><p>默认地址为：</p><p><a href="http://127.0.0.1:27017/">http://127.0.0.1:27017</a></p><p>或者</p><p><a href="http://localhost:27017/">http://localhost:27017</a></p><p>这样我们就可以直接通过在cmd 输入:mongo，进行数据库操作了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MongoDB </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Error: couldn&#39;t connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Erro</title>
+      <link href="/2022/10/13/mongodb3/"/>
+      <url>/2022/10/13/mongodb3/</url>
+      
+        <content type="html"><![CDATA[<p>我们在cmd中输入：mongo如果出现错误提示：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: couldn<span class="string">&#x27;t connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Erro</span></span><br></pre></td></tr></table></figure><span id="more"></span><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><blockquote><p>1）在Mongodb安装的根目录bin文件夹同级创建 data文件夹，再在其下创建db文件夹</p><p>2）打开终端执行： mongod</p><p>3）再打开一个终端执行：mongo</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MongoDB </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SQL到MongoDB的映射图表</title>
+      <link href="/2022/10/13/mongodb2/"/>
+      <url>/2022/10/13/mongodb2/</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th>SQL术语&#x2F;概念</th><th>MongoDB术语&#x2F;概念</th></tr></thead><tbody><tr><td>database</td><td><a href="https://docs.mongodb.com/manual/reference/glossary/#term-database">database</a></td></tr><tr><td>table</td><td><a href="https://docs.mongodb.com/manual/reference/glossary/#term-collection">collection</a></td></tr><tr><td>row</td><td>document or BSON document</td></tr><tr><td>column</td><td><a href="https://docs.mongodb.com/manual/reference/glossary/#term-field">field</a></td></tr><tr><td>index</td><td><a href="https://docs.mongodb.com/manual/reference/glossary/#term-index">index</a></td></tr><tr><td>table joins</td><td><a href="https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/#pipe._S_lookup">$lookup, 嵌入文档</a></td></tr><tr><td>primary key （指定任何唯一的列或列组合作为主键。）</td><td><a href="https://docs.mongodb.com/manual/reference/glossary/#term-primary-key">primary key （在MongoDB中，主键自动设置为_id字段。）</a></td></tr><tr><td>aggregation (e.g. group by)</td><td><a href="https://docs.mongodb.com/manual/reference/sql-aggregation-comparison/">aggregation pipeline See the SQL to Aggregation Mapping Chart.</a></td></tr><tr><td>SELECT INTO NEW_TABLE</td><td>$out See the SQL to Aggregation Mapping Chart.</td></tr><tr><td>MERGE INTO TABLE</td><td>$merge (Available starting in MongoDB 4.2) See the SQL to Aggregation Mapping Chart.</td></tr><tr><td>Transactions</td><td><a href="https://docs.mongodb.com/manual/core/transactions/">transactions 在许多情况下，非规范化数据模型（嵌入式文档和数组） 将继续是您数据和用例的最佳选择，而不是多文档事务。 也就是说，在许多情况下，对数据进行适当的建模将最 大程度地减少对多文档交易的需求。</a></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MongoDB </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MongoDB 常用的数据库命令</title>
+      <link href="/2022/10/13/mongodb1/"/>
+      <url>/2022/10/13/mongodb1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、切换数据库-x2F-如果数据库不存在则创建数据库-test是具体的数据库名称"><a href="#1、切换数据库-x2F-如果数据库不存在则创建数据库-test是具体的数据库名称" class="headerlink" title="1、切换数据库&#x2F;如果数据库不存在则创建数据库[test是具体的数据库名称]"></a>1、切换数据库&#x2F;如果数据库不存在则创建数据库[test是具体的数据库名称]</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use <span class="built_in">test</span></span><br></pre></td></tr></table></figure><h2 id="2、如果你想查看所有数据库，可以使用-show-dbs-命令"><a href="#2、如果你想查看所有数据库，可以使用-show-dbs-命令" class="headerlink" title="2、如果你想查看所有数据库，可以使用 show dbs 命令"></a>2、如果你想查看所有数据库，可以使用 show dbs 命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br></pre></td></tr></table></figure><h2 id="3、MongoDB-删除数据库的语法"><a href="#3、MongoDB-删除数据库的语法" class="headerlink" title="3、MongoDB 删除数据库的语法"></a>3、MongoDB 删除数据库的语法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.dropDatabase()</span><br></pre></td></tr></table></figure><h2 id="4、写入一条记录【如果表不存在会自动创建"><a href="#4、写入一条记录【如果表不存在会自动创建" class="headerlink" title="4、写入一条记录【如果表不存在会自动创建"></a>4、写入一条记录【如果表不存在会自动创建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table2.insertOne(&#123; o1: <span class="string">&quot;1&quot;</span> &#125;)</span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="5、写入多条记录"><a href="#5、写入多条记录" class="headerlink" title="5、写入多条记录"></a>5、写入多条记录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.insertMany([&#123; o1: <span class="string">&quot;4&quot;</span> &#125;, &#123; o1: <span class="string">&quot;5&quot;</span>, o2: <span class="string">&quot;6&quot;</span> &#125;, &#123; o2: <span class="string">&quot;7&quot;</span> &#125;])</span><br></pre></td></tr></table></figure><h2 id="6、查询所有"><a href="#6、查询所有" class="headerlink" title="6、查询所有"></a>6、查询所有</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.find()</span><br></pre></td></tr></table></figure><h2 id="7、查找指定条件的记录-field（字段）o1-值-为”3”"><a href="#7、查找指定条件的记录-field（字段）o1-值-为”3”" class="headerlink" title="7、查找指定条件的记录[field（字段）o1 值 为”3”]"></a>7、查找指定条件的记录[field（字段）o1 值 为”3”]</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.find(&#123; o1: <span class="string">&quot;3&quot;</span> &#125;)</span><br></pre></td></tr></table></figure><h2 id="8、查找出符合前者条件的一条记录，然后以后者替换前者"><a href="#8、查找出符合前者条件的一条记录，然后以后者替换前者" class="headerlink" title="8、查找出符合前者条件的一条记录，然后以后者替换前者"></a>8、查找出符合前者条件的一条记录，然后以后者替换前者</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.replaceOne(&#123; o1: <span class="string">&quot;1&quot;</span> &#125;, &#123; o1: <span class="string">&quot;3&quot;</span> &#125;)</span><br></pre></td></tr></table></figure><h2 id="9、MongoDB-使用-update-和-save-方法来更新集合中的文档。"><a href="#9、MongoDB-使用-update-和-save-方法来更新集合中的文档。" class="headerlink" title="9、MongoDB 使用 update() 和 save() 方法来更新集合中的文档。"></a>9、MongoDB 使用 update() 和 save() 方法来更新集合中的文档。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.update(&#123; o1: <span class="string">&quot;1&quot;</span> &#125;, &#123; <span class="variable">$set</span>: &#123; o1: <span class="string">&quot;mongodb&quot;</span> &#125; &#125;)</span><br></pre></td></tr></table></figure><h2 id="10、写入文档"><a href="#10、写入文档" class="headerlink" title="10、写入文档"></a>10、写入文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db.table3.insert(&#123;</span><br><span class="line">    title: <span class="string">&#x27;mongodb教程&#x27;</span>,</span><br><span class="line">    description: <span class="string">&#x27;一个nosql数据库&#x27;</span>,</span><br><span class="line">    by: <span class="string">&#x27;菜鸟教程&#x27;</span>,</span><br><span class="line">    url: <span class="string">&#x27;http://www.runoob.com&#x27;</span>,</span><br><span class="line">    tags: [<span class="string">&#x27;mongodb&#x27;</span>, <span class="string">&#x27;database&#x27;</span>, <span class="string">&#x27;NoSQL&#x27;</span>],</span><br><span class="line">    likes: 100</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="11、将数据定义成一个变量，然后insert"><a href="#11、将数据定义成一个变量，然后insert" class="headerlink" title="11、将数据定义成一个变量，然后insert"></a>11、将数据定义成一个变量，然后insert</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">document = (&#123;</span><br><span class="line">    title: <span class="string">&#x27;mongodb教程&#x27;</span>,</span><br><span class="line">    description: <span class="string">&#x27;一个nosql数据库&#x27;</span>,</span><br><span class="line">    by: <span class="string">&#x27;菜鸟教程&#x27;</span>,</span><br><span class="line">    url: <span class="string">&#x27;http://www.runoob.com&#x27;</span>,</span><br><span class="line">    tags: [<span class="string">&#x27;mongodb&#x27;</span>, <span class="string">&#x27;database&#x27;</span>, <span class="string">&#x27;NoSQL&#x27;</span>],</span><br><span class="line">    likes: 100</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">db.table3.insert(document);</span><br></pre></td></tr></table></figure><h2 id="12、从集合中查询特定数据"><a href="#12、从集合中查询特定数据" class="headerlink" title="12、从集合中查询特定数据"></a>12、从集合中查询特定数据</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.table1.find(&#123; o1: <span class="string">&#x27;mongodb&#x27;</span> &#125;)</span><br><span class="line">//db.table3.find().pretty()</span><br></pre></td></tr></table></figure><h2 id="13、从集合中删除某文档"><a href="#13、从集合中删除某文档" class="headerlink" title="13、从集合中删除某文档"></a>13、从集合中删除某文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.deleteOne(&#123; o1: <span class="string">&#x27;7&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure><h2 id="14、删除集合中所有的文档"><a href="#14、删除集合中所有的文档" class="headerlink" title="14、删除集合中所有的文档"></a>14、删除集合中所有的文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table2.deleteMany(&#123;&#125;)</span><br></pre></td></tr></table></figure><h2 id="15、filter-查询过滤文档"><a href="#15、filter-查询过滤文档" class="headerlink" title="15、filter 查询过滤文档"></a>15、filter 查询过滤文档</h2><h2 id="16、删除集合中符合条件的所有文档"><a href="#16、删除集合中符合条件的所有文档" class="headerlink" title="16、删除集合中符合条件的所有文档"></a>16、删除集合中符合条件的所有文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.deleteMany(&#123; o1: <span class="string">&#x27;5&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure><h2 id="17、删除单个文档或与指定过滤器匹配的所有文档。"><a href="#17、删除单个文档或与指定过滤器匹配的所有文档。" class="headerlink" title="17、删除单个文档或与指定过滤器匹配的所有文档。"></a>17、删除单个文档或与指定过滤器匹配的所有文档。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.remove(&#123; o2: <span class="string">&#x27;7&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure><h2 id="18、删除指定order排序的第一个文档"><a href="#18、删除指定order排序的第一个文档" class="headerlink" title="18、删除指定order排序的第一个文档"></a>18、删除指定order排序的第一个文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table3.findOneAndDelete(&#123; url: <span class="string">&#x27;http://www.runoob.com&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure><h2 id="19、批量写入、更新、删除操作【有序、无序】-默认情况下，bulkWrite-执行有序的写入。"><a href="#19、批量写入、更新、删除操作【有序、无序】-默认情况下，bulkWrite-执行有序的写入。" class="headerlink" title="19、批量写入、更新、删除操作【有序、无序】;默认情况下，bulkWrite() 执行有序的写入。"></a>19、批量写入、更新、删除操作【有序、无序】;默认情况下，bulkWrite() 执行有序的写入。</h2><h3 id="要指定无序的写入，请在选项文档中设置ordered-false"><a href="#要指定无序的写入，请在选项文档中设置ordered-false" class="headerlink" title="要指定无序的写入，请在选项文档中设置ordered:false"></a>要指定无序的写入，请在选项文档中设置ordered:false</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">    db.table1.bulkWrite(</span><br><span class="line">        [</span><br><span class="line">            &#123;</span><br><span class="line">                insertOne: &#123;</span><br><span class="line">                    <span class="string">&quot;document&quot;</span>:</span><br><span class="line">                        &#123;</span><br><span class="line">                            o1: <span class="string">&quot;4&quot;</span></span><br><span class="line">                        &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                updateOne: &#123;</span><br><span class="line">                    <span class="string">&quot;filter&quot;</span>: &#123; o1: <span class="string">&quot;4&quot;</span> &#125;,</span><br><span class="line">                    <span class="string">&quot;update&quot;</span>: &#123; o1: <span class="string">&#x27;3&#x27;</span> &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                deleteOne: &#123;</span><br><span class="line">                    <span class="string">&quot;filter&quot;</span>: &#123; o1: <span class="string">&#x27;4&#x27;</span> &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                replaceOne: &#123;</span><br><span class="line">                    <span class="string">&quot;filter&quot;</span>: &#123; o1: <span class="string">&#x27;3&#x27;</span> &#125;,</span><br><span class="line">                    <span class="string">&quot;replacement&quot;</span>: &#123; o1: <span class="string">&#x27;5&#x27;</span>, o2: <span class="string">&#x27;6&#x27;</span> &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line">catch (e) &#123; <span class="built_in">print</span>(e) &#125;</span><br><span class="line">db.table1.insertOne(&#123; o3: <span class="string">&#x27;这是一句话&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure><h2 id="20、使用-text查询操作符对具有文本索引的集合执行文本索引。"><a href="#20、使用-text查询操作符对具有文本索引的集合执行文本索引。" class="headerlink" title="20、使用$text查询操作符对具有文本索引的集合执行文本索引。"></a>20、使用$text查询操作符对具有文本索引的集合执行文本索引。</h2><h3 id="查询后排序：sort-1（升序）-x2F-1-降序"><a href="#查询后排序：sort-1（升序）-x2F-1-降序" class="headerlink" title="查询后排序：sort:1（升序）&#x2F;-1(降序)"></a>查询后排序：sort:1（升序）&#x2F;-1(降序)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.find().<span class="built_in">sort</span>(&#123;o1:1&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MongoDB </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>el-dialog 问题</title>
       <link href="/2022/10/13/ui3/"/>
       <url>/2022/10/13/ui3/</url>
@@ -1618,7 +1853,7 @@
       <link href="/2022/09/28/electron1/"/>
       <url>/2022/09/28/electron1/</url>
       
-        <content type="html"><![CDATA[<h4> 阅读本文前建议先看：<a href="https://www.romanticlife.top/blog/0/236" title="" target="">基础教程</a></h4><h4> 你也可以查看：<a href="https://www.electronjs.org/zh/docs/latest/tutorial/process-model" title="" target="">官网资料</a></h4><h3 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h3><p>Electron从Chromium继承了它的多进程架构，这使得该框架在架构上非常类似于现代web浏览器。本文将扩展 <a href="https://www.romanticlife.top/blog/0/236" title="" target="">教程</a> 中应用的概念。<br>为什么不是单进程》？</p><p>Web浏览器是非常复杂的应用程序。除了显示网页内容的主要功能之外，他们还有许多次要职责，比如管理多个窗口(或标签)和加载第三方扩展。</p><p>在早期，浏览器通常使用一个进程来实现所有这些功能。虽然这种模式意味着你打开的每个标签的开销更小，但它也意味着一个网站的崩溃或挂起会影响整个浏览器。</p><span id="more"></span><h3 id="多进程模型"><a href="#多进程模型" class="headerlink" title="多进程模型"></a>多进程模型</h3><p>为了解决这个问题，Chrome团队决定每个标签将在自己的过程中呈现，以限制网页上的漏洞或恶意代码可能对整个应用程序造成的伤害。然后，一个单一的浏览器进程控制这些进程，以及应用程序的整个生命周期。</p><p>Electron应用的结构与此非常相似。</p><p>作为一个应用程序开发者，你控制两种类型的进程:main和renderer。</p><p>这些过程类似于Chrome自己的浏览器及其渲染过程。</p><h3 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h3><p>每个Electron应用程序都有一个单独的主进程，它充当应用程序的入口点。主进程运行在Node.js环境中，这意味着它能够require模块并使用所有Node.js api。</p><h3 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h3><p>主进程的主要目的是使用 <a href="https://www.electronjs.org/zh/docs/latest/api/browser-window" title="" target="">BrowserWindow</a> 模块创建和管理应用程序窗口。</p><p>BrowserWindow类的每个实例都会创建一个应用程序窗口，在一个单独的渲染进程中加载一个网页。你可以在主进程中使用窗口的 <a href="https://www.electronjs.org/zh/docs/latest/api/web-contents" title="" target="">webContents</a> 对象与这些web内容进行交互。</p><blockquote><p>main.js</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const &#123; BrowserWindow &#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line"></span><br><span class="line">const win = new BrowserWindow(&#123; width: 800, height: 1500 &#125;)</span><br><span class="line">win.loadURL(<span class="string">&#x27;https://github.com&#x27;</span>)</span><br><span class="line"></span><br><span class="line">const contents = win.webContents</span><br><span class="line">console.log(contents)</span><br></pre></td></tr></table></figure><p>注意:渲染器进程也会为  <a href="https://www.electronjs.org/zh/docs/latest/tutorial/web-embeds" title="" target="">web embeds</a> 创建，比如BrowserView模块。webContents对象也可以访问嵌入的web内容。</p><p>因为BrowserWindow模块是一个  <a href="https://nodejs.org/api/events.html#events_class_eventemitter" title="" target="">EventEmitter</a> ，您还可以为各种用户事件添加处理程序(例如，最小化或最大化窗口)。</p><p>当BrowserWindow实例被销毁时，它对应的渲染进程也会终止。</p><h3 id="应用的声明周期"><a href="#应用的声明周期" class="headerlink" title="应用的声明周期"></a>应用的声明周期</h3><p>主进程还通过Electron的 <a href="https://www.electronjs.org/zh/docs/latest/api/app" title="" target="">app</a> 模块控制应用程序的生命周期。此模块提供了大量事件和方法，您可以使用它们来添加自定义应用程序行为(例如，以编程方式退出应用程序、修改应用程序停靠或显示关于面板)。</p><p>作为一个实际的例子，在快速入门指南中显示的应用程序使用应用程序api来创建一个更原生的应用程序窗口体验。</p><h3 id="VUE项目js-base64不兼容IE"><a href="#VUE项目js-base64不兼容IE" class="headerlink" title="VUE项目js-base64不兼容IE"></a>VUE项目js-base64不兼容IE</h3><p>一般我们直接通过指令：</p><blockquote><p>npm install –save js-base64 </p></blockquote><p>安装base64插件，但是是默认安装高版本（3或以上），它的问题就是不兼容ie11</p><p>解决办法：</p><p>1）卸载已经安装的base64插件（未安装则跳过此步）</p><blockquote><p>npm uninstall js-base64</p></blockquote><p>2）安装指定版本（安装2.x.x版本）</p><blockquote><p>npm install <a href="mailto:&#106;&#115;&#45;&#x62;&#x61;&#x73;&#101;&#54;&#52;&#64;&#x32;&#x2e;&#x36;&#x2e;&#50;">&#106;&#115;&#45;&#x62;&#x61;&#x73;&#101;&#54;&#52;&#64;&#x32;&#x2e;&#x36;&#x2e;&#50;</a> –save</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h4> 阅读本文前建议先看：<a href="https://www.romanticlife.top/blog/0/236" title="" target="">基础教程</a></h4><h4> 你也可以查看：<a href="https://www.electronjs.org/zh/docs/latest/tutorial/process-model" title="" target="">官网资料</a></h4><h3 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h3><p>Electron从Chromium继承了它的多进程架构，这使得该框架在架构上非常类似于现代web浏览器。本文将扩展 <a href="https://www.romanticlife.top/blog/0/236" title="" target="">教程</a> 中应用的概念。<br>为什么不是单进程》？</p><p>Web浏览器是非常复杂的应用程序。除了显示网页内容的主要功能之外，他们还有许多次要职责，比如管理多个窗口(或标签)和加载第三方扩展。</p><p>在早期，浏览器通常使用一个进程来实现所有这些功能。虽然这种模式意味着你打开的每个标签的开销更小，但它也意味着一个网站的崩溃或挂起会影响整个浏览器。</p><span id="more"></span><h3 id="多进程模型"><a href="#多进程模型" class="headerlink" title="多进程模型"></a>多进程模型</h3><p>为了解决这个问题，Chrome团队决定每个标签将在自己的过程中呈现，以限制网页上的漏洞或恶意代码可能对整个应用程序造成的伤害。然后，一个单一的浏览器进程控制这些进程，以及应用程序的整个生命周期。</p><p>Electron应用的结构与此非常相似。</p><p>作为一个应用程序开发者，你控制两种类型的进程:main和renderer。</p><p>这些过程类似于Chrome自己的浏览器及其渲染过程。</p><h3 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h3><p>每个Electron应用程序都有一个单独的主进程，它充当应用程序的入口点。主进程运行在Node.js环境中，这意味着它能够require模块并使用所有Node.js api。</p><h3 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h3><p>主进程的主要目的是使用 <a href="https://www.electronjs.org/zh/docs/latest/api/browser-window" title="" target="">BrowserWindow</a> 模块创建和管理应用程序窗口。</p><p>BrowserWindow类的每个实例都会创建一个应用程序窗口，在一个单独的渲染进程中加载一个网页。你可以在主进程中使用窗口的 <a href="https://www.electronjs.org/zh/docs/latest/api/web-contents" title="" target="">webContents</a> 对象与这些web内容进行交互。</p><blockquote><p>main.js</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const &#123; BrowserWindow &#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line"></span><br><span class="line">const win = new BrowserWindow(&#123; width: 800, height: 1500 &#125;)</span><br><span class="line">win.loadURL(<span class="string">&#x27;https://github.com&#x27;</span>)</span><br><span class="line"></span><br><span class="line">const contents = win.webContents</span><br><span class="line">console.log(contents)</span><br></pre></td></tr></table></figure><p>注意:渲染器进程也会为  <a href="https://www.electronjs.org/zh/docs/latest/tutorial/web-embeds" title="" target="">web embeds</a> 创建，比如BrowserView模块。webContents对象也可以访问嵌入的web内容。</p><p>因为BrowserWindow模块是一个  <a href="https://nodejs.org/api/events.html#events_class_eventemitter" title="" target="">EventEmitter</a> ，您还可以为各种用户事件添加处理程序(例如，最小化或最大化窗口)。</p><p>当BrowserWindow实例被销毁时，它对应的渲染进程也会终止。</p><h3 id="应用的声明周期"><a href="#应用的声明周期" class="headerlink" title="应用的声明周期"></a>应用的声明周期</h3><p>主进程还通过Electron的 <a href="https://www.electronjs.org/zh/docs/latest/api/app" title="" target="">app</a> 模块控制应用程序的生命周期。此模块提供了大量事件和方法，您可以使用它们来添加自定义应用程序行为(例如，以编程方式退出应用程序、修改应用程序停靠或显示关于面板)。</p><p>作为一个实际的例子，在快速入门指南中显示的应用程序使用应用程序api来创建一个更原生的应用程序窗口体验。</p><h3 id="VUE项目js-base64不兼容IE"><a href="#VUE项目js-base64不兼容IE" class="headerlink" title="VUE项目js-base64不兼容IE"></a>VUE项目js-base64不兼容IE</h3><p>一般我们直接通过指令：</p><blockquote><p>npm install –save js-base64 </p></blockquote><p>安装base64插件，但是是默认安装高版本（3或以上），它的问题就是不兼容ie11</p><p>解决办法：</p><p>1）卸载已经安装的base64插件（未安装则跳过此步）</p><blockquote><p>npm uninstall js-base64</p></blockquote><p>2）安装指定版本（安装2.x.x版本）</p><blockquote><p>npm install <a href="mailto:&#106;&#x73;&#x2d;&#x62;&#97;&#115;&#x65;&#54;&#x34;&#x40;&#x32;&#46;&#x36;&#46;&#x32;">&#106;&#x73;&#x2d;&#x62;&#97;&#115;&#x65;&#54;&#x34;&#x40;&#x32;&#46;&#x36;&#46;&#x32;</a> –save</p></blockquote>]]></content>
       
       
       
