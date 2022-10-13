@@ -80,18 +80,6 @@
 		  </li>
 		  
 		  <li>
-			<a href="/" title="所有大类">
-			  <i class="fa fa-folder"></i>分类
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/" title="所有标签">
-			  <i class="fa fa-tags"></i>标签
-			</a>
-		  </li>
-		  
-		  <li>
 			<a href="/note" title="我的速记">
 			  <i class="fa fa-user"></i>速记
 			</a>
@@ -140,8 +128,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue23/" >Vue实现通过npm启动和打包时自动切换assetsPublicPath的路径</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool4/" >svn commit时候一直显示please wait，且一直不动</a></div>						
 		</h3>
 	
 
@@ -150,12 +138,11 @@
   <div class="row">
 	
 	
-		<p>通常情况下我们是修改config》index.js》assetsPublicPath的值：<br>开发环境：’&#x2F;‘<br>生产环境：’.&#x2F;‘</p>
-<p>来解决这个问题，但是我们每次在开发和生产环境（测试与打包）切换的时候，就要手动去修改这个值，这是比较麻烦的，万一忘记修改了，打包到线上就会出现异常，相当烦人！<br>有没有一个让npm进行测试运行和打包的时候自动切换这个路径的一劳永逸的办法呢？</p>
-<p>答案是有的！</p>
+		<p>解决方案：<br>node_modules 这个文件右键，选择TortoiseSVN，再选择Unversion and add to ignore list   就可以了；<br>因为SVN检索node_modules文件系统比较慢。</p>
+
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue23/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool4/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -163,8 +150,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue22/" >Vue中引入ElementUi</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool3/" >nginx常用命令</a></div>						
 		</h3>
 	
 
@@ -173,12 +160,20 @@
   <div class="row">
 	
 	
-		<p>1.安装Element-UI框架</p>
-<blockquote><p>官网：npm i element-ui -S<br>也可以是<br>npm install element-ui –save</p>
+		<p>1).命令可以查看nginx的服务进程信息</p>
+<blockquote><p>tasklist &#x2F;fi “imagename eq nginx.exe”</p>
+</blockquote>
+
+<p>2).命令可以关闭nginx的服务进程[所有的，慎用]</p>
+<blockquote><p>taskkill &#x2F;fi “imagename eq nginx.exe” &#x2F;f</p>
+</blockquote>
+
+<p>3).启动nginx[前提是配置了conf]</p>
+<blockquote><p>Start nginx</p>
 </blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue22/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool3/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -186,8 +181,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue21/" >Vue项目中加入百度统计</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool2/" >VScode常用的插件集合</a></div>						
 		</h3>
 	
 
@@ -196,15 +191,15 @@
   <div class="row">
 	
 	
-		<p>原本我用的是CNZZ插件来做访客统计的功能，但是现在不免费了，一年最低要近1000块大洋才能使用，我只能呵呵。</p>
-<p>主要是网站没人气嘛没必要花这笔钱，而且还穷。</p>
-<p>那就这样吧，再用下下去，就不划算了！！！</p>
-<p>于是在百度搜罗资料，寻求一个Vue项目能做访客统计的插件。</p>
-<p>最终选中了百度统计这款插件，话不多说，用起来先！</p>
-<p>1.申请百度统计的账号（已有账号请跳过此步。）</p>
+		<ol>
+<li>Vetur&#x2F;Volar ：vue&#x2F;vue3语法高亮、智能感知、Emmet等, 包含格式化功能， Alt+Shift+F （格式化全文）</li>
+<li>ESLint : 校验js代码规范</li>
+<li>Prettier - Code formatter ： 格式化js、css代码插件</li>
+<li>open in browser ： 在文件右键 可以选择在浏览器预览</li>
+<li>Auto Rename Tag : 重命名一个HTML &#x2F; XML标签时，自动重命名配对的HTML &#x2F; XML标签
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue21/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool2/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -212,8 +207,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue20/" >Vue中UI库Ant Design Vue 回到顶部（BackTop）组件的使用</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool1/" >npm 实现一次执行多个指令</a></div>						
 		</h3>
 	
 
@@ -222,11 +217,12 @@
   <div class="row">
 	
 	
-		<p>首先看下官方文档的使用说明，写出了以下范例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;components-back-top-demo-custom&quot;</span>&gt;</span><br><span class="line">      &lt;a-back-top&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;ant-back-top-inner&quot;</span>&gt;</span><br><span class="line">          &lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;up&quot;</span>&gt;&lt;/a-icon&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/a-back-top&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/template&gt;</span><br></pre></td></tr></table></figure>
+		<p>现在有这么一个情况是存在以下指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;dev&quot;</span>: <span class="string">&quot;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;npm run dev&quot;</span>,</span><br><span class="line">    <span class="string">&quot;electron&quot;</span>: <span class="string">&quot;electron-forge start&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;node build/build.js&quot;</span>,       </span><br><span class="line">    <span class="string">&quot;package&quot;</span>:<span class="string">&quot;electron-packager . Electron_Vue应用 --platform=win32 --arch=x64 --icon=favicon.ico --out=./out --asar --app-version=1.0.1 --overwrite --ignore=node_modules&quot;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>我们将要执行start和electron指令，常规的做法是依次npm run start和npm run electron即可；</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue20/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool1/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -235,7 +231,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue19/" >vue项目中使用分享插件social-share</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue27/" >Vue 常用的UI组件与框架总结</a></div>						
 		</h3>
 	
 
@@ -244,14 +240,16 @@
   <div class="row">
 	
 	
-		<p>老规矩先安装依赖：</p>
-<blockquote><p>cnpm install vue-social-share -S</p>
-</blockquote>
-<p>安装完后从main.js中引入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Share from <span class="string">&#x27;vue-social-share&#x27;</span></span><br><span class="line">import <span class="string">&#x27;vue-social-share/dist/client.css&#x27;</span>;</span><br><span class="line">Vue.use(Share)</span><br></pre></td></tr></table></figure>
+		<h3 id="一、UI组件及框架（原文地址：https-tangjiusheng-com-vue-155-html）"><a href="#一、UI组件及框架（原文地址：https-tangjiusheng-com-vue-155-html）" class="headerlink" title="一、UI组件及框架（原文地址：https://tangjiusheng.com/vue/155.html）"></a>一、UI组件及框架（原文地址：<a target="_blank" rel="noopener" href="https://tangjiusheng.com/vue/155.html%EF%BC%89">https://tangjiusheng.com/vue/155.html）</a></h3><p>element - 饿了么出品的Vue2的web UI工具套件</p>
+<p>mint-ui - Vue 2的移动UI元素</p>
+<p>iview - 基于 Vuejs 的开源 UI 组件库</p>
+<p>Keen-UI - 轻量级的基本UI组件合集</p>
+<p>vue-material - 通过Vue Material和Vue 2建立精美的app应用</p>
+<p>muse-ui - 三端样式一致的响应式 UI 库</p>
+<p>vuetify - 为移动而生的Vue JS 2组件框架</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue19/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue27/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -304,7 +302,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>44</span></a></li>
+			<li><a href="/categories/IT/">IT<span>52</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -319,48 +317,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
 			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
 		
 			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>7</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
 			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
 			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/工具/">工具<span>10</span></a></li>
-		
 			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
+			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
 		
-		   <li><a href="/tags">...<span>23</span></a></li>
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>1</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>32</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>26</span></a></li>
 		 
 		</ul>
 	</div>
@@ -377,19 +375,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/html7/" ><i class="fa fa-file-o"></i>HTML5基本元素</a>
+        <a href="/2022/10/13/csharp1/" ><i class="fa fa-file-o"></i>Winform中如何调用JSON格式接口进行GET/P...</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/html6/" ><i class="fa fa-file-o"></i>glyphicon和font awesome字体图标的...</a>
+        <a href="/2022/10/13/css7/" ><i class="fa fa-file-o"></i>标签添加自动换行的属性</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/html5/" ><i class="fa fa-file-o"></i>HTML5的主要功能构成</a>
+        <a href="/2022/10/13/css6/" ><i class="fa fa-file-o"></i>wangeditor自带的样式</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/html4/" ><i class="fa fa-file-o"></i>响应式导航</a>
+        <a href="/2022/10/13/css5/" ><i class="fa fa-file-o"></i>css3菜单点击demo</a>
       </li>
     
   </ul>

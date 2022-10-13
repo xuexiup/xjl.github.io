@@ -80,18 +80,6 @@
 		  </li>
 		  
 		  <li>
-			<a href="/" title="所有大类">
-			  <i class="fa fa-folder"></i>分类
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/" title="所有标签">
-			  <i class="fa fa-tags"></i>标签
-			</a>
-		  </li>
-		  
-		  <li>
 			<a href="/note" title="我的速记">
 			  <i class="fa fa-user"></i>速记
 			</a>
@@ -154,7 +142,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/html3/" >路径中的点“./”、“../”、“/”代表的含义</a></div>						
+			<div class="article-title"><a href="/2022/10/13/css4/" >css中的块元素与行内（内联元素）</a></div>						
 		</h3>
 	
 
@@ -163,13 +151,16 @@
   <div class="row">
 	
 	
-		<p>.&#x2F; 代表当前目录</p>
-<p>..&#x2F; 代表上一层目录</p>
-<p>&#x2F; 代表根目录</p>
+		<h3 id="块元素–常见元素div"><a href="#块元素–常见元素div" class="headerlink" title="块元素–常见元素div"></a>块元素–常见元素div</h3><blockquote><p>1.独占一行<br>2.默认宽度是父元素的宽度（即撑满父元素）<br>3.默认高度由其内容撑开，所以无内容时候（若没有其它样式，height…）就消失了</p>
+</blockquote>
+
+<h3 id="行内元素–常见元素span"><a href="#行内元素–常见元素span" class="headerlink" title="行内元素–常见元素span"></a>行内元素–常见元素span</h3><blockquote><p>1.只占本身内容大小（设定width,height不会生效）<br>如果源代码两个span，换行排列（存在换行），而浏览器对其识别成一个空格出现两个元素水平排列，之间存在缝隙。<br>2.多个行内元素渲染呈现从左往右依次排列，无法容纳时自动换行<br>3.默认宽高都是由内容撑开（行内元素是无法设置宽高的，若无内容区就消失了）</p>
+</blockquote>
+
 
 	
 	</div>
-  <a type="button" href="/2022/10/13/html3/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/css4/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -180,7 +171,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/special4/" >Abp生成模板项目</a></div>						
+			<div class="article-title"><a href="/2022/10/13/css3/" >css 省略号表示溢出文本</a></div>						
 		</h3>
 	
 
@@ -189,87 +180,107 @@
   <div class="row">
 	
 	
-		<h3 id="1-通过官网选择前后端语言，这里我后台语言选的是“ASP-NET-Core”-前端语言选的是“Vue-js”"><a href="#1-通过官网选择前后端语言，这里我后台语言选的是“ASP-NET-Core”-前端语言选的是“Vue-js”" class="headerlink" title="1.通过官网选择前后端语言，这里我后台语言选的是“ASP.NET Core”,前端语言选的是“Vue.js”"></a>1.通过官网选择前后端语言，这里我后台语言选的是“ASP.NET Core”,前端语言选的是“Vue.js”</h3><h3 id="2-在“Choose-your-project’s-name”栏输入项目名；“邮箱”选填可不填。"><a href="#2-在“Choose-your-project’s-name”栏输入项目名；“邮箱”选填可不填。" class="headerlink" title="2.在“Choose your project’s name”栏输入项目名；“邮箱”选填可不填。"></a>2.在“Choose your project’s name”栏输入项目名；“邮箱”选填可不填。</h3><h3 id="3-点击“Create-my-project-”便可生出abp模板项目后下载。"><a href="#3-点击“Create-my-project-”便可生出abp模板项目后下载。" class="headerlink" title="3.点击“Create my project!”便可生出abp模板项目后下载。"></a>3.点击“Create my project!”便可生出abp模板项目后下载。</h3><h3 id="4-打开生成的文件夹，有个版本号（我这里是6-5-0）的文件夹，里面的文件夹“aspnet-core”也就是后台项目，可通过vs打开开发；而“vue”文件夹就是前端项目源文件，可通过vscode或Hbuilder等软件开发。"><a href="#4-打开生成的文件夹，有个版本号（我这里是6-5-0）的文件夹，里面的文件夹“aspnet-core”也就是后台项目，可通过vs打开开发；而“vue”文件夹就是前端项目源文件，可通过vscode或Hbuilder等软件开发。" class="headerlink" title="4.打开生成的文件夹，有个版本号（我这里是6.5.0）的文件夹，里面的文件夹“aspnet-core”也就是后台项目，可通过vs打开开发；而“vue”文件夹就是前端项目源文件，可通过vscode或Hbuilder等软件开发。"></a>4.打开生成的文件夹，有个版本号（我这里是6.5.0）的文件夹，里面的文件夹“aspnet-core”也就是后台项目，可通过vs打开开发；而“vue”文件夹就是前端项目源文件，可通过vscode或Hbuilder等软件开发。</h3><p>后台项目文件夹各项目的主要作用：</p>
-<blockquote><p>src路径下<br>.Application：应用服务层<br>.Core：领域层<br>.EntityFrameworkCore：基础层<br>.Migrator：abp数据库迁移项目<br>.Web.Core、.Web.Host：展现层<br>test路径下<br>.Tests：单元测试</p>
+		<h2 id="1-先强制一行内显示文本"><a href="#1-先强制一行内显示文本" class="headerlink" title="1.先强制一行内显示文本"></a>1.先强制一行内显示文本</h2><p>white-space: nowrap;</p>
+<h2 id="2-超出部分隐藏"><a href="#2-超出部分隐藏" class="headerlink" title="2.超出部分隐藏"></a>2.超出部分隐藏</h2><p>overflow: hidden;</p>
+<h2 id="3-文字用省略号替代超出的部分"><a href="#3-文字用省略号替代超出的部分" class="headerlink" title="3.文字用省略号替代超出的部分"></a>3.文字用省略号替代超出的部分</h2><p>text-overflow: ellipsis;</p>
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/css3/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/css2/" >如何用css3画一个冰墩墩</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>文章来源：<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1724607815488021505&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1724607815488021505&amp;wfr=spider&amp;for=pc</a></p>
+	
+	</div>
+  <a type="button" href="/2022/10/13/css2/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/css1/" >CSS3中特殊字符的用法</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>首先找出特殊字符的编码，例如：9650 25B2 【正黑三角】  </p>
+<p>使用方法：after(伪类)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;tempble&quot;</span>&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>样式为：</p>
+<blockquote><p>.tempble:after{<br>　　content: “&#x2F;9650 25B2”;&#x2F;&#x2F;特殊字符或形状<br>}</p>
+</blockquote>
+
+
+<p>这便会在样式为tempble的对象后渲染出一个特殊符号。</p>
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/css1/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/html7/" >HTML5基本元素</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="New-HTML5-新属性："><a href="#New-HTML5-新属性：" class="headerlink" title="New : HTML5 新属性："></a>New : HTML5 新属性：</h3><blockquote><p>accesskey 设置访问元素的键盘快捷键。</p>
+<p>class 规定元素的类名（classname）</p>
+<p>contenteditableNew 规定是否可编辑元素的内容。</p>
+<p>contextmenuNew 指定一个元素的上下文菜单。当用户右击该元素，出   现上下文菜单 </p>
+<p>data-*New 用于存储页面的自定义数据</p>
+<p>dir 设置元素中内容的文本方向。</p>
+<p>draggableNew 指定某个元素是否可以拖动</p>
+<p>dropzoneNew 指定是否将数据复制，移动，或链接，或删除</p>
+<p>hiddenNew hidden 属性规定对元素进行隐藏。</p>
+<p>id 规定元素的唯一 id</p>
+<p>lang 设置元素中内容的语言代码。</p>
+<p>spellcheckNew 检测元素是否拼写错误</p>
+<p>style 规定元素的行内样式（inline style）</p>
+<p>tabindex 设置元素的 Tab 键控制次序。</p>
+<p>title 规定元素的额外信息（可在工具提示中显示）</p>
+<p>translateNew 指定是否一个元素的值在页面载入时是否需要翻译 </p>
 </blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/13/special4/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/html2/" >sessionStorage和localStorage的区别与用法</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>二者都是用于浏览器存储，多用于用来存储网站一些需要页面交互的隐秘信息。<br>当然主流浏览器和高版本的IE浏览器是支持这两种用法的，为了代码的严谨性我们可以加一个判断：</p>
-<pre><code class="bash"> if (!window.sessionStorage) &#123;
-              this.$message(&quot;浏览器不支持sessionStorage，请联系管理员解决&quot;);
-            &#125;
-</code></pre>
-	
-	</div>
-  <a type="button" href="/2022/10/13/html2/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/terminology/" >沙箱环境（sandbox environment）</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>沙箱环境<br>Sandbo(又叫沙箱、沙盘、沙盒)环境，即是一个虚拟系统程序，允许你在沙盘环境中运行浏览器或其他程序，因此运行所产生的变化可以随后删除。</p>
-	
-	</div>
-  <a type="button" href="/2022/10/13/terminology/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/special3/" >Electron学习之路 -基础教程篇</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>以下内容是根据 <a href="https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-prerequisites" title="" target="">官网</a> 资料和自己实践整理（查阅资料）所得；</p>
-<blockquote><p>根据官网说明：Electron是一个使用 JavaScript、HTML 和 CSS 构建桌面应用程序的框架。</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/13/special3/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/html7/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -327,7 +338,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>44</span></a></li>
+			<li><a href="/categories/IT/">IT<span>52</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -342,48 +353,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+		
 			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
 		
 			<li><a href="/tags/Vue/">Vue<span>32</span></a></li>
 		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/工具/">工具<span>10</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>7</span></a></li>
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>23</span></a></li>
+		   <li><a href="/tags">...<span>26</span></a></li>
 		 
 		</ul>
 	</div>
@@ -400,19 +411,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/html7/" ><i class="fa fa-file-o"></i>HTML5基本元素</a>
+        <a href="/2022/10/13/csharp1/" ><i class="fa fa-file-o"></i>Winform中如何调用JSON格式接口进行GET/P...</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/html6/" ><i class="fa fa-file-o"></i>glyphicon和font awesome字体图标的...</a>
+        <a href="/2022/10/13/css7/" ><i class="fa fa-file-o"></i>标签添加自动换行的属性</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/html5/" ><i class="fa fa-file-o"></i>HTML5的主要功能构成</a>
+        <a href="/2022/10/13/css6/" ><i class="fa fa-file-o"></i>wangeditor自带的样式</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/html4/" ><i class="fa fa-file-o"></i>响应式导航</a>
+        <a href="/2022/10/13/css5/" ><i class="fa fa-file-o"></i>css3菜单点击demo</a>
       </li>
     
   </ul>
