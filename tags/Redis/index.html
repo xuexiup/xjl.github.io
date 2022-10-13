@@ -1,0 +1,617 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Redis | 寒山飞鹰</title>
+  
+  <meta name="author" content="南疆">
+  
+  <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="寒山飞鹰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有发表记录">
+			  <i class="fa fa-archive"></i>档案
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/note" title="我的速记">
+			  <i class="fa fa-user"></i>速记
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/message" title="messagebord">
+			  <i class="fa fa-book"></i>访客留言
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="关于我">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+<!-- title -->
+<div class="page-header page-header-inverse ">
+  <h1 class="archive-title-tag title title-inverse ">Redis</h1>
+</div>
+
+<div class="row page">
+  <!-- cols -->
+  
+  <div class="col-md-9">
+	
+
+	  <div id="top_search"></div>
+
+      
+         <!-- display as entry -->
+	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis8/" >Redis简介</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。<br>它通常被称为数据结构服务器，因为值（value）支持五种数据类型：</p>
+<blockquote><p>string（字符串）<br>hash（哈希）<br>list（列表）<br>set（集合）<br>zset(sorted set：有序集合)。</p>
+</blockquote>
+
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis8/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis7/" >Redis配置与命令</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>Redis 的配置文件位于 Redis 安装目录下，文件名为 redis.conf。<br>你可以通过修改 redis.conf 文件或使用 CONFIG set 命令来修改配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.redis 127.0.0.1:6379&gt; CONFIG SET CONFIG_SETTING_NAME NEW_CONFIG_VALUE</span><br><span class="line">实例</span><br><span class="line">1.redis 127.0.0.1:6379&gt; CONFIG SET loglevel <span class="string">&quot;notice&quot;</span></span><br><span class="line">2.OK</span><br><span class="line">3.redis 127.0.0.1:6379&gt; CONFIG GET loglevel</span><br><span class="line">4. </span><br><span class="line">5.1) <span class="string">&quot;loglevel&quot;</span></span><br><span class="line">6.2) <span class="string">&quot;notice&quot;</span></span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis7/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis6/" >Redis keys 命令</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<table>
+<thead>
+<tr>
+<th>1</th>
+<th><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3528.html">DEL key 该命令用于在 key 存在是删除 key。</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3529.html">DUMP key 序列化给定 key ，并返回被序列化的值。</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3530.html">EXISTS key 检查给定 key 是否存在。</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3531.html">EXPIRE key seconds 为给定 key 设置过期时间。</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3532.html">EXPIREAT key timestamp EXPIREAT 的作用和 EXPIRE 类似，都用于为 key 设置过期时间。 不同在于 EXPIREAT 命令接受的时间参数是 UNIX 时间戳(unix timestamp)。</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3533.html">PEXPIRE key milliseconds 设置 key 的过期时间亿以毫秒计。</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3534.html">PEXPIREAT key milliseconds-timestamp 设置 key 过期时间的时间戳(unix timestamp) 以毫秒计</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3535.html">KEYS pattern 查找所有符合给定模式( pattern)的 key 。</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3536.html">MOVE key db 将当前数据库的 key 移动到给定的数据库 db 当中。</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3537.html">PERSIST key 移除 key 的过期时间，key 将持久保持。</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3538.html">PTTL key 以毫秒为单位返回 key 的剩余的过期时间。</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3539.html">TTL key 以秒为单位，返回给定 key 的剩余生存时间(TTL, time to live)。</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3540.html">RANDOMKEY 从当前数据库中随机返回一个 key 。</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3541.html">RENAME key newkey 修改 key 的名称</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3542.html">RENAMENX key newkey 仅当 newkey 不存在时，将 key 改名为 newkey 。</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3543.html">TYPE key 返回 key 所储存的值的类型。</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis6/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis5/" >Redis五大数据类型的基本使用</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.string</p>
+<p>redis最基本的类型，你可以理解成与Memcached一模一样的类型，一个key对应一个value。</p>
+<p>string类型是二进制安全的。意思是redis的string可以包含任何数据。比如jpg图片或者序列化的对象 。</p>
+<p>string类型是Redis最基本的数据类型，一个键最大能存储512MB。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. redis 127.0.0.1:6379&gt; SET name <span class="string">&quot;redis.net.cn&quot;</span></span><br><span class="line"></span><br><span class="line">2. OK</span><br><span class="line"></span><br><span class="line">3. redis 127.0.0.1:6379&gt; GET name</span><br><span class="line"></span><br><span class="line">4. <span class="string">&quot;redis.net.cn&quot;</span></span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis5/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis4/" >Redis五大数据类型的基本相关命令</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.字符串命令</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3544.html">SET key value 设置指定 key 的值</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3545.html">GET key 获取指定 key 的值。</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3546.html">GETRANGE key start end 返回 key 中字符串值的子字符</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3547.html">GETSET key value 将给定 key 的值设为 value ，并返回 key 的旧值(old value)。</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3548.html">GETBIT key offset 对 key 所储存的字符串值，获取指定偏移量上的位(bit)。</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>[MGET key1 <a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3549.html">key2..] 获取所有(一个或多个)给定 key 的值。</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3550.html">SETBIT key offset value 对 key 所储存的字符串值，设置或清除指定偏移量上的位(bit)。</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3551.html">SETEX key seconds value 将值 value 关联到 key ，并将 key 的过期时间设为 seconds (以秒为单位)。</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3552.html">SETNX key value 只有在 key 不存在时设置 key 的值。</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3553.html">SETRANGE key offset value 用 value 参数覆写给定 key 所储存的字符串值，从偏移量 offset 开始。</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3554.html">STRLEN key 返回 key 所储存的字符串值的长度。</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>[MSET key value <a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3555.html">key value …] 同时设置一个或多个 key-value 对。</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td>[MSETNX key value <a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3556.html">key value …] 同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在。</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3557.html">PSETEX key milliseconds value 这个命令和 SETEX 命令相似，但它以毫秒为单位设置 key 的生存时间，而不是像 SETEX 命令那样，以秒为单位。</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3558.html">INCR key 将 key 中储存的数字值增一。</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3559.html">INCRBY key increment 将 key 所储存的值加上给定的增量值（increment） 。</a></td>
+</tr>
+<tr>
+<td>17</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3560.html">INCRBYFLOAT key increment 将 key 所储存的值加上给定的浮点增量值（increment） 。</a></td>
+</tr>
+<tr>
+<td>18</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3561.html">DECR key 将 key 中储存的数字值减一。</a></td>
+</tr>
+<tr>
+<td>19</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3562.html">DECRBY key decrement key 所储存的值减去给定的减量值（decrement） 。</a></td>
+</tr>
+<tr>
+<td>20</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3563.html">APPEND key value 如果 key 已经存在并且是一个字符串， APPEND 命令将 value 追加到 key 原来的值的末尾。</a></td>
+</tr>
+</tbody></table>
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis4/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+	     </div>
+	     <div>
+	       <center>
+	         <div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
+
+        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+
+		
+		   <li class="next"> <a href="/tags/Redis/page/2/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
+        
+	
+</ul>
+</div>
+
+	       </center>
+	     </div>	
+      
+
+</div> <!-- col-md-9/col-md-12 -->
+
+
+<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			<div class="widget">
+    
+</div>
+
+		
+			
+	<div class="widget">
+		<h4>分类</h4>
+		<ul class="tag_box inline list-unstyled">
+		
+			<li><a href="/categories/IT/">IT<span>72</span></a></li>
+		
+			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
+		
+			<li><a href="/categories/百科知识/">百科知识<span>3</span></a></li>
+		
+		</ul>
+	</div>
+
+		
+			
+	<div class="widget">
+		<h4>标签云</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>33</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>最新文章</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2099/12/06/hexo1/"  title="内容来源于官网、实践、搜索" ><i class="fa fa-file-o"></i>hexo 使用大全</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/13/redis8/" ><i class="fa fa-file-o"></i>Redis简介</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/13/redis7/" ><i class="fa fa-file-o"></i>Redis配置与命令</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/13/redis6/" ><i class="fa fa-file-o"></i>Redis keys 命令</a>
+      </li>
+    
+      <li>
+        <a href="/2022/10/13/redis5/" ><i class="fa fa-file-o"></i>Redis五大数据类型的基本使用</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>链接</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github-alt"></i><a href="https://www.romanticlife.top" title="之郎的个人博客空间" target="_blank"]);">月落晨星</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

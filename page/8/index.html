@@ -142,7 +142,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool9/" title="需要了解在package.json文件下dependencies和devDependencies其区别">npm install --save、npm install --save-dev 、npm install -g 的区别</a></div>						
+			<div class="article-title"><a href="/2022/10/13/html3/" >路径中的点“./”、“../”、“/”代表的含义</a></div>						
 		</h3>
 	
 
@@ -151,11 +151,38 @@
   <div class="row">
 	
 	
-		<blockquote><p>devDependencies    用于开发环境<br>dependencies    用于线上环境</p>
+		<p>.&#x2F; 代表当前目录</p>
+<p>..&#x2F; 代表上一层目录</p>
+<p>&#x2F; 代表根目录</p>
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/html3/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/special4/" >Abp生成模板项目</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="1-通过官网选择前后端语言，这里我后台语言选的是“ASP-NET-Core”-前端语言选的是“Vue-js”"><a href="#1-通过官网选择前后端语言，这里我后台语言选的是“ASP-NET-Core”-前端语言选的是“Vue-js”" class="headerlink" title="1.通过官网选择前后端语言，这里我后台语言选的是“ASP.NET Core”,前端语言选的是“Vue.js”"></a>1.通过官网选择前后端语言，这里我后台语言选的是“ASP.NET Core”,前端语言选的是“Vue.js”</h3><h3 id="2-在“Choose-your-project’s-name”栏输入项目名；“邮箱”选填可不填。"><a href="#2-在“Choose-your-project’s-name”栏输入项目名；“邮箱”选填可不填。" class="headerlink" title="2.在“Choose your project’s name”栏输入项目名；“邮箱”选填可不填。"></a>2.在“Choose your project’s name”栏输入项目名；“邮箱”选填可不填。</h3><h3 id="3-点击“Create-my-project-”便可生出abp模板项目后下载。"><a href="#3-点击“Create-my-project-”便可生出abp模板项目后下载。" class="headerlink" title="3.点击“Create my project!”便可生出abp模板项目后下载。"></a>3.点击“Create my project!”便可生出abp模板项目后下载。</h3><h3 id="4-打开生成的文件夹，有个版本号（我这里是6-5-0）的文件夹，里面的文件夹“aspnet-core”也就是后台项目，可通过vs打开开发；而“vue”文件夹就是前端项目源文件，可通过vscode或Hbuilder等软件开发。"><a href="#4-打开生成的文件夹，有个版本号（我这里是6-5-0）的文件夹，里面的文件夹“aspnet-core”也就是后台项目，可通过vs打开开发；而“vue”文件夹就是前端项目源文件，可通过vscode或Hbuilder等软件开发。" class="headerlink" title="4.打开生成的文件夹，有个版本号（我这里是6.5.0）的文件夹，里面的文件夹“aspnet-core”也就是后台项目，可通过vs打开开发；而“vue”文件夹就是前端项目源文件，可通过vscode或Hbuilder等软件开发。"></a>4.打开生成的文件夹，有个版本号（我这里是6.5.0）的文件夹，里面的文件夹“aspnet-core”也就是后台项目，可通过vs打开开发；而“vue”文件夹就是前端项目源文件，可通过vscode或Hbuilder等软件开发。</h3><p>后台项目文件夹各项目的主要作用：</p>
+<blockquote><p>src路径下<br>.Application：应用服务层<br>.Core：领域层<br>.EntityFrameworkCore：基础层<br>.Migrator：abp数据库迁移项目<br>.Web.Core、.Web.Host：展现层<br>test路径下<br>.Tests：单元测试</p>
 </blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/13/tool9/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/special4/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -166,7 +193,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool8/" >vue解决本地调试和发布后生产环境跨域的问题</a></div>						
+			<div class="article-title"><a href="/2022/10/13/html2/" >sessionStorage和localStorage的区别与用法</a></div>						
 		</h3>
 	
 
@@ -175,10 +202,14 @@
   <div class="row">
 	
 	
-		<h3 id="1-解决本地环境调试跨域（前端代码使用代理）"><a href="#1-解决本地环境调试跨域（前端代码使用代理）" class="headerlink" title="1.解决本地环境调试跨域（前端代码使用代理）"></a>1.解决本地环境调试跨域（前端代码使用代理）</h3><h2 id="1-在main-js中定义代理"><a href="#1-在main-js中定义代理" class="headerlink" title="1).在main.js中定义代理"></a>1).在main.js中定义代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.dev_proxyname = <span class="string">&#x27;/api&#x27;</span></span><br></pre></td></tr></table></figure>
+		<p>二者都是用于浏览器存储，多用于用来存储网站一些需要页面交互的隐秘信息。<br>当然主流浏览器和高版本的IE浏览器是支持这两种用法的，为了代码的严谨性我们可以加一个判断：</p>
+<pre><code class="bash"> if (!window.sessionStorage) &#123;
+              this.$message(&quot;浏览器不支持sessionStorage，请联系管理员解决&quot;);
+            &#125;
+</code></pre>
 	
 	</div>
-  <a type="button" href="/2022/10/13/tool8/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/html2/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -189,7 +220,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool7/" >nginx配置的网页刷新 404</a></div>						
+			<div class="article-title"><a href="/2022/10/13/terminology/" >沙箱环境（sandbox environment）</a></div>						
 		</h3>
 	
 
@@ -198,61 +229,35 @@
   <div class="row">
 	
 	
-		<p>在配置中添加：</p>
-<blockquote><p>try_files $uri $uri&#x2F; &#x2F;index.html; —解决页面刷新404问题 </p>
+		<p>沙箱环境<br>Sandbo(又叫沙箱、沙盘、沙盒)环境，即是一个虚拟系统程序，允许你在沙盘环境中运行浏览器或其他程序，因此运行所产生的变化可以随后删除。</p>
+	
+	</div>
+  <a type="button" href="/2022/10/13/terminology/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/special3/" >Electron学习之路 -基础教程篇</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>以下内容是根据 <a href="https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-prerequisites" title="" target="">官网</a> 资料和自己实践整理（查阅资料）所得；</p>
+<blockquote><p>根据官网说明：Electron是一个使用 JavaScript、HTML 和 CSS 构建桌面应用程序的框架。</p>
 </blockquote>
-
-<p>实例：</p>
 	
 	</div>
-  <a type="button" href="/2022/10/13/tool7/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool6/" >uniApp 报错 plus is not defined</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="plus是什么？"><a href="#plus是什么？" class="headerlink" title="plus是什么？"></a>plus是什么？</h3><blockquote><p>plus是5+Runtime的内部对象。<br>就像chrome浏览器里有chrome.开头的一些对象方法，5+runtime内部内置了plus对象。<br>因为plus和mui不一样，plus是引擎级别的，不需要前端框架。而mui是前端框架，所以是要引入mui.js才能使用的。</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/13/tool6/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool5/" >office的另类安装方法</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<a href="https://www.bilibili.com/video/BV193411K7Yq/?spm_id_from=333.337.search-card.all.click&vd_source=d476ccd7f594c6a924ede109727a1a64" title="" target="">office的另类安装方法</a>
-	
-	</div>
-  <a type="button" href="/2022/10/13/tool5/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/special3/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -310,7 +315,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>64</span></a></li>
+			<li><a href="/categories/IT/">IT<span>72</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -325,48 +330,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>1</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>1</span></a></li>
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
 			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
 		
-			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>33</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
 			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>1</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>32</span></a></li>
+		   <li><a href="/tags">...<span>33</span></a></li>
 		 
 		</ul>
 	</div>
@@ -383,19 +388,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript5/" ><i class="fa fa-file-o"></i>js数组的5种查询方式[find(),findInde...</a>
+        <a href="/2022/10/13/redis8/" ><i class="fa fa-file-o"></i>Redis简介</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript4/" ><i class="fa fa-file-o"></i>Js给数组对象（每个）添加一个新元素/字段并赋值</a>
+        <a href="/2022/10/13/redis7/" ><i class="fa fa-file-o"></i>Redis配置与命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript3/" ><i class="fa fa-file-o"></i>Vue中使用base64</a>
+        <a href="/2022/10/13/redis6/" ><i class="fa fa-file-o"></i>Redis keys 命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript2/" ><i class="fa fa-file-o"></i>Typscript与Javascript的对比</a>
+        <a href="/2022/10/13/redis5/" ><i class="fa fa-file-o"></i>Redis五大数据类型的基本使用</a>
       </li>
     
   </ul>

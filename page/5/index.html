@@ -142,7 +142,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css3/" >css 省略号表示溢出文本</a></div>						
+			<div class="article-title"><a href="/2022/10/13/ui1/" >ElementUI栅格系统布局与偏移</a></div>						
 		</h3>
 	
 
@@ -151,13 +151,11 @@
   <div class="row">
 	
 	
-		<h2 id="1-先强制一行内显示文本"><a href="#1-先强制一行内显示文本" class="headerlink" title="1.先强制一行内显示文本"></a>1.先强制一行内显示文本</h2><p>white-space: nowrap;</p>
-<h2 id="2-超出部分隐藏"><a href="#2-超出部分隐藏" class="headerlink" title="2.超出部分隐藏"></a>2.超出部分隐藏</h2><p>overflow: hidden;</p>
-<h2 id="3-文字用省略号替代超出的部分"><a href="#3-文字用省略号替代超出的部分" class="headerlink" title="3.文字用省略号替代超出的部分"></a>3.文字用省略号替代超出的部分</h2><p>text-overflow: ellipsis;</p>
-
+		<p>以下内容参照 <a href="https://element.eleme.io/#/zh-CN/component/layout#col-attributes" title="" target="">官方文档</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line"></span><br><span class="line">&lt;el-col</span><br><span class="line">        :xs=<span class="string">&quot;&#123; span: 24, offset: 0 &#125;&quot;</span></span><br><span class="line">        :sm=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :md=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :lg=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :xl=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :xxl=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">      &gt;</span><br><span class="line">&lt;/el-col&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/13/css3/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/ui1/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -168,7 +166,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css2/" >如何用css3画一个冰墩墩</a></div>						
+			<div class="article-title"><a href="/2022/10/13/netnote2/" >电脑开启VT的方法</a></div>						
 		</h3>
 	
 
@@ -177,10 +175,12 @@
   <div class="row">
 	
 	
-		<p>文章来源：<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1724607815488021505&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1724607815488021505&amp;wfr=spider&amp;for=pc</a></p>
+		<p>
+<a href="https://support.yeshen.com/zh-CN/often/vt" title="" target="">点我查看详情</a>
+</p>
 	
 	</div>
-  <a type="button" href="/2022/10/13/css2/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/netnote2/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -191,7 +191,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css1/" >CSS3中特殊字符的用法</a></div>						
+			<div class="article-title"><a href="/2022/10/13/netnote1/" >软件版本号释意</a></div>						
 		</h3>
 	
 
@@ -200,19 +200,13 @@
   <div class="row">
 	
 	
-		<p>首先找出特殊字符的编码，例如：9650 25B2 【正黑三角】  </p>
-<p>使用方法：after(伪类)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;tempble&quot;</span>&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>样式为：</p>
-<blockquote><p>.tempble:after{<br>　　content: “&#x2F;9650 25B2”;&#x2F;&#x2F;特殊字符或形状<br>}</p>
-</blockquote>
-
-
-<p>这便会在样式为tempble的对象后渲染出一个特殊符号。</p>
-
+		<h3 id="1、软件版本阶段说明"><a href="#1、软件版本阶段说明" class="headerlink" title="1、软件版本阶段说明"></a>1、软件版本阶段说明</h3><h2 id="Alpha版"><a href="#Alpha版" class="headerlink" title="*Alpha版"></a>*Alpha版</h2><p>此版本表示该软件在此阶段主要是以实现软件功能为主，通常只在软件开发者内部交流，一般而言，该版本软件的Bug较多，需要继续修改。</p>
+<h2 id="Beta版"><a href="#Beta版" class="headerlink" title="*Beta版"></a>*Beta版</h2><p>该版本相对于α版已有了很大的改进，消除了严重的错误，但还是存在着一些缺陷，需要经过多次测试来进一步消除，此版本主要的修改对像是软件的UI。</p>
+<h2 id="RC版"><a href="#RC版" class="headerlink" title="*RC版"></a>*RC版</h2><p>该版本已经相当成熟了，基本上不存在导致错误的BUG，与即将发行的正式版相差无几。</p>
+<h2 id="Release版"><a href="#Release版" class="headerlink" title="*Release版"></a>*Release版</h2><p>该版本意味“最终版本”，在前面版本的一系列测试版之后，终归会有一个正式版本，是最终交付用户使用的一个版本。该版本有时也称为标准版。一般情况下，Release不会以单词形式出现在软件封面上，取而代之的是符号(R)。</p>
 	
 	</div>
-  <a type="button" href="/2022/10/13/css1/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/netnote1/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -223,7 +217,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/html7/" >HTML5基本元素</a></div>						
+			<div class="article-title"><a href="/2022/10/13/csharp1/" >Winform中如何调用JSON格式接口进行GET/POST</a></div>						
 		</h3>
 	
 
@@ -232,26 +226,10 @@
   <div class="row">
 	
 	
-		<h3 id="New-HTML5-新属性："><a href="#New-HTML5-新属性：" class="headerlink" title="New : HTML5 新属性："></a>New : HTML5 新属性：</h3><blockquote><p>accesskey 设置访问元素的键盘快捷键。</p>
-<p>class 规定元素的类名（classname）</p>
-<p>contenteditableNew 规定是否可编辑元素的内容。</p>
-<p>contextmenuNew 指定一个元素的上下文菜单。当用户右击该元素，出   现上下文菜单 </p>
-<p>data-*New 用于存储页面的自定义数据</p>
-<p>dir 设置元素中内容的文本方向。</p>
-<p>draggableNew 指定某个元素是否可以拖动</p>
-<p>dropzoneNew 指定是否将数据复制，移动，或链接，或删除</p>
-<p>hiddenNew hidden 属性规定对元素进行隐藏。</p>
-<p>id 规定元素的唯一 id</p>
-<p>lang 设置元素中内容的语言代码。</p>
-<p>spellcheckNew 检测元素是否拼写错误</p>
-<p>style 规定元素的行内样式（inline style）</p>
-<p>tabindex 设置元素的 Tab 键控制次序。</p>
-<p>title 规定元素的额外信息（可在工具提示中显示）</p>
-<p>translateNew 指定是否一个元素的值在页面载入时是否需要翻译 </p>
-</blockquote>
+		<h3 id="1-创建一个winform桌面程序的项目-NET-Framework"><a href="#1-创建一个winform桌面程序的项目-NET-Framework" class="headerlink" title="1.创建一个winform桌面程序的项目(.NET Framework)"></a>1.创建一个winform桌面程序的项目(.NET Framework)</h3><h3 id="2-然后创建一个通用方法的类库：Common"><a href="#2-然后创建一个通用方法的类库：Common" class="headerlink" title="2.然后创建一个通用方法的类库：Common"></a>2.然后创建一个通用方法的类库：Common</h3><h3 id="3-在类库中添加接口发送与请求的通用方法：HttpHelper-cs"><a href="#3-在类库中添加接口发送与请求的通用方法：HttpHelper-cs" class="headerlink" title="3.在类库中添加接口发送与请求的通用方法：HttpHelper.cs"></a>3.在类库中添加接口发送与请求的通用方法：HttpHelper.cs</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class HttpHelper</span><br><span class="line">    &#123;</span><br><span class="line">        /// &lt;summary&gt;</span><br><span class="line">               /// 调用api返回json</span><br><span class="line">               /// &lt;/summary&gt;</span><br><span class="line">               /// &lt;param name=&quot;url&quot;&gt;api地址&lt;/param&gt;</span><br><span class="line">               /// &lt;param name=&quot;jsonstr&quot;&gt;接收参数&lt;/param&gt;</span><br><span class="line">               /// &lt;param name=&quot;type&quot;&gt;类型&lt;/param&gt;</span><br><span class="line">               /// &lt;returns&gt;&lt;/returns&gt;</span><br><span class="line">        public static string HttpApi(string url, string jsonstr, string type)</span><br><span class="line">        &#123;</span><br><span class="line">            Encoding encoding = Encoding.UTF8;</span><br><span class="line">            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);//webrequest请求api地址</span><br><span class="line">            request.Accept = &quot;*/*&quot;;</span><br><span class="line">            request.ContentType = &quot;application/json&quot;;</span><br><span class="line">            request.Method = type.ToUpper().ToString();//get或者post</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">            byte[] buffer = encoding.GetBytes(jsonstr);</span><br><span class="line">            request.ContentLength = buffer.Length;</span><br><span class="line">            request.GetRequestStream().Write(buffer, 0, buffer.Length);</span><br><span class="line">            HttpWebResponse response = (HttpWebResponse)request.GetResponse();</span><br><span class="line">            using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8))</span><br><span class="line">            &#123;</span><br><span class="line">                return reader.ReadToEnd();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/13/html7/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/csharp1/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -262,7 +240,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/html6/" >glyphicon和font awesome字体图标的混合使用导致样式混乱</a></div>						
+			<div class="article-title"><a href="/2022/10/13/css7/" >标签添加自动换行的属性</a></div>						
 		</h3>
 	
 
@@ -271,12 +249,16 @@
   <div class="row">
 	
 	
-		<p>原则上字体文件的混合使用不会出现混乱，或页面出现乱码标识，框框等问题，如果出现了这种问题，可以从以下几种方式去排查。</p>
-<blockquote><p>1).对应css文件引用路径不对<br>2).只是引用了css，却没有添加对应的fonts文件夹【字体文件】<br>3). css文件与字体文件的相对路径不对<br>4).网站中自定义了全局 font,或font-family 导致 字体文件显示不出来</p>
+		<blockquote><p>word-wrap:break-word;</p>
+<p>white-space: pre-wrap;</p>
+<p>white-space: -moz-pre-wrap;</p>
+<p>white-space: -pre-wrap;</p>
+<p>white-space:-o-pre-wrap;</p>
+<p>word-wrap: break-word;</p>
 </blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/13/html6/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/css7/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -334,7 +316,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>64</span></a></li>
+			<li><a href="/categories/IT/">IT<span>72</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -349,48 +331,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
 		
 			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
-			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
-		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>1</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
 			<li><a href="/tags/工具/">工具<span>10</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>33</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/JavaScript/">JavaScript<span>5</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
 			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>32</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+		
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>5</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>33</span></a></li>
 		 
 		</ul>
 	</div>
@@ -407,19 +389,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript5/" ><i class="fa fa-file-o"></i>js数组的5种查询方式[find(),findInde...</a>
+        <a href="/2022/10/13/redis8/" ><i class="fa fa-file-o"></i>Redis简介</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript4/" ><i class="fa fa-file-o"></i>Js给数组对象（每个）添加一个新元素/字段并赋值</a>
+        <a href="/2022/10/13/redis7/" ><i class="fa fa-file-o"></i>Redis配置与命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript3/" ><i class="fa fa-file-o"></i>Vue中使用base64</a>
+        <a href="/2022/10/13/redis6/" ><i class="fa fa-file-o"></i>Redis keys 命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript2/" ><i class="fa fa-file-o"></i>Typscript与Javascript的对比</a>
+        <a href="/2022/10/13/redis5/" ><i class="fa fa-file-o"></i>Redis五大数据类型的基本使用</a>
       </li>
     
   </ul>

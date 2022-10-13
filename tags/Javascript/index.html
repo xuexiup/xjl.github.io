@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>JavaScript | 寒山飞鹰</title>
+  <title>Javascript | 寒山飞鹰</title>
   
   <meta name="author" content="南疆">
   
@@ -109,7 +109,7 @@
 
 <!-- title -->
 <div class="page-header page-header-inverse ">
-  <h1 class="archive-title-tag title title-inverse ">JavaScript</h1>
+  <h1 class="archive-title-tag title title-inverse ">Javascript</h1>
 </div>
 
 <div class="row page">
@@ -128,8 +128,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/javascript5/" >js数组的5种查询方式[find(),findIndex(),indexOf(),lastIndexOf(),include()]</a></div>						
+			<div class="date"> 2022-09-28 </div>
+			<div class="article-title"><a href="/2022/09/28/html1/" >后端返回的数据会带一个换行符（“↵”），前端如何根据该符号进行换行展示</a></div>						
 		</h3>
 	
 
@@ -138,116 +138,12 @@
   <div class="row">
 	
 	
-		<p>1.find() 返回数组中第一个满足条件的数据</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.find((item, index) =&gt; &#123; <span class="built_in">return</span>...&#125;)</span><br></pre></td></tr></table></figure>
-
-
-<p>2.findIndex() 返回数组中第一个满足条件的索引(从0开始), 不满足返回-1</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.findIndex((item, index) =&gt; &#123; <span class="built_in">return</span>...&#125;)</span><br></pre></td></tr></table></figure>
+		<h3 id="方法一：textarea赋值"><a href="#方法一：textarea赋值" class="headerlink" title="方法一：textarea赋值"></a>方法一：textarea赋值</h3><p>　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。</p>
+<h3 id="方法二：使用v-html输出文本"><a href="#方法二：使用v-html输出文本" class="headerlink" title="方法二：使用v-html输出文本"></a>方法二：使用v-html输出文本</h3><p>　　“↵”符号在html中会识别别为\r,\n等转义字符，所以我们可以使用\r\n去替换（.replace(&#x2F;(\r\n|\n|\r)&#x2F;gm, ‘ &lt; br &#x2F;&gt; ‘)）</p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;span v-html=<span class="string">&quot;detail.replace(/(\r\n|\n|\r)/gm, &#x27;&lt;br /&gt;&#x27;)&quot;</span>&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/13/javascript5/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/javascript4/" >Js给数组对象（每个）添加一个新元素/字段并赋值</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="1-数组-map"><a href="#1-数组-map" class="headerlink" title="1.数组.map"></a>1.数组.map</h2><p>map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。</p>
-<p>map() 方法按照原始数组元素顺序依次处理元素。</p>
-<p>注意： map() 不会对空数组进行检测。</p>
-<p>注意： map() 不会改变原始数组。</p>
-<p>用法：array.map(function(currentValue,index,arr), thisValue)</p>
-<p>currentValue	必须。当前元素的值<br>index	可选。当前元素的索引值<br>arr	可选。当前元素属于的数组对象</p>
-	
-	</div>
-  <a type="button" href="/2022/10/13/javascript4/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/javascript3/" >Vue中使用base64</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save js-base64</span><br></pre></td></tr></table></figure>
-
-<p>2.在项目文件中引入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> Base64 = require(<span class="string">&quot;js-base64&quot;</span>).Base64;</span><br></pre></td></tr></table></figure>
-
-<p>3.使用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Base64.encode(<span class="string">&#x27;之郎&#x27;</span>) // 5LmL6YOO</span><br><span class="line"></span><br><span class="line">Base64.decode(<span class="string">&#x27;5LmL6YOO&#x27;</span>) // 之郎</span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/javascript3/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/javascript2/" >Typscript与Javascript的对比</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>Typescript（文件后缀名.ts）是Javascript(文件后缀名.js)的超集，可以在ts中使用原生js语法，即向下兼容。<br>Typescript简称“TS”，Javascript简称“JS”</p>
-	
-	</div>
-  <a type="button" href="/2022/10/13/javascript2/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/javascript1/" >JavaScript中 数组的几个用法</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="1-array-push"><a href="#1-array-push" class="headerlink" title="1.array.push()"></a>1.array.push()</h2><p>在数组尾部添加新的元素，并返回新的数组长度。</p>
-<h2 id="2-array-unshift"><a href="#2-array-unshift" class="headerlink" title="2.array.unshift()"></a>2.array.unshift()</h2><p>在数组头部添加新的元素，并返回新的数组长度。[IE不支持]</p>
-<h2 id="3-array-pop"><a href="#3-array-pop" class="headerlink" title="3.array.pop()"></a>3.array.pop()</h2><p>删除并返回数组最后一个元素。</p>
-<h2 id="4-array-shift"><a href="#4-array-shift" class="headerlink" title="4.array.shift()"></a>4.array.shift()</h2><p>删除并返回数组第一个元素。</p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/javascript1/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/09/28/html1/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -290,7 +186,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>64</span></a></li>
+			<li><a href="/categories/IT/">IT<span>72</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -305,48 +201,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
 			<li><a href="/tags/JavaScript/">JavaScript<span>5</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
 			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
-			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
-			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
 			<li><a href="/tags/mui/">mui<span>1</span></a></li>
 		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
 		
-			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>33</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
 		
 			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
 			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
-		   <li><a href="/tags">...<span>32</span></a></li>
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>33</span></a></li>
 		 
 		</ul>
 	</div>
@@ -363,19 +259,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript5/" ><i class="fa fa-file-o"></i>js数组的5种查询方式[find(),findInde...</a>
+        <a href="/2022/10/13/redis8/" ><i class="fa fa-file-o"></i>Redis简介</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript4/" ><i class="fa fa-file-o"></i>Js给数组对象（每个）添加一个新元素/字段并赋值</a>
+        <a href="/2022/10/13/redis7/" ><i class="fa fa-file-o"></i>Redis配置与命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript3/" ><i class="fa fa-file-o"></i>Vue中使用base64</a>
+        <a href="/2022/10/13/redis6/" ><i class="fa fa-file-o"></i>Redis keys 命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript2/" ><i class="fa fa-file-o"></i>Typscript与Javascript的对比</a>
+        <a href="/2022/10/13/redis5/" ><i class="fa fa-file-o"></i>Redis五大数据类型的基本使用</a>
       </li>
     
   </ul>

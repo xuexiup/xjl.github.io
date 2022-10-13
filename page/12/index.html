@@ -142,7 +142,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue16/" >Ant Design Vue icon 图标的使用方法</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue24/" title="本文档适用于Vue2的项目创建，不适用于Vue3">Vue 2.x项目完整搭建步骤</a></div>						
 		</h3>
 	
 
@@ -151,66 +151,15 @@
   <div class="row">
 	
 	
-		<p>先看<a href="https://2x.antdv.com/components/icon-cn" title="" target="">官方文档</a><br>直接点击Outlined栏相应的图标会自动将图标名称复制到你的剪切板上,这里我们点击一个类似菜单的图标：<menu-fold-outlined /></p>
-<p>通常我们会这样去使用：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;menu-fold-outlined&quot;</span>&gt;&lt;/a-icon&gt;</span><br></pre></td></tr></table></figure>
-<p>但是并不会显示出来</p>
-<p>正确的用法应该是：我们在调用的时候标签要去掉分类词</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue16/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue15/" >Ant Design Vue 菜单（Menu）的用法介绍</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue15/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue14/" title="注意：以下三个方案中，方案一，方案二皆为不兼容IE【网站无法访问】的失败方案；方案三为兼容IE的可行方案；">Vue中引入highlight.js实现代码高亮，兼容IE</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>【方案一】</p>
-<p>根据highlight.js官网的介绍，我们在main.js文件中通过import的方式引入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import hljs from <span class="string">&quot;highlight.js&quot;</span>;</span><br><span class="line">import <span class="string">&quot;highlight.js/styles/monokai-sublime.css&quot;</span>;</span><br><span class="line">Vue.use(hljs)</span><br></pre></td></tr></table></figure>
-<p>这里用到了富文本框WandEditor，引入高亮；</p>
-<blockquote><p>this.editor.highlight &#x3D; hljs</p>
+		<p>1）安装Node（转淘宝镜像）和2.x版本的vue-cli</p>
+<blockquote><p>安装node后可通过指令：node –version</p>
+<p>查看版本号</p>
+<p>安装vue-cli后可通过指令：vue –version 或 vue -V</p>
+<p>查看版本号</p>
 </blockquote>
-<p>以上测试环境和打包后在IE上都不兼容，其它浏览器正常运行；</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue14/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue24/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -221,7 +170,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue13/" >在Vue中引入静态图片</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue23/" >Vue实现通过npm启动和打包时自动切换assetsPublicPath的路径</a></div>						
 		</h3>
 	
 
@@ -230,16 +179,12 @@
   <div class="row">
 	
 	
-		<p>1.将图片放在assets或其某文件下</p>
-<p>2.通过以下两种方法引入</p>
-<p>1).import  img1 from ‘..&#x2F;assets&#x2F;images&#x2F;img1.jpg’</p>
-<p>在data中定义地址变量：pic:img1</p>
-<p>2)直接在data中通过require引入:</p>
-<p>pic: require(“..&#x2F;assets&#x2F;images&#x2F;img1.jpg”) </p>
-
+		<p>通常情况下我们是修改config》index.js》assetsPublicPath的值：<br>开发环境：’&#x2F;‘<br>生产环境：’.&#x2F;‘</p>
+<p>来解决这个问题，但是我们每次在开发和生产环境（测试与打包）切换的时候，就要手动去修改这个值，这是比较麻烦的，万一忘记修改了，打包到线上就会出现异常，相当烦人！<br>有没有一个让npm进行测试运行和打包的时候自动切换这个路径的一劳永逸的办法呢？</p>
+<p>答案是有的！</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue13/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue23/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -250,7 +195,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue12/" >Visual Studio Code常用的扩展插件</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue22/" >Vue中引入ElementUi</a></div>						
 		</h3>
 	
 
@@ -259,17 +204,64 @@
   <div class="row">
 	
 	
-		<ol>
-<li><p>Vetur<br>vue 代码?亮插件,vue开发神器</p>
-</li>
-<li><p>Auto Close Tag<br>html?动闭合标签插件</p>
-</li>
-<li><p>Beautify<br>格式化插件</p>
-</li>
-<li><p>Chinese (Simplified) vscode<br>汉化插件</p>
+		<p>1.安装Element-UI框架</p>
+<blockquote><p>官网：npm i element-ui -S<br>也可以是<br>npm install element-ui –save</p>
+</blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue12/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue22/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue21/" >Vue项目中加入百度统计</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>原本我用的是CNZZ插件来做访客统计的功能，但是现在不免费了，一年最低要近1000块大洋才能使用，我只能呵呵。</p>
+<p>主要是网站没人气嘛没必要花这笔钱，而且还穷。</p>
+<p>那就这样吧，再用下下去，就不划算了！！！</p>
+<p>于是在百度搜罗资料，寻求一个Vue项目能做访客统计的插件。</p>
+<p>最终选中了百度统计这款插件，话不多说，用起来先！</p>
+<p>1.申请百度统计的账号（已有账号请跳过此步。）</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue21/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue20/" >Vue中UI库Ant Design Vue 回到顶部（BackTop）组件的使用</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>首先看下官方文档的使用说明，写出了以下范例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;components-back-top-demo-custom&quot;</span>&gt;</span><br><span class="line">      &lt;a-back-top&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;ant-back-top-inner&quot;</span>&gt;</span><br><span class="line">          &lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;up&quot;</span>&gt;&lt;/a-icon&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/a-back-top&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/template&gt;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue20/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -327,7 +319,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>64</span></a></li>
+			<li><a href="/categories/IT/">IT<span>72</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -342,48 +334,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
 			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
 			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
 		
 			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
 			<li><a href="/tags/winform/">winform<span>1</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
 		
 			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>33</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
 			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
 		
-			<li><a href="/tags/c/">c#<span>1</span></a></li>
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>32</span></a></li>
+		   <li><a href="/tags">...<span>33</span></a></li>
 		 
 		</ul>
 	</div>
@@ -400,19 +392,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript5/" ><i class="fa fa-file-o"></i>js数组的5种查询方式[find(),findInde...</a>
+        <a href="/2022/10/13/redis8/" ><i class="fa fa-file-o"></i>Redis简介</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript4/" ><i class="fa fa-file-o"></i>Js给数组对象（每个）添加一个新元素/字段并赋值</a>
+        <a href="/2022/10/13/redis7/" ><i class="fa fa-file-o"></i>Redis配置与命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript3/" ><i class="fa fa-file-o"></i>Vue中使用base64</a>
+        <a href="/2022/10/13/redis6/" ><i class="fa fa-file-o"></i>Redis keys 命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript2/" ><i class="fa fa-file-o"></i>Typscript与Javascript的对比</a>
+        <a href="/2022/10/13/redis5/" ><i class="fa fa-file-o"></i>Redis五大数据类型的基本使用</a>
       </li>
     
   </ul>

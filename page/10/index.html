@@ -141,8 +141,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue26/" >Vue2和Vue3的区别</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool7/" >nginx配置的网页刷新 404</a></div>						
 		</h3>
 	
 
@@ -151,11 +151,14 @@
   <div class="row">
 	
 	
-		<h3 id="一、vue2和vue3双向数据绑定原理的区别？"><a href="#一、vue2和vue3双向数据绑定原理的区别？" class="headerlink" title="一、vue2和vue3双向数据绑定原理的区别？"></a>一、vue2和vue3双向数据绑定原理的区别？</h3><p>vue2 的双向数据绑定是利用ES5 的一个 API Object.definePropert()对数据进行劫持 结合 发布订阅模式的方式来实现的<br>vue3发生了改变，使用proxy替换Object.defineProerty,使用Proxy的优势：<br>可直接监听数组类型的数据变化<br>性能的提升<br>监听的目标为对象本身，不需要像Object.defineProperty一样遍历每个属性，有一定的性能提升<br>可直接实现对象属性的新增&#x2F;删除</p>
-<h3 id="二、根节点的不同"><a href="#二、根节点的不同" class="headerlink" title="二、根节点的不同"></a>二、根节点的不同</h3><p>vue2只接受一个跟几点，而vue3在组件中支持多个根节点.</p>
+		<p>在配置中添加：</p>
+<blockquote><p>try_files $uri $uri&#x2F; &#x2F;index.html; —解决页面刷新404问题 </p>
+</blockquote>
+
+<p>实例：</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue26/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool7/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -165,8 +168,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue25/" >使用vite创建Vue3项目</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool6/" >uniApp 报错 plus is not defined</a></div>						
 		</h3>
 	
 
@@ -175,14 +178,11 @@
   <div class="row">
 	
 	
-		<p>通过Vite创建的Vue3项目是可以跟Vue2项目共存的，即不影响我们旧的Vue2的项目。</p>
-<p>前提条件：已安装 15.0 或更高版本的 Node.js</p>
-<p>1）在需要创建项目的文件夹下打开终端，并执行指令：</p>
-<blockquote><p>npm init vite@latest</p>
+		<h3 id="plus是什么？"><a href="#plus是什么？" class="headerlink" title="plus是什么？"></a>plus是什么？</h3><blockquote><p>plus是5+Runtime的内部对象。<br>就像chrome浏览器里有chrome.开头的一些对象方法，5+runtime内部内置了plus对象。<br>因为plus和mui不一样，plus是引擎级别的，不需要前端框架。而mui是前端框架，所以是要引入mui.js才能使用的。</p>
 </blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue25/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool6/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -192,8 +192,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue24/" title="本文档适用于Vue2的项目创建，不适用于Vue3">Vue 2.x项目完整搭建步骤</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool5/" >office的另类安装方法</a></div>						
 		</h3>
 	
 
@@ -202,65 +202,67 @@
   <div class="row">
 	
 	
-		<p>1）安装Node（转淘宝镜像）和2.x版本的vue-cli</p>
-<blockquote><p>安装node后可通过指令：node –version</p>
-<p>查看版本号</p>
-<p>安装vue-cli后可通过指令：vue –version 或 vue -V</p>
-<p>查看版本号</p>
+		<a href="https://www.bilibili.com/video/BV193411K7Yq/?spm_id_from=333.337.search-card.all.click&vd_source=d476ccd7f594c6a924ede109727a1a64" title="" target="">office的另类安装方法</a>
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool5/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool4/" >svn commit时候一直显示please wait，且一直不动</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>解决方案：<br>node_modules 这个文件右键，选择TortoiseSVN，再选择Unversion and add to ignore list   就可以了；<br>因为SVN检索node_modules文件系统比较慢。</p>
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool4/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool3/" >nginx常用命令</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>1).命令可以查看nginx的服务进程信息</p>
+<blockquote><p>tasklist &#x2F;fi “imagename eq nginx.exe”</p>
+</blockquote>
+
+<p>2).命令可以关闭nginx的服务进程[所有的，慎用]</p>
+<blockquote><p>taskkill &#x2F;fi “imagename eq nginx.exe” &#x2F;f</p>
+</blockquote>
+
+<p>3).启动nginx[前提是配置了conf]</p>
+<blockquote><p>Start nginx</p>
 </blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue24/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue23/" >Vue实现通过npm启动和打包时自动切换assetsPublicPath的路径</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>通常情况下我们是修改config》index.js》assetsPublicPath的值：<br>开发环境：’&#x2F;‘<br>生产环境：’.&#x2F;‘</p>
-<p>来解决这个问题，但是我们每次在开发和生产环境（测试与打包）切换的时候，就要手动去修改这个值，这是比较麻烦的，万一忘记修改了，打包到线上就会出现异常，相当烦人！<br>有没有一个让npm进行测试运行和打包的时候自动切换这个路径的一劳永逸的办法呢？</p>
-<p>答案是有的！</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue23/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue22/" >Vue中引入ElementUi</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.安装Element-UI框架</p>
-<blockquote><p>官网：npm i element-ui -S<br>也可以是<br>npm install element-ui –save</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue22/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool3/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -318,7 +320,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>64</span></a></li>
+			<li><a href="/categories/IT/">IT<span>72</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -333,48 +335,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/JavaScript/">JavaScript<span>5</span></a></li>
-		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
 			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
 		
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
 			<li><a href="/tags/工具/">工具<span>10</span></a></li>
 		
-			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
 			<li><a href="/tags/c/">c#<span>1</span></a></li>
 		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>32</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>33</span></a></li>
 		 
 		</ul>
 	</div>
@@ -391,19 +393,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript5/" ><i class="fa fa-file-o"></i>js数组的5种查询方式[find(),findInde...</a>
+        <a href="/2022/10/13/redis8/" ><i class="fa fa-file-o"></i>Redis简介</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript4/" ><i class="fa fa-file-o"></i>Js给数组对象（每个）添加一个新元素/字段并赋值</a>
+        <a href="/2022/10/13/redis7/" ><i class="fa fa-file-o"></i>Redis配置与命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript3/" ><i class="fa fa-file-o"></i>Vue中使用base64</a>
+        <a href="/2022/10/13/redis6/" ><i class="fa fa-file-o"></i>Redis keys 命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript2/" ><i class="fa fa-file-o"></i>Typscript与Javascript的对比</a>
+        <a href="/2022/10/13/redis5/" ><i class="fa fa-file-o"></i>Redis五大数据类型的基本使用</a>
       </li>
     
   </ul>

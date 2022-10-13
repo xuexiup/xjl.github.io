@@ -142,7 +142,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/ui3/" >el-dialog 问题</a></div>						
+			<div class="article-title"><a href="/2022/10/13/javascript4/" >Js给数组对象（每个）添加一个新元素/字段并赋值</a></div>						
 		</h3>
 	
 
@@ -151,11 +151,15 @@
   <div class="row">
 	
 	
-		<h3 id="1-弹出层被遮罩挡住"><a href="#1-弹出层被遮罩挡住" class="headerlink" title="1.弹出层被遮罩挡住"></a>1.弹出层被遮罩挡住</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:modal-append-to-body=<span class="string">&quot;false&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-点击取消或确定，弹窗关闭后会再次打开一下，又关闭"><a href="#2-点击取消或确定，弹窗关闭后会再次打开一下，又关闭" class="headerlink" title="2.点击取消或确定，弹窗关闭后会再次打开一下，又关闭"></a>2.点击取消或确定，弹窗关闭后会再次打开一下，又关闭</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v-if=<span class="string">&quot;dialogFormVisible&quot;</span></span><br></pre></td></tr></table></figure>
+		<h2 id="1-数组-map"><a href="#1-数组-map" class="headerlink" title="1.数组.map"></a>1.数组.map</h2><p>map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。</p>
+<p>map() 方法按照原始数组元素顺序依次处理元素。</p>
+<p>注意： map() 不会对空数组进行检测。</p>
+<p>注意： map() 不会改变原始数组。</p>
+<p>用法：array.map(function(currentValue,index,arr), thisValue)</p>
+<p>currentValue	必须。当前元素的值<br>index	可选。当前元素的索引值<br>arr	可选。当前元素属于的数组对象</p>
 	
 	</div>
-  <a type="button" href="/2022/10/13/ui3/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/javascript4/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -166,7 +170,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/ui2/" >ElementUI控件el-tree方法renderContent的使用</a></div>						
+			<div class="article-title"><a href="/2022/10/13/javascript3/" >Vue中使用base64</a></div>						
 		</h3>
 	
 
@@ -175,12 +179,18 @@
   <div class="row">
 	
 	
-		<p>renderContent并不会影响代码中既定tree数据层结构渲染加载；</p>
-<p>这里的作用是根据tree的特定level调整其样式：</p>
-<h2 id="el-tree"><a href="#el-tree" class="headerlink" title="el-tree"></a>el-tree</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tree</span><br><span class="line"></span><br><span class="line">                :render-content=<span class="string">&quot;renderContent&quot;</span></span><br><span class="line"></span><br><span class="line">                :data=<span class="string">&quot;treedata&quot;</span></span><br><span class="line"></span><br><span class="line">                default-expand-all</span><br><span class="line"></span><br><span class="line">                :show-checkbox=<span class="string">&quot;showcheckbox&quot;</span></span><br><span class="line"></span><br><span class="line">                highlight-current</span><br><span class="line"></span><br><span class="line">                node-key=<span class="string">&quot;itemId&quot;</span></span><br><span class="line"></span><br><span class="line">                :expand-on-click-node=<span class="string">&quot;false&quot;</span></span><br><span class="line"></span><br><span class="line">                @node-click=<span class="string">&quot;handleNodeClick&quot;</span></span><br><span class="line"></span><br><span class="line">                :props=<span class="string">&quot;ItemProps&quot;</span></span><br><span class="line"></span><br><span class="line">                v-loading=<span class="string">&quot;ISload&quot;</span></span><br><span class="line"></span><br><span class="line">                ref=<span class="string">&quot;tree&quot;</span></span><br><span class="line"></span><br><span class="line">                @check-change=<span class="string">&quot;itemCheckChange&quot;</span></span><br><span class="line"></span><br><span class="line">                style=<span class="string">&quot;margin-top: 1em;&quot;</span></span><br><span class="line"></span><br><span class="line">              &gt;&lt;/el-tree&gt;</span><br></pre></td></tr></table></figure>
+		<p>1.安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save js-base64</span><br></pre></td></tr></table></figure>
+
+<p>2.在项目文件中引入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> Base64 = require(<span class="string">&quot;js-base64&quot;</span>).Base64;</span><br></pre></td></tr></table></figure>
+
+<p>3.使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Base64.encode(<span class="string">&#x27;之郎&#x27;</span>) // 5LmL6YOO</span><br><span class="line"></span><br><span class="line">Base64.decode(<span class="string">&#x27;5LmL6YOO&#x27;</span>) // 之郎</span><br></pre></td></tr></table></figure>
+
 	
 	</div>
-  <a type="button" href="/2022/10/13/ui2/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/javascript3/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -191,7 +201,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/ui1/" >ElementUI栅格系统布局与偏移</a></div>						
+			<div class="article-title"><a href="/2022/10/13/javascript2/" >Typscript与Javascript的对比</a></div>						
 		</h3>
 	
 
@@ -200,11 +210,10 @@
   <div class="row">
 	
 	
-		<p>以下内容参照 <a href="https://element.eleme.io/#/zh-CN/component/layout#col-attributes" title="" target="">官方文档</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line"></span><br><span class="line">&lt;el-col</span><br><span class="line">        :xs=<span class="string">&quot;&#123; span: 24, offset: 0 &#125;&quot;</span></span><br><span class="line">        :sm=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :md=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :lg=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :xl=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :xxl=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">      &gt;</span><br><span class="line">&lt;/el-col&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br></pre></td></tr></table></figure>
+		<p>Typescript（文件后缀名.ts）是Javascript(文件后缀名.js)的超集，可以在ts中使用原生js语法，即向下兼容。<br>Typescript简称“TS”，Javascript简称“JS”</p>
 	
 	</div>
-  <a type="button" href="/2022/10/13/ui1/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/javascript2/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -215,7 +224,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/netnote2/" >电脑开启VT的方法</a></div>						
+			<div class="article-title"><a href="/2022/10/13/javascript1/" >JavaScript中 数组的几个用法</a></div>						
 		</h3>
 	
 
@@ -224,12 +233,14 @@
   <div class="row">
 	
 	
-		<p>
-<a href="https://support.yeshen.com/zh-CN/often/vt" title="" target="">点我查看详情</a>
-</p>
+		<h2 id="1-array-push"><a href="#1-array-push" class="headerlink" title="1.array.push()"></a>1.array.push()</h2><p>在数组尾部添加新的元素，并返回新的数组长度。</p>
+<h2 id="2-array-unshift"><a href="#2-array-unshift" class="headerlink" title="2.array.unshift()"></a>2.array.unshift()</h2><p>在数组头部添加新的元素，并返回新的数组长度。[IE不支持]</p>
+<h2 id="3-array-pop"><a href="#3-array-pop" class="headerlink" title="3.array.pop()"></a>3.array.pop()</h2><p>删除并返回数组最后一个元素。</p>
+<h2 id="4-array-shift"><a href="#4-array-shift" class="headerlink" title="4.array.shift()"></a>4.array.shift()</h2><p>删除并返回数组第一个元素。</p>
+
 	
 	</div>
-  <a type="button" href="/2022/10/13/netnote2/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/javascript1/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -240,7 +251,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/netnote1/" >软件版本号释意</a></div>						
+			<div class="article-title"><a href="/2022/10/13/mongodb4/" >Mongodb的下载与安装</a></div>						
 		</h3>
 	
 
@@ -249,13 +260,17 @@
   <div class="row">
 	
 	
-		<h3 id="1、软件版本阶段说明"><a href="#1、软件版本阶段说明" class="headerlink" title="1、软件版本阶段说明"></a>1、软件版本阶段说明</h3><h2 id="Alpha版"><a href="#Alpha版" class="headerlink" title="*Alpha版"></a>*Alpha版</h2><p>此版本表示该软件在此阶段主要是以实现软件功能为主，通常只在软件开发者内部交流，一般而言，该版本软件的Bug较多，需要继续修改。</p>
-<h2 id="Beta版"><a href="#Beta版" class="headerlink" title="*Beta版"></a>*Beta版</h2><p>该版本相对于α版已有了很大的改进，消除了严重的错误，但还是存在着一些缺陷，需要经过多次测试来进一步消除，此版本主要的修改对像是软件的UI。</p>
-<h2 id="RC版"><a href="#RC版" class="headerlink" title="*RC版"></a>*RC版</h2><p>该版本已经相当成熟了，基本上不存在导致错误的BUG，与即将发行的正式版相差无几。</p>
-<h2 id="Release版"><a href="#Release版" class="headerlink" title="*Release版"></a>*Release版</h2><p>该版本意味“最终版本”，在前面版本的一系列测试版之后，终归会有一个正式版本，是最终交付用户使用的一个版本。该版本有时也称为标准版。一般情况下，Release不会以单词形式出现在软件封面上，取而代之的是符号(R)。</p>
+		<p>1.去<a href="https://www.mongodb.com/try/download" title="" target="">Mongodb官网</a>下载安装包，选择Community版本就行</p>
+<p>2.下载后解压【建议不放到C盘，节省C盘空间】</p>
+<p>3.由于Mongodb不会自动创建存放数据以及配置文件和日志等路径，需要我们手动创建文件夹：</p>
+<blockquote><p>1）data:用于存放数据库文件数据，并在其下创建一个名为 db 的文件夹<br>2）log:用于存放日志文件</p>
+</blockquote>
+
+<p>data以及log文件夹可以是其它名字，文件夹路径也不一定是在mongodb解压的根路径下【配置文件中指定关联】</p>
+<p>这里我是在解压后的bin目录同级创建的以上文件夹。</p>
 	
 	</div>
-  <a type="button" href="/2022/10/13/netnote1/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/mongodb4/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -313,7 +328,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>64</span></a></li>
+			<li><a href="/categories/IT/">IT<span>72</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -328,48 +343,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>1</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
-		
 			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>1</span></a></li>
-		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/JavaScript/">JavaScript<span>5</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
 			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
 		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>5</span></a></li>
+		
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>33</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
 			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>32</span></a></li>
+		   <li><a href="/tags">...<span>33</span></a></li>
 		 
 		</ul>
 	</div>
@@ -386,19 +401,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript5/" ><i class="fa fa-file-o"></i>js数组的5种查询方式[find(),findInde...</a>
+        <a href="/2022/10/13/redis8/" ><i class="fa fa-file-o"></i>Redis简介</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript4/" ><i class="fa fa-file-o"></i>Js给数组对象（每个）添加一个新元素/字段并赋值</a>
+        <a href="/2022/10/13/redis7/" ><i class="fa fa-file-o"></i>Redis配置与命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript3/" ><i class="fa fa-file-o"></i>Vue中使用base64</a>
+        <a href="/2022/10/13/redis6/" ><i class="fa fa-file-o"></i>Redis keys 命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript2/" ><i class="fa fa-file-o"></i>Typscript与Javascript的对比</a>
+        <a href="/2022/10/13/redis5/" ><i class="fa fa-file-o"></i>Redis五大数据类型的基本使用</a>
       </li>
     
   </ul>

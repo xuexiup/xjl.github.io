@@ -129,7 +129,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue3/" >Vue中引入Jquery</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue11/" >Vue的生命周期</a></div>						
 		</h3>
 	
 
@@ -138,11 +138,11 @@
   <div class="row">
 	
 	
-		<p>1.首先在依赖中填写要引入jquery版本信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;@babel/polyfill&quot;</span>: <span class="string">&quot;^7.12.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;ant-design-vue&quot;</span>: <span class="string">&quot;^1.6.5&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;axios&quot;</span>: <span class="string">&quot;^0.20.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;element-ui&quot;</span>: <span class="string">&quot;^2.13.2&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;hexo-helper-live2d&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;jquery&quot;</span>: <span class="string">&quot;^3.6.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;view-design&quot;</span>: <span class="string">&quot;^4.4.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue&quot;</span>: <span class="string">&quot;^2.5.2&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-axios&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-resource&quot;</span>: <span class="string">&quot;^1.5.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-router&quot;</span>: <span class="string">&quot;^3.4.7&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;wangeditor&quot;</span>: <span class="string">&quot;^4.7.10&quot;</span></span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+		<h3 id="什么是Vue的生命周期-？"><a href="#什么是Vue的生命周期-？" class="headerlink" title="什么是Vue的生命周期 ？"></a>什么是Vue的生命周期 ？</h3><blockquote><p>Vue 的实例从创建到销毁的过程 ，就是生命周期 ，也就是从开始创建 ，初始化数据 ，编译模板 ，挂载Dom到渲染DOM ，更新数据再到渲染 ，卸载等一系列的过程 ，我们称这是Vue的生命周期。</p>
+</blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue3/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue11/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -151,7 +151,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue2/" >vue 打包后图片显示，或因为路径原因，显示白屏？</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue10/" >axios中使用异步（async +await）</a></div>						
 		</h3>
 	
 
@@ -160,11 +160,11 @@
   <div class="row">
 	
 	
-		<p>打包后由于路径不对，导致资源文件加载不到，需要调整：</p>
-<p>1.config&#x2F;index.js 修改以下两个地方</p>
+		<p>1.定义方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> getIteminfo(<span class="built_in">id</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">id</span> == null) <span class="built_in">id</span> = getPara();//获取页面参数</span><br><span class="line"></span><br><span class="line">    var item_options = [];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> await axios(&#123;</span><br><span class="line"></span><br><span class="line">        url: dev_proxyftpname + <span class="string">&quot;/api/findOneById&quot;</span>,</span><br><span class="line"></span><br><span class="line">        method: <span class="string">&quot;post&quot;</span>,</span><br><span class="line"></span><br><span class="line">        data: JSON.stringify(&#123; <span class="built_in">id</span>: <span class="built_in">id</span> &#125;),</span><br><span class="line"></span><br><span class="line">        headers: &#123; <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span> &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="built_in">timeout</span>: 1000 * 30,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">        .<span class="keyword">then</span>((res) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (res.data) &#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (res.data.data != null) &#123;</span><br><span class="line"></span><br><span class="line">                    <span class="built_in">return</span> res.data.data;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue2/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue10/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -172,8 +172,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-09-29 </div>
-			<div class="article-title"><a href="/2022/09/29/vue1/" title="此篇文章信息来源于自己实践查阅资料所得。">封装axios，添加拦截器</a></div>						
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue9/" >Vue中全局变量和全局函数的使用</a></div>						
 		</h3>
 	
 
@@ -182,10 +182,12 @@
   <div class="row">
 	
 	
-		<h3 id="1-安装axios"><a href="#1-安装axios" class="headerlink" title="1.安装axios"></a>1.安装axios</h3>
+		<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>1.直接在main.js中通过prototype定义</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.accessToken = <span class="string">&#x27;xxx&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>在页面中调用：this.accessToken<br>这种方法简单但是，当需要定义变量很多的时候，管理就很繁杂，这个时候就不宜使用。</p>
 	
 	</div>
-  <a type="button" href="/2022/09/29/vue1/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue9/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -193,8 +195,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-09-28 </div>
-			<div class="article-title"><a href="/2022/09/28/html1/" >后端返回的数据会带一个换行符（“↵”），前端如何根据该符号进行换行展示</a></div>						
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue8/" title="Vuex是一个专为 Vue.js 应用程序开发的状态管理模式 + 库,其结构：">vuex状态管理模式</a></div>						
 		</h3>
 	
 
@@ -203,12 +205,39 @@
   <div class="row">
 	
 	
-		<h3 id="方法一：textarea赋值"><a href="#方法一：textarea赋值" class="headerlink" title="方法一：textarea赋值"></a>方法一：textarea赋值</h3><p>　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。</p>
-<h3 id="方法二：使用v-html输出文本"><a href="#方法二：使用v-html输出文本" class="headerlink" title="方法二：使用v-html输出文本"></a>方法二：使用v-html输出文本</h3><p>　　“↵”符号在html中会识别别为\r,\n等转义字符，所以我们可以使用\r\n去替换（.replace(&#x2F;(\r\n|\n|\r)&#x2F;gm, ‘ &lt; br &#x2F;&gt; ‘)）</p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;span v-html=<span class="string">&quot;detail.replace(/(\r\n|\n|\r)/gm, &#x27;&lt;br /&gt;&#x27;)&quot;</span>&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+		<blockquote><p>State：定义存储状态对象</p>
+<p>Getter:获取到State后，对其计算返回需要的值（获取计算状态对象）</p>
+<p>Mutation：提交更新状态对象（同步，异步使用：Action）</p>
+<p>Action:提交一个或多个Mutation，不是直接变更状态</p>
+<p>Module:模块化vuex，可以让每一个模块拥有自己的state、mutation、action、getters,使得结构非常清晰，方便管理。</p>
+</blockquote>
 	
 	</div>
-  <a type="button" href="/2022/09/28/html1/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue8/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue7/" >Vue Router的封装配置</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.安装（如果在创建项目的时候没有确认安装）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install vue-router --save</span><br></pre></td></tr></table></figure>
+
+<p>之后在src下会生成一个文件夹router，这里我们删除这个文件夹。（安装好就行了，不用它的默认文件夹，我们自己封装）</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue7/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -225,7 +254,7 @@
         <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
 
 		
-          <li class="next disabled"><a>下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		   <li class="next"> <a href="/categories/IT/page/14/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
         
 	
 </ul>
@@ -261,7 +290,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>64</span></a></li>
+			<li><a href="/categories/IT/">IT<span>72</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -276,48 +305,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
 		
 			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
-			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
 			<li><a href="/tags/JavaScript/">JavaScript<span>5</span></a></li>
 		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
 		
-		   <li><a href="/tags">...<span>32</span></a></li>
+			<li><a href="/tags/winform/">winform<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>33</span></a></li>
 		 
 		</ul>
 	</div>
@@ -334,19 +363,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript5/" ><i class="fa fa-file-o"></i>js数组的5种查询方式[find(),findInde...</a>
+        <a href="/2022/10/13/redis8/" ><i class="fa fa-file-o"></i>Redis简介</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript4/" ><i class="fa fa-file-o"></i>Js给数组对象（每个）添加一个新元素/字段并赋值</a>
+        <a href="/2022/10/13/redis7/" ><i class="fa fa-file-o"></i>Redis配置与命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript3/" ><i class="fa fa-file-o"></i>Vue中使用base64</a>
+        <a href="/2022/10/13/redis6/" ><i class="fa fa-file-o"></i>Redis keys 命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript2/" ><i class="fa fa-file-o"></i>Typscript与Javascript的对比</a>
+        <a href="/2022/10/13/redis5/" ><i class="fa fa-file-o"></i>Redis五大数据类型的基本使用</a>
       </li>
     
   </ul>

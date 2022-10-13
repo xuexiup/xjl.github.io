@@ -142,7 +142,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/javascript1/" >JavaScript中 数组的几个用法</a></div>						
+			<div class="article-title"><a href="/2022/10/13/redis4/" >Redis五大数据类型的基本相关命令</a></div>						
 		</h3>
 	
 
@@ -151,143 +151,94 @@
   <div class="row">
 	
 	
-		<h2 id="1-array-push"><a href="#1-array-push" class="headerlink" title="1.array.push()"></a>1.array.push()</h2><p>在数组尾部添加新的元素，并返回新的数组长度。</p>
-<h2 id="2-array-unshift"><a href="#2-array-unshift" class="headerlink" title="2.array.unshift()"></a>2.array.unshift()</h2><p>在数组头部添加新的元素，并返回新的数组长度。[IE不支持]</p>
-<h2 id="3-array-pop"><a href="#3-array-pop" class="headerlink" title="3.array.pop()"></a>3.array.pop()</h2><p>删除并返回数组最后一个元素。</p>
-<h2 id="4-array-shift"><a href="#4-array-shift" class="headerlink" title="4.array.shift()"></a>4.array.shift()</h2><p>删除并返回数组第一个元素。</p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/javascript1/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/mongodb4/" >Mongodb的下载与安装</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.去<a href="https://www.mongodb.com/try/download" title="" target="">Mongodb官网</a>下载安装包，选择Community版本就行</p>
-<p>2.下载后解压【建议不放到C盘，节省C盘空间】</p>
-<p>3.由于Mongodb不会自动创建存放数据以及配置文件和日志等路径，需要我们手动创建文件夹：</p>
-<blockquote><p>1）data:用于存放数据库文件数据，并在其下创建一个名为 db 的文件夹<br>2）log:用于存放日志文件</p>
-</blockquote>
-
-<p>data以及log文件夹可以是其它名字，文件夹路径也不一定是在mongodb解压的根路径下【配置文件中指定关联】</p>
-<p>这里我是在解压后的bin目录同级创建的以上文件夹。</p>
-	
-	</div>
-  <a type="button" href="/2022/10/13/mongodb4/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/mongodb3/" >Error: couldn&#39;t connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Erro</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>我们在cmd中输入：mongo如果出现错误提示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: couldn<span class="string">&#x27;t connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Erro</span></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/13/mongodb3/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/mongodb2/" title="下表介绍了各种SQL术语和概念以及相应的MongoDB术语和概念。">SQL到MongoDB的映射图表</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<table>
+		<p>1.字符串命令</p>
+<table>
 <thead>
 <tr>
-<th>SQL术语&#x2F;概念</th>
-<th>MongoDB术语&#x2F;概念</th>
+<th>1</th>
+<th><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3544.html">SET key value 设置指定 key 的值</a></th>
 </tr>
 </thead>
 <tbody><tr>
-<td>database</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/glossary/#term-database">database</a></td>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3545.html">GET key 获取指定 key 的值。</a></td>
 </tr>
 <tr>
-<td>table</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/glossary/#term-collection">collection</a></td>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3546.html">GETRANGE key start end 返回 key 中字符串值的子字符</a></td>
 </tr>
 <tr>
-<td>row</td>
-<td>document or BSON document</td>
+<td>4</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3547.html">GETSET key value 将给定 key 的值设为 value ，并返回 key 的旧值(old value)。</a></td>
 </tr>
 <tr>
-<td>column</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/glossary/#term-field">field</a></td>
+<td>5</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3548.html">GETBIT key offset 对 key 所储存的字符串值，获取指定偏移量上的位(bit)。</a></td>
 </tr>
 <tr>
-<td>index</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/glossary/#term-index">index</a></td>
+<td>6</td>
+<td>[MGET key1 <a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3549.html">key2..] 获取所有(一个或多个)给定 key 的值。</a></td>
 </tr>
 <tr>
-<td>table joins</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/#pipe._S_lookup">$lookup, 嵌入文档</a></td>
+<td>7</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3550.html">SETBIT key offset value 对 key 所储存的字符串值，设置或清除指定偏移量上的位(bit)。</a></td>
 </tr>
 <tr>
-<td>primary key （指定任何唯一的列或列组合作为主键。）</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/glossary/#term-primary-key">primary key （在MongoDB中，主键自动设置为_id字段。）</a></td>
+<td>8</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3551.html">SETEX key seconds value 将值 value 关联到 key ，并将 key 的过期时间设为 seconds (以秒为单位)。</a></td>
 </tr>
 <tr>
-<td>aggregation (e.g. group by)</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/sql-aggregation-comparison/">aggregation pipeline See the SQL to Aggregation Mapping Chart.</a></td>
+<td>9</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3552.html">SETNX key value 只有在 key 不存在时设置 key 的值。</a></td>
 </tr>
 <tr>
-<td>SELECT INTO NEW_TABLE</td>
-<td>$out See the SQL to Aggregation Mapping Chart.</td>
+<td>10</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3553.html">SETRANGE key offset value 用 value 参数覆写给定 key 所储存的字符串值，从偏移量 offset 开始。</a></td>
 </tr>
 <tr>
-<td>MERGE INTO TABLE</td>
-<td>$merge (Available starting in MongoDB 4.2) See the SQL to Aggregation Mapping Chart.</td>
+<td>11</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3554.html">STRLEN key 返回 key 所储存的字符串值的长度。</a></td>
 </tr>
 <tr>
-<td>Transactions</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/core/transactions/">transactions 在许多情况下，非规范化数据模型（嵌入式文档和数组） 将继续是您数据和用例的最佳选择，而不是多文档事务。 也就是说，在许多情况下，对数据进行适当的建模将最 大程度地减少对多文档交易的需求。</a></td>
+<td>12</td>
+<td>[MSET key value <a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3555.html">key value …] 同时设置一个或多个 key-value 对。</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td>[MSETNX key value <a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3556.html">key value …] 同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在。</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3557.html">PSETEX key milliseconds value 这个命令和 SETEX 命令相似，但它以毫秒为单位设置 key 的生存时间，而不是像 SETEX 命令那样，以秒为单位。</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3558.html">INCR key 将 key 中储存的数字值增一。</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3559.html">INCRBY key increment 将 key 所储存的值加上给定的增量值（increment） 。</a></td>
+</tr>
+<tr>
+<td>17</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3560.html">INCRBYFLOAT key increment 将 key 所储存的值加上给定的浮点增量值（increment） 。</a></td>
+</tr>
+<tr>
+<td>18</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3561.html">DECR key 将 key 中储存的数字值减一。</a></td>
+</tr>
+<tr>
+<td>19</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3562.html">DECRBY key decrement key 所储存的值减去给定的减量值（decrement） 。</a></td>
+</tr>
+<tr>
+<td>20</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3563.html">APPEND key value 如果 key 已经存在并且是一个字符串， APPEND 命令将 value 追加到 key 原来的值的末尾。</a></td>
 </tr>
 </tbody></table>
-
 	
 	</div>
-  <a type="button" href="/2022/10/13/mongodb2/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/redis4/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -298,7 +249,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/mongodb1/" >MongoDB 常用的数据库命令</a></div>						
+			<div class="article-title"><a href="/2022/10/13/redis3/" >Redis发布订阅</a></div>						
 		</h3>
 	
 
@@ -307,16 +258,96 @@
   <div class="row">
 	
 	
-		<h2 id="1、切换数据库-x2F-如果数据库不存在则创建数据库-test是具体的数据库名称"><a href="#1、切换数据库-x2F-如果数据库不存在则创建数据库-test是具体的数据库名称" class="headerlink" title="1、切换数据库&#x2F;如果数据库不存在则创建数据库[test是具体的数据库名称]"></a>1、切换数据库&#x2F;如果数据库不存在则创建数据库[test是具体的数据库名称]</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2、如果你想查看所有数据库，可以使用-show-dbs-命令"><a href="#2、如果你想查看所有数据库，可以使用-show-dbs-命令" class="headerlink" title="2、如果你想查看所有数据库，可以使用 show dbs 命令"></a>2、如果你想查看所有数据库，可以使用 show dbs 命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br></pre></td></tr></table></figure>
-
-<h2 id="3、MongoDB-删除数据库的语法"><a href="#3、MongoDB-删除数据库的语法" class="headerlink" title="3、MongoDB 删除数据库的语法"></a>3、MongoDB 删除数据库的语法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.dropDatabase()</span><br></pre></td></tr></table></figure>
-
-<h2 id="4、写入一条记录【如果表不存在会自动创建"><a href="#4、写入一条记录【如果表不存在会自动创建" class="headerlink" title="4、写入一条记录【如果表不存在会自动创建"></a>4、写入一条记录【如果表不存在会自动创建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table2.insertOne(&#123; o1: <span class="string">&quot;1&quot;</span> &#125;)</span><br></pre></td></tr></table></figure>
+		<p>Redis 发布订阅(pub&#x2F;sub)是一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。</p>
+<p>Redis 客户端可以订阅任意数量的频道。</p>
+<p>Redis 发布订阅命令</p>
 	
 	</div>
-  <a type="button" href="/2022/10/13/mongodb1/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/redis3/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis2/" >Redis事务</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Redis 事务可以一次执行多个命令， 并且带有以下两个重要的保证：</p>
+<p>1） 事务是一个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执行。事务在执行的过程中，不会被其他客户端发送来的命令请求所打断。</p>
+<p>2）事务是一个原子操作：事务中的命令要么全部被执行，要么全部都不执行。</p>
+<p>一个事务从开始到执行会经历以下三个阶段：</p>
+<p>开始事务》命令入队》执行事务</p>
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis2/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis1/" >Redis连接</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Redis 连接命令主要是用于连接 redis 服务。</p>
+<p>以下实例演示了客户端如何通过密码验证连接到 redis 服务，并检测服务是否在运行：</p>
+<blockquote><p>1.redis 127.0.0.1:6379&gt; AUTH “password”</p>
+<p>2.OK</p>
+<p>3.redis 127.0.0.1:6379&gt; PING</p>
+<p>4.PONG</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis1/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/javascript5/" >js数组的5种查询方式[find(),findIndex(),indexOf(),lastIndexOf(),include()]</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.find() 返回数组中第一个满足条件的数据</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.find((item, index) =&gt; &#123; <span class="built_in">return</span>...&#125;)</span><br></pre></td></tr></table></figure>
+
+
+<p>2.findIndex() 返回数组中第一个满足条件的索引(从0开始), 不满足返回-1</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.findIndex((item, index) =&gt; &#123; <span class="built_in">return</span>...&#125;)</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/javascript5/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -374,7 +405,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>64</span></a></li>
+			<li><a href="/categories/IT/">IT<span>72</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
@@ -389,48 +420,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/工具/">工具<span>10</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>33</span></a></li>
-		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
-		
 			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
 		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
 			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
+		
 			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
 			<li><a href="/tags/mui/">mui<span>1</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>32</span></a></li>
+		   <li><a href="/tags">...<span>33</span></a></li>
 		 
 		</ul>
 	</div>
@@ -447,19 +478,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript5/" ><i class="fa fa-file-o"></i>js数组的5种查询方式[find(),findInde...</a>
+        <a href="/2022/10/13/redis8/" ><i class="fa fa-file-o"></i>Redis简介</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript4/" ><i class="fa fa-file-o"></i>Js给数组对象（每个）添加一个新元素/字段并赋值</a>
+        <a href="/2022/10/13/redis7/" ><i class="fa fa-file-o"></i>Redis配置与命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript3/" ><i class="fa fa-file-o"></i>Vue中使用base64</a>
+        <a href="/2022/10/13/redis6/" ><i class="fa fa-file-o"></i>Redis keys 命令</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/javascript2/" ><i class="fa fa-file-o"></i>Typscript与Javascript的对比</a>
+        <a href="/2022/10/13/redis5/" ><i class="fa fa-file-o"></i>Redis五大数据类型的基本使用</a>
       </li>
     
   </ul>
