@@ -140,8 +140,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue17/" >Vue中使用AOS动画插件，让你的网页更酷炫</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool6/" >uniApp 报错 plus is not defined</a></div>						
 		</h3>
 	
 
@@ -150,85 +150,11 @@
   <div class="row">
 	
 	
-		<p>根据官方文档，使用此插件可以通过直接引用的方式，也可以是下载安装本地包；<br>1.直接使用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.css&quot;</span>/&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.js”</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">AOS.init();</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这种引入方式如果是在Vue项目中，自然是从首页（index.html）中引入。</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue17/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue16/" >Ant Design Vue icon 图标的使用方法</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>先看<a href="https://2x.antdv.com/components/icon-cn" title="" target="">官方文档</a><br>直接点击Outlined栏相应的图标会自动将图标名称复制到你的剪切板上,这里我们点击一个类似菜单的图标：<menu-fold-outlined /></p>
-<p>通常我们会这样去使用：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;menu-fold-outlined&quot;</span>&gt;&lt;/a-icon&gt;</span><br></pre></td></tr></table></figure>
-<p>但是并不会显示出来</p>
-<p>正确的用法应该是：我们在调用的时候标签要去掉分类词</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue16/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue15/" >Ant Design Vue 菜单（Menu）的用法介绍</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue15/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue14/" title="注意：以下三个方案中，方案一，方案二皆为不兼容IE【网站无法访问】的失败方案；方案三为兼容IE的可行方案；">Vue中引入highlight.js实现代码高亮，兼容IE</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>【方案一】</p>
-<p>根据highlight.js官网的介绍，我们在main.js文件中通过import的方式引入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import hljs from <span class="string">&quot;highlight.js&quot;</span>;</span><br><span class="line">import <span class="string">&quot;highlight.js/styles/monokai-sublime.css&quot;</span>;</span><br><span class="line">Vue.use(hljs)</span><br></pre></td></tr></table></figure>
-<p>这里用到了富文本框WandEditor，引入高亮；</p>
-<blockquote><p>this.editor.highlight &#x3D; hljs</p>
+		<h3 id="plus是什么？"><a href="#plus是什么？" class="headerlink" title="plus是什么？"></a>plus是什么？</h3><blockquote><p>plus是5+Runtime的内部对象。<br>就像chrome浏览器里有chrome.开头的一些对象方法，5+runtime内部内置了plus对象。<br>因为plus和mui不一样，plus是引擎级别的，不需要前端框架。而mui是前端框架，所以是要引入mui.js才能使用的。</p>
 </blockquote>
-<p>以上测试环境和打包后在IE上都不兼容，其它浏览器正常运行；</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue14/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool6/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -236,8 +162,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue13/" >在Vue中引入静态图片</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool5/" >office的另类安装方法</a></div>						
 		</h3>
 	
 
@@ -246,16 +172,89 @@
   <div class="row">
 	
 	
-		<p>1.将图片放在assets或其某文件下</p>
-<p>2.通过以下两种方法引入</p>
-<p>1).import  img1 from ‘..&#x2F;assets&#x2F;images&#x2F;img1.jpg’</p>
-<p>在data中定义地址变量：pic:img1</p>
-<p>2)直接在data中通过require引入:</p>
-<p>pic: require(“..&#x2F;assets&#x2F;images&#x2F;img1.jpg”) </p>
+		<a href="https://www.bilibili.com/video/BV193411K7Yq/?spm_id_from=333.337.search-card.all.click&vd_source=d476ccd7f594c6a924ede109727a1a64" title="" target="">office的另类安装方法</a>
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool5/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool4/" >svn commit时候一直显示please wait，且一直不动</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>解决方案：<br>node_modules 这个文件右键，选择TortoiseSVN，再选择Unversion and add to ignore list   就可以了；<br>因为SVN检索node_modules文件系统比较慢。</p>
 
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue13/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool4/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool3/" >nginx常用命令</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1).命令可以查看nginx的服务进程信息</p>
+<blockquote><p>tasklist &#x2F;fi “imagename eq nginx.exe”</p>
+</blockquote>
+
+<p>2).命令可以关闭nginx的服务进程[所有的，慎用]</p>
+<blockquote><p>taskkill &#x2F;fi “imagename eq nginx.exe” &#x2F;f</p>
+</blockquote>
+
+<p>3).启动nginx[前提是配置了conf]</p>
+<blockquote><p>Start nginx</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool3/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool2/" >VScode常用的插件集合</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<ol>
+<li>Vetur&#x2F;Volar ：vue&#x2F;vue3语法高亮、智能感知、Emmet等, 包含格式化功能， Alt+Shift+F （格式化全文）</li>
+<li>ESLint : 校验js代码规范</li>
+<li>Prettier - Code formatter ： 格式化js、css代码插件</li>
+<li>open in browser ： 在文件右键 可以选择在浏览器预览</li>
+<li>Auto Rename Tag : 重命名一个HTML &#x2F; XML标签时，自动重命名配对的HTML &#x2F; XML标签
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool2/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -308,7 +307,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>28</span></a></li>
+			<li><a href="/categories/IT/">IT<span>44</span></a></li>
+		
+			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
+		
+			<li><a href="/categories/百科知识/">百科知识<span>1</span></a></li>
 		
 		</ul>
 	</div>
@@ -319,28 +322,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
 			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
-			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>7</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>32</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
 		
 			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
 		
 			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
 			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>27</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>23</span></a></li>
 		 
 		</ul>
 	</div>
@@ -357,19 +380,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/08/vue27/" ><i class="fa fa-file-o"></i>Vue 常用的UI组件与框架总结</a>
+        <a href="/2022/10/13/html7/" ><i class="fa fa-file-o"></i>HTML5基本元素</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue26/" ><i class="fa fa-file-o"></i>Vue2和Vue3的区别</a>
+        <a href="/2022/10/13/html6/" ><i class="fa fa-file-o"></i>glyphicon和font awesome字体图标的...</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue25/" ><i class="fa fa-file-o"></i>使用vite创建Vue3项目</a>
+        <a href="/2022/10/13/html5/" ><i class="fa fa-file-o"></i>HTML5的主要功能构成</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue24/"  title="本文档适用于Vue2的项目创建，不适用于Vue3" ><i class="fa fa-file-o"></i>Vue 2.x项目完整搭建步骤</a>
+        <a href="/2022/10/13/html4/" ><i class="fa fa-file-o"></i>响应式导航</a>
       </li>
     
   </ul>

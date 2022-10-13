@@ -141,7 +141,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue12/" >Visual Studio Code常用的扩展插件</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue17/" >Vue中使用AOS动画插件，让你的网页更酷炫</a></div>						
 		</h3>
 	
 
@@ -150,17 +150,12 @@
   <div class="row">
 	
 	
-		<ol>
-<li><p>Vetur<br>vue 代码?亮插件,vue开发神器</p>
-</li>
-<li><p>Auto Close Tag<br>html?动闭合标签插件</p>
-</li>
-<li><p>Beautify<br>格式化插件</p>
-</li>
-<li><p>Chinese (Simplified) vscode<br>汉化插件</p>
+		<p>根据官方文档，使用此插件可以通过直接引用的方式，也可以是下载安装本地包；<br>1.直接使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.css&quot;</span>/&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.js”</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">AOS.init();</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这种引入方式如果是在Vue项目中，自然是从首页（index.html）中引入。</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue12/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue17/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -169,7 +164,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue11/" >Vue的生命周期</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue16/" >Ant Design Vue icon 图标的使用方法</a></div>						
 		</h3>
 	
 
@@ -178,11 +173,62 @@
   <div class="row">
 	
 	
-		<h3 id="什么是Vue的生命周期-？"><a href="#什么是Vue的生命周期-？" class="headerlink" title="什么是Vue的生命周期 ？"></a>什么是Vue的生命周期 ？</h3><blockquote><p>Vue 的实例从创建到销毁的过程 ，就是生命周期 ，也就是从开始创建 ，初始化数据 ，编译模板 ，挂载Dom到渲染DOM ，更新数据再到渲染 ，卸载等一系列的过程 ，我们称这是Vue的生命周期。</p>
+		<p>先看<a href="https://2x.antdv.com/components/icon-cn" title="" target="">官方文档</a><br>直接点击Outlined栏相应的图标会自动将图标名称复制到你的剪切板上,这里我们点击一个类似菜单的图标：<menu-fold-outlined /></p>
+<p>通常我们会这样去使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;menu-fold-outlined&quot;</span>&gt;&lt;/a-icon&gt;</span><br></pre></td></tr></table></figure>
+<p>但是并不会显示出来</p>
+<p>正确的用法应该是：我们在调用的时候标签要去掉分类词</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue16/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue15/" >Ant Design Vue 菜单（Menu）的用法介绍</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue15/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue14/" title="注意：以下三个方案中，方案一，方案二皆为不兼容IE【网站无法访问】的失败方案；方案三为兼容IE的可行方案；">Vue中引入highlight.js实现代码高亮，兼容IE</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>【方案一】</p>
+<p>根据highlight.js官网的介绍，我们在main.js文件中通过import的方式引入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import hljs from <span class="string">&quot;highlight.js&quot;</span>;</span><br><span class="line">import <span class="string">&quot;highlight.js/styles/monokai-sublime.css&quot;</span>;</span><br><span class="line">Vue.use(hljs)</span><br></pre></td></tr></table></figure>
+<p>这里用到了富文本框WandEditor，引入高亮；</p>
+<blockquote><p>this.editor.highlight &#x3D; hljs</p>
 </blockquote>
+<p>以上测试环境和打包后在IE上都不兼容，其它浏览器正常运行；</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue11/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue14/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -191,7 +237,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue10/" >axios中使用异步（async +await）</a></div>						
+			<div class="article-title"><a href="/2022/10/08/vue13/" >在Vue中引入静态图片</a></div>						
 		</h3>
 	
 
@@ -200,60 +246,16 @@
   <div class="row">
 	
 	
-		<p>1.定义方法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> getIteminfo(<span class="built_in">id</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">id</span> == null) <span class="built_in">id</span> = getPara();//获取页面参数</span><br><span class="line"></span><br><span class="line">    var item_options = [];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> await axios(&#123;</span><br><span class="line"></span><br><span class="line">        url: dev_proxyftpname + <span class="string">&quot;/api/findOneById&quot;</span>,</span><br><span class="line"></span><br><span class="line">        method: <span class="string">&quot;post&quot;</span>,</span><br><span class="line"></span><br><span class="line">        data: JSON.stringify(&#123; <span class="built_in">id</span>: <span class="built_in">id</span> &#125;),</span><br><span class="line"></span><br><span class="line">        headers: &#123; <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span> &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="built_in">timeout</span>: 1000 * 30,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">        .<span class="keyword">then</span>((res) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (res.data) &#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (res.data.data != null) &#123;</span><br><span class="line"></span><br><span class="line">                    <span class="built_in">return</span> res.data.data;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+		<p>1.将图片放在assets或其某文件下</p>
+<p>2.通过以下两种方法引入</p>
+<p>1).import  img1 from ‘..&#x2F;assets&#x2F;images&#x2F;img1.jpg’</p>
+<p>在data中定义地址变量：pic:img1</p>
+<p>2)直接在data中通过require引入:</p>
+<p>pic: require(“..&#x2F;assets&#x2F;images&#x2F;img1.jpg”) </p>
+
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue10/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue9/" >Vue中全局变量和全局函数的使用</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>1.直接在main.js中通过prototype定义</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.accessToken = <span class="string">&#x27;xxx&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>在页面中调用：this.accessToken<br>这种方法简单但是，当需要定义变量很多的时候，管理就很繁杂，这个时候就不宜使用。</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue9/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue8/" title="Vuex是一个专为 Vue.js 应用程序开发的状态管理模式 + 库,其结构：">vuex状态管理模式</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<blockquote><p>State：定义存储状态对象</p>
-<p>Getter:获取到State后，对其计算返回需要的值（获取计算状态对象）</p>
-<p>Mutation：提交更新状态对象（同步，异步使用：Action）</p>
-<p>Action:提交一个或多个Mutation，不是直接变更状态</p>
-<p>Module:模块化vuex，可以让每一个模块拥有自己的state、mutation、action、getters,使得结构非常清晰，方便管理。</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue8/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/08/vue13/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -306,7 +308,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>28</span></a></li>
+			<li><a href="/categories/IT/">IT<span>44</span></a></li>
+		
+			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
+		
+			<li><a href="/categories/百科知识/">百科知识<span>1</span></a></li>
 		
 		</ul>
 	</div>
@@ -317,28 +323,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
-		
 			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
 		
 			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>7</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
 			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>27</span></a></li>
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
 		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>32</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>23</span></a></li>
 		 
 		</ul>
 	</div>
@@ -355,19 +381,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/08/vue27/" ><i class="fa fa-file-o"></i>Vue 常用的UI组件与框架总结</a>
+        <a href="/2022/10/13/html7/" ><i class="fa fa-file-o"></i>HTML5基本元素</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue26/" ><i class="fa fa-file-o"></i>Vue2和Vue3的区别</a>
+        <a href="/2022/10/13/html6/" ><i class="fa fa-file-o"></i>glyphicon和font awesome字体图标的...</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue25/" ><i class="fa fa-file-o"></i>使用vite创建Vue3项目</a>
+        <a href="/2022/10/13/html5/" ><i class="fa fa-file-o"></i>HTML5的主要功能构成</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue24/"  title="本文档适用于Vue2的项目创建，不适用于Vue3" ><i class="fa fa-file-o"></i>Vue 2.x项目完整搭建步骤</a>
+        <a href="/2022/10/13/html4/" ><i class="fa fa-file-o"></i>响应式导航</a>
       </li>
     
   </ul>

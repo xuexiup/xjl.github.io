@@ -247,6 +247,8 @@ p a {
 
 p a:hover {
     background-color: transparent;
+    color:#E5975C;
+    text-decoration: underline;
 }
 
 .row h4 {

@@ -1,0 +1,591 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Electron学习之路 -基础教程篇 | 寒山飞鹰</title>
+  
+  <meta name="author" content="南疆">
+  
+  <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
+  
+  
+  <meta name="keywords" content="Electron">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="Electron学习之路 -基础教程篇" />
+  <meta property="og:site_name" content="寒山飞鹰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有发表记录">
+			  <i class="fa fa-archive"></i>档案
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/" title="所有大类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/note" title="我的速记">
+			  <i class="fa fa-user"></i>速记
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/message" title="messagebord">
+			  <i class="fa fa-book"></i>访客留言
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="关于我">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Electron学习之路 -基础教程篇</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>以下内容是根据 <a href="https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-prerequisites" title="" target="">官网</a> 资料和自己实践整理（查阅资料）所得；</p>
+<blockquote><p>根据官网说明：Electron是一个使用 JavaScript、HTML 和 CSS 构建桌面应用程序的框架。</p>
+</blockquote>
+<span id="more"></span>
+<h3 id="创建第一个Electron应用程序"><a href="#创建第一个Electron应用程序" class="headerlink" title="创建第一个Electron应用程序"></a>创建第一个Electron应用程序</h3><h2 id="简介》"><a href="#简介》" class="headerlink" title="简介》"></a>简介》</h2><p>Electron应用程序是使用npm包建立的。Electron可执行文件应该安装在项目的devDependencies中，并且可以使用package.json文件中中的脚本在开发模式下运行。</p>
+<p>可执行文件运行package.json的main属性中的JavaScript入口点。这个文件控制着Electron的主进程，它运行着Node.js的一个实例，负责应用的生命周期，显示本地接口，执行特权操作，以及管理渲染进程。</p>
+<p>渲染进程(或简称渲染器)负责显示图形内容。您可以通过将网页指向一个web地址或一个本地HTML文件来将网页加载到渲染器中。渲染器的行为与普通网页非常相似，并且可以访问相同的web api。</p>
+<h2 id="学前需知》"><a href="#学前需知》" class="headerlink" title="学前需知》"></a>学前需知》</h2><p>通过将Chromium和Node.js嵌入到一个二进制文件中，Electron允许您使用一个JavaScript代码库创建在Windows、macOS和Linux上运行的跨平台应用程序。</p>
+<p>Electron是一个原生的web应用包装层，运行在Node.js环境中，因此在进入学习之前需要熟悉Node和前端web开发基础知识：</p>
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Learn" title="" target="">Getting started with the Web (MDN Web Docs)</a> 
+</p>
+<p>
+<a href="https://nodejs.dev/learn" title="" target="">NodeJS官方入门指南</a>
+</p>
+
+<h2 id="与其它桌面程序应用框架的对比》"><a href="#与其它桌面程序应用框架的对比》" class="headerlink" title="与其它桌面程序应用框架的对比》"></a>与其它桌面程序应用框架的对比》</h2><p>同样是做桌面应用程序的框架，那么它和传统的Winform和WPF又有什么区别呢？</p>
+<p>Winform：上手容易，技术老套，性能一般，常用组件库DevExpress,SunnyUI，适合对性能要求不高的项目</p>
+<p>WPF：性能高，可以做炫酷的效果，上手进阶难，适合大型的桌面应用程序</p>
+<p>Electron：对前端技术人员比较友好，相当于在网页上套了一层壳，可以打包成exe程序，只是打包后比较臃肿，性能堪忧，不过上手容易，方法都是封装好了的，根据官方可以快速构建一个桌面应用程序。</p>
+<p>当然基于c++ 开发的QT框架也能做出漂亮的桌面应用程序。</p>
+<p>所以这么看来Eelectron也是挺有优势的，因为是基于web开发来实现跨平台的桌面应用程序，对于如今广大的前端开发用户还是很友好的，当然其性能和对内存的处理以及打包文件的处理是不够好的。</p>
+<h2 id="开发工具》"><a href="#开发工具》" class="headerlink" title="开发工具》"></a>开发工具》</h2><p>这里我使用的是：<a href="https://code.visualstudio.com/" title="" target="">Visual Studio Code</a></p>
+<p>这个软件也是基于Electron开发出来的。</p>
+<h2 id="创建项目》"><a href="#创建项目》" class="headerlink" title="创建项目》"></a>创建项目》</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-electron-app &amp;&amp; <span class="built_in">cd</span> my-electron-app</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
+<p>使用方式：<br>这里我是在E盘（你自己的项目存放位置）下的文件搜索框内容输入cmd，<br>这样打开命令提示符号终端窗口，然后输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-electron-app &amp;&amp; <span class="built_in">cd</span> my-electron-app</span><br></pre></td></tr></table></figure>
+
+<p>回车</p>
+<p>这样就会在E盘下生成 my-electron-app 这个文件夹，并且指令进入此文件夹</p>
+<p>接着使用指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+
+<p>这样就是初始化创建了项目的配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">package.json</span><br></pre></td></tr></table></figure>
+
+<p>当然了如果使用了淘宝镜像，可以使用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm init </span><br></pre></td></tr></table></figure>
+<p>来替换 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+
+<h2 id="Electron的安装》"><a href="#Electron的安装》" class="headerlink" title="Electron的安装》"></a>Electron的安装》</h2><p>命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install electron --save-dev</span><br></pre></td></tr></table></figure>
+
+<p>执行以上命令：在初始化包并安装Electron之后，package.json文件应该如下所示。同时文件夹下还生成了node_modules文件夹，其中包含Electron可执行文件，以及一个包锁：.package-lock.json来指定要安装的确切依赖版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;my-electron-app&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;electron progroam&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;author&quot;</span>: <span class="string">&quot;zl&quot;</span>,</span><br><span class="line">  <span class="string">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span>,</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">   <span class="string">&quot;electron&quot;</span>: <span class="string">&quot;^20.0.1&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在以上文件（package.json）中的main对应的脚本文件(这里是main.js）<br>它是Electron应用程序的入口。这个脚本控制主进程，它运行在Node.js环境中，负责控制应用的生命周期，显示本机接口，执行特权操作，以及管理渲染进程(后面会详细介绍)。<br>这里的main.js是我们在创建应用的时候自己命名的，但是框架并没有为我们生成这个js文件，所以我们需要在根目录下自己去手动生成，以此来保证配置正确运行。这里我们将main.js中的内容设置简单点：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(<span class="string">&#x27;hello Electron!&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="程序启动配置》"><a href="#程序启动配置》" class="headerlink" title="程序启动配置》"></a>程序启动配置》</h2><p>由于Electron的主进程是在Node.js中运行的，所以您可以使用Electron命令执行任意Node.js代码(甚至可以将其用作REPL)。<br>要执行这个脚本，就需要需要添加“electron .”到package.json的scripts字段中的start指令中。这个指令将告诉Electron可执行文件在当前目录中查找主脚本，并在dev模式中运行它。这样package.json内容如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;my-electron-app&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;electron progroam&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;main.js&quot;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</span><br><span class="line">    &quot;start&quot;:&quot;electron .&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;author&quot;: &quot;zl&quot;,</span><br><span class="line">  &quot;license&quot;: &quot;ISC&quot;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;electron&quot;: &quot;^20.0.1&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>      
+<p>配置完start指令后，通过在终端（cmd）运行指令 npm run start便会在终端打印出“hello Electron!”。<br>当然这只是在Electron中执行了打印文字的脚本，接下来将学习如何使用HTML创建用户界面并将其加载到本地窗口中。<br>上面我们实现了通过在终端运行Electron指令–执行入口文件main.js</p>
+<p>功能：打印文字；</p>
+<p>接下来我们将学习如何在BrowserWindow中加载网页。</p>
+<p>根据官网介绍：</p>
+<blockquote><p>In Electron, each window displays a web page that can be loaded either from a local HTML file or a remote web address.<br>在Electron中，每个窗口都显示一个可以从本地HTML文件或远程web地址加载的网页。</p>
+</blockquote>
+<p>也就是Electron应用程序窗口可以显示本项目中的.html文件，也可以通过加载网站网络地址来实现网页的呈现。<br>如果是加载网站的url来实现网页的呈现，这种方式就相当于我们把网站开发好了，发布到外网上。然后在Electron中加载进来就可以了，相当于给网站外加了个一个浏览器的壳，这样对前端开发人员来说是相当友好滴。</p>
+<h3 id="接下来将介绍如何在Electron框架下的BrowserWindow中加载本地html文件以及已发布网站地址。"><a href="#接下来将介绍如何在Electron框架下的BrowserWindow中加载本地html文件以及已发布网站地址。" class="headerlink" title="接下来将介绍如何在Electron框架下的BrowserWindow中加载本地html文件以及已发布网站地址。"></a>接下来将介绍如何在Electron框架下的BrowserWindow中加载本地html文件以及已发布网站地址。</h3><h2 id="1）在BrowserWindow中加载本地（本项目）html文件"><a href="#1）在BrowserWindow中加载本地（本项目）html文件" class="headerlink" title="1）在BrowserWindow中加载本地（本项目）html文件"></a>1）在BrowserWindow中加载本地（本项目）html文件</h2><p>我们在根目录下创建一个名为index.html的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;<span class="built_in">head</span>&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span><br><span class="line">    &lt;!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP --&gt;</span><br><span class="line">    &lt;meta</span><br><span class="line">      http-equiv=<span class="string">&quot;Content-Security-Policy&quot;</span></span><br><span class="line">      content=<span class="string">&quot;default-src &#x27;self&#x27;; script-src &#x27;self&#x27;&quot;</span></span><br><span class="line">    /&gt;</span><br><span class="line">    &lt;meta</span><br><span class="line">      http-equiv=<span class="string">&quot;X-Content-Security-Policy&quot;</span></span><br><span class="line">      content=<span class="string">&quot;default-src &#x27;self&#x27;; script-src &#x27;self&#x27;&quot;</span></span><br><span class="line">    /&gt;</span><br><span class="line">    &lt;title&gt;Hello from Electron renderer!&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Hello from Electron renderer!&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;??&lt;/p&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>那么我们如何将这个网页加载到Electron的浏览器窗口（BrowserWindow）中去呢？<br>前面我们已经了解到了，package.json配置文件中的main对应的是整个Electron程序的入口文件（这里是：main.js）。<br>这样我们需要将main.js中的内容修改为以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const &#123;</span><br><span class="line">    app,</span><br><span class="line">    BrowserWindow</span><br><span class="line">&#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line">const createWindow = () =&gt; &#123;</span><br><span class="line">    const win = new BrowserWindow(&#123;</span><br><span class="line">        width: 800,</span><br><span class="line">        height: 600,</span><br><span class="line">    &#125;)</span><br><span class="line">    win.loadFile(<span class="string">&#x27;index.html&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line">app.whenReady().<span class="keyword">then</span>(() =&gt; &#123;</span><br><span class="line">    createWindow()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>让我们看看以上配置内容的语义。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const &#123;</span><br><span class="line">    app,</span><br><span class="line">    BrowserWindow</span><br><span class="line">&#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>以上配置用CommonJS模块语法导入了两个Electron模块：</p>
+<blockquote><p>app：控制整个应用程序事件的声明周期</p>
+<p>BrowserWindow：创建和管理应用程序的窗口</p>
+</blockquote>
+
+<p>这里我们可能已经注意到模块名称的大小写并不是使用统一的规则，这里面是有它自己的规则的，根据官网说明：</p>
+<blockquote><p>Electron在这里遵循典型的JavaScript约定，其中PascalCase模块是可实例化的类构造函数(如BrowserWindow, Tray, Notification)，而camelCase模块是不可实例化的(如app, ipcreender, webContents)。</p>
+</blockquote>
+<p>需要注意的是：目前Electron不直接支持ECMAScript模块(即使用import来加载模块)。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const createWindow = () =&gt; &#123;</span><br><span class="line">    const win = new BrowserWindow(&#123;</span><br><span class="line">        width: 800,</span><br><span class="line">        height: 600,</span><br><span class="line">    &#125;)</span><br><span class="line">    win.loadFile(<span class="string">&#x27;index.html&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上配置表示：通过函数createWindow()加载你的网页到一个新的BrowserWindow实例；<br>也就是说窗口BrowserWindow可以被我们重写的，这样我们可以控制它的大小、显示的位置、是否显示自带的辅助功能菜单（File、Edit、View、Window、Help）以及是否显示最小化，最大化和关闭图标等功能。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.whenReady().<span class="keyword">then</span>(() =&gt; &#123;</span><br><span class="line">    createWindow()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>以上配置表示：应用程序执行时候就调用我们定义的函数createWindow()（重写BrowserWindow）<br>Electron的许多核心模块都是Node.js事件触发器，它们遵循Node的异步事件驱动架构。app模块就是其中一个发射器。</p>
+<p>在Electron中，BrowserWindows只能在app模块的ready事件触发后创建。<br>你可以通过使用app.whenReady() API以及等这个事件的promise执行完后来回调createWindow()</p>
+<h2 id="2）在BrowserWindow中加载网站网络URL来实现网页的呈现"><a href="#2）在BrowserWindow中加载网站网络URL来实现网页的呈现" class="headerlink" title="2）在BrowserWindow中加载网站网络URL来实现网页的呈现"></a>2）在BrowserWindow中加载网站网络URL来实现网页的呈现</h2><p>在以上内容的基础上，我们只需要将配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">win.loadFile(<span class="string">&#x27;index.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">win.loadURL(<span class="string">&#x27;https://www.romanticlife.top&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>这样就可以在BrowserWindow调用已发布的网站（本博客）<br>现在我们执行指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run start</span><br></pre></td></tr></table></figure>
+
+<p>此时我们看到index.html文件加载到窗口（BrowserWindow）中去了。<br>至此，Electron应用程序是已经能够正常的运行起来了，那么我们如如何去管理应用程序的窗口生命周期喃？</p>
+<h2 id="管理应用程序的声明周期》"><a href="#管理应用程序的声明周期》" class="headerlink" title="管理应用程序的声明周期》"></a>管理应用程序的声明周期》</h2><p>Electron应用程序在窗口中显示的每个网页将运行在一个单独的进程中，称为渲染进程(或简称为渲染器)。</p>
+<p>这个渲染过程与通用网页的渲染过程是一致的，即渲染过程可以访问与典型前端web开发相同的JavaScript api和工具，例如使用webpack来捆绑和缩减代码，或者使用React来构建用户界面…</p>
+<p>应用程序窗口在每个操作系统上的行为都不同。比起默认地强制执行这些约定，Electron给你在应用程序代码中实现它们的选择，如果你希望遵循它们。你可以通过监听由应用程序和BrowserWindow模块发出的事件来实现基本的窗口约定。</p>
+<p>检查Node的进程。平台变量可以帮助您在特定平台上有条件地运行代码。</p>
+<p>注意</p>
+<blockquote><p>Electron只能在三种可能的平台上运行:win32 (Windows)、linux (linux)和darwin (macOS)。</p>
+</blockquote>
+<h2 id="关闭所有窗口时退出应用-Windows-amp-Linux-》"><a href="#关闭所有窗口时退出应用-Windows-amp-Linux-》" class="headerlink" title="关闭所有窗口时退出应用 (Windows &amp; Linux)》"></a>关闭所有窗口时退出应用 (Windows &amp; Linux)》</h2><p>注意这里只是针对：window和Linux系统，macOS系统不适用。</p>
+<p>在Windows和Linux上，关闭所有窗口通常会完全退出应用程序。如果要在Electron应用程序中实现这个模式，需要监听app模块的window-all-closed事件，并调用app.quit()来退出你的应用程序</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;window-all-closed&#x27;</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (process.platform !== <span class="string">&#x27;darwin&#x27;</span>) app.quit()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>这样我们就是实现了一个Electron应用程序从创建》运行》关闭，整个生命周期。完整的代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">package.json</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;my-electron-app&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;electron progroam&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;start&quot;</span>:<span class="string">&quot;electron .&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;author&quot;</span>: <span class="string">&quot;zl&quot;</span>,</span><br><span class="line">  <span class="string">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span>,</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;electron&quot;</span>: <span class="string">&quot;^20.0.1&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">main.js</span><br><span class="line">const &#123;</span><br><span class="line">    app,</span><br><span class="line">    BrowserWindow</span><br><span class="line">&#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line">const createWindow = () =&gt; &#123;</span><br><span class="line">    const win = new BrowserWindow(&#123;</span><br><span class="line">        width: 800,</span><br><span class="line">        height: 600,</span><br><span class="line">    &#125;)</span><br><span class="line">    win.loadFile(<span class="string">&#x27;index.html&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.whenReady().<span class="keyword">then</span>(() =&gt; &#123;</span><br><span class="line">    createWindow()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">&#x27;window-all-closed&#x27;</span>, () =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (process.platform !== <span class="string">&#x27;darwin&#x27;</span>) &#123;</span><br><span class="line">        app.quit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="built_in">head</span>&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span><br><span class="line">    &lt;!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP --&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">&quot;Content-Security-Policy&quot;</span> content=<span class="string">&quot;default-src &#x27;self&#x27;; script-src &#x27;self&#x27;&quot;</span> /&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">&quot;X-Content-Security-Policy&quot;</span> content=<span class="string">&quot;default-src &#x27;self&#x27;; script-src &#x27;self&#x27;&quot;</span> /&gt;</span><br><span class="line">    &lt;title&gt;Hello from Electron renderer!&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Hello from Electron renderer!&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;??&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="项目调试"><a href="#项目调试" class="headerlink" title="项目调试"></a>项目调试</h3><p>如果你想在VS Code工具中调试Electron应用程序，则需要将VS Code附加到主进程和渲染进程。<br>以下是要运行的示例配置：</p>
+<p>在你的项目下新建一个.vscode文件夹，并在其下创建一个launch.json配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;compounds&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Main + renderer&quot;</span>,</span><br><span class="line">      <span class="string">&quot;configurations&quot;</span>: [<span class="string">&quot;Main&quot;</span>, <span class="string">&quot;Renderer&quot;</span>],</span><br><span class="line">      <span class="string">&quot;stopAll&quot;</span>: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;configurations&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Renderer&quot;</span>,</span><br><span class="line">      <span class="string">&quot;port&quot;</span>: 9222,</span><br><span class="line">      <span class="string">&quot;request&quot;</span>: <span class="string">&quot;attach&quot;</span>,</span><br><span class="line">      <span class="string">&quot;type&quot;</span>: <span class="string">&quot;pwa-chrome&quot;</span>,</span><br><span class="line">      <span class="string">&quot;webRoot&quot;</span>: <span class="string">&quot;<span class="variable">$&#123;workspaceFolder&#125;</span>&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Main&quot;</span>,</span><br><span class="line">      <span class="string">&quot;type&quot;</span>: <span class="string">&quot;pwa-node&quot;</span>,</span><br><span class="line">      <span class="string">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,</span><br><span class="line">      <span class="string">&quot;cwd&quot;</span>: <span class="string">&quot;<span class="variable">$&#123;workspaceFolder&#125;</span>&quot;</span>,</span><br><span class="line">      <span class="string">&quot;runtimeExecutable&quot;</span>: <span class="string">&quot;<span class="variable">$&#123;workspaceFolder&#125;</span>/node_modules/.bin/electron&quot;</span>,</span><br><span class="line">      <span class="string">&quot;windows&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;runtimeExecutable&quot;</span>: <span class="string">&quot;<span class="variable">$&#123;workspaceFolder&#125;</span>/node_modules/.bin/electron.cmd&quot;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="string">&quot;args&quot;</span>: [<span class="string">&quot;.&quot;</span>, <span class="string">&quot;--remote-debugging-port=9222&quot;</span>],</span><br><span class="line">      <span class="string">&quot;outputCapture&quot;</span>: <span class="string">&quot;std&quot;</span>,</span><br><span class="line">      <span class="string">&quot;console&quot;</span>: <span class="string">&quot;integratedTerminal&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>做了以上工作后，当你选择侧边栏的“运行和调试”时，会出现“Main + renderer”选项，这将允许你设置断点并检查主进程和渲染进程中的所有变量。</p>
+<p>在以上launch.json文件中有3个配置项：</p>
+<blockquote><p>1）Main用于启动主进程，并开放9222端口用于远程调试(–remote-debugging-port&#x3D;9222)。这是我们将用于监听Renderer调试器的端口。因为主进程是一个Node.js进程，类型被设置为pwa-node (pwa-是用来告诉VS Code使用最新的JavaScript调试器的一个前缀)。<br>2）Renderer用于调试渲染器进程。由于这个进程（Renderer）是由主进程创建的，所以我们必须“附加”到主进程上(“request”:“attach”)，而不是创建一个新的进程。渲染器进程是一个web进程，所以不得不使用pwa-chrome作为调试器。<br>3）Main + renderer是一个复合任务，可以同时执行前面的任务。</p>
+</blockquote>
+
+<p>因为我们是在Renderer中附加一个进程，所以有可能你的代码的前几行会被跳过，因为调试器在它们被执行之前没有足够的时间进行连接。可以通过刷新页面或在开发模式执行代码之前设置settimeout来解决这个问题。</p>
+<h2 id="【知识延申】》如何给Chrome浏览器开启远程调试的功能？"><a href="#【知识延申】》如何给Chrome浏览器开启远程调试的功能？" class="headerlink" title="【知识延申】》如何给Chrome浏览器开启远程调试的功能？"></a>【知识延申】》如何给Chrome浏览器开启远程调试的功能？</h2><blockquote><p>。找到Chrome浏览器的安装地址（在Chrome浏览器的搜索栏输入：chrome:&#x2F;&#x2F;version    出现页面信息中的“可执行文件路径”项即是当前电脑中Chrome浏览器的安装地址）；<br>。关闭所有打开的Chrome浏览器<br>。在地址栏输入cmd，打开命令终端<br>。在命令终端中输入：chrome.exe –remote-debugging-port&#x3D;9222</p>
+</blockquote>
+<p>按照以上操作后便会自动打开一个网页：<a target="_blank" rel="noopener" href="http://127.0.0.1:9222/json/version">http://127.0.0.1:9222/json/version</a><br>页面中的webSocketDebuggerUrl后面的地址，这就是我们远程链接的地址；测试的过程中，可能会发现标签页越开越多。只要至少保留一个标签页不关闭，那么这个浏览器窗口就可以一直使用。<br>当然如果你想在调试方面有更深入的了解，下面的指南提供了更多的信息:</p>
+<p>
+<a href="https://www.electronjs.org/docs/latest/tutorial/application-debugging" title="" target="">Application Debugging</a>
+</p>
+<p>
+<a href="https://www.electronjs.org/docs/latest/tutorial/devtools-extension" title="" target="">DevTools Extensions</a>
+</p>
+
+<h3 id="预加载脚本：preload-js"><a href="#预加载脚本：preload-js" class="headerlink" title="预加载脚本：preload.js"></a>预加载脚本：preload.js</h3><p>接下来将了解什么是预加载脚本，以及如何使用预加载脚本安全地将私有api公开到渲染进程中以及如何使用Electron的进程间通信(IPC)模块在主进程和渲染进程之间通信。 </p>
+<h2 id="什么是预加载脚本？"><a href="#什么是预加载脚本？" class="headerlink" title="什么是预加载脚本？"></a>什么是预加载脚本？</h2><blockquote><p>预加载脚本中的代码在网页加载到浏览器窗口之前运行。它可以访问DOM API和Node.js环境，通常通过contextBridge API向渲染器暴露私有API。</p>
+</blockquote>
+
+<p>因为主进程和渲染进程的职责有很大不同，Electron应用程序经常使用预加载脚本建立进程间通信(IPC)接口，在两种进程之间传递任意消息。</p>
+<p>Electron的主进程是一个具有完全操作系统访问权限的Node.js环境。在Electron模块之上，你还可以访问Node.js内置模块，以及任何通过npm安装的包。另一方面，由于安全原因，渲染进程运行网页时默认不运行Node.js。</p>
+<p>为了将Electron的不同过程类型连接在一起，我们需要使用一种称为预加载的特殊脚本。</p>
+<h2 id="接下来了解使用预加载脚本增强渲染器。"><a href="#接下来了解使用预加载脚本增强渲染器。" class="headerlink" title="接下来了解使用预加载脚本增强渲染器。"></a>接下来了解使用预加载脚本增强渲染器。</h2><p>BrowserWindow的预加载脚本运行在可以访问HTML DOM和Node.js环境的上下文中。在渲染器加载页面之前会注入预加载脚本，类似于Chrome扩展的内容脚本。若要向渲染器添加需要特权访问的特性，可以通过contextBridge API定义全局对象。</p>
+<p>为了演示这个概念，我们创建一个预加载脚本，实现将应用程序的Chrome、Node和Electron版本暴露到渲染器中。</p>
+<p>新建preload.js脚本，用于暴露Electron进程的选定属性。在Versions全局变量中向渲染器进程添加Versions对象。内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const &#123; contextBridge &#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line"></span><br><span class="line">contextBridge.exposeInMainWorld(<span class="string">&#x27;versions&#x27;</span>, &#123;</span><br><span class="line">  node: () =&gt; process.versions.node,</span><br><span class="line">  chrome: () =&gt; process.versions.chrome,</span><br><span class="line">  electron: () =&gt; process.versions.electron,</span><br><span class="line">  // we can also expose variables, not just <span class="built_in">functions</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>要将这个脚本附加到你的渲染器进程，需要将它的路径传递给BrowserWindow构造函数中的webPreferences.preload项:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">/*main.js */</span><br><span class="line">const &#123;</span><br><span class="line">    app,</span><br><span class="line">    BrowserWindow</span><br><span class="line">&#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line">const path = require(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line">const createWindow = () =&gt; &#123;</span><br><span class="line">    const win = new BrowserWindow(&#123;</span><br><span class="line">        width: 800,</span><br><span class="line">        height: 600,</span><br><span class="line">        webPreferences: &#123;</span><br><span class="line">            preload: path.join(__dirname, <span class="string">&#x27;preload.js&#x27;</span>),</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">    win.loadFile(<span class="string">&#x27;index.html&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.whenReady().<span class="keyword">then</span>(() =&gt; &#123;</span><br><span class="line">    createWindow()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">&#x27;window-all-closed&#x27;</span>, () =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (process.platform !== <span class="string">&#x27;darwin&#x27;</span>) &#123;</span><br><span class="line">        app.quit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>在以上内容中我们用到了两个Node.js的知识点：</p>
+<blockquote><p>1）__dirname    字符串指向当前正在执行的脚本的路径(本例中即为项目的根文件夹)。</p>
+<p>2）path. join    接口将多个路径拼接在一起，组成一个跨所有平台的组合路径字符串。</p>
+</blockquote>
+<p>此时，渲染器可以访问全局versions，接着让我们在窗口中显示该版本信息。这个变量可以通过window.versions或versions访问。</p>
+<p>新建一个renderer.js脚本，用于通过 document.getElementById DOM API实现将 id为info的HTML元素的文本信息替换为版本信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/*renderer.js*/</span><br><span class="line">const information = document.getElementById(<span class="string">&#x27;info&#x27;</span>)</span><br><span class="line">information.innerText = `This app is using Chrome (v<span class="variable">$&#123;versions.chrome()&#125;</span>), Node.js (v<span class="variable">$&#123;versions.node()&#125;</span>), and Electron (v<span class="variable">$&#123;versions.electron()&#125;</span>)`</span><br></pre></td></tr></table></figure>
+<p>然后修改index.html，添加一个id属性为info的新元素，并引入renderer.js脚本:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;<span class="built_in">head</span>&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span><br><span class="line">    &lt;meta</span><br><span class="line">      http-equiv=<span class="string">&quot;Content-Security-Policy&quot;</span></span><br><span class="line">      content=<span class="string">&quot;default-src &#x27;self&#x27;; script-src &#x27;self&#x27;&quot;</span></span><br><span class="line">    /&gt;</span><br><span class="line">    &lt;meta</span><br><span class="line">      http-equiv=<span class="string">&quot;X-Content-Security-Policy&quot;</span></span><br><span class="line">      content=<span class="string">&quot;default-src &#x27;self&#x27;; script-src &#x27;self&#x27;&quot;</span></span><br><span class="line">    /&gt;</span><br><span class="line">    &lt;title&gt;Hello from Electron renderer!&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Hello from Electron renderer!&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;??&lt;/p&gt;</span><br><span class="line">    &lt;p <span class="built_in">id</span>=<span class="string">&quot;info&quot;</span>&gt;&lt;/p&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">  &lt;script src=<span class="string">&quot;./renderer.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>完成以上步骤后，运行程序我们可以看到窗口显示出Chorm、Node.js、Electron的版本信息。</p>
+<h3 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h3><p>正如上面所提到的那样，Electron的main和renderer进程职责不同且不可互换。这意味着不能从渲染进程直接访问Node.js api，也不能从主进程访问HTML文档对象模型(DOM)。</p>
+<p>解决这个问题的方法是使用Electron的ipcMain和ipcrederer模块进行进程间通信(IPC)。如需从你的网页向主进程发送消息，你可以用ipcMain.handle句柄建立一个主进程，然后在预加载脚本中暴露一个调用ipcRenderer.invoke的函数去触发这个句柄。</p>
+<p>为了演示这个观点，我们将在渲染器中添加一个名为ping()的全局函数，该函数将从主进程返回一个字符串。</p>
+<p>首先，在预加载脚本中配置调用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const &#123;</span><br><span class="line">    contextBridge,</span><br><span class="line">    ipcRenderer</span><br><span class="line">&#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line"></span><br><span class="line">contextBridge.exposeInMainWorld(<span class="string">&#x27;versions&#x27;</span>, &#123;</span><br><span class="line">    node: () =&gt; process.versions.node,</span><br><span class="line">    chrome: () =&gt; process.versions.chrome,</span><br><span class="line">    electron: () =&gt; process.versions.electron,</span><br><span class="line">    ping: () =&gt; ipcRenderer.invoke(<span class="string">&#x27;ping&#x27;</span>),</span><br><span class="line">    // we can also expose variables, not just <span class="built_in">functions</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="IPC安全机制》"><a href="#IPC安全机制》" class="headerlink" title="IPC安全机制》"></a>IPC安全机制》</h2><p>请注意，我们为何将ipcRenderer.invoke(‘ping’) 调用封装在一个帮助函数中，而不是直接通过上下文桥接暴露ipcRenderer模块的。你绝对不想通过preload直接暴露整个ipcRenderer模块。这将使渲染器能够向主进程发送任意IPC消息，并将为恶意代码提供有力的攻击载体。</p>
+<p>然后，在主进程中设置handle 侦听器，此操作需要在加载HTML文件之前执行，以确保在渲染器进程发出invoke调用之前handle 侦听器已准备就绪：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">/*main.js */</span><br><span class="line">const &#123;</span><br><span class="line">    app,</span><br><span class="line">    ipcMain,</span><br><span class="line">    BrowserWindow</span><br><span class="line">&#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line">const path = require(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line">const createWindow = () =&gt; &#123;</span><br><span class="line">    const win = new BrowserWindow(&#123;</span><br><span class="line">        width: 800,</span><br><span class="line">        height: 600,</span><br><span class="line">        webPreferences: &#123;</span><br><span class="line">            preload: path.join(__dirname, <span class="string">&#x27;preload.js&#x27;</span>),</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">    ipcMain.handle(<span class="string">&#x27;ping&#x27;</span>, () =&gt; <span class="string">&#x27;pong&#x27;</span>)</span><br><span class="line">    win.loadFile(<span class="string">&#x27;index.html&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.whenReady().<span class="keyword">then</span>(() =&gt; &#123;</span><br><span class="line">    createWindow()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">&#x27;window-all-closed&#x27;</span>, () =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (process.platform !== <span class="string">&#x27;darwin&#x27;</span>) &#123;</span><br><span class="line">        app.quit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>设置好发送方和接收方之后，现在就可以通过刚才定义的“ping”通道从渲染器向主进程发送消息了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/*renderer.js*/</span><br><span class="line">const information = document.getElementById(<span class="string">&#x27;info&#x27;</span>)</span><br><span class="line">information.innerText = `This app is using Chrome (v<span class="variable">$&#123;versions.chrome()&#125;</span>), Node.js (v<span class="variable">$&#123;versions.node()&#125;</span>), and Electron (v<span class="variable">$&#123;versions.electron()&#125;</span>)`</span><br><span class="line"></span><br><span class="line">const func = async () =&gt; &#123;</span><br><span class="line">    const response = await window.versions.ping()</span><br><span class="line">    console.log(response) // prints out <span class="string">&#x27;pong&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func()</span><br></pre></td></tr></table></figure>
+<p>若要对ipcRenderer 和ipcMain模块更深入理解，查看完整的<a href="https://www.electronjs.org/docs/latest/tutorial/ipc" title="" target="">Inter-Process Communication</a>指南。</p>
+<p>接下来将了解为应用添加更多功能的环境，又如何将应用分发给用户。</p>
+<h3 id="添加功能"><a href="#添加功能" class="headerlink" title="添加功能"></a>添加功能</h3><p>即增加应用程序的复杂性。</p>
+<p>如果您一直按照本文进行操作，至此，您应该拥有一个具有静态用户界面的功能性Electron应用程序。从现在开始，你可以从两个大的方向来提升你的应用:</p>
+<blockquote><p>1）增加渲染进程的web应用程序代码的复杂性</p>
+<p>2）使操作系统和Node.js的深度集成</p>
+</blockquote>
+
+<p>理解这两个宽泛概念之间的区别是很重要的。</p>
+<p>对于第一点，Electron对特殊环境是非必要的。在Electron中构建一个漂亮的待办事项列表的应用程序只是将你的Electron BrowserWindow指向一个漂亮的待办事项列表web应用程序。最终，你正在使用与在web上相同的工具(HTML、CSS、JavaScript)构建你的渲染器UI。因此，Electron的文档不会深入讨论如何使用标准的web工具。</p>
+<p>另一方面，Electron还提供了一组丰富的工具，允许您与桌面环境集成，从创建托盘图标到为显示本地菜单添加全局快捷方式。它还在主进程中为您提供了Node.js环境的所有功能。这一功能集将Electron应用程序与在浏览器选项卡中运行网站分开，并且是Electron文档的重点。</p>
+<p>Electron的文档中有许多教程，可以帮助您了解更高级的话题和更深入的操作系统集成。要开始使用，<br>请查看<a href="https://www.electronjs.org/docs/latest/tutorial/examples" title="" target="">How-To Examples</a>文档。</p>
+<p>接着继续了解如何使Electron应用程序让最终用户使用？</p>
+<p>为此我们将学习使用<a href="https://www.electronforge.io/" title="" target="">Electron Forge</a>打包和分发应用程序的基础知识。</p>
+<h3 id="应用程序打包"><a href="#应用程序打包" class="headerlink" title="应用程序打包"></a>应用程序打包</h3><p>Electron没有任何打包和分发的工具捆绑到其核心模块中。一旦你有了一个在开发模式下工作的Electron应用程序，你需要使用其他工具来创建一个打包的应用程序，你可以分发给你的用户(也称为分发版)。分发文件可以是安装程序(如Windows上的MSI)，也可以是可移植的可执行文件(如macOS上的.app)。</p>
+<h2 id="打包项目》"><a href="#打包项目》" class="headerlink" title="打包项目》"></a>打包项目》</h2><p>将 Electron Forge 添加到您应用的开发依赖中</p>
+<p>并使用其”import”命令设置 Forge 的脚手架</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cnpm install @electron-forge/cli -g</span><br><span class="line"></span><br><span class="line">npx electron-forge import</span><br></pre></td></tr></table></figure>
+
+<p>以上两条命令执行成功后会在项目中package.json文件scripts节点中自动新增以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;package&quot;</span>: <span class="string">&quot;electron-forge package&quot;</span>,</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;make&quot;</span>: <span class="string">&quot;electron-forge make&quot;</span></span><br></pre></td></tr></table></figure>
+<p>执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run package</span><br></pre></td></tr></table></figure>
+
+<p>会在根目录下生成可执行程序.exe文件夹out。</p>
+<p>执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run make</span><br></pre></td></tr></table></figure>
+
+<p>包含以下2个步骤：</p>
+<blockquote><p>1）首先它将引用线下运行electronic -forge包，将您的应用程序代码与Electron二进制文件捆绑在一起。打包的代码将生成到一个文件夹中。</p>
+<p>2）然后它将使用这个打包的app文件夹为每个配置的制造者创建一个单独的分发版。npm run make命令执行后，会在根目录下生成一个out文件夹，其中包含分发版和一个包含打包的应用程序代码（.exe）的文件夹。</p>
+</blockquote>
+
+<p>这样，out&#x2F;make文件夹中的分发版应该可以启动了</p>
+<p>至此您已经创建了第一个捆绑的Electron应用程序。</p>
+<p>以上我们已经成功生成了可执行文件，如何修改它exe可执行程序的图标、程序名称（xxx.exex）。。。？？？</p>
+<h2 id="配置程序图标和名称等》"><a href="#配置程序图标和名称等》" class="headerlink" title="配置程序图标和名称等》"></a>配置程序图标和名称等》</h2><p>这是可以在打包脚本中去配置的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;package&quot;</span>:<span class="string">&quot;electron-packager . appName --platform=win32 --arch=x64 --icon=favicon.ico --out=./out --asar --app-version=1.0.1 --overwrite --ignore=node_modules&quot;</span>,</span><br></pre></td></tr></table></figure>
+ <blockquote><p>.appName</p>
+<p>表示生成的exe可执行文件的名称是appName，即：appName.exe</p>
+<p>–icon&#x3D;favicon.ico</p>
+<p>设置可执行文件的图标是favicon.ico，这个图标文件是我们已手动放在根目录下</p>
+<p>–out&#x3D;.&#x2F;out </p>
+<p>指定打包文件输出的文件夹位置,当前指定的为项目目录下的out文件夹</p>
+<p>–asar </p>
+<p>该参数可以不加（一般需要加上），如果加上，打包之后应用的源码会以.asar格式存在；否则会以文件夹app形式存在，app中呈现源码</p>
+<p>–app-version&#x3D;1.0.1</p>
+<p>设置项目程序的版本号</p>
+<p>–overwrite</p>
+<p>表示此次打包会覆盖上次打包的内容</p>
+<p>–ignore&#x3D;node_modules</p>
+<p>指定打包时忽略目录：node_modules
+ </p>
+</blockquote>
+
+
+<h3 id="发布与更新"><a href="#发布与更新" class="headerlink" title="发布与更新"></a>发布与更新</h3><p>如果您一直按照本教程的流程学习，这是本教程的最后一步!在这小结，你将发布你的应用到</p>
+<p><a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository" title="" target="">GitHub releases</a> </p>
+上，并将自动更新集成到你的应用代码中。
+
+<h2 id="使用update-electronjs-org"><a href="#使用update-electronjs-org" class="headerlink" title="使用update.electronjs.org"></a>使用update.electronjs.org</h2><p>Electron的维护者在 <a target="_blank" rel="noopener" href="https://update.electronjs.org/">https://update.electronjs.org/</a> 上为开源应用程序提供免费的自动更新服务。它的要求是:</p>
+<blockquote><p>1）应用运行在macOS或Windows上</p>
+<p>2）应用程序有一个公共的GitHub库</p>
+<p>3）构建版本发布到GitHub releases</p>
+<p>4）构建是代码签名的（<a href="https://www.electronjs.org/zh/docs/latest/tutorial/code-signing" title="" target="">code signed</a>）</p>
+</blockquote>
+
+<h2 id="发布GitHub-release"><a href="#发布GitHub-release" class="headerlink" title="发布GitHub release"></a>发布GitHub release</h2><p>Electron Forge拥有 <a href="https://www.electronforge.io/config/publishers" title="" target="">Publisher</a> 插件，可以自动将打包的应用程序分发到各种来源。在本教程中，我们将使用GitHub Publisher，它将允许我们将我们的代码发布到GitHub上。</p>
+<h2 id="生成个人访问令牌"><a href="#生成个人访问令牌" class="headerlink" title="生成个人访问令牌"></a>生成个人访问令牌</h2><p>Forge不能在未经允许的情况下发布到GitHub上的任何存储库。你需要传入一个经过验证的令牌，让Forge能够访问你的GitHub发行版。最简单的方法是使用 public_repo作用域 <a href="https://github.com/settings/tokens/new" title="" target="">create a new personal access token (PAT)</a>，它提供对公共存储库的写访问。一定要保密这个标志。</p>
+<h2 id="设置GitHub发布者"><a href="#设置GitHub发布者" class="headerlink" title="设置GitHub发布者"></a>设置GitHub发布者</h2><h3 id="安装模块"><a href="#安装模块" class="headerlink" title="安装模块"></a>安装模块</h3><p>Forge的 <a href="https://www.electronforge.io/config/publishers/github" title="" target="">GitHub Publisher</a> 是一个需要安装在你的项目的devDependencies中的插件:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev @electron-forge/publisher-github</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add --dev @electron-forge/publisher-github</span><br></pre></td></tr></table></figure>
+<h2 id="在Forge中配置发布者"><a href="#在Forge中配置发布者" class="headerlink" title="在Forge中配置发布者"></a>在Forge中配置发布者</h2><p>一旦您安装了它，您需要在您的Forge配置中设置它。一个完整的选项列表记录在Forge的 <a href="https://js.electronforge.io/publisher/github/interfaces/publishergithubconfig" title="" target="">PublisherGitHubConfig</a> API文档中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/*package.json*/</span><br><span class="line">&#123;</span><br><span class="line">  //...</span><br><span class="line">  <span class="string">&quot;config&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;forge&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;publishers&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;name&quot;</span>: <span class="string">&quot;@electron-forge/publisher-github&quot;</span>,</span><br><span class="line">          <span class="string">&quot;config&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;repository&quot;</span>: &#123;</span><br><span class="line">              <span class="string">&quot;owner&quot;</span>: <span class="string">&quot;github-user-name&quot;</span>,</span><br><span class="line">              <span class="string">&quot;name&quot;</span>: <span class="string">&quot;github-repo-name&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;prerelease&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="string">&quot;draft&quot;</span>: <span class="literal">true</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  //...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="设置身份验证令牌"><a href="#设置身份验证令牌" class="headerlink" title="设置身份验证令牌"></a>设置身份验证令牌</h2><p>您还需要让发布服务器知道您的身份验证令牌。默认情况下，它将使用存储在 GITHUB_TOKEN环境变量中的值。</p>
+<h2 id="运行发布指令"><a href="#运行发布指令" class="headerlink" title="运行发布指令"></a>运行发布指令</h2><p>把Forge的 <a href="https://www.electronforge.io/cli#publish" title="" target="">publish command</a> 添加到你的npm脚本中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/*package.json*/</span><br><span class="line">  //...</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;electron-forge start&quot;</span>,</span><br><span class="line">    <span class="string">&quot;package&quot;</span>: <span class="string">&quot;electron-forge package&quot;</span>,</span><br><span class="line">    <span class="string">&quot;make&quot;</span>: <span class="string">&quot;electron-forge make&quot;</span>,</span><br><span class="line">    <span class="string">&quot;publish&quot;</span>: <span class="string">&quot;electron-forge publish&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  //...</span><br><span class="line">```  </span><br><span class="line">这个命令将运行你配置的makers，并将输出分发版发布到新的GitHub版本:</span><br><span class="line">```bash</span><br><span class="line">npm run publish</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn run publish</span><br></pre></td></tr></table></figure>
+<p>默认情况下，这只会为您的主机操作系统和体系结构发布一个发行版。你可以通过传递–arch 标志到你的Forge命令来发布不同的架构。</p>
+<p>这个版本的名称将对应于项目文件package.json中的version 字段。</p>
+<h2 id="在GitHub-Actions中发布"><a href="#在GitHub-Actions中发布" class="headerlink" title="在GitHub Actions中发布"></a>在GitHub Actions中发布</h2><p>在本地发布是很痛苦的，特别是因为你只能为你的主机操作系统创建分发版(也就是说，你不能从macOS发布windows.exe文件)。</p>
+<p>一个解决方案是通过自动化工作流发布你的应用程序，比如 <a href="https://github.com/features/actions" title="" target="">GitHub Actions</a>，它可以在Ubuntu、macOS和Windows上运行云中的任务。这正是 <a href="https://www.electronjs.org/fiddle" title="" target="">Electron Fiddle</a> 所采用的方法。你可以参考Fiddle<br>的 <a href="https://github.com/electron/fiddle/blob/main/.github/workflows/build.yaml" title="" target="">Build and Release pipeline</a> 以及 <a href="https://github.com/electron/fiddle/blob/main/forge.config.js" title="" target="">Forge configuration</a> 来了解更多细节。</p>
+<h2 id="测试更新程序代码"><a href="#测试更新程序代码" class="headerlink" title="测试更新程序代码"></a>测试更新程序代码</h2><p>现在我们有了一个通过GitHub releases的功能发布系统，我们现在需要告诉我们的Electron应用程序在新发布的时候下载更新。Electron应用程序通过 <a href="https://www.electronjs.org/zh/docs/latest/api/auto-updater" title="" target="">autoUpdater</a> 模块实现这一功能，该模块从更新服务器提要读取数据，以检查是否有新版本可供下载。</p>
+<p>update.electronjs.org服务提供了一个与更新程序兼容的提要。例如，Electron Fiddle v0.28.0将在<a target="_blank" rel="noopener" href="https://update.electronjs.org/electron/fiddle/darwin/v0.28.0">https://update.electronjs.org/electron/fiddle/darwin/v0.28.0</a> 上检查端点，以查看是否有更新的GitHub版本可用。服务提供了一个与更新程序兼容的提要。例如，Electron Fiddle v0.28.0将在<a target="_blank" rel="noopener" href="https://update.electronjs.org/electron/fiddle/darwin/v0.28.0">https://update.electronjs.org/electron/fiddle/darwin/v0.28.0</a> 上检查端点，以查看是否有更新的GitHub版本可用。</p>
+<p>在你的版本发布到GitHub后，update.electronjs.org服务应该可以为你的应用程序工作。剩下的唯一步骤是使用autoUpdater 模块配置提要。</p>
+<p>为了使这个过程更容易，Electron团队维护 <a href="https://github.com/electron/update-electron-app" title="" target="">update-electron-app</a> 模块，该模块在一个函数调用中为update.electronjs.org设置autoUpdater 样板文件——不需要配置。此模块将搜索update.electronjs.org feed，此与项目 package.json文件中”repository”字段匹配。</p>
+<p>首先，将安装作为运行时依赖项的模块：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install update-electron-app</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add update-electron-app</span><br></pre></td></tr></table></figure>
+<p>然后，导入模块并在主进程中立即调用它：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/*main.js*/</span><br><span class="line">require(<span class="string">&#x27;update-electron-app&#x27;</span>)()</span><br></pre></td></tr></table></figure>
+<p>这样，一旦打包应用，它会为你发布的每一个新的GitHub版本实现自我更新。</p>
+<p>在本小结中，我们配置了Electron Forge的GitHub发布者上传你的应用程序的分发到GitHub发行版。由于分发版不能总是在平台之间生成，如果您无法访问机器，我们建议在持续集成管道中设置您的构建和发布流程。</p>
+<p>Electron应用程序可以通过将autoUpdater模块指向更新服务器feed进行自我更新。update.electronjs.org是Electron为GitHub上发布的开源应用提供的一个免费更新服务器。配置您的Electron应用程序来使用该服务就像安装和导入update-electron-app模块一样简单。</p>
+<p>如果您的应用程序不符合update.electronjs.org的条件，您应该部署自己的更新服务器，并自己配置autoUpdater模块。</p>
+<h1 id="问题集锦》"><a href="#问题集锦》" class="headerlink" title="问题集锦》"></a>问题集锦》</h1><p>1）命令cnpm install electron -g 是全局安装，用于在第一次安装后出现‘electron’不被识别的情况，安装成功了，使用：electron -v命令可以查看版本号。</p>
+<p>当然了使用这个命令前需要添加淘宝镜像；具体可参照前面创建Vue项目里的操作方法，也可自行百度。</p>
+<p>这里我在使用这个命令时出现了以下错误：</p>
+<p>Error: EPERM: operation not permitted, mkdir ‘D:\softprogram\nodejs\node_modules\electron_tmp’<br>原因是：node权限问题；</p>
+<p>解决办法：这里我们进入：D:\softprogram\nodejs》右键》属性》安全》点击“编辑”》选中“Users”》勾选权限框 “允许”栏中的所有权限》应用》确定</p>
+<p>再执行命令：cnpm install electron -g，即可成功安装。</p>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2022/10/13/terminology/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
+
+		
+		   <li class="next"><a href="/2022/10/13/special2/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">留言</h2>
+  
+</section> -->
+
+
+
+	
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2022-10-13 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

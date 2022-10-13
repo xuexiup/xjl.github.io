@@ -153,8 +153,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue18/" >Vue中实现页面刷新的几种方式</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/special2/" >HBuilder X 开发 5+App(mui项目)</a></div>						
 		</h3>
 	
 
@@ -163,14 +163,22 @@
   <div class="row">
 	
 	
-		<p>1.原页面刷新，类似于F5</p>
-<blockquote><p>this.$router.go(0)<br>或者<br>location.reload()</p>
+		<p>根据 <a href="https://hx.dcloud.net.cn/" title="" target="">HBuilder X 官网</a> 介绍，工具具有以下特点:</p>
+<blockquote><ol>
+<li>轻巧<br>仅10余M的绿色发行包(不含插件)</li>
+<li>极速<br>不管是启动速度、大文档打开速度、编码提示，都极速响应<br>C++的架构性能远超Java或Electron架构</li>
+<li>vue开发强化<br><code>HX</code>对vue做了大量优化投入，开发体验远超其他开发工具<br><a target="_blank" rel="noopener" href="https://hx.dcloud.net.cn/Tutorial/Language/vue">详见</a> 按下Alt+鼠标左键可直接打开网址</li>
+<li>小程序支持<br>国外开发工具没有对中国的小程序开发优化，<code>HX</code>可开发<code>uni-app</code>或<code>小程序</code>、<code>快应用</code>等项目，为国人提供更高效工具</li>
+<li>markdown利器<br><code>HX</code>是唯一一个新建文件默认类型是markdown的编辑器，也是对md支持最强的编辑器<br><code>HX</code>为md强化了众多功能，请<strong>务必点击</strong>【菜单-帮助-markdown语法示例】，快速掌握md及<code>HX</code>的强化技巧！</li>
+<li>清爽护眼<br>HX的界面比其他工具更清爽简洁，绿柔主题经过科学的脑疲劳测试，是最适合人眼长期观看的主题界面<br><a target="_blank" rel="noopener" href="https://hx.dcloud.net.cn/Tutorial/Other/health">详见</a></li>
+<li>强大的语法提示<br><code>HX</code>是中国唯一一家拥有自主IDE语法分析引擎的公司，对前端语言提供准确的代码提示和转到定义(Alt+鼠标左键)</li>
+<li>高效极客工具<br>更强大的多光标、智能双击…让字处理的效率大幅提升<br>了解<code>HX</code>的极客技巧，<a target="_blank" rel="noopener" href="https://hx.dcloud.net.cn/Tutorial/UserGuide/skill">详见</a>，</li>
+<li>更强的json支持<br>现代js开发中大量json结构的写法，<code>HX</code>提供了比其他工具更高效的操作<br><a target="_blank" rel="noopener" href="https://hx.dcloud.net.cn/Tutorial/Language/json">详见</a></li>
+</ol>
 </blockquote>
-
-<p>2.创建一个空白页面（blank.vue），通过路由的方式先跳转到空白页面再跳转回来</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue18/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/special2/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -180,8 +188,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue17/" >Vue中使用AOS动画插件，让你的网页更酷炫</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/special1/" title="需要注意的是，微信公众号分为订阅号、服务号、企业微信 三种">微信公众号开发</a></div>						
 		</h3>
 	
 
@@ -190,12 +198,14 @@
   <div class="row">
 	
 	
-		<p>根据官方文档，使用此插件可以通过直接引用的方式，也可以是下载安装本地包；<br>1.直接使用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.css&quot;</span>/&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.js”</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">AOS.init();</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这种引入方式如果是在Vue项目中，自然是从首页（index.html）中引入。</p>
+		<p>开发微信公众号，我们需要用到微信公众平台的服务账号，也就是我们开发项目的身份吧。</p>
+<p>需要注意的是，微信公众号分为订阅号、服务号、企业微信 三种</p>
+<p>这也是我们创建账号选择账号的类型，同时一经创建后，类型无法修改。</p>
+<p>创建是通过邮箱注册的，而且三种类型的服务号，一旦用邮箱注册其中一种，便无法再注册另外两种类型的微信公众号</p>
+<p>这里我是选择的：服务号</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue17/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/special1/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -205,8 +215,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue16/" >Ant Design Vue icon 图标的使用方法</a></div>						
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool10/" >安装pycharm软件后在Terminal终端无法使用pip，显示No module named pip如何解决?</a></div>						
 		</h3>
 	
 
@@ -215,66 +225,59 @@
   <div class="row">
 	
 	
-		<p>先看<a href="https://2x.antdv.com/components/icon-cn" title="" target="">官方文档</a><br>直接点击Outlined栏相应的图标会自动将图标名称复制到你的剪切板上,这里我们点击一个类似菜单的图标：<menu-fold-outlined /></p>
-<p>通常我们会这样去使用：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;menu-fold-outlined&quot;</span>&gt;&lt;/a-icon&gt;</span><br></pre></td></tr></table></figure>
-<p>但是并不会显示出来</p>
-<p>正确的用法应该是：我们在调用的时候标签要去掉分类词</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue16/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue15/" >Ant Design Vue 菜单（Menu）的用法介绍</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue15/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue14/" title="注意：以下三个方案中，方案一，方案二皆为不兼容IE【网站无法访问】的失败方案；方案三为兼容IE的可行方案；">Vue中引入highlight.js实现代码高亮，兼容IE</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>【方案一】</p>
-<p>根据highlight.js官网的介绍，我们在main.js文件中通过import的方式引入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import hljs from <span class="string">&quot;highlight.js&quot;</span>;</span><br><span class="line">import <span class="string">&quot;highlight.js/styles/monokai-sublime.css&quot;</span>;</span><br><span class="line">Vue.use(hljs)</span><br></pre></td></tr></table></figure>
-<p>这里用到了富文本框WandEditor，引入高亮；</p>
-<blockquote><p>this.editor.highlight &#x3D; hljs</p>
+		<p>安装pycharm的时候会卸载pip的有关内容。若出现了这种情况，则运行以下指令：</p>
+<blockquote><p>1）python -m ensurepip<br>2）python -m pip install –upgrade pip</p>
 </blockquote>
-<p>以上测试环境和打包后在IE上都不兼容，其它浏览器正常运行；</p>
 	
 	</div>
-  <a type="button" href="/2022/10/08/vue14/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool10/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool9/" title="需要了解在package.json文件下dependencies和devDependencies其区别">npm install --save、npm install --save-dev 、npm install -g 的区别</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<blockquote><p>devDependencies    用于开发环境<br>dependencies    用于线上环境</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool9/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool8/" >vue解决本地调试和发布后生产环境跨域的问题</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="1-解决本地环境调试跨域（前端代码使用代理）"><a href="#1-解决本地环境调试跨域（前端代码使用代理）" class="headerlink" title="1.解决本地环境调试跨域（前端代码使用代理）"></a>1.解决本地环境调试跨域（前端代码使用代理）</h3><h2 id="1-在main-js中定义代理"><a href="#1-在main-js中定义代理" class="headerlink" title="1).在main.js中定义代理"></a>1).在main.js中定义代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.dev_proxyname = <span class="string">&#x27;/api&#x27;</span></span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool8/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -332,7 +335,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>28</span></a></li>
+			<li><a href="/categories/IT/">IT<span>44</span></a></li>
+		
+			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
+		
+			<li><a href="/categories/百科知识/">百科知识<span>1</span></a></li>
 		
 		</ul>
 	</div>
@@ -343,28 +350,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Vue/">Vue<span>27</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>1</span></a></li>
-		
 			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
 		
 			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
 		
 			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>32</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>7</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>23</span></a></li>
 		 
 		</ul>
 	</div>
@@ -381,19 +408,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/08/vue27/" ><i class="fa fa-file-o"></i>Vue 常用的UI组件与框架总结</a>
+        <a href="/2022/10/13/html7/" ><i class="fa fa-file-o"></i>HTML5基本元素</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue26/" ><i class="fa fa-file-o"></i>Vue2和Vue3的区别</a>
+        <a href="/2022/10/13/html6/" ><i class="fa fa-file-o"></i>glyphicon和font awesome字体图标的...</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue25/" ><i class="fa fa-file-o"></i>使用vite创建Vue3项目</a>
+        <a href="/2022/10/13/html5/" ><i class="fa fa-file-o"></i>HTML5的主要功能构成</a>
       </li>
     
       <li>
-        <a href="/2022/10/08/vue24/"  title="本文档适用于Vue2的项目创建，不适用于Vue3" ><i class="fa fa-file-o"></i>Vue 2.x项目完整搭建步骤</a>
+        <a href="/2022/10/13/html4/" ><i class="fa fa-file-o"></i>响应式导航</a>
       </li>
     
   </ul>
