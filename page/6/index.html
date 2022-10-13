@@ -142,7 +142,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool5/" >office的另类安装方法</a></div>						
+			<div class="article-title"><a href="/2022/10/13/tool10/" >安装pycharm软件后在Terminal终端无法使用pip，显示No module named pip如何解决?</a></div>						
 		</h3>
 	
 
@@ -151,67 +151,12 @@
   <div class="row">
 	
 	
-		<a href="https://www.bilibili.com/video/BV193411K7Yq/?spm_id_from=333.337.search-card.all.click&vd_source=d476ccd7f594c6a924ede109727a1a64" title="" target="">office的另类安装方法</a>
-	
-	</div>
-  <a type="button" href="/2022/10/13/tool5/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool4/" >svn commit时候一直显示please wait，且一直不动</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>解决方案：<br>node_modules 这个文件右键，选择TortoiseSVN，再选择Unversion and add to ignore list   就可以了；<br>因为SVN检索node_modules文件系统比较慢。</p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/tool4/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool3/" >nginx常用命令</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1).命令可以查看nginx的服务进程信息</p>
-<blockquote><p>tasklist &#x2F;fi “imagename eq nginx.exe”</p>
-</blockquote>
-
-<p>2).命令可以关闭nginx的服务进程[所有的，慎用]</p>
-<blockquote><p>taskkill &#x2F;fi “imagename eq nginx.exe” &#x2F;f</p>
-</blockquote>
-
-<p>3).启动nginx[前提是配置了conf]</p>
-<blockquote><p>Start nginx</p>
+		<p>安装pycharm的时候会卸载pip的有关内容。若出现了这种情况，则运行以下指令：</p>
+<blockquote><p>1）python -m ensurepip<br>2）python -m pip install –upgrade pip</p>
 </blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/13/tool3/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool10/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -222,7 +167,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool2/" >VScode常用的插件集合</a></div>						
+			<div class="article-title"><a href="/2022/10/13/tool9/" title="需要了解在package.json文件下dependencies和devDependencies其区别">npm install --save、npm install --save-dev 、npm install -g 的区别</a></div>						
 		</h3>
 	
 
@@ -231,15 +176,11 @@
   <div class="row">
 	
 	
-		<ol>
-<li>Vetur&#x2F;Volar ：vue&#x2F;vue3语法高亮、智能感知、Emmet等, 包含格式化功能， Alt+Shift+F （格式化全文）</li>
-<li>ESLint : 校验js代码规范</li>
-<li>Prettier - Code formatter ： 格式化js、css代码插件</li>
-<li>open in browser ： 在文件右键 可以选择在浏览器预览</li>
-<li>Auto Rename Tag : 重命名一个HTML &#x2F; XML标签时，自动重命名配对的HTML &#x2F; XML标签
+		<blockquote><p>devDependencies    用于开发环境<br>dependencies    用于线上环境</p>
+</blockquote>
 	
 	</div>
-  <a type="button" href="/2022/10/13/tool2/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool9/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -250,7 +191,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool1/" >npm 实现一次执行多个指令</a></div>						
+			<div class="article-title"><a href="/2022/10/13/tool8/" >vue解决本地调试和发布后生产环境跨域的问题</a></div>						
 		</h3>
 	
 
@@ -259,12 +200,61 @@
   <div class="row">
 	
 	
-		<p>现在有这么一个情况是存在以下指令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;dev&quot;</span>: <span class="string">&quot;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;npm run dev&quot;</span>,</span><br><span class="line">    <span class="string">&quot;electron&quot;</span>: <span class="string">&quot;electron-forge start&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;node build/build.js&quot;</span>,       </span><br><span class="line">    <span class="string">&quot;package&quot;</span>:<span class="string">&quot;electron-packager . Electron_Vue应用 --platform=win32 --arch=x64 --icon=favicon.ico --out=./out --asar --app-version=1.0.1 --overwrite --ignore=node_modules&quot;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>我们将要执行start和electron指令，常规的做法是依次npm run start和npm run electron即可；</p>
+		<h3 id="1-解决本地环境调试跨域（前端代码使用代理）"><a href="#1-解决本地环境调试跨域（前端代码使用代理）" class="headerlink" title="1.解决本地环境调试跨域（前端代码使用代理）"></a>1.解决本地环境调试跨域（前端代码使用代理）</h3><h2 id="1-在main-js中定义代理"><a href="#1-在main-js中定义代理" class="headerlink" title="1).在main.js中定义代理"></a>1).在main.js中定义代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.dev_proxyname = <span class="string">&#x27;/api&#x27;</span></span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/13/tool1/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/tool8/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool7/" >nginx配置的网页刷新 404</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>在配置中添加：</p>
+<blockquote><p>try_files $uri $uri&#x2F; &#x2F;index.html; —解决页面刷新404问题 </p>
+</blockquote>
+
+<p>实例：</p>
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool7/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool6/" >uniApp 报错 plus is not defined</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="plus是什么？"><a href="#plus是什么？" class="headerlink" title="plus是什么？"></a>plus是什么？</h3><blockquote><p>plus是5+Runtime的内部对象。<br>就像chrome浏览器里有chrome.开头的一些对象方法，5+runtime内部内置了plus对象。<br>因为plus和mui不一样，plus是引擎级别的，不需要前端框架。而mui是前端框架，所以是要引入mui.js才能使用的。</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool6/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -322,11 +312,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>52</span></a></li>
+			<li><a href="/categories/IT/">IT<span>55</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
-			<li><a href="/categories/百科知识/">百科知识<span>1</span></a></li>
+			<li><a href="/categories/百科知识/">百科知识<span>3</span></a></li>
 		
 		</ul>
 	</div>
@@ -337,21 +327,7 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>32</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
 			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
@@ -359,26 +335,40 @@
 		
 			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
 			<li><a href="/tags/winform/">winform<span>1</span></a></li>
 		
+			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+		
 			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
 		
-			<li><a href="/tags/c/">c#<span>1</span></a></li>
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
 		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
 			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
 			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>26</span></a></li>
+		   <li><a href="/tags">...<span>29</span></a></li>
 		 
 		</ul>
 	</div>
@@ -395,19 +385,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/csharp1/" ><i class="fa fa-file-o"></i>Winform中如何调用JSON格式接口进行GET/P...</a>
+        <a href="/2022/10/13/ui3/" ><i class="fa fa-file-o"></i>el-dialog 问题</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/css7/" ><i class="fa fa-file-o"></i>标签添加自动换行的属性</a>
+        <a href="/2022/10/13/ui2/" ><i class="fa fa-file-o"></i>ElementUI控件el-tree方法renderC...</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/css6/" ><i class="fa fa-file-o"></i>wangeditor自带的样式</a>
+        <a href="/2022/10/13/ui1/" ><i class="fa fa-file-o"></i>ElementUI栅格系统布局与偏移</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/css5/" ><i class="fa fa-file-o"></i>css3菜单点击demo</a>
+        <a href="/2022/10/13/netnote2/" ><i class="fa fa-file-o"></i>电脑开启VT的方法</a>
       </li>
     
   </ul>

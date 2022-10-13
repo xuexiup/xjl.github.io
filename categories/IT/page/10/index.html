@@ -129,6 +129,79 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue9/" >Vue中全局变量和全局函数的使用</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>1.直接在main.js中通过prototype定义</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.accessToken = <span class="string">&#x27;xxx&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>在页面中调用：this.accessToken<br>这种方法简单但是，当需要定义变量很多的时候，管理就很繁杂，这个时候就不宜使用。</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue9/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue8/" title="Vuex是一个专为 Vue.js 应用程序开发的状态管理模式 + 库,其结构：">vuex状态管理模式</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<blockquote><p>State：定义存储状态对象</p>
+<p>Getter:获取到State后，对其计算返回需要的值（获取计算状态对象）</p>
+<p>Mutation：提交更新状态对象（同步，异步使用：Action）</p>
+<p>Action:提交一个或多个Mutation，不是直接变更状态</p>
+<p>Module:模块化vuex，可以让每一个模块拥有自己的state、mutation、action、getters,使得结构非常清晰，方便管理。</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue8/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue7/" >Vue Router的封装配置</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.安装（如果在创建项目的时候没有确认安装）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install vue-router --save</span><br></pre></td></tr></table></figure>
+
+<p>之后在src下会生成一个文件夹router，这里我们删除这个文件夹。（安装好就行了，不用它的默认文件夹，我们自己封装）</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue7/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
 			<div class="article-title"><a href="/2022/10/08/vue6/" >Vue错误笔记集合</a></div>						
 		</h3>
 	
@@ -171,72 +244,6 @@
 	
 	</div>
   <a type="button" href="/2022/10/08/vue5/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue4/" >vue-cli更新</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.卸载旧版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall vue-cli -g  </span><br><span class="line"></span><br><span class="line">或</span><br><span class="line"></span><br><span class="line">yarn global remove vue-cli</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue4/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue3/" >Vue中引入Jquery</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.首先在依赖中填写要引入jquery版本信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;@babel/polyfill&quot;</span>: <span class="string">&quot;^7.12.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;ant-design-vue&quot;</span>: <span class="string">&quot;^1.6.5&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;axios&quot;</span>: <span class="string">&quot;^0.20.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;element-ui&quot;</span>: <span class="string">&quot;^2.13.2&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;hexo-helper-live2d&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;jquery&quot;</span>: <span class="string">&quot;^3.6.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;view-design&quot;</span>: <span class="string">&quot;^4.4.0&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue&quot;</span>: <span class="string">&quot;^2.5.2&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-axios&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-resource&quot;</span>: <span class="string">&quot;^1.5.1&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-router&quot;</span>: <span class="string">&quot;^3.4.7&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;wangeditor&quot;</span>: <span class="string">&quot;^4.7.10&quot;</span></span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue3/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue2/" >vue 打包后图片显示，或因为路径原因，显示白屏？</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>打包后由于路径不对，导致资源文件加载不到，需要调整：</p>
-<p>1.config&#x2F;index.js 修改以下两个地方</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue2/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 	       
@@ -289,11 +296,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>52</span></a></li>
+			<li><a href="/categories/IT/">IT<span>55</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>4</span></a></li>
 		
-			<li><a href="/categories/百科知识/">百科知识<span>1</span></a></li>
+			<li><a href="/categories/百科知识/">百科知识<span>3</span></a></li>
 		
 		</ul>
 	</div>
@@ -304,48 +311,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>1</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
 		
 			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
-			<li><a href="/tags/工具/">工具<span>10</span></a></li>
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>1</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
 			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
 			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
 		
 			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
-			<li><a href="/tags/HTML5/">HTML5<span>14</span></a></li>
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>32</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
 			<li><a href="/tags/mui/">mui<span>1</span></a></li>
 		
-			<li><a href="/tags/winform/">winform<span>1</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>2</span></a></li>
 		
-			<li><a href="/tags/c/">c#<span>1</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>26</span></a></li>
+		   <li><a href="/tags">...<span>29</span></a></li>
 		 
 		</ul>
 	</div>
@@ -362,19 +369,19 @@
       </li>
     
       <li>
-        <a href="/2022/10/13/csharp1/" ><i class="fa fa-file-o"></i>Winform中如何调用JSON格式接口进行GET/P...</a>
+        <a href="/2022/10/13/ui3/" ><i class="fa fa-file-o"></i>el-dialog 问题</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/css7/" ><i class="fa fa-file-o"></i>标签添加自动换行的属性</a>
+        <a href="/2022/10/13/ui2/" ><i class="fa fa-file-o"></i>ElementUI控件el-tree方法renderC...</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/css6/" ><i class="fa fa-file-o"></i>wangeditor自带的样式</a>
+        <a href="/2022/10/13/ui1/" ><i class="fa fa-file-o"></i>ElementUI栅格系统布局与偏移</a>
       </li>
     
       <li>
-        <a href="/2022/10/13/css5/" ><i class="fa fa-file-o"></i>css3菜单点击demo</a>
+        <a href="/2022/10/13/netnote2/" ><i class="fa fa-file-o"></i>电脑开启VT的方法</a>
       </li>
     
   </ul>
