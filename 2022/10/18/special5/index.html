@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>svn commit时候一直显示please wait，且一直不动 | 寒山飞鹰</title>
+  <title>nginx学习之路 | 寒山飞鹰</title>
   
   <meta name="author" content="南疆">
   
   <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
   
   
-  <meta name="keywords" content="svn commit时候一直显示please wait，且一直不动">
+  <meta name="keywords" content="反向代理 web服务器 nginx">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:title" content="svn commit时候一直显示please wait，且一直不动" />
+  <meta property="og:title" content="nginx学习之路" />
   <meta property="og:site_name" content="寒山飞鹰" />
 
   
@@ -112,7 +112,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> svn commit时候一直显示please wait，且一直不动</h1>
+			<h1 class="title title-inverse "> nginx学习之路</h1>
 		</div>		
 	
 
@@ -132,8 +132,19 @@
 	<div class="mypage">		
 	  		
 
-	  <p>解决方案：<br>node_modules 这个文件右键，选择TortoiseSVN，再选择Unversion and add to ignore list   就可以了；<br>因为SVN检索node_modules文件系统比较慢。</p>
-	  
+	  <blockquote><p>1、解决nginx报错：No mapping for the Unicode character exists in the target multi-byte code pa.. </p>
+</blockquote>
+
+<h2 id="原因：nginx-路径中有中文"><a href="#原因：nginx-路径中有中文" class="headerlink" title="原因：nginx 路径中有中文"></a>原因：nginx 路径中有中文</h2><blockquote><p>2、[emerg] 12080#3204: bind() to 0.0.0.0:10099 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)</p>
+</blockquote>
+
+<h2 id="原因：10099端口被占用了"><a href="#原因：10099端口被占用了" class="headerlink" title="原因：10099端口被占用了"></a>原因：10099端口被占用了</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">切换另一个没被占用的端口便可以解决问题。</span><br></pre></td></tr></table></figure>
+
+<h3 id="如果我们想要查看10099端口被什么应用占用？"><a href="#如果我们想要查看10099端口被什么应用占用？" class="headerlink" title="如果我们想要查看10099端口被什么应用占用？"></a>如果我们想要查看10099端口被什么应用占用？</h3><p>1、按键盘win+r 打开运行界面，输入cmd，确定，打开管理员界<br>2、输入netstat -aon | findstr :10099  –查看对应的pid<br>3、输入 tasklist|findstr “对应的pid”    </p>
+<span id="more"></span>
+<blockquote><p>3、nginx常用的命令？</p>
+</blockquote>
+<p><a href="https://xuexiup.github.io/2022/10/13/tool3/" title="" target="">点我查看</a></p>	  
 	</div>
 
 	<!-- recommended posts -->
@@ -145,13 +156,13 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2022/10/13/tool5/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+    	<li class="prev"><a href="/2099/12/06/hexo1/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
 
 		
-		   <li class="next"><a href="/2022/10/13/tool3/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2022/10/13/article1/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -224,7 +235,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2022-10-13 
+	2022-10-18 
 	</div>
 	
 
@@ -235,7 +246,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/IT/">IT<span>72</span></a></li>
+    <li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
   </li>
 
     </ul>
@@ -248,7 +259,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/工具/">工具<span>11</span></a></li>
+  <li><a href="/tags/工具/">工具<span>11</span></a></li> <li><a href="/tags/nginx/">nginx<span>2</span></a></li>
     </ul>
 	</div>
 	
