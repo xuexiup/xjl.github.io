@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Electron中使用Vue2网站构建跨平台的桌面应用程序 | 寒山飞鹰</title>
+  
+  <meta name="author" content="南疆">
+  
+  <meta name="description" content="此篇文章信息来源于Electron官网资料和自己实践查阅资料所得。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="Electron中使用Vue2网站构建跨平台的桌面应用程序" />
+  <meta property="og:site_name" content="寒山飞鹰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有发表记录">
+			  <i class="fa fa-archive"></i>档案
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/note" title="我的速记">
+			  <i class="fa fa-user"></i>速记
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/message" title="messagebord">
+			  <i class="fa fa-book"></i>访客留言
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="关于我">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Electron中使用Vue2网站构建跨平台的桌面应用程序</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>此篇文章信息来源于Electron官网资料和自己实践查阅资料所得。</p>
+			
+		 </div> <!-- alert -->
+	  		
+
+	  <p>Electron是一个可使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序的工具；</p>
+<p>详细信息可查看博主整理的文档：<a target="_blank" rel="noopener" href="https://xuexiup.github.io/2022/10/13/special3/">https://xuexiup.github.io/2022/10/13/special3/</a></p>
+<p>这里我们详细介绍下Electron结合Vue2的使用（Vue3项目类似只是网站开发方式变了，Vue3用到了TS）</p>
+<p>1）搭建 <a href="https://www.romanticlife.top/blog/0/256" title="" target="">Vue2.x的网站</a> 这里我命名为：my_electron_vue</p>
+<p>2）进入网站目录安装Electron及打包工具</p>
+<p>cd my_electron_vue</p>
+<p>cnpm install –save-dev electron electron-packager</p>
+<p>3)执行命令：cnpm install</p>
+<p>4)在根目录下创建一个名为：main.js的文件</p>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/*main.js */</span><br><span class="line">const &#123;</span><br><span class="line">    app,    </span><br><span class="line">    BrowserWindow</span><br><span class="line">&#125; = require(&#x27;electron&#x27;)</span><br><span class="line">const createWindow = () =&gt; &#123;</span><br><span class="line">    const win = new BrowserWindow(&#123;</span><br><span class="line">        width: 800,</span><br><span class="line">        height: 600,</span><br><span class="line">        webPreferences: &#123;&#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">    //这是vue项目启动的地址</span><br><span class="line">    win.loadURL(&#x27;http://localhost:8080&#x27;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.whenReady().then(() =&gt; &#123;</span><br><span class="line">    createWindow()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.on(&#x27;window-all-closed&#x27;, () =&gt; &#123;</span><br><span class="line">    if (process.platform !== &#x27;darwin&#x27;) &#123;</span><br><span class="line">        app.quit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>在package.json文件中增加（最后会给出完整的packge.json文件）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;name&quot;: &quot;my_electron_vue&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;A Vue.js project&quot;,</span><br><span class="line">  &quot;author&quot;: &quot;xjl&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;main&quot;: &quot;main.js&quot;,</span><br></pre></td></tr></table></figure>
+<p>增加vue网站启动项和Electron启动项的指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;dev&quot;: &quot;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&quot;,</span><br><span class="line">  &quot;start&quot;: &quot;npm run dev&quot;,</span><br><span class="line">  &quot;electron&quot;: &quot;electron-forge start&quot;,</span><br><span class="line">  &quot;build&quot;: &quot;node build/build.js&quot;,    </span><br><span class="line">  &quot;serve&quot;: &quot;concurrently \&quot;npm run start\&quot; \&quot;npm run electron\&quot;&quot;,</span><br><span class="line">  &quot;package&quot;:&quot;electron-packager . Electron_Vue应用 --platform=win32 --arch=x64 --icon=favicon.ico --out=./out --asar --app-version=1.0.1 --overwrite --ignore=node_modules&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>这里的serve指令是 指令start和electron的集合(点我查看npm一次执行多条指令的方法)</p>
+<p>这样，通过执行指令：npm run serve便实现了：</p>
+<p>1）先执行：npm run dev</p>
+<p>启动Vue网站（这里网站地址为：<a href="http://localhost:8080），这个“端口号”以及“网站启动时是否默认在浏览器中打开”是可以在config》index.js中修改的。">http://localhost:8080），这个“端口号”以及“网站启动时是否默认在浏览器中打开”是可以在config》index.js中修改的。</a></p>
+<p>2）接着自动执行：npm run electron</p>
+<p>就会打开Electron窗体，由于我们在Electron入口main.js中使用了加载外部url的指令：win.loadURL(‘<a href="http://localhost:8080&#39;">http://localhost:8080&#39;</a>)</p>
+<p>这个url也即是1）执行后启动的Vue网站。</p>
+<p>这样，我们便实现了Electron结合Vue实现跨平台桌面应用的程序开发。</p>
+<p>这里有一点是Electron默认不是热重载的，如果我们要实现Vue中的内容修改后保存Electron界面上的内容自动修改，请查看内容：Electron项目开发时如何实现热重载？</p>
+<p>完整的package.json文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;my_electron_vue&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;A Vue.js project&quot;,</span><br><span class="line">  &quot;author&quot;: &quot;xjl&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;main&quot;: &quot;main.js&quot;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;dev&quot;: &quot;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&quot;,</span><br><span class="line">    &quot;start&quot;: &quot;npm run dev&quot;,</span><br><span class="line">    &quot;electron&quot;: &quot;electron-forge start&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;node build/build.js&quot;,    </span><br><span class="line">    &quot;serve&quot;: &quot;concurrently \&quot;npm run start\&quot; \&quot;npm run electron\&quot;&quot;,</span><br><span class="line">    &quot;package&quot;:&quot;electron-packager . Electron_Vue应用 --platform=win32 --arch=x64 --icon=favicon.ico --out=./out --asar --app-version=1.0.1 --overwrite --ignore=node_modules&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;concurrently&quot;: &quot;^7.3.0&quot;,</span><br><span class="line">    &quot;vue&quot;: &quot;^2.5.2&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;autoprefixer&quot;: &quot;^7.1.2&quot;,</span><br><span class="line">    &quot;babel-core&quot;: &quot;^6.22.1&quot;,</span><br><span class="line">    &quot;babel-helper-vue-jsx-merge-props&quot;: &quot;^2.0.3&quot;,</span><br><span class="line">    &quot;babel-loader&quot;: &quot;^7.1.1&quot;,</span><br><span class="line">    &quot;babel-plugin-syntax-jsx&quot;: &quot;^6.18.0&quot;,</span><br><span class="line">    &quot;babel-plugin-transform-runtime&quot;: &quot;^6.22.0&quot;,</span><br><span class="line">    &quot;babel-plugin-transform-vue-jsx&quot;: &quot;^3.5.0&quot;,</span><br><span class="line">    &quot;babel-preset-env&quot;: &quot;^1.3.2&quot;,</span><br><span class="line">    &quot;babel-preset-stage-2&quot;: &quot;^6.22.0&quot;,</span><br><span class="line">    &quot;chalk&quot;: &quot;^2.0.1&quot;,</span><br><span class="line">    &quot;copy-webpack-plugin&quot;: &quot;^4.0.1&quot;,</span><br><span class="line">    &quot;css-loader&quot;: &quot;^0.28.0&quot;,</span><br><span class="line">    &quot;electron&quot;: &quot;^20.0.2&quot;,</span><br><span class="line">    &quot;electron-packager&quot;: &quot;^15.5.1&quot;,</span><br><span class="line">    &quot;electron-reloader&quot;: &quot;^1.2.3&quot;,</span><br><span class="line">    &quot;extract-text-webpack-plugin&quot;: &quot;^3.0.0&quot;,</span><br><span class="line">    &quot;file-loader&quot;: &quot;^1.1.4&quot;,</span><br><span class="line">    &quot;friendly-errors-webpack-plugin&quot;: &quot;^1.6.1&quot;,</span><br><span class="line">    &quot;html-webpack-plugin&quot;: &quot;^2.30.1&quot;,</span><br><span class="line">    &quot;node-notifier&quot;: &quot;^5.1.2&quot;,</span><br><span class="line">    &quot;optimize-css-assets-webpack-plugin&quot;: &quot;^3.2.0&quot;,</span><br><span class="line">    &quot;ora&quot;: &quot;^1.2.0&quot;,</span><br><span class="line">    &quot;portfinder&quot;: &quot;^1.0.13&quot;,</span><br><span class="line">    &quot;postcss-import&quot;: &quot;^11.0.0&quot;,</span><br><span class="line">    &quot;postcss-loader&quot;: &quot;^2.0.8&quot;,</span><br><span class="line">    &quot;postcss-url&quot;: &quot;^7.2.1&quot;,</span><br><span class="line">    &quot;rimraf&quot;: &quot;^2.6.0&quot;,</span><br><span class="line">    &quot;semver&quot;: &quot;^5.3.0&quot;,</span><br><span class="line">    &quot;shelljs&quot;: &quot;^0.7.6&quot;,</span><br><span class="line">    &quot;uglifyjs-webpack-plugin&quot;: &quot;^1.1.1&quot;,</span><br><span class="line">    &quot;url-loader&quot;: &quot;^0.5.8&quot;,</span><br><span class="line">    &quot;vue-loader&quot;: &quot;^13.3.0&quot;,</span><br><span class="line">    &quot;vue-style-loader&quot;: &quot;^3.0.1&quot;,</span><br><span class="line">    &quot;vue-template-compiler&quot;: &quot;^2.5.2&quot;,</span><br><span class="line">    &quot;webpack&quot;: &quot;^3.6.0&quot;,</span><br><span class="line">    &quot;webpack-bundle-analyzer&quot;: &quot;^2.9.0&quot;,</span><br><span class="line">    &quot;webpack-dev-server&quot;: &quot;^2.9.1&quot;,</span><br><span class="line">    &quot;webpack-merge&quot;: &quot;^4.1.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;engines&quot;: &#123;</span><br><span class="line">    &quot;node&quot;: &quot;&gt;= 6.0.0&quot;,</span><br><span class="line">    &quot;npm&quot;: &quot;&gt;= 3.0.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;browserslist&quot;: [</span><br><span class="line">    &quot;&gt; 1%&quot;,</span><br><span class="line">    &quot;last 2 versions&quot;,</span><br><span class="line">    &quot;not ie &lt;= 8&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2099/12/06/hexo1/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
+
+		
+		   <li class="next"><a href="/2022/10/18/tool11/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">留言</h2>
+  
+</section> -->
+
+
+
+	
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2022-10-19 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Electron/">Electron<span>3</span></a></li> <li><a href="/tags/Vue/">Vue<span>34</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

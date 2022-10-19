@@ -301,7 +301,10 @@
 <p>接着继续了解如何使Electron应用程序让最终用户使用？</p>
 <p>为此我们将学习使用<a href="https://www.electronforge.io/" title="" target="">Electron Forge</a>打包和分发应用程序的基础知识。</p>
 <h3 id="应用程序打包"><a href="#应用程序打包" class="headerlink" title="应用程序打包"></a>应用程序打包</h3><p>Electron没有任何打包和分发的工具捆绑到其核心模块中。一旦你有了一个在开发模式下工作的Electron应用程序，你需要使用其他工具来创建一个打包的应用程序，你可以分发给你的用户(也称为分发版)。分发文件可以是安装程序(如Windows上的MSI)，也可以是可移植的可执行文件(如macOS上的.app)。</p>
-<h2 id="打包项目》"><a href="#打包项目》" class="headerlink" title="打包项目》"></a>打包项目》</h2><p>将 Electron Forge 添加到您应用的开发依赖中</p>
+<h2 id="打包项目》"><a href="#打包项目》" class="headerlink" title="打包项目》"></a>打包项目》</h2><p>将 Electron Forge 添加到您应用的开发依赖中<br>electron-forge 相当于  的一个脚手架，可以让我们更方便的创建、运行、打包  项目</p>
+<blockquote><p>注意：electron-forge打包时是需要安装git的；<br>因为它在打包时会检测系统有没有装git，没有是打不了包的 。</p>
+</blockquote>
+
 <p>并使用其”import”命令设置 Forge 的脚手架</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cnpm install @electron-forge/cli -g</span><br><span class="line"></span><br><span class="line">npx electron-forge import</span><br></pre></td></tr></table></figure>
 
@@ -390,6 +393,7 @@
 <p>Error: EPERM: operation not permitted, mkdir ‘D:\softprogram\nodejs\node_modules\electron_tmp’<br>原因是：node权限问题；</p>
 <p>解决办法：这里我们进入：D:\softprogram\nodejs》右键》属性》安全》点击“编辑”》选中“Users”》勾选权限框 “允许”栏中的所有权限》应用》确定</p>
 <p>再执行命令：cnpm install electron -g，即可成功安装。</p>
+<h3 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h3><p>1、<a href="https://baijiahao.baidu.com/s?id=1717329147141658938&wfr=spider&for=pc" title="" target="">Electron构建跨平台应用</a></p>
 	  
 	</div>
 
@@ -505,7 +509,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Electron/">Electron<span>2</span></a></li>
+  <li><a href="/tags/Electron/">Electron<span>3</span></a></li>
     </ul>
 	</div>
 	
