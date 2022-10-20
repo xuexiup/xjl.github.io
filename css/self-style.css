@@ -282,5 +282,7 @@ tr td a {
 .meta-widget .fa {
     color: #E5975C;
 }
-
+a{
+    word-wrap: break-word;    
+}
 /*修改样式end*/

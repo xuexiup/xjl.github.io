@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>磁盘 硬盘 软盘和内存之间的关系 | 寒山飞鹰</title>
+  
+  <meta name="author" content="南疆">
+  
+  <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
+  
+  
+  <meta name="keywords" content="Html">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="磁盘 硬盘 软盘和内存之间的关系" />
+  <meta property="og:site_name" content="寒山飞鹰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有发表记录">
+			  <i class="fa fa-archive"></i>档案
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/note" title="我的速记">
+			  <i class="fa fa-user"></i>速记
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/mark" title="mark清单">
+			  <i class="fa fa-list-ol"></i>mark清单
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/message" title="messagebord">
+			  <i class="fa fa-book"></i>访客留言
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="关于我">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 磁盘 硬盘 软盘和内存之间的关系</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>对于“软盘、硬盘、磁盘和内存”这4个概念想必很多小伙伴都有听说过。</p>
+<p>尤其是硬盘和内存。我们去买电脑时有两个必须要考虑的参数，就是内存大小和硬盘大小，一般来说内存越大电脑运行速度会越快，硬盘越大能够存储的文件就越多。这么看来硬盘和内存好像毫无关联，其实不然，不管是内存和硬盘还是软盘和磁盘，它们本质上来说都是用来存储数据的。</p>
+<p>一、磁盘</p>
+<p>先来说说磁盘、硬盘和软盘之间的关系。</p>
+<p>磁盘分为硬盘和软盘，它们都是外部存储器。外部存储器的特点就是不受断电的影响。那硬盘和软盘又有什么区别呢？</p>
+<p>硬盘一般都装在机箱里面，容量较大，能够存储的文件比较多。</p>
+<p>而软盘并不是装在电脑里面的，而是可移动的，一般用来存储文件和不同电脑之间进行拷贝文件，就功能上来说它和现在的U盘是一样的，只是外形、存储原理不一样，它的容量要比硬盘小的多，比如最常用的3.5英寸的软盘容量只有1.44MB，这么小的存储空间对于目前的我们来说基本上什么也干不了，而且它的存储速度要比硬盘慢很多。所以只有早期的电脑才会用软盘，目前已经被淘汰。</p>
+<p>二、内存</p>
+<p>前面说了外部存储器，再来说说内部存储器，也就是我们所说的内存。内存的的存储速度要比硬盘快很多，但是内存会受断电的影响，也就是说一断电里面存储的所有数据都会丢失。</p>
+<p>举个例子，如果我们做了半天的word没点保存键，结果这时候家里停电了（或者死机了），那么再开机的时候我们做的那份word就没了。因为没点保存键的话，这些还没保存的数据就是暂时存储在内存里面的，一旦断电就会丢失，只有我们点击保存按钮后才会永久存储在磁盘中。 之前在网上看到了一个特别通俗好理解的说法：</p>
+<p>做菜时，我们聪明的大脑和灵巧的双手就好比是CPU，切下来的菜好比是数据，切下来的菜总是先临时放在砧板上，砧板就好比是内存，砧板小了菜容易掉到地上，就象内存小了容易卡一样，最后菜才进锅子（硬盘）。</p>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2099/12/06/hexo1/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
+
+		
+		   <li class="next"><a href="/2022/10/19/html8/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">留言</h2>
+  
+</section> -->
+
+
+
+	
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2022-10-20 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>75</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML5/">HTML5<span>16</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

@@ -25,6 +25,56 @@
     
     
     <entry>
+      <title>磁盘 硬盘 软盘和内存之间的关系</title>
+      <link href="/2022/10/20/html9/"/>
+      <url>/2022/10/20/html9/</url>
+      
+        <content type="html"><![CDATA[<p>对于“软盘、硬盘、磁盘和内存”这4个概念想必很多小伙伴都有听说过。</p><p>尤其是硬盘和内存。我们去买电脑时有两个必须要考虑的参数，就是内存大小和硬盘大小，一般来说内存越大电脑运行速度会越快，硬盘越大能够存储的文件就越多。这么看来硬盘和内存好像毫无关联，其实不然，不管是内存和硬盘还是软盘和磁盘，它们本质上来说都是用来存储数据的。</p><p>一、磁盘</p><p>先来说说磁盘、硬盘和软盘之间的关系。</p><p>磁盘分为硬盘和软盘，它们都是外部存储器。外部存储器的特点就是不受断电的影响。那硬盘和软盘又有什么区别呢？</p><p>硬盘一般都装在机箱里面，容量较大，能够存储的文件比较多。</p><p>而软盘并不是装在电脑里面的，而是可移动的，一般用来存储文件和不同电脑之间进行拷贝文件，就功能上来说它和现在的U盘是一样的，只是外形、存储原理不一样，它的容量要比硬盘小的多，比如最常用的3.5英寸的软盘容量只有1.44MB，这么小的存储空间对于目前的我们来说基本上什么也干不了，而且它的存储速度要比硬盘慢很多。所以只有早期的电脑才会用软盘，目前已经被淘汰。</p><p>二、内存</p><p>前面说了外部存储器，再来说说内部存储器，也就是我们所说的内存。内存的的存储速度要比硬盘快很多，但是内存会受断电的影响，也就是说一断电里面存储的所有数据都会丢失。</p><p>举个例子，如果我们做了半天的word没点保存键，结果这时候家里停电了（或者死机了），那么再开机的时候我们做的那份word就没了。因为没点保存键的话，这些还没保存的数据就是暂时存储在内存里面的，一旦断电就会丢失，只有我们点击保存按钮后才会永久存储在磁盘中。 之前在网上看到了一个特别通俗好理解的说法：</p><p>做菜时，我们聪明的大脑和灵巧的双手就好比是CPU，切下来的菜好比是数据，切下来的菜总是先临时放在砧板上，砧板就好比是内存，砧板小了菜容易掉到地上，就象内存小了容易卡一样，最后菜才进锅子（硬盘）。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML5 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>对HTML转义符号转换</title>
+      <link href="/2022/10/19/html8/"/>
+      <url>/2022/10/19/html8/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> function escape2Html(str) &#123;</span><br><span class="line">    var arrEntities=&#123;&#x27;lt&#x27;:&#x27;&lt;&#x27;,&#x27;gt&#x27;:&#x27;&gt;&#x27;,&#x27;nbsp&#x27;:&#x27; &#x27;,&#x27;amp&#x27;:&#x27;&amp;&#x27;,&#x27;quot&#x27;:&#x27;&quot;&#x27;&#125;;</span><br><span class="line">   return str.replace(/&amp;(lt|gt|nbsp|amp|quot);/ig,function(all,t)&#123;return arrEntities[t];&#125;);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">var s = escape2Html(&quot;&amp;lt;p&amp;gt;fasfas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;fkasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasfjalsk&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://t12.baidu.com/it/u=2506809329,284241162&amp;amp;amp;fm=76&amp;quot; style=&amp;quot;max-width:100%;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&quot;);</span><br><span class="line"> </span><br><span class="line">alert(s);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML5 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Electron中使用Vue2网站构建跨平台的桌面应用程序</title>
       <link href="/2022/10/19/electron2/"/>
       <url>/2022/10/19/electron2/</url>
@@ -2155,7 +2205,7 @@
       <link href="/2022/09/28/electron1/"/>
       <url>/2022/09/28/electron1/</url>
       
-        <content type="html"><![CDATA[<h4> 阅读本文前建议先看：<a href="https://xuexiup.github.io/2022/10/13/special3/" title="" target="">基础教程</a></h4><h4> 你也可以查看：<a href="https://www.electronjs.org/zh/docs/latest/tutorial/process-model" title="" target="">官网资料</a></h4><h3 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h3><p>Electron从Chromium继承了它的多进程架构，这使得该框架在架构上非常类似于现代web浏览器。本文将扩展 <a href="https://www.romanticlife.top/blog/0/236" title="" target="">教程</a> 中应用的概念。<br>为什么不是单进程》？</p><p>Web浏览器是非常复杂的应用程序。除了显示网页内容的主要功能之外，他们还有许多次要职责，比如管理多个窗口(或标签)和加载第三方扩展。</p><p>在早期，浏览器通常使用一个进程来实现所有这些功能。虽然这种模式意味着你打开的每个标签的开销更小，但它也意味着一个网站的崩溃或挂起会影响整个浏览器。</p><span id="more"></span><h3 id="多进程模型"><a href="#多进程模型" class="headerlink" title="多进程模型"></a>多进程模型</h3><p>为了解决这个问题，Chrome团队决定每个标签将在自己的过程中呈现，以限制网页上的漏洞或恶意代码可能对整个应用程序造成的伤害。然后，一个单一的浏览器进程控制这些进程，以及应用程序的整个生命周期。</p><p>Electron应用的结构与此非常相似。</p><p>作为一个应用程序开发者，你控制两种类型的进程:main和renderer。</p><p>这些过程类似于Chrome自己的浏览器及其渲染过程。</p><h3 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h3><p>每个Electron应用程序都有一个单独的主进程，它充当应用程序的入口点。主进程运行在Node.js环境中，这意味着它能够require模块并使用所有Node.js api。</p><h3 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h3><p>主进程的主要目的是使用 <a href="https://www.electronjs.org/zh/docs/latest/api/browser-window" title="" target="">BrowserWindow</a> 模块创建和管理应用程序窗口。</p><p>BrowserWindow类的每个实例都会创建一个应用程序窗口，在一个单独的渲染进程中加载一个网页。你可以在主进程中使用窗口的 <a href="https://www.electronjs.org/zh/docs/latest/api/web-contents" title="" target="">webContents</a> 对象与这些web内容进行交互。</p><blockquote><p>main.js</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const &#123; BrowserWindow &#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line"></span><br><span class="line">const win = new BrowserWindow(&#123; width: 800, height: 1500 &#125;)</span><br><span class="line">win.loadURL(<span class="string">&#x27;https://github.com&#x27;</span>)</span><br><span class="line"></span><br><span class="line">const contents = win.webContents</span><br><span class="line">console.log(contents)</span><br></pre></td></tr></table></figure><p>注意:渲染器进程也会为  <a href="https://www.electronjs.org/zh/docs/latest/tutorial/web-embeds" title="" target="">web embeds</a> 创建，比如BrowserView模块。webContents对象也可以访问嵌入的web内容。</p><p>因为BrowserWindow模块是一个  <a href="https://nodejs.org/api/events.html#events_class_eventemitter" title="" target="">EventEmitter</a> ，您还可以为各种用户事件添加处理程序(例如，最小化或最大化窗口)。</p><p>当BrowserWindow实例被销毁时，它对应的渲染进程也会终止。</p><h3 id="应用的声明周期"><a href="#应用的声明周期" class="headerlink" title="应用的声明周期"></a>应用的声明周期</h3><p>主进程还通过Electron的 <a href="https://www.electronjs.org/zh/docs/latest/api/app" title="" target="">app</a> 模块控制应用程序的生命周期。此模块提供了大量事件和方法，您可以使用它们来添加自定义应用程序行为(例如，以编程方式退出应用程序、修改应用程序停靠或显示关于面板)。</p><p>作为一个实际的例子，在快速入门指南中显示的应用程序使用应用程序api来创建一个更原生的应用程序窗口体验。</p><h3 id="VUE项目js-base64不兼容IE"><a href="#VUE项目js-base64不兼容IE" class="headerlink" title="VUE项目js-base64不兼容IE"></a>VUE项目js-base64不兼容IE</h3><p>一般我们直接通过指令：</p><blockquote><p>npm install –save js-base64 </p></blockquote><p>安装base64插件，但是是默认安装高版本（3或以上），它的问题就是不兼容ie11</p><p>解决办法：</p><p>1）卸载已经安装的base64插件（未安装则跳过此步）</p><blockquote><p>npm uninstall js-base64</p></blockquote><p>2）安装指定版本（安装2.x.x版本）</p><blockquote><p>npm install <a href="mailto:&#106;&#115;&#45;&#98;&#97;&#x73;&#x65;&#54;&#52;&#64;&#50;&#46;&#54;&#x2e;&#x32;">&#106;&#115;&#45;&#98;&#97;&#x73;&#x65;&#54;&#52;&#64;&#50;&#46;&#54;&#x2e;&#x32;</a> –save</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h4> 阅读本文前建议先看：<a href="https://xuexiup.github.io/2022/10/13/special3/" title="" target="">基础教程</a></h4><h4> 你也可以查看：<a href="https://www.electronjs.org/zh/docs/latest/tutorial/process-model" title="" target="">官网资料</a></h4><h3 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h3><p>Electron从Chromium继承了它的多进程架构，这使得该框架在架构上非常类似于现代web浏览器。本文将扩展 <a href="https://www.romanticlife.top/blog/0/236" title="" target="">教程</a> 中应用的概念。<br>为什么不是单进程》？</p><p>Web浏览器是非常复杂的应用程序。除了显示网页内容的主要功能之外，他们还有许多次要职责，比如管理多个窗口(或标签)和加载第三方扩展。</p><p>在早期，浏览器通常使用一个进程来实现所有这些功能。虽然这种模式意味着你打开的每个标签的开销更小，但它也意味着一个网站的崩溃或挂起会影响整个浏览器。</p><span id="more"></span><h3 id="多进程模型"><a href="#多进程模型" class="headerlink" title="多进程模型"></a>多进程模型</h3><p>为了解决这个问题，Chrome团队决定每个标签将在自己的过程中呈现，以限制网页上的漏洞或恶意代码可能对整个应用程序造成的伤害。然后，一个单一的浏览器进程控制这些进程，以及应用程序的整个生命周期。</p><p>Electron应用的结构与此非常相似。</p><p>作为一个应用程序开发者，你控制两种类型的进程:main和renderer。</p><p>这些过程类似于Chrome自己的浏览器及其渲染过程。</p><h3 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h3><p>每个Electron应用程序都有一个单独的主进程，它充当应用程序的入口点。主进程运行在Node.js环境中，这意味着它能够require模块并使用所有Node.js api。</p><h3 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h3><p>主进程的主要目的是使用 <a href="https://www.electronjs.org/zh/docs/latest/api/browser-window" title="" target="">BrowserWindow</a> 模块创建和管理应用程序窗口。</p><p>BrowserWindow类的每个实例都会创建一个应用程序窗口，在一个单独的渲染进程中加载一个网页。你可以在主进程中使用窗口的 <a href="https://www.electronjs.org/zh/docs/latest/api/web-contents" title="" target="">webContents</a> 对象与这些web内容进行交互。</p><blockquote><p>main.js</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const &#123; BrowserWindow &#125; = require(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line"></span><br><span class="line">const win = new BrowserWindow(&#123; width: 800, height: 1500 &#125;)</span><br><span class="line">win.loadURL(<span class="string">&#x27;https://github.com&#x27;</span>)</span><br><span class="line"></span><br><span class="line">const contents = win.webContents</span><br><span class="line">console.log(contents)</span><br></pre></td></tr></table></figure><p>注意:渲染器进程也会为  <a href="https://www.electronjs.org/zh/docs/latest/tutorial/web-embeds" title="" target="">web embeds</a> 创建，比如BrowserView模块。webContents对象也可以访问嵌入的web内容。</p><p>因为BrowserWindow模块是一个  <a href="https://nodejs.org/api/events.html#events_class_eventemitter" title="" target="">EventEmitter</a> ，您还可以为各种用户事件添加处理程序(例如，最小化或最大化窗口)。</p><p>当BrowserWindow实例被销毁时，它对应的渲染进程也会终止。</p><h3 id="应用的声明周期"><a href="#应用的声明周期" class="headerlink" title="应用的声明周期"></a>应用的声明周期</h3><p>主进程还通过Electron的 <a href="https://www.electronjs.org/zh/docs/latest/api/app" title="" target="">app</a> 模块控制应用程序的生命周期。此模块提供了大量事件和方法，您可以使用它们来添加自定义应用程序行为(例如，以编程方式退出应用程序、修改应用程序停靠或显示关于面板)。</p><p>作为一个实际的例子，在快速入门指南中显示的应用程序使用应用程序api来创建一个更原生的应用程序窗口体验。</p><h3 id="VUE项目js-base64不兼容IE"><a href="#VUE项目js-base64不兼容IE" class="headerlink" title="VUE项目js-base64不兼容IE"></a>VUE项目js-base64不兼容IE</h3><p>一般我们直接通过指令：</p><blockquote><p>npm install –save js-base64 </p></blockquote><p>安装base64插件，但是是默认安装高版本（3或以上），它的问题就是不兼容ie11</p><p>解决办法：</p><p>1）卸载已经安装的base64插件（未安装则跳过此步）</p><blockquote><p>npm uninstall js-base64</p></blockquote><p>2）安装指定版本（安装2.x.x版本）</p><blockquote><p>npm install <a href="mailto:&#106;&#115;&#45;&#98;&#x61;&#115;&#x65;&#x36;&#52;&#x40;&#x32;&#x2e;&#54;&#x2e;&#x32;">&#106;&#115;&#45;&#98;&#x61;&#115;&#x65;&#x36;&#52;&#x40;&#x32;&#x2e;&#54;&#x2e;&#x32;</a> –save</p></blockquote>]]></content>
       
       
       
