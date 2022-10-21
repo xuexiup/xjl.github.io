@@ -137,7 +137,9 @@
 	<div class="mypage">		
 	  		
 
-	  <h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>前端每个项目的根目录上有一个 package.json 文件，定义了当前项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等）。当运行 npm install命令时，会根据文件中的配置自动下载所需的模块配置项目所需的运行和开发环境。</p>
+	  <h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p> <a href="https://docs.npmjs.com/cli/v8/configuring-npm/package-json" title="" target="">package.json npm官方文档</a> </p>
+前端每个项目的根目录上有一个 package.json 文件，定义了当前项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等）。当运行 npm install命令时，会根据文件中的配置自动下载所需的模块配置项目所需的运行和开发环境。
+
 <p>package.json文件是一个JSON对象，该对象的每一个成员就是当前项目的一项设置。比如name就是项目名称，version是版本号。</p>
 <span id="more"></span>
 <p>下面是一个更完整的package.json文件，详细解释一下每个字段的真实含义：</p>
@@ -163,9 +165,10 @@
 </ol>
 <p>contributors是对象数组，具有 name字段和可选的 url及 email字段。</p>
 <p>author 可以是具有 name字段和可选的 url及 email字段的对象，或包括name, url 和 email 字符串：</p>
-<p>“author”: “edemao <a href="mailto:&#101;&#x64;&#101;&#x6d;&#97;&#111;&#64;&#120;&#x78;&#x2e;&#99;&#111;&#x6d;">&#101;&#x64;&#101;&#x6d;&#97;&#111;&#64;&#120;&#x78;&#x2e;&#99;&#111;&#x6d;</a> (<a target="_blank" rel="noopener" href="https://edemao.top/)&quot;">https://edemao.top/)&quot;</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;author&quot;: &quot;edemao edemao@xx.com (https://edemao.top/)&quot;</span><br></pre></td></tr></table></figure>
 <p>&#x2F;** 或 *&#x2F;</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;author&quot;: &#123;</span><br><span class="line">  &quot;name&quot; : &quot;edemao&quot;,</span><br><span class="line">  &quot;email&quot; : &quot;edemao@xx.com&quot;,</span><br><span class="line">  &quot;url&quot; : &quot;https://edemao.top/&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ol start="9">
 <li><p>files字段<br>是模块下文件名或者文件夹名构成的数组，如果是文件夹名，则文件夹下所有的文件也会被包含进来（除非文件被另一些配置排除了）。可以在模块根目录下创建一个.npmignore文件，写在这个文件里边的文件即便被写在files属性里边也会被排除在外，这个文件的写法与.gitignore类似。</p>
 </li>
@@ -176,6 +179,7 @@
 </ol>
 <p>当我们编写一个cli工具的时候，需要指定工具的运行命令，比如webpack执行 bin&#x2F;index.js文件中的代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;bin&quot;: &#123;</span><br><span class="line">  &quot;webpack&quot;: &quot;bin/index.js&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>档模块以依赖的方式被安装，如果存在bin选项，会在node_modules&#x2F;.bin&#x2F;生成对应的文件，并建立符号链接。由于node_modules&#x2F;.bin&#x2F;目录会在运行时加入系统的 PATH 变量，所以 npm run 就可以不带路径，直接通过命令来调用这些脚本文件。</p>
 <p>所有 node_modules&#x2F;.bin&#x2F; 目录下的命令，都可以用 npm run [命令] 的格式运行。在命令行键入npm run，按tab键会显示所有可以使用的命令。</p>
 <ol start="13">
@@ -186,8 +190,9 @@
 <li><p>repository 字段<br>指定一个源代码存放地址。</p>
 </li>
 <li><p>scripts字段<br>指定了运行脚本命令的 npm 命令行缩写。使用 scripts字段可以快速的执行 shell 命令，可以理解为 alias。scripts可以直接使用node_modules中安装的模块，否则需要使用npx命令才能直接运行：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;build&quot;: &quot;webpack&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</li>
 </ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;build&quot;: &quot;webpack&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>&#x2F;&#x2F; npm run build 相当于 npx webpack<br>17. config 字段<br>用于添加命令行的环境变量。在server.js脚本就可以引用config字段的值。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(process.env.npm_package_config_port); // 8080</span><br></pre></td></tr></table></figure>
 <p>也可以通过npm config set进行修改：</p>
@@ -234,7 +239,9 @@
 <li><p>browser 字段<br>指定供浏览器使用的模块版本。指定浏览器打包工具比如 Browserify该打包的文件。</p>
 </li>
 </ol>
-<h2 id="package-lock-json"><a href="#package-lock-json" class="headerlink" title="package-lock.json"></a>package-lock.json</h2><p>package-lock.json 目的是对整个依赖树进行版本固定的（锁死），会在 npm 更改 node_modules 目录树 或者 package.json 时自动生成的 ，它准确的描述了当前项目 npm 包的依赖树，并且在随后的安装中会根据 package-lock.json 来安装，保证是相同的一个依赖树，不考虑这个过程中是否有某个依赖有小版本的更新。项目中有 package-lock.json 文件，会根据 package-lock.json 里的内容来处理和安装依赖而不再根据 package.json，除非对 package.json 中依赖的版本进行了修改。</p>
+<h2 id="package-lock-json"><a href="#package-lock-json" class="headerlink" title="package-lock.json"></a>package-lock.json</h2><p> <a href="https://docs.npmjs.com/cli/v6/configuring-npm/package-lock-json" title="" target="">package-lock.json npm官方文档</a> </p>
+
+<p>package-lock.json 目的是对整个依赖树进行版本固定的（锁死），会在 npm 更改 node_modules 目录树 或者 package.json 时自动生成的 ，它准确的描述了当前项目 npm 包的依赖树，并且在随后的安装中会根据 package-lock.json 来安装，保证是相同的一个依赖树，不考虑这个过程中是否有某个依赖有小版本的更新。项目中有 package-lock.json 文件，会根据 package-lock.json 里的内容来处理和安装依赖而不再根据 package.json，除非对 package.json 中依赖的版本进行了修改。</p>
 <p>注意，使用cnpm install时候，并不会生成 package-lock.json 文件，也不会根据 package-lock.json 来安装依赖包，还是会使用 package.json 来安装。</p>
 <p>package-lock.json 可能被意外更改的原因：</p>
 <p>package.json 文件修改了；</p>
