@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>es6新特性有哪些？ | 寒山飞鹰</title>
+  
+  <meta name="author" content="南疆">
+  
+  <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
+  
+  
+  <meta name="keywords" content="JavaScript,ES6">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="es6新特性有哪些？" />
+  <meta property="og:site_name" content="寒山飞鹰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">寒山飞鹰</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有发表记录">
+			  <i class="fa fa-archive"></i>档案
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/note" title="我的速记">
+			  <i class="fa fa-user"></i>速记
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/mark" title="mark清单">
+			  <i class="fa fa-list-ol"></i>mark清单
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/message" title="messagebord">
+			  <i class="fa fa-book"></i>访客留言
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="关于我">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> es6新特性有哪些？</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>es6新特性：const与let变量、模板字面量、解构、增强的对象字面量、for…of循环、展开运算符(…)、剩余参数(可变参数)、ES6箭头函数、类的支持、字符串模板、iterator、generator、模块、Symbols等。</p>
+<p>1.let const<br>let 表示申明变量。const 表示申明常量。</p>
+<p>常量定义了就不能改了。对象除外，因为对象指向的地址没变。</p>
+<p>const在申明是必须被赋值。</p>
+<p>两者都为块级作用域。</p>
+<p>块级作用域与函数作用域。任何一对花括号({和｝)中的语句集都属于一个块，在这之中定义的所有变量在代码块外都是不可见的，我们称之为块级作用域。函数作用域就好理解了，定义在函数中的参数和变量在函数外部是不可见的。</p>
+<p>const a &#x3D; 1<br>a &#x3D; 0 &#x2F;&#x2F;报错</p>
+<span id="more"></span>
+<p>2.模块字符串<code> 可以使用反引号</code>来进行字符拼接。${}</p>
+<p>3.解构<br>可以使用{}来对数组和对象进行解构。</p>
+<p>4.函数的参数默认值<br>函数传参可以有默认值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// ES6；</span><br><span class="line"><span class="keyword">function</span> printText(text = <span class="string">&#x27;default&#x27;</span>) &#123;</span><br><span class="line">    console.log(text);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>Spread &#x2F; Rest 操作符…<br>Spread &#x2F; Rest 操作符指的是 …，具体是 Spread 还是 Rest 需要看上下文语境。</li>
+</ol>
+<p>当被用于迭代器中时，它是一个 Spread 操作符：迭代器 (Iterator)是按照一定的顺序对一个或多个容器中的元素行进遍历的一种机制</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> foo(x,y,z) &#123;</span><br><span class="line">  console.log(x,y,z);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> arr = [1,2,3];</span><br><span class="line">foo(...arr); // 1 2 3</span><br></pre></td></tr></table></figure>
+<p>当被用于函数传参时，是一个 Rest 操作符：当被用于函数传参时，是一个 Rest 操作符：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> foo(...args) &#123;</span><br><span class="line">  console.log(args);</span><br><span class="line">&#125;</span><br><span class="line">foo( 1, 2, 3, 4, 5); // [1, 2, 3, 4, 5]</span><br></pre></td></tr></table></figure>
+<p>6.箭头函数<br>不需要 function 关键字来创建函数</p>
+<p>省略 return 关键字</p>
+<p>this始终指向函数申明时所在作用域下的this值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//es5</span><br><span class="line">var fun = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">&#125;</span><br><span class="line">//es6</span><br><span class="line">var fn = () =&gt; &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>7.for of<br>for of遍历的是键值对中的值</p>
+<p>for in遍历的是键值对中的键</p>
+<p>8.class类<br>ES6 中支持 class 语法，不过，ES6的class不是新的对象继承模型，它只是原型链的语法表现形式。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Student &#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>() &#123;</span><br><span class="line">    console.log(<span class="string">&quot;I&#x27;m a student.&quot;</span>);</span><br><span class="line">  &#125; </span><br><span class="line">  <span class="function"><span class="title">study</span></span>() &#123;</span><br><span class="line">    console.log(<span class="string">&#x27;study!&#x27;</span>);</span><br><span class="line">  &#125; </span><br><span class="line">  static <span class="function"><span class="title">read</span></span>() &#123;</span><br><span class="line">    console.log(<span class="string">&quot;Reading Now.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125; </span><br><span class="line">console.log(typeof Student); // <span class="keyword">function</span></span><br><span class="line"><span class="built_in">let</span> stu = new Student(); // <span class="string">&quot;I&#x27;m a student.&quot;</span></span><br><span class="line">stu.study(); // <span class="string">&quot;study!&quot;</span></span><br><span class="line">stu.read(); // <span class="string">&quot;Reading Now.&quot;</span></span><br></pre></td></tr></table></figure>
+<p>9.导入导出<br>导入improt</p>
+<p>导出export default</p>
+<p>10.promise<br>Promise 用于更优雅地处理异步请求。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  new Promise((resolve,reject) =&gt; &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      resolve(<span class="string">&#x27;成功了！&#x27;</span>)</span><br><span class="line">    &#125;,1000)</span><br><span class="line">    // reject(<span class="string">&quot;失败了，wuwu&quot;</span>)</span><br><span class="line">  &#125;).<span class="keyword">then</span>(data =&gt; &#123;</span><br><span class="line">    console.log(data)</span><br><span class="line">  &#125;).catch(err =&gt; &#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>11.async&#x2F;await<br>比promise更好的解决了回调。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">async <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  awiat fn()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>12.Symbol<br>新的基本类型</p>
+<p>13.Set集合<br>存储任何类型的唯一值，即集合中所保存的数据元素是不重复的。类数组结构。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr = [1,2,3,1]</span><br><span class="line"><span class="built_in">let</span> arrNew = new Set(arr)</span><br><span class="line">arrNew = [1,2,3]</span><br></pre></td></tr></table></figure>
+<p>类数组不是数组，要转化为数组Array.form(arrNew)这样arrNew才是数组了。</p>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2023/02/02/dotnet3/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
+
+		
+		   <li class="next"><a href="/2023/02/02/dotnet2/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">留言</h2>
+  
+</section> -->
+
+
+
+	
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2023-02-02 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>80</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2023 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

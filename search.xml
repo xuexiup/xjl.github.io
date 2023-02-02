@@ -25,6 +25,58 @@
     
     
     <entry>
+      <title>c#中的值类型和引用类型</title>
+      <link href="/2023/02/02/dotnet3/"/>
+      <url>/2023/02/02/dotnet3/</url>
+      
+        <content type="html"><![CDATA[<p>1.1 值类型和引用类型的使用特点</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：变量直接存储值，内存通常在栈中分配</span><br><span class="line">2). 引用类型：变量存储的是一个地址，这个地址对应的空间才真正存储数据(值)，内存通常在堆上分配，</span><br><span class="line">当没有任何变量引用这个地址时，该地址对应的数据空间就成为一个垃圾，由GC来回收</span><br></pre></td></tr></table></figure><p>1.2值类型和引用类型的说明</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：主要有 int（整型），bool（bool型），<span class="built_in">float</span>（单精度浮点数），double（双精度浮点数），</span><br><span class="line">char（字符串类型），struct（结构体），enum（枚举），sbyte，byte，short，ushort，uint，long，ulong</span><br><span class="line">2). 引用类型：主要有 string（字符串），object（对象），list（集合），class（类），interface（接口），</span><br><span class="line">array（数组），delegate（委托）、指针、slice切片、map、管道chan等都是引用类型</span><br></pre></td></tr></table></figure><p>指针类型</p><p>在不安全的上下文中，类型可以是指针类型、值类型或引用类型。 指针类型声明采用下列形式之一：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>* identifier;</span><br><span class="line">void* identifier; //allowed but not recommended</span><br></pre></td></tr></table></figure><p>以下任一类型均可为指针类型：</p><p>sbyte、byte、short、ushort、int、uint、long、ulong、char、float、double、decimal 或 bool。</p><p>任何枚举类型。<br>任何指针类型。<br>任何仅包含非托管类型字段的用户定义的结构类型</p><pre><code></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# </tag>
+            
+            <tag> .Net </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>es6新特性有哪些？</title>
+      <link href="/2023/02/02/javascript6/"/>
+      <url>/2023/02/02/javascript6/</url>
+      
+        <content type="html"><![CDATA[<p>es6新特性：const与let变量、模板字面量、解构、增强的对象字面量、for…of循环、展开运算符(…)、剩余参数(可变参数)、ES6箭头函数、类的支持、字符串模板、iterator、generator、模块、Symbols等。</p><p>1.let const<br>let 表示申明变量。const 表示申明常量。</p><p>常量定义了就不能改了。对象除外，因为对象指向的地址没变。</p><p>const在申明是必须被赋值。</p><p>两者都为块级作用域。</p><p>块级作用域与函数作用域。任何一对花括号({和｝)中的语句集都属于一个块，在这之中定义的所有变量在代码块外都是不可见的，我们称之为块级作用域。函数作用域就好理解了，定义在函数中的参数和变量在函数外部是不可见的。</p><p>const a &#x3D; 1<br>a &#x3D; 0 &#x2F;&#x2F;报错</p><span id="more"></span><p>2.模块字符串<code> 可以使用反引号</code>来进行字符拼接。${}</p><p>3.解构<br>可以使用{}来对数组和对象进行解构。</p><p>4.函数的参数默认值<br>函数传参可以有默认值</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// ES6；</span><br><span class="line"><span class="keyword">function</span> printText(text = <span class="string">&#x27;default&#x27;</span>) &#123;</span><br><span class="line">    console.log(text);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="5"><li>Spread &#x2F; Rest 操作符…<br>Spread &#x2F; Rest 操作符指的是 …，具体是 Spread 还是 Rest 需要看上下文语境。</li></ol><p>当被用于迭代器中时，它是一个 Spread 操作符：迭代器 (Iterator)是按照一定的顺序对一个或多个容器中的元素行进遍历的一种机制</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> foo(x,y,z) &#123;</span><br><span class="line">  console.log(x,y,z);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> arr = [1,2,3];</span><br><span class="line">foo(...arr); // 1 2 3</span><br></pre></td></tr></table></figure><p>当被用于函数传参时，是一个 Rest 操作符：当被用于函数传参时，是一个 Rest 操作符：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> foo(...args) &#123;</span><br><span class="line">  console.log(args);</span><br><span class="line">&#125;</span><br><span class="line">foo( 1, 2, 3, 4, 5); // [1, 2, 3, 4, 5]</span><br></pre></td></tr></table></figure><p>6.箭头函数<br>不需要 function 关键字来创建函数</p><p>省略 return 关键字</p><p>this始终指向函数申明时所在作用域下的this值</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//es5</span><br><span class="line">var fun = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">&#125;</span><br><span class="line">//es6</span><br><span class="line">var fn = () =&gt; &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>7.for of<br>for of遍历的是键值对中的值</p><p>for in遍历的是键值对中的键</p><p>8.class类<br>ES6 中支持 class 语法，不过，ES6的class不是新的对象继承模型，它只是原型链的语法表现形式。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Student &#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>() &#123;</span><br><span class="line">    console.log(<span class="string">&quot;I&#x27;m a student.&quot;</span>);</span><br><span class="line">  &#125; </span><br><span class="line">  <span class="function"><span class="title">study</span></span>() &#123;</span><br><span class="line">    console.log(<span class="string">&#x27;study!&#x27;</span>);</span><br><span class="line">  &#125; </span><br><span class="line">  static <span class="function"><span class="title">read</span></span>() &#123;</span><br><span class="line">    console.log(<span class="string">&quot;Reading Now.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125; </span><br><span class="line">console.log(typeof Student); // <span class="keyword">function</span></span><br><span class="line"><span class="built_in">let</span> stu = new Student(); // <span class="string">&quot;I&#x27;m a student.&quot;</span></span><br><span class="line">stu.study(); // <span class="string">&quot;study!&quot;</span></span><br><span class="line">stu.read(); // <span class="string">&quot;Reading Now.&quot;</span></span><br></pre></td></tr></table></figure><p>9.导入导出<br>导入improt</p><p>导出export default</p><p>10.promise<br>Promise 用于更优雅地处理异步请求。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  new Promise((resolve,reject) =&gt; &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      resolve(<span class="string">&#x27;成功了！&#x27;</span>)</span><br><span class="line">    &#125;,1000)</span><br><span class="line">    // reject(<span class="string">&quot;失败了，wuwu&quot;</span>)</span><br><span class="line">  &#125;).<span class="keyword">then</span>(data =&gt; &#123;</span><br><span class="line">    console.log(data)</span><br><span class="line">  &#125;).catch(err =&gt; &#123;</span><br><span class="line">    console.log(err)</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>11.async&#x2F;await<br>比promise更好的解决了回调。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">async <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  awiat fn()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>12.Symbol<br>新的基本类型</p><p>13.Set集合<br>存储任何类型的唯一值，即集合中所保存的数据元素是不重复的。类数组结构。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr = [1,2,3,1]</span><br><span class="line"><span class="built_in">let</span> arrNew = new Set(arr)</span><br><span class="line">arrNew = [1,2,3]</span><br></pre></td></tr></table></figure><p>类数组不是数组，要转化为数组Array.form(arrNew)这样arrNew才是数组了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ASP.NET.MVC 网站创建流程</title>
       <link href="/2023/02/02/dotnet2/"/>
       <url>/2023/02/02/dotnet2/</url>
