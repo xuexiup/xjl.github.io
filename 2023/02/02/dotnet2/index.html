@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ElementUI控件el-tree方法renderContent的使用 | 寒山飞鹰</title>
+  <title>ASP.NET.MVC 网站创建流程 | 寒山飞鹰</title>
   
   <meta name="author" content="南疆">
   
   <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
   
   
-  <meta name="keywords" content="ui">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:title" content="ElementUI控件el-tree方法renderContent的使用" />
+  <meta property="og:title" content="ASP.NET.MVC 网站创建流程" />
   <meta property="og:site_name" content="寒山飞鹰" />
 
   
@@ -118,7 +117,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> ElementUI控件el-tree方法renderContent的使用</h1>
+			<h1 class="title title-inverse "> ASP.NET.MVC 网站创建流程</h1>
 		</div>		
 	
 
@@ -138,24 +137,8 @@
 	<div class="mypage">		
 	  		
 
-	  <p>renderContent并不会影响代码中既定tree数据层结构渲染加载；</p>
-<p>这里的作用是根据tree的特定level调整其样式：</p>
-<h2 id="el-tree"><a href="#el-tree" class="headerlink" title="el-tree"></a>el-tree</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tree</span><br><span class="line"></span><br><span class="line">                :render-content=<span class="string">&quot;renderContent&quot;</span></span><br><span class="line"></span><br><span class="line">                :data=<span class="string">&quot;treedata&quot;</span></span><br><span class="line"></span><br><span class="line">                default-expand-all</span><br><span class="line"></span><br><span class="line">                :show-checkbox=<span class="string">&quot;showcheckbox&quot;</span></span><br><span class="line"></span><br><span class="line">                highlight-current</span><br><span class="line"></span><br><span class="line">                node-key=<span class="string">&quot;itemId&quot;</span></span><br><span class="line"></span><br><span class="line">                :expand-on-click-node=<span class="string">&quot;false&quot;</span></span><br><span class="line"></span><br><span class="line">                @node-click=<span class="string">&quot;handleNodeClick&quot;</span></span><br><span class="line"></span><br><span class="line">                :props=<span class="string">&quot;ItemProps&quot;</span></span><br><span class="line"></span><br><span class="line">                v-loading=<span class="string">&quot;ISload&quot;</span></span><br><span class="line"></span><br><span class="line">                ref=<span class="string">&quot;tree&quot;</span></span><br><span class="line"></span><br><span class="line">                @check-change=<span class="string">&quot;itemCheckChange&quot;</span></span><br><span class="line"></span><br><span class="line">                style=<span class="string">&quot;margin-top: 1em;&quot;</span></span><br><span class="line"></span><br><span class="line">              &gt;&lt;/el-tree&gt;</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><pre><code class="bash">    renderContent(h, &#123; node, data, store &#125;) &#123;  
-
-      if (node.level === 1) &#123;
-
-        return &lt;span class=&#39;firstlevel&#39;&gt;&#123;node.label&#125;&lt;/span&gt;;
-
-      &#125; else &#123;
-
-        return &lt;span class=&#39;notfirstlevel&#39;&gt;&#123;node.label&#125;&lt;/span&gt;;
-
-      &#125;
-
-    &#125;,
-</code></pre>
+	  <p>1).创建空解决方案文件夹：Test<br>2).右键Test&#x3D;》添加&#x3D;》新建解决方案文件夹（3个）<br>（1）Common<br>    右键&#x3D;》添加&#x3D;》新建项目&#x3D;》类库(.NET Standard),名为Common,用于存放通用类（连接类，加密算法…）<br>（2）DAL 为其添加2个类库<br>    Domain：添加实体类型数据类型<br>    Severice：存放业务接口<br>（3）Web<br>    右键&#x3D;》添加新建项目&#x3D;》ASP.NET应用程序（.NET Framework）选择MVC，去掉https项，创建MVC网站</p>
+<p>至此 MVC项目网站创建完毕。    </p>
 	  
 	</div>
 
@@ -168,13 +151,13 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2022/10/13/ui3/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+    	<li class="prev"><a href="/2099/12/06/hexo1/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
 
 		
-		   <li class="next"><a href="/2022/10/13/ui1/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2023/02/02/dotnet1/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -247,7 +230,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2022-10-13 
+	2023-02-02 
 	</div>
 	
 
@@ -271,7 +254,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li> <li><a href="/tags/UI/">UI<span>3</span></a></li>
+  <li><a href="/tags/Net/">.Net<span>2</span></a></li> <li><a href="/tags/MVC/">MVC<span>1</span></a></li>
     </ul>
 	</div>
 	
