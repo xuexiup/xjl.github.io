@@ -148,6 +148,56 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue16/" >Ant Design Vue icon 图标的使用方法</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>先看<a href="https://2x.antdv.com/components/icon-cn" title="" target="">官方文档</a><br>直接点击Outlined栏相应的图标会自动将图标名称复制到你的剪切板上,这里我们点击一个类似菜单的图标：<menu-fold-outlined /></p>
+<p>通常我们会这样去使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;menu-fold-outlined&quot;</span>&gt;&lt;/a-icon&gt;</span><br></pre></td></tr></table></figure>
+<p>但是并不会显示出来</p>
+<p>正确的用法应该是：我们在调用的时候标签要去掉分类词</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue16/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue15/" >Ant Design Vue 菜单（Menu）的用法介绍</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue15/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
 			<div class="article-title"><a href="/2022/10/08/vue14/" title="注意：以下三个方案中，方案一，方案二皆为不兼容IE【网站无法访问】的失败方案；方案三为兼容IE的可行方案；">Vue中引入highlight.js实现代码高亮，兼容IE</a></div>						
 		</h3>
 	
@@ -230,54 +280,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue11/" >Vue的生命周期</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="什么是Vue的生命周期-？"><a href="#什么是Vue的生命周期-？" class="headerlink" title="什么是Vue的生命周期 ？"></a>什么是Vue的生命周期 ？</h3><blockquote><p>Vue 的实例从创建到销毁的过程 ，就是生命周期 ，也就是从开始创建 ，初始化数据 ，编译模板 ，挂载Dom到渲染DOM ，更新数据再到渲染 ，卸载等一系列的过程 ，我们称这是Vue的生命周期。</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue11/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue10/" >axios中使用异步（async +await）</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.定义方法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> getIteminfo(<span class="built_in">id</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">id</span> == null) <span class="built_in">id</span> = getPara();//获取页面参数</span><br><span class="line"></span><br><span class="line">    var item_options = [];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> await axios(&#123;</span><br><span class="line"></span><br><span class="line">        url: dev_proxyftpname + <span class="string">&quot;/api/findOneById&quot;</span>,</span><br><span class="line"></span><br><span class="line">        method: <span class="string">&quot;post&quot;</span>,</span><br><span class="line"></span><br><span class="line">        data: JSON.stringify(&#123; <span class="built_in">id</span>: <span class="built_in">id</span> &#125;),</span><br><span class="line"></span><br><span class="line">        headers: &#123; <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span> &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="built_in">timeout</span>: 1000 * 30,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">        .<span class="keyword">then</span>((res) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (res.data) &#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (res.data.data != null) &#123;</span><br><span class="line"></span><br><span class="line">                    <span class="built_in">return</span> res.data.data;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue10/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -331,7 +333,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>84</span></a></li>
+			<li><a href="/categories/IT/">IT<span>86</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
@@ -348,45 +350,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
 			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
-			<li><a href="/tags/工具/">工具<span>12</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>17</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
-		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+			<li><a href="/tags/Net/">.Net<span>5</span></a></li>
 		
 			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
 		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
 			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+			<li><a href="/tags/c/">c#<span>4</span></a></li>
 		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
 		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+			<li><a href="/tags/winform/">winform<span>1</span></a></li>
 		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
 		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>39</span></a></li>
@@ -406,19 +408,19 @@
       </li>
     
       <li>
+        <a href="/2023/02/09/html0/" ><i class="fa fa-file-o"></i>前端系列问题</a>
+      </li>
+    
+      <li>
+        <a href="/2023/02/09/html11/" ><i class="fa fa-file-o"></i>Sass的常见问题点</a>
+      </li>
+    
+      <li>
         <a href="/2023/02/09/vue29/" ><i class="fa fa-file-o"></i>axios 和 express的区别</a>
       </li>
     
       <li>
         <a href="/2023/02/09/html10/" ><i class="fa fa-file-o"></i>Sass的优缺点优点</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/08/dotnet5/" ><i class="fa fa-file-o"></i>.Net Core常用知识大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/03/dotnet4/" ><i class="fa fa-file-o"></i>.Net常用知识大全</a>
       </li>
     
   </ul>

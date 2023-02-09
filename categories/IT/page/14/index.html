@@ -135,6 +135,53 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue20/" >Vue中UI库Ant Design Vue 回到顶部（BackTop）组件的使用</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>首先看下官方文档的使用说明，写出了以下范例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;components-back-top-demo-custom&quot;</span>&gt;</span><br><span class="line">      &lt;a-back-top&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;ant-back-top-inner&quot;</span>&gt;</span><br><span class="line">          &lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;up&quot;</span>&gt;&lt;/a-icon&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/a-back-top&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/template&gt;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue20/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue19/" >vue项目中使用分享插件social-share</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>老规矩先安装依赖：</p>
+<blockquote><p>cnpm install vue-social-share -S</p>
+</blockquote>
+<p>安装完后从main.js中引入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Share from <span class="string">&#x27;vue-social-share&#x27;</span></span><br><span class="line">import <span class="string">&#x27;vue-social-share/dist/client.css&#x27;</span>;</span><br><span class="line">Vue.use(Share)</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue19/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
 			<div class="article-title"><a href="/2022/10/08/vue18/" >Vue中实现页面刷新的几种方式</a></div>						
 		</h3>
 	
@@ -203,54 +250,6 @@
 </div>
 
 	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue15/" >Ant Design Vue 菜单（Menu）的用法介绍</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue15/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue14/" title="注意：以下三个方案中，方案一，方案二皆为不兼容IE【网站无法访问】的失败方案；方案三为兼容IE的可行方案；">Vue中引入highlight.js实现代码高亮，兼容IE</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>【方案一】</p>
-<p>根据highlight.js官网的介绍，我们在main.js文件中通过import的方式引入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import hljs from <span class="string">&quot;highlight.js&quot;</span>;</span><br><span class="line">import <span class="string">&quot;highlight.js/styles/monokai-sublime.css&quot;</span>;</span><br><span class="line">Vue.use(hljs)</span><br></pre></td></tr></table></figure>
-<p>这里用到了富文本框WandEditor，引入高亮；</p>
-<blockquote><p>this.editor.highlight &#x3D; hljs</p>
-</blockquote>
-<p>以上测试环境和打包后在IE上都不兼容，其它浏览器正常运行；</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue14/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
 	     </div>
 	     <div>
 	       <center>
@@ -300,7 +299,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>84</span></a></li>
+			<li><a href="/categories/IT/">IT<span>86</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
@@ -317,45 +316,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+			<li><a href="/tags/工具/">工具<span>12</span></a></li>
 		
 			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
-		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
-		
 			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/Net/">.Net<span>5</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
 		
 			<li><a href="/tags/Vue/">Vue<span>36</span></a></li>
 		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>4</span></a></li>
 		
 			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
 		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>39</span></a></li>
@@ -375,19 +374,19 @@
       </li>
     
       <li>
+        <a href="/2023/02/09/html0/" ><i class="fa fa-file-o"></i>前端系列问题</a>
+      </li>
+    
+      <li>
+        <a href="/2023/02/09/html11/" ><i class="fa fa-file-o"></i>Sass的常见问题点</a>
+      </li>
+    
+      <li>
         <a href="/2023/02/09/vue29/" ><i class="fa fa-file-o"></i>axios 和 express的区别</a>
       </li>
     
       <li>
         <a href="/2023/02/09/html10/" ><i class="fa fa-file-o"></i>Sass的优缺点优点</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/08/dotnet5/" ><i class="fa fa-file-o"></i>.Net Core常用知识大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/03/dotnet4/" ><i class="fa fa-file-o"></i>.Net常用知识大全</a>
       </li>
     
   </ul>
