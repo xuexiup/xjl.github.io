@@ -135,6 +135,56 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/javascript6/" >es6新特性有哪些？</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>es6新特性：const与let变量、模板字面量、解构、增强的对象字面量、for…of循环、展开运算符(…)、剩余参数(可变参数)、ES6箭头函数、类的支持、字符串模板、iterator、generator、模块、Symbols等。</p>
+<p>1.let const<br>let 表示申明变量。const 表示申明常量。</p>
+<p>常量定义了就不能改了。对象除外，因为对象指向的地址没变。</p>
+<p>const在申明是必须被赋值。</p>
+<p>两者都为块级作用域。</p>
+<p>块级作用域与函数作用域。任何一对花括号({和｝)中的语句集都属于一个块，在这之中定义的所有变量在代码块外都是不可见的，我们称之为块级作用域。函数作用域就好理解了，定义在函数中的参数和变量在函数外部是不可见的。</p>
+<p>const a &#x3D; 1<br>a &#x3D; 0 &#x2F;&#x2F;报错</p>
+	
+	</div>
+  <a type="button" href="/2023/02/02/javascript6/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/dotnet2/" >ASP.NET.MVC 网站创建流程</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1).创建空解决方案文件夹：Test<br>2).右键Test&#x3D;》添加&#x3D;》新建解决方案文件夹（3个）<br>（1）Common<br>    右键&#x3D;》添加&#x3D;》新建项目&#x3D;》类库(.NET Standard),名为Common,用于存放通用类（连接类，加密算法…）<br>（2）DAL 为其添加2个类库<br>    Domain：添加实体类型数据类型<br>    Severice：存放业务接口<br>（3）Web<br>    右键&#x3D;》添加新建项目&#x3D;》ASP.NET应用程序（.NET Framework）选择MVC，去掉https项，创建MVC网站</p>
+<p>至此 MVC项目网站创建完毕。    </p>
+
+	
+	</div>
+  <a type="button" href="/2023/02/02/dotnet2/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
 			<div class="article-title"><a href="/2023/02/02/dotnet1/" >ASP.NET.MVC中Linq的基本语法</a></div>						
 		</h3>
 	
@@ -207,49 +257,6 @@
 </div>
 
 	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-19 </div>
-			<div class="article-title"><a href="/2022/10/19/html8/" >对HTML转义符号转换</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> function escape2Html(str) &#123;</span><br><span class="line">    var arrEntities=&#123;&#x27;lt&#x27;:&#x27;&lt;&#x27;,&#x27;gt&#x27;:&#x27;&gt;&#x27;,&#x27;nbsp&#x27;:&#x27; &#x27;,&#x27;amp&#x27;:&#x27;&amp;&#x27;,&#x27;quot&#x27;:&#x27;&quot;&#x27;&#125;;</span><br><span class="line">   return str.replace(/&amp;(lt|gt|nbsp|amp|quot);/ig,function(all,t)&#123;return arrEntities[t];&#125;);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">var s = escape2Html(&quot;&amp;lt;p&amp;gt;fasfas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;fkasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasfjalsk&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://t12.baidu.com/it/u=2506809329,284241162&amp;amp;amp;fm=76&amp;quot; style=&amp;quot;max-width:100%;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&quot;);</span><br><span class="line"> </span><br><span class="line">alert(s);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/19/html8/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-18 </div>
-			<div class="article-title"><a href="/2022/10/18/tool11/" >Selenium和Python的区别</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>Python是一门编程语言；<br>Selenium是一个用于Web应用程序测试的工具（IDE）。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样；<br>也就是说 selenium ide是用来录制， 录制完的脚本，通过RC启动不同浏览器运行测试；<br>python+selenium，是需要自己搭框架的，搭完框架后需要自己去写脚本，需要对selenium进行二次封装；<br>总结：Selenium可以用python语言来调用它(Selenium RC)进行测试，这样写脚本会更加灵活，更有效率，可读性强，重复运行稳定性高，而且也易于维护。</p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/18/tool11/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
 	     </div>
 	     <div>
 	       <center>
@@ -299,7 +306,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>82</span></a></li>
+			<li><a href="/categories/IT/">IT<span>84</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
@@ -316,45 +323,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>17</span></a></li>
 		
 			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
 		
-			<li><a href="/tags/工具/">工具<span>12</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
 			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
 		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+			<li><a href="/tags/Vue/">Vue<span>36</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>1</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>16</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>35</span></a></li>
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
 			<li><a href="/tags/c/">c#<span>4</span></a></li>
 		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
 			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>39</span></a></li>
@@ -374,19 +381,19 @@
       </li>
     
       <li>
+        <a href="/2023/02/09/vue29/" ><i class="fa fa-file-o"></i>axios 和 express的区别</a>
+      </li>
+    
+      <li>
+        <a href="/2023/02/09/html10/" ><i class="fa fa-file-o"></i>Sass的优缺点优点</a>
+      </li>
+    
+      <li>
         <a href="/2023/02/08/dotnet5/" ><i class="fa fa-file-o"></i>.Net Core常用知识大全</a>
       </li>
     
       <li>
         <a href="/2023/02/03/dotnet4/" ><i class="fa fa-file-o"></i>.Net常用知识大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/02/dotnet3/" ><i class="fa fa-file-o"></i>c#中的值类型和引用类型</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/02/javascript6/" ><i class="fa fa-file-o"></i>es6新特性有哪些？</a>
       </li>
     
   </ul>

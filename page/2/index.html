@@ -148,6 +148,71 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/dotnet3/" >c#中的值类型和引用类型</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.1 值类型和引用类型的使用特点</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：变量直接存储值，内存通常在栈中分配</span><br><span class="line">2). 引用类型：变量存储的是一个地址，这个地址对应的空间才真正存储数据(值)，内存通常在堆上分配，</span><br><span class="line">当没有任何变量引用这个地址时，该地址对应的数据空间就成为一个垃圾，由GC来回收</span><br></pre></td></tr></table></figure>
+<p>1.2值类型和引用类型的说明</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：主要有 int（整型），bool（bool型），<span class="built_in">float</span>（单精度浮点数），double（双精度浮点数），</span><br><span class="line">char（字符串类型），struct（结构体），enum（枚举），sbyte，byte，short，ushort，uint，long，ulong</span><br><span class="line">2). 引用类型：主要有 string（字符串），object（对象），list（集合），class（类），interface（接口），</span><br><span class="line">array（数组），delegate（委托）、指针、slice切片、map、管道chan等都是引用类型</span><br></pre></td></tr></table></figure>
+
+<p>指针类型</p>
+<p>在不安全的上下文中，类型可以是指针类型、值类型或引用类型。 指针类型声明采用下列形式之一：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>* identifier;</span><br><span class="line">void* identifier; //allowed but not recommended</span><br></pre></td></tr></table></figure>
+<p>以下任一类型均可为指针类型：</p>
+<p>sbyte、byte、short、ushort、int、uint、long、ulong、char、float、double、decimal 或 bool。</p>
+<p>任何枚举类型。<br>任何指针类型。<br>任何仅包含非托管类型字段的用户定义的结构类型</p>
+<pre><code>
+</code></pre>
+
+	
+	</div>
+  <a type="button" href="/2023/02/02/dotnet3/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/javascript6/" >es6新特性有哪些？</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>es6新特性：const与let变量、模板字面量、解构、增强的对象字面量、for…of循环、展开运算符(…)、剩余参数(可变参数)、ES6箭头函数、类的支持、字符串模板、iterator、generator、模块、Symbols等。</p>
+<p>1.let const<br>let 表示申明变量。const 表示申明常量。</p>
+<p>常量定义了就不能改了。对象除外，因为对象指向的地址没变。</p>
+<p>const在申明是必须被赋值。</p>
+<p>两者都为块级作用域。</p>
+<p>块级作用域与函数作用域。任何一对花括号({和｝)中的语句集都属于一个块，在这之中定义的所有变量在代码块外都是不可见的，我们称之为块级作用域。函数作用域就好理解了，定义在函数中的参数和变量在函数外部是不可见的。</p>
+<p>const a &#x3D; 1<br>a &#x3D; 0 &#x2F;&#x2F;报错</p>
+	
+	</div>
+  <a type="button" href="/2023/02/02/javascript6/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
 			<div class="article-title"><a href="/2023/02/02/dotnet2/" >ASP.NET.MVC 网站创建流程</a></div>						
 		</h3>
 	
@@ -216,63 +281,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-20 </div>
-			<div class="article-title"><a href="/2022/10/20/html9/" >磁盘 硬盘 软盘和内存之间的关系</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>对于“软盘、硬盘、磁盘和内存”这4个概念想必很多小伙伴都有听说过。</p>
-<p>尤其是硬盘和内存。我们去买电脑时有两个必须要考虑的参数，就是内存大小和硬盘大小，一般来说内存越大电脑运行速度会越快，硬盘越大能够存储的文件就越多。这么看来硬盘和内存好像毫无关联，其实不然，不管是内存和硬盘还是软盘和磁盘，它们本质上来说都是用来存储数据的。</p>
-<p>一、磁盘</p>
-<p>先来说说磁盘、硬盘和软盘之间的关系。</p>
-<p>磁盘分为硬盘和软盘，它们都是外部存储器。外部存储器的特点就是不受断电的影响。那硬盘和软盘又有什么区别呢？</p>
-<p>硬盘一般都装在机箱里面，容量较大，能够存储的文件比较多。</p>
-<p>而软盘并不是装在电脑里面的，而是可移动的，一般用来存储文件和不同电脑之间进行拷贝文件，就功能上来说它和现在的U盘是一样的，只是外形、存储原理不一样，它的容量要比硬盘小的多，比如最常用的3.5英寸的软盘容量只有1.44MB，这么小的存储空间对于目前的我们来说基本上什么也干不了，而且它的存储速度要比硬盘慢很多。所以只有早期的电脑才会用软盘，目前已经被淘汰。</p>
-<p>二、内存</p>
-<p>前面说了外部存储器，再来说说内部存储器，也就是我们所说的内存。内存的的存储速度要比硬盘快很多，但是内存会受断电的影响，也就是说一断电里面存储的所有数据都会丢失。</p>
-<p>举个例子，如果我们做了半天的word没点保存键，结果这时候家里停电了（或者死机了），那么再开机的时候我们做的那份word就没了。因为没点保存键的话，这些还没保存的数据就是暂时存储在内存里面的，一旦断电就会丢失，只有我们点击保存按钮后才会永久存储在磁盘中。 之前在网上看到了一个特别通俗好理解的说法：</p>
-<p>做菜时，我们聪明的大脑和灵巧的双手就好比是CPU，切下来的菜好比是数据，切下来的菜总是先临时放在砧板上，砧板就好比是内存，砧板小了菜容易掉到地上，就象内存小了容易卡一样，最后菜才进锅子（硬盘）。</p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/20/html9/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-19 </div>
-			<div class="article-title"><a href="/2022/10/19/html8/" >对HTML转义符号转换</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> function escape2Html(str) &#123;</span><br><span class="line">    var arrEntities=&#123;&#x27;lt&#x27;:&#x27;&lt;&#x27;,&#x27;gt&#x27;:&#x27;&gt;&#x27;,&#x27;nbsp&#x27;:&#x27; &#x27;,&#x27;amp&#x27;:&#x27;&amp;&#x27;,&#x27;quot&#x27;:&#x27;&quot;&#x27;&#125;;</span><br><span class="line">   return str.replace(/&amp;(lt|gt|nbsp|amp|quot);/ig,function(all,t)&#123;return arrEntities[t];&#125;);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">var s = escape2Html(&quot;&amp;lt;p&amp;gt;fasfas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;fkasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasfjalsk&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://t12.baidu.com/it/u=2506809329,284241162&amp;amp;amp;fm=76&amp;quot; style=&amp;quot;max-width:100%;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&quot;);</span><br><span class="line"> </span><br><span class="line">alert(s);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/19/html8/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -326,7 +334,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>82</span></a></li>
+			<li><a href="/categories/IT/">IT<span>84</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
@@ -343,45 +351,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Net/">.Net<span>5</span></a></li>
-		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
 			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
 		
 			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
 		
 			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/tags/HTML5/">HTML5<span>17</span></a></li>
 		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
-		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
 			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>35</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>12</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>39</span></a></li>
@@ -401,19 +409,19 @@
       </li>
     
       <li>
+        <a href="/2023/02/09/vue29/" ><i class="fa fa-file-o"></i>axios 和 express的区别</a>
+      </li>
+    
+      <li>
+        <a href="/2023/02/09/html10/" ><i class="fa fa-file-o"></i>Sass的优缺点优点</a>
+      </li>
+    
+      <li>
         <a href="/2023/02/08/dotnet5/" ><i class="fa fa-file-o"></i>.Net Core常用知识大全</a>
       </li>
     
       <li>
         <a href="/2023/02/03/dotnet4/" ><i class="fa fa-file-o"></i>.Net常用知识大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/02/dotnet3/" ><i class="fa fa-file-o"></i>c#中的值类型和引用类型</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/02/javascript6/" ><i class="fa fa-file-o"></i>es6新特性有哪些？</a>
       </li>
     
   </ul>
