@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>.Net基础十问 | 五星码农</title>
+  
+  <meta name="author" content="孑孓">
+  
+  <meta name="description" content="资料来源于实践、网络查询">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content=".Net基础十问" />
+  <meta property="og:site_name" content="五星码农" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">五星码农</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有发表记录">
+			  <i class="fa fa-archive"></i>档案
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/note" title="我的速记">
+			  <i class="fa fa-user"></i>速记
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/mark" title="mark清单">
+			  <i class="fa fa-list-ol"></i>mark清单
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/message" title="messagebord">
+			  <i class="fa fa-book"></i>访客留言
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="关于我">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> .Net基础十问</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>资料来源于实践、网络查询</p>
+			
+		 </div> <!-- alert -->
+	  		
+
+	  <p>第一问：C#中变量类型分为哪两种？</p>
+<blockquote><p>值类型和引用类型，值类型变量自身存储数据，引用类型存储的势实际数据的引用，通过引用找到实际的数据。</p>
+</blockquote>        
+
+<p>第二问：Class和Struct的区别？</p>
+<blockquote><p>Class为引用类型，可以被实例化，存储实际的引用；Struct为值类型，值类型自身存储数据数据。</p>
+</blockquote>                
+<span id="more"></span>
+<p>第三问：C#中类的修饰符和类成员的修饰符有哪些？</p>
+<blockquote><p>C#中可以修饰类的修饰符为：public、internal、sealed、abstract</p>
+<p>C#中不能修饰类的修饰符为：private和protected</p>
+<p>C#中成员的修饰符为：public、internal、protected、private</p>
+<p>public：完全公开，没有访问限制。</p>
+<p>internal：可以应用于当前应用程序以及类库。</p>
+<p>protected：在当前类和子类中可以使用。</p>
+<p>private：只有在当前类中可以使用。</p>
+<p>sealed：密封类，不能被其他类型继承。</p>
+<p>abstract：抽象类，不能创建实例。</p>
+</blockquote>        
+<p>第四问：面向对象的三个特征（特点）是什么？</p>
+<blockquote><p>封装：把对象的属性或者行为邓庄起来，类似于一个类。</p>
+<p>继承：子类可以继承父类。</p>
+<p>多态：父类可以应用于子类，子类可以去使用父类的一些特征方法。</p>
+</blockquote>        
+<p>第五问：面向对象和面向过程的区别？</p>
+<blockquote><p>面向对象：把问题分解成多个对象，强调的是解决问题行为标准（方式）</p>
+<p>面向过程：分析问题并解决问题的步骤，强调的势解决问题的步骤。</p>
+</blockquote>        
+<p>第六问：什么是装箱和拆箱？</p>
+<blockquote><p>装箱：从值类型转换到引用类型。</p>
+<p>拆箱：从引用类型到值类型的转换。</p>
+</blockquote>        
+<p>第七问：什么事IOC？</p>
+<blockquote><p>控制反转，是一种思想（设计模式）而不是一种技术实现。</p>
+<p>控制：拥有创建对象的权利。</p>
+<p>反转：把控制权交给IOC容器。</p>
+<p>优点：	1、对象之间的耦合度或依赖度降低。</p>
+<pre><code>    2、资源容易管理
+</code></pre>
+<p>传统模式下：在一个类中需要new关键字去实例化另一个类。</p>
+<p>IOC设计模式：不需要new去创建对象，直接从IOC容器中获取。</p>
+</blockquote>        
+<p>第八问：什么事OOP？</p>
+<blockquote><p>面向对象编程</p>
+<p>提取共有的属性和方法，形成一个父类。</p>
+</blockquote>        
+<p>第九问：什么事AOP？</p>
+<blockquote><p>面向切面的编程，在不改变原有的业务逻辑情况下，横切逻辑代码，解耦合代码，避免横切代码重复。</p>
+<p>切：指的是横向逻辑，就是保证原有的业务逻辑代码不变，操作横切逻辑代码，所以就是面相横切编程。</p>
+<p>面：横切代码影响的是很多方法，每个方法如同一个点，很多点就形成面。</p>
+<p>应用场景：事务控制，权限效验、日志信息等。</p>
+<p>多个方法的相同位置出现重复代码。</p>
+</blockquote>        
+<p>第十问：什么事DI？</p>
+<blockquote><p>依赖注入</p>
+<p>DI是IOC设计思想的实现方式</p>
+<p>一个类去引用另外一个类，就会产生依赖。</p>
+<p>优点：如果添加另一个类，不需要修改之前代码，只要修改注入的地方将实现类进行替换。</p>
+<p>实例化接口的时候，不用手动new来狗仔实现类，交给IOC容器进行构建。</p>
+<p>实现了解耦</p>
+<p>DIP：依赖注入倒置原则：依赖于抽象，不依赖预聚体，高层模块不依赖于低层模块，它们依赖于抽象。</p>
+</blockquote>                	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2099/12/06/hexo1/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
+
+		
+		   <li class="next"><a href="/2023/02/15/dotnet6/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">留言</h2>
+  
+</section> -->
+
+
+
+	
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2023-02-16 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>88</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/c/">c#<span>6</span></a></li> <li><a href="/tags/Net/">.Net<span>7</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2023 孑孓
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

@@ -25,6 +25,33 @@
     
     
     <entry>
+      <title>.Net基础十问</title>
+      <link href="/2023/02/16/dotnet7/"/>
+      <url>/2023/02/16/dotnet7/</url>
+      
+        <content type="html"><![CDATA[<p>第一问：C#中变量类型分为哪两种？</p><blockquote><p>值类型和引用类型，值类型变量自身存储数据，引用类型存储的势实际数据的引用，通过引用找到实际的数据。</p></blockquote>        <p>第二问：Class和Struct的区别？</p><blockquote><p>Class为引用类型，可以被实例化，存储实际的引用；Struct为值类型，值类型自身存储数据数据。</p></blockquote>                <span id="more"></span><p>第三问：C#中类的修饰符和类成员的修饰符有哪些？</p><blockquote><p>C#中可以修饰类的修饰符为：public、internal、sealed、abstract</p><p>C#中不能修饰类的修饰符为：private和protected</p><p>C#中成员的修饰符为：public、internal、protected、private</p><p>public：完全公开，没有访问限制。</p><p>internal：可以应用于当前应用程序以及类库。</p><p>protected：在当前类和子类中可以使用。</p><p>private：只有在当前类中可以使用。</p><p>sealed：密封类，不能被其他类型继承。</p><p>abstract：抽象类，不能创建实例。</p></blockquote>        <p>第四问：面向对象的三个特征（特点）是什么？</p><blockquote><p>封装：把对象的属性或者行为邓庄起来，类似于一个类。</p><p>继承：子类可以继承父类。</p><p>多态：父类可以应用于子类，子类可以去使用父类的一些特征方法。</p></blockquote>        <p>第五问：面向对象和面向过程的区别？</p><blockquote><p>面向对象：把问题分解成多个对象，强调的是解决问题行为标准（方式）</p><p>面向过程：分析问题并解决问题的步骤，强调的势解决问题的步骤。</p></blockquote>        <p>第六问：什么是装箱和拆箱？</p><blockquote><p>装箱：从值类型转换到引用类型。</p><p>拆箱：从引用类型到值类型的转换。</p></blockquote>        <p>第七问：什么事IOC？</p><blockquote><p>控制反转，是一种思想（设计模式）而不是一种技术实现。</p><p>控制：拥有创建对象的权利。</p><p>反转：把控制权交给IOC容器。</p><p>优点：1、对象之间的耦合度或依赖度降低。</p><pre><code>    2、资源容易管理</code></pre><p>传统模式下：在一个类中需要new关键字去实例化另一个类。</p><p>IOC设计模式：不需要new去创建对象，直接从IOC容器中获取。</p></blockquote>        <p>第八问：什么事OOP？</p><blockquote><p>面向对象编程</p><p>提取共有的属性和方法，形成一个父类。</p></blockquote>        <p>第九问：什么事AOP？</p><blockquote><p>面向切面的编程，在不改变原有的业务逻辑情况下，横切逻辑代码，解耦合代码，避免横切代码重复。</p><p>切：指的是横向逻辑，就是保证原有的业务逻辑代码不变，操作横切逻辑代码，所以就是面相横切编程。</p><p>面：横切代码影响的是很多方法，每个方法如同一个点，很多点就形成面。</p><p>应用场景：事务控制，权限效验、日志信息等。</p><p>多个方法的相同位置出现重复代码。</p></blockquote>        <p>第十问：什么事DI？</p><blockquote><p>依赖注入</p><p>DI是IOC设计思想的实现方式</p><p>一个类去引用另外一个类，就会产生依赖。</p><p>优点：如果添加另一个类，不需要修改之前代码，只要修改注入的地方将实现类进行替换。</p><p>实例化接口的时候，不用手动new来狗仔实现类，交给IOC容器进行构建。</p><p>实现了解耦</p><p>DIP：依赖注入倒置原则：依赖于抽象，不依赖预聚体，高层模块不依赖于低层模块，它们依赖于抽象。</p></blockquote>                ]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# </tag>
+            
+            <tag> .Net </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>winform常用知识大全</title>
       <link href="/2023/02/15/dotnet6/"/>
       <url>/2023/02/15/dotnet6/</url>
