@@ -135,6 +135,29 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/ui2/" >ElementUI控件el-tree方法renderContent的使用</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>renderContent并不会影响代码中既定tree数据层结构渲染加载；</p>
+<p>这里的作用是根据tree的特定level调整其样式：</p>
+<h2 id="el-tree"><a href="#el-tree" class="headerlink" title="el-tree"></a>el-tree</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tree</span><br><span class="line"></span><br><span class="line">                :render-content=<span class="string">&quot;renderContent&quot;</span></span><br><span class="line"></span><br><span class="line">                :data=<span class="string">&quot;treedata&quot;</span></span><br><span class="line"></span><br><span class="line">                default-expand-all</span><br><span class="line"></span><br><span class="line">                :show-checkbox=<span class="string">&quot;showcheckbox&quot;</span></span><br><span class="line"></span><br><span class="line">                highlight-current</span><br><span class="line"></span><br><span class="line">                node-key=<span class="string">&quot;itemId&quot;</span></span><br><span class="line"></span><br><span class="line">                :expand-on-click-node=<span class="string">&quot;false&quot;</span></span><br><span class="line"></span><br><span class="line">                @node-click=<span class="string">&quot;handleNodeClick&quot;</span></span><br><span class="line"></span><br><span class="line">                :props=<span class="string">&quot;ItemProps&quot;</span></span><br><span class="line"></span><br><span class="line">                v-loading=<span class="string">&quot;ISload&quot;</span></span><br><span class="line"></span><br><span class="line">                ref=<span class="string">&quot;tree&quot;</span></span><br><span class="line"></span><br><span class="line">                @check-change=<span class="string">&quot;itemCheckChange&quot;</span></span><br><span class="line"></span><br><span class="line">                style=<span class="string">&quot;margin-top: 1em;&quot;</span></span><br><span class="line"></span><br><span class="line">              &gt;&lt;/el-tree&gt;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/ui2/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
 			<div class="article-title"><a href="/2022/10/13/ui1/" >ElementUI栅格系统布局与偏移</a></div>						
 		</h3>
 	
@@ -221,27 +244,6 @@
 </div>
 
 	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css5/" >css3菜单点击demo</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;<span class="built_in">head</span>&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;utf-8&quot;</span> /&gt;</span><br><span class="line">    &lt;title&gt;菜单&lt;/title&gt;</span><br><span class="line">    &lt;style <span class="built_in">type</span>=<span class="string">&#x27;text/css&#x27;</span>&gt;</span><br><span class="line">        .container &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        /*这就生成了三横杠的菜单*/</span><br><span class="line">        .bar1, .bar2, .bar3 &#123;</span><br><span class="line">            width: 35px;</span><br><span class="line">            height: 5px;</span><br><span class="line">            background-color: <span class="comment">#333;</span></span><br><span class="line">            margin: 6px 0;</span><br><span class="line">            transition: 0.4s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .change .bar1 &#123;</span><br><span class="line">            -webkit-transform: rotate(-45deg) translate(-9px, 6px);</span><br><span class="line">            transform: rotate(-45deg) translate(-9px, 6px);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .change .bar2 &#123;</span><br><span class="line">            opacity: 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .change .bar3 &#123;</span><br><span class="line">            -webkit-transform: rotate(45deg) translate(-8px, -8px);</span><br><span class="line">            transform: rotate(45deg) translate(-8px, -8px);</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        <span class="keyword">function</span> myFunction(x) &#123;</span><br><span class="line">            x.classList.toggle(<span class="string">&quot;change&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;p&gt;点击菜单按钮变为 <span class="string">&quot;X&quot;</span>:&lt;/p&gt;</span><br><span class="line">    &lt;div class=<span class="string">&quot;container&quot;</span> onclick=<span class="string">&quot;myFunction(this)&quot;</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;bar1&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;bar2&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;bar3&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/13/css5/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
 	     </div>
 	     <div>
 	       <center>
@@ -291,7 +293,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>88</span></a></li>
+			<li><a href="/categories/IT/">IT<span>89</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
@@ -308,45 +310,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
 			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>36</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
-		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>6</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
-		
-			<li><a href="/tags/工具/">工具<span>12</span></a></li>
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
 			<li><a href="/tags/UI/">UI<span>3</span></a></li>
 		
-			<li><a href="/tags/winform/">winform<span>2</span></a></li>
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>6</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>12</span></a></li>
+		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>39</span></a></li>
@@ -366,6 +368,10 @@
       </li>
     
       <li>
+        <a href="/2023/02/21/vue0/"  title="本文对 Vue 框架中一些重要的特性、框架的原理以问题的形式进行整理汇总，意在帮助作者及读者掌握 Vue的知识。" ><i class="fa fa-file-o"></i>vue问题大全</a>
+      </li>
+    
+      <li>
         <a href="/2023/02/16/dotnet7/"  title="资料来源于实践、网络查询" ><i class="fa fa-file-o"></i>.Net基础十问</a>
       </li>
     
@@ -375,10 +381,6 @@
     
       <li>
         <a href="/2023/02/09/html0/" ><i class="fa fa-file-o"></i>前端系列问题</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/09/html11/" ><i class="fa fa-file-o"></i>Sass的常见问题点</a>
       </li>
     
   </ul>
