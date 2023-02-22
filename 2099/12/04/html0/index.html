@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>前端系列问题 | 五星码农</title>
+  <title>前端系列问题 | 五星米农</title>
   
   <meta name="author" content="孑孓">
   
@@ -14,7 +14,7 @@
 
   
   <meta property="og:title" content="前端系列问题" />
-  <meta property="og:site_name" content="五星码农" />
+  <meta property="og:site_name" content="五星米农" />
 
   
   <meta property="og:image" content="" />
@@ -70,7 +70,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-       <a class="navbar-brand" href="/">五星码农</a>
+       <a class="navbar-brand" href="/">五星米农</a>
       <div class="collapse navbar-collapse nav-menu">
 		<ul class="nav navbar-nav">
 		  
@@ -137,11 +137,12 @@
 	<div class="mypage">		
 	  		
 
-	  <h3 id="typescript跟es6有什么区别？"><a href="#typescript跟es6有什么区别？" class="headerlink" title="typescript跟es6有什么区别？"></a>typescript跟es6有什么区别？</h3><h3 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h3><p>TypeScript是一种由微软开发的自由和开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+	  <h2 id="typescript跟es6有什么区别？"><a href="#typescript跟es6有什么区别？" class="headerlink" title="typescript跟es6有什么区别？"></a>typescript跟es6有什么区别？</h2><h3 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h3><blockquote><p>TypeScript是一种由微软开发的自由和开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
 <p>TypeScript扩展了JavaScript的语法，所以任何现有的JavaScript程序可以不加改变的在TypeScript下工作。TypeScript是为大型应用之开发而设计，而编译时它产生 JavaScript 以确保兼容性。</p>
 <p>TypeScript 支持为已存在的 JavaScript 库添加类型信息的头文件，扩展了它对于流行的库如 jQuery，MongoDB，Node.js和 D3.js 的好处。</p>
 <p>TypeScript 的历史</p>
 <p>Anders Hejlsberg开发了 TypeScript。它于2012 年 10 月 1 日首次向公众推出。经过微软内部两年的开发，2013 年发布了新版 TypeScript 0.9。2019 年 4 月 24 日发布了TypeScript 3.4.5。</p>
+</blockquote>
 <span id="more"></span>
 
 <h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><p>ECMAScript (ES) 是由ECMA 国际标准化的脚本语言规范。它的创建是为了标准化 JavaScript。ES 脚本语言包含许多实现，其中最流行的是JavaScript。开发人员主要将ECMAScript用于万维网 (WWW)的客户端脚本。</p>
@@ -426,8 +427,9 @@ data: {
 <h3 id="进程和线程的区别"><a href="#进程和线程的区别" class="headerlink" title="进程和线程的区别"></a>进程和线程的区别</h3><blockquote><p>1、进程是资源分配的最小单位，线程是资源调度的最小单位。<br>2、线程是在进程下运行的。一个进程可以包含多个线程。<br>3、进程有自己的独立地址空间，每启动一个进程，系统就会为它分配地址空间。而线程是共享进程中的数据的，使用相同的地址空间。<br>4、同一进程下不同线程间数据容易共享，不同进程间数据很难共享。<br>5、线程之间没有单独的地址空间，一个线程死掉，整个进程也死掉。而一个进程死掉并不会对另外一个进程造成影响。</p>
 </blockquote>
 
-<h3 id="WebAssembly"><a href="#WebAssembly" class="headerlink" title="WebAssembly"></a>WebAssembly</h3><p>WebAssembly是除了 javascript以外，另一种可以在网页中运行的编程语言。<br>在这之前，如果要在浏览器种运行代码来对网页中的各种元素进行控制，只有javascript一种选择。</p>
+<h3 id="WebAssembly"><a href="#WebAssembly" class="headerlink" title="WebAssembly"></a>WebAssembly</h3><blockquote><p>WebAssembly是除了 javascript以外，另一种可以在网页中运行的编程语言。<br>在这之前，如果要在浏览器种运行代码来对网页中的各种元素进行控制，只有javascript一种选择。</p>
 <p>WebAssembly与其它的汇编语言不一样，它不依赖于具体的物理机器<br>可以抽象理解成它是概念机器的机器语言</p>
+</blockquote>
 <p>优势</p>
 <p>文件加载：WebAssembly因为是字节码所以体积比js小很多，下载速度更快<br>解析阶段：解析时间比js更短<br>编译优化：编译和优化所需的时间较少，这是因为在文件推送到服务器之前<br>已经进行了更多优化，而JavaScript需要为动态类型多次编译代码<br>重新优化：WebAssembly 代码不需要重新优化，因为编译器有足够的信息<br>可以在第一次运行时获得正确的代码<br>执行：执行可以更快，WebAssembly指令更接近机器码<br>垃圾回收：目前 WebAssembly不直接支持垃圾回收，垃圾回收都是手动控制的<br>所以比自动垃圾回收效率更高<br>安全：可以放flash和签名等等。</p>
 <p>应用<br>用于视频和音频编码器，图形和3D，多媒体和游戏，密码计算或便携式语言实现等领域</p>
@@ -443,13 +445,13 @@ data: {
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2023/02/15/dotnet6/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+    	<li class="prev"><a href="/2099/12/05/dotnet0/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
   		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
 
 		
-		   <li class="next"><a href="/2023/02/09/html11/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2099/12/03/vue0/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -522,7 +524,7 @@ data: {
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2023-02-09 
+	2099-12-04 
 	</div>
 	
 
