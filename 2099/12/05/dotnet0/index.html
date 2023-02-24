@@ -526,7 +526,23 @@
 <p>通过接口实现依赖注入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public interface IMyInterFaceCace</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">IMyInterFace myinterfacce &#123; get; <span class="built_in">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class MyClass : IMyInterFaceCace</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">private IMyInterFace _myinterfacce;</span><br><span class="line"></span><br><span class="line">public IMyInterFace myinterfacce</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">get &#123; <span class="built_in">return</span> _myinterfacce; &#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> &#123; _myinterfacce = value; &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>此外,通过特性、反射+配置文件、定义注入方法也可进行依赖注入,不多赘述</p>
-	  
+<h2 id="TCPD、UDP协议"><a href="#TCPD、UDP协议" class="headerlink" title="TCPD、UDP协议"></a>TCPD、UDP协议</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3>  <blockquote><p>TCP（Transmission Control Protocol，传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议，由IETF的RFC 793定义。在简化的计算机网络OSI模型中，它完成第四层传输层所指定的功能，UDP（用户数据包协议）是同一层内另一个重要的传输协议。</p>
+<p>在因特网协议族中，TCP所在层位于IP层之上、应用层之下的中间层。不同主机的应用层之间经常需要可靠的、像管道一样的连接，但是IP层不提供这样的流机制，而是提供不可靠的包交换。</p>
+<p>UDP（User Datagram Protocol，用户数据报协议）是OSI参考模型中一种无连接的传输层协议，提供面向事务的简单不可靠信息传送服务，IETF RFC 768是UDP的正式规范。UDP在IP报文的协议号是17。
+  </p>
+</blockquote>
+<p>TCP和UDP使用IP协议从一个网络传送数据包到另一个网络。把IP想像成一种高速公路，它允许其它协议在上面行驶并找到到其它电脑的出口。TCP和UDP是高速公路上的“卡车”，它们携带的货物就是像HTTP，文件传输协议FTP这样的协议等。 </p>
+<h3 id="TCP和UDP的优缺点"><a href="#TCP和UDP的优缺点" class="headerlink" title="TCP和UDP的优缺点"></a>TCP和UDP的优缺点</h3><p>TCP<br>  <blockquote><p>优点：可靠、稳定。可靠体现在TCP在传输数据之前，会有三次握手来建立连接，而且在数据传输时，有确认、重传、滑动窗口、拥塞控制等机制，在数据传完后，还会断开连接用来节约系统资源。</p>
+<p>缺点：慢，效率低，占用系统资源高，易被攻击。TCP在传递数据之前，要先建立连接，这会消耗时间，而且在数据传递时，确认机制、重传机制、拥塞控制等都会消耗大量时间，而且要在每台设备上维护所有的传输连接，事实上，每个连接都会占用系统的CPU、内存等硬件资源。由于TCP存在确认机制和三次握手机制，这些会导致TCP容易被人利用，实现DOS、DDOS、CC等攻击。
+  </p>
+</blockquote><br>UDP<br>  <blockquote><p>优点：快，比TCP稍安全。UDP没有TCP的握手、确认、滑动窗口、重传、拥塞控制等机制，UDP是一个无状态的传输协议，所以它在传递数据时非常快。没有TCP的这些机制，UDP较TCP被攻击者利用的漏洞就要少一些。但UDP也是无法避免攻击的，比如UDP Flood攻击等。</p>
+<p>缺点：不可靠，不稳定。因为UDP没有TCP那些可靠的机制，在数据传递时，如果网络质量不好，就会很容易丢包。
+  </p>
+</blockquote></p>
+<h3 id="TCP和UDP的应用场景"><a href="#TCP和UDP的应用场景" class="headerlink" title="TCP和UDP的应用场景"></a>TCP和UDP的应用场景</h3><blockquote><p>TCP应用场景：<br>    1.当对网络通讯质量有要求时，比如整个数据要准确无误的传递给对方，<br>    2.用于一些要求可靠的应用，比如HTTP、HTTPS、FTP等传输文件的协议，POP、SMTP等邮件传输的协议。<br>    3.在日常生活中，常见使用TCP协议的应用，比如浏览器使用HTTP，Outlook使用POP、SMTP，QQ文件传输等。</p>
+<p>UDP应用场景：<br>  1.面向数据报方式<br>  2.网络数据大多为短消息<br>  3.拥有大量Client<br>  4.对数据安全性无特殊要求<br>  5.网络负担非常重，但对响应速度要求高
+  </p>
+</blockquote>	  
 	</div>
 
 	<!-- recommended posts -->
