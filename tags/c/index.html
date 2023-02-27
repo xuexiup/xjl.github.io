@@ -134,6 +134,31 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2099-12-06 </div>
+			<div class="article-title"><a href="/2099/12/06/dotnetcore0/" >.NetCore常用知识大全</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="谈一谈对DDD的理解"><a href="#谈一谈对DDD的理解" class="headerlink" title="谈一谈对DDD的理解?"></a>谈一谈对DDD的理解?</h3><blockquote><p>DDD，领域驱动设计。就是通过领域来指导软件设计，是一种十分抽象的软件设计思想;<br>它主要分为战略设计和战术设计:</p>
+<p>1）战略方面，通过事件风暴进行领域模型的划分，划分出核心域，子域，支撑域，定义通用语言，划分出界限上下文。</p>
+<p>2）战术设计方面，ddd将架构分层，“松耦合，高内聚”是架构设计的整体思想。按照DDD思想，可以分为领域层，基础设施层，应用层，接口层。</p>
+</blockquote>
+<p>接口层为前端用户提供api接口。基础设施层可以放一些第三方的服务，数据库连接等内容。应用层是对领域服务的编排，是很薄的一层（目前我自己的架构，应用的是cqrs，所有的相关逻辑都是放在了应用层，而领域层只是放了实体，因为暂时还不是特别理解领域层的服务和事件都应该写什么）。领域层包括实体，值对象，聚合根，领域服务，领域事件等内容。</p>
+	
+	</div>
+  <a type="button" href="/2099/12/06/dotnetcore0/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2099-12-05 </div>
 			<div class="article-title"><a href="/2099/12/05/dotnet0/" >.Net常用知识大全</a></div>						
 		</h3>
@@ -227,40 +252,6 @@
 </div>
 
 	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-02 </div>
-			<div class="article-title"><a href="/2023/02/02/dotnet3/" >c#中的值类型和引用类型</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.1 值类型和引用类型的使用特点</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：变量直接存储值，内存通常在栈中分配</span><br><span class="line">2). 引用类型：变量存储的是一个地址，这个地址对应的空间才真正存储数据(值)，内存通常在堆上分配，</span><br><span class="line">当没有任何变量引用这个地址时，该地址对应的数据空间就成为一个垃圾，由GC来回收</span><br></pre></td></tr></table></figure>
-<p>1.2值类型和引用类型的说明</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：主要有 int（整型），bool（bool型），<span class="built_in">float</span>（单精度浮点数），double（双精度浮点数），</span><br><span class="line">char（字符串类型），struct（结构体），enum（枚举），sbyte，byte，short，ushort，uint，long，ulong</span><br><span class="line">2). 引用类型：主要有 string（字符串），object（对象），list（集合），class（类），interface（接口），</span><br><span class="line">array（数组），delegate（委托）、指针、slice切片、map、管道chan等都是引用类型</span><br></pre></td></tr></table></figure>
-
-<p>指针类型</p>
-<p>在不安全的上下文中，类型可以是指针类型、值类型或引用类型。 指针类型声明采用下列形式之一：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>* identifier;</span><br><span class="line">void* identifier; //allowed but not recommended</span><br></pre></td></tr></table></figure>
-<p>以下任一类型均可为指针类型：</p>
-<p>sbyte、byte、short、ushort、int、uint、long、ulong、char、float、double、decimal 或 bool。</p>
-<p>任何枚举类型。<br>任何指针类型。<br>任何仅包含非托管类型字段的用户定义的结构类型</p>
-<pre><code>
-</code></pre>
-
-	
-	</div>
-  <a type="button" href="/2023/02/02/dotnet3/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-	       
 	     </div>
 	     <div>
 	       <center>
@@ -310,7 +301,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>89</span></a></li>
+			<li><a href="/categories/IT/">IT<span>90</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
@@ -327,48 +318,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
 		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>2</span></a></li>
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
 			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
 		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/工具/">工具<span>12</span></a></li>
-		
 			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/Net/">.Net<span>7</span></a></li>
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
 		
 			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
 		
 			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>2</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>12</span></a></li>
+		
+			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+		
 			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
 		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-		   <li><a href="/tags">...<span>39</span></a></li>
+		
+		   <li><a href="/tags">...<span>40</span></a></li>
 		 
 		</ul>
 	</div>
@@ -385,6 +376,10 @@
       </li>
     
       <li>
+        <a href="/2099/12/06/dotnetcore0/" ><i class="fa fa-file-o"></i>.NetCore常用知识大全</a>
+      </li>
+    
+      <li>
         <a href="/2099/12/05/dotnet0/" ><i class="fa fa-file-o"></i>.Net常用知识大全</a>
       </li>
     
@@ -394,10 +389,6 @@
     
       <li>
         <a href="/2099/12/03/vue0/"  title="本文对 Vue 框架中一些重要的特性、框架的原理以问题的形式进行整理汇总，意在帮助作者及读者掌握 Vue的知识。" ><i class="fa fa-file-o"></i>vue知识巩固</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/02/dotnet6/" ><i class="fa fa-file-o"></i>winform知识理解</a>
       </li>
     
   </ul>

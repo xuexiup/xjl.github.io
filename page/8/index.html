@@ -148,6 +148,36 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/mongodb4/" >Mongodb的下载与安装</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.去<a href="https://www.mongodb.com/try/download" title="" target="">Mongodb官网</a>下载安装包，选择Community版本就行</p>
+<p>2.下载后解压【建议不放到C盘，节省C盘空间】</p>
+<p>3.由于Mongodb不会自动创建存放数据以及配置文件和日志等路径，需要我们手动创建文件夹：</p>
+<blockquote><p>1）data:用于存放数据库文件数据，并在其下创建一个名为 db 的文件夹<br>2）log:用于存放日志文件</p>
+</blockquote>
+
+<p>data以及log文件夹可以是其它名字，文件夹路径也不一定是在mongodb解压的根路径下【配置文件中指定关联】</p>
+<p>这里我是在解压后的bin目录同级创建的以上文件夹。</p>
+	
+	</div>
+  <a type="button" href="/2022/10/13/mongodb4/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
 			<div class="article-title"><a href="/2022/10/13/mongodb3/" >Error: couldn&#39;t connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Erro</a></div>						
 		</h3>
 	
@@ -294,31 +324,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/ui2/" >ElementUI控件el-tree方法renderContent的使用</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>renderContent并不会影响代码中既定tree数据层结构渲染加载；</p>
-<p>这里的作用是根据tree的特定level调整其样式：</p>
-<h2 id="el-tree"><a href="#el-tree" class="headerlink" title="el-tree"></a>el-tree</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tree</span><br><span class="line"></span><br><span class="line">                :render-content=<span class="string">&quot;renderContent&quot;</span></span><br><span class="line"></span><br><span class="line">                :data=<span class="string">&quot;treedata&quot;</span></span><br><span class="line"></span><br><span class="line">                default-expand-all</span><br><span class="line"></span><br><span class="line">                :show-checkbox=<span class="string">&quot;showcheckbox&quot;</span></span><br><span class="line"></span><br><span class="line">                highlight-current</span><br><span class="line"></span><br><span class="line">                node-key=<span class="string">&quot;itemId&quot;</span></span><br><span class="line"></span><br><span class="line">                :expand-on-click-node=<span class="string">&quot;false&quot;</span></span><br><span class="line"></span><br><span class="line">                @node-click=<span class="string">&quot;handleNodeClick&quot;</span></span><br><span class="line"></span><br><span class="line">                :props=<span class="string">&quot;ItemProps&quot;</span></span><br><span class="line"></span><br><span class="line">                v-loading=<span class="string">&quot;ISload&quot;</span></span><br><span class="line"></span><br><span class="line">                ref=<span class="string">&quot;tree&quot;</span></span><br><span class="line"></span><br><span class="line">                @check-change=<span class="string">&quot;itemCheckChange&quot;</span></span><br><span class="line"></span><br><span class="line">                style=<span class="string">&quot;margin-top: 1em;&quot;</span></span><br><span class="line"></span><br><span class="line">              &gt;&lt;/el-tree&gt;</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/13/ui2/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -372,7 +377,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>89</span></a></li>
+			<li><a href="/categories/IT/">IT<span>90</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
@@ -389,48 +394,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
 		
 			<li><a href="/tags/Net/">.Net<span>7</span></a></li>
 		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
 		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+			<li><a href="/tags/winform/">winform<span>2</span></a></li>
 		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
 		
 			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
 		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+			<li><a href="/tags/c/">c#<span>7</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
 			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
 		
 			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
 		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>39</span></a></li>
+		   <li><a href="/tags">...<span>40</span></a></li>
 		 
 		</ul>
 	</div>
@@ -447,6 +452,10 @@
       </li>
     
       <li>
+        <a href="/2099/12/06/dotnetcore0/" ><i class="fa fa-file-o"></i>.NetCore常用知识大全</a>
+      </li>
+    
+      <li>
         <a href="/2099/12/05/dotnet0/" ><i class="fa fa-file-o"></i>.Net常用知识大全</a>
       </li>
     
@@ -456,10 +465,6 @@
     
       <li>
         <a href="/2099/12/03/vue0/"  title="本文对 Vue 框架中一些重要的特性、框架的原理以问题的形式进行整理汇总，意在帮助作者及读者掌握 Vue的知识。" ><i class="fa fa-file-o"></i>vue知识巩固</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/02/dotnet6/" ><i class="fa fa-file-o"></i>winform知识理解</a>
       </li>
     
   </ul>
