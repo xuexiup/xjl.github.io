@@ -207,6 +207,12 @@
 <h3 id="1-将图标放置在根目录：source-img-下"><a href="#1-将图标放置在根目录：source-img-下" class="headerlink" title="1.将图标放置在根目录：source\img 下"></a>1.将图标放置在根目录：source\img 下</h3><h3 id="2-修改根目录下-themes-freemind-layout-partial-head-ejs-内容"><a href="#2-修改根目录下-themes-freemind-layout-partial-head-ejs-内容" class="headerlink" title="2.修改根目录下 themes\freemind\layout_partial\head.ejs 内容"></a>2.修改根目录下 themes\freemind\layout_partial\head.ejs 内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.favicon)&#123; %&gt;</span><br><span class="line">&lt;<span class="built_in">link</span> rel=<span class="string">&quot;icon&quot;</span> href=<span class="string">&quot;/img/favicon.ico&quot;</span>&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 
 
+<blockquote><p>8.github如何绑定自己的域名？</p>
+</blockquote>
+<p>1.申请一个域名<br>2.在github仓库项目文件中添加一个无后缀名的CNAME文件，内容填写：要绑定的域名（ 例如 <a target="_blank" rel="noopener" href="http://www.romanticlife.top/">www.romanticlife.top</a> ）；<br>这一步骤也可以是在hexo网站的source文件夹下添加（最终会推送到git上）；<br>3.添加域名解析</p>
+<blockquote><p>1）ping你的github仓库域名：ping xxx.github.io，得到一个IP地址<br>2）用以上得到的IP作为“记录值”添加两个A记录：主机记录为“WWW”和“@”</p>
+</blockquote>
+<p>这样就可以用自己的域名访问git网站了。</p>
 	  
 	</div>
 
