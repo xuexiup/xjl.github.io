@@ -46,7 +46,9 @@ blockquote {
     background-color: rgba(0, 0, 0, .025);
 }
 
-
+.topimg{
+    z-index:9999;
+}
 @media screen and (max-width: 768px) {
     h2 {
         overflow-x: scroll;
@@ -55,13 +57,14 @@ blockquote {
     body {
         background-color: white !important;
     }
-
+.topimg{
+    z-index: 1;
+}
     .navbar-nav {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
-        width: 120%;
-        padding-left: 1em;
+        flex-direction: column;        
+        padding-left: 1em;                 
     }
 
     .navbar-nav li {
@@ -70,7 +73,8 @@ blockquote {
     }
 
     .navbar-nav li:first-child {
-        padding-top: 1em;
+        padding-top: 2em;
+        margin-top: 1.8em;
     }
 
     .navbar-nav li:last-child {
