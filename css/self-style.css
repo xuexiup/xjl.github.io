@@ -113,33 +113,38 @@ h3::after {
 
 body {
     /* background-color: #E9E9E9; */
-    background-image: url("/img/n5.jpg");
+    background-image: url("/img/n6.jpg");
     z-index: -1 !important;
     width: 100%;
     height: 100%;
     top: 0;
     background-repeat: repeat;
     background-size: cover;
-    opacity: 1;
+    opacity:1;
     filter: "grayscale(100%)";
-    color: #31332E !important;
+    color: #31332E !important;  
     position: fixed;
 }
 
 .navbar {
     background-color: #607339 !important;
+    background: transparent !important; 
+    box-shadow: -1px 1px 1px rgba(255, 255, 255, .5);
 }
 
 .container {
     background: rgba(255, 255, 255, .7) !important;    
+ 
+       
 }
 
 #main-nav .container {
-    background-color: #607339 !important;
+    /* background-color: #607339 !important;   */
+    background: transparent !important;
 }
 
 .content {
-    background: rgba(255, 255, 255, .65) !important;
+    background: rgba(255, 255, 255, .55) !important;
     /* background: transparent !important; */
     height: 100vh;
     overflow-y: scroll;
@@ -178,7 +183,7 @@ body {
 
 .navbar-brand:hover,
 .navbar li a:Hover {
-    color: #607339 !important;
+    color: #9A3535 !important;
     background-color: white !important;
 
 }
@@ -194,10 +199,6 @@ footer a:hover {
 
 .list-unstyled li a {
     color: black
-}
-
-.navbar-nav li {
-    background-color: #607339;
 }
 
 blockquote {
