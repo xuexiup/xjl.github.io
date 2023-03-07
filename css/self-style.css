@@ -194,7 +194,14 @@ body {
     font-weight: bolder;
 
 }
-
+.btn{
+    box-shadow: none;
+    cursor: pointer;
+    background-color:#7AA621 ;
+    color: white;
+    padding:1px;
+    box-shadow: -2px 1px rgba(255, 255, 255, .1);
+}
 footer a {
     color: #7AA621 !important;
 }

@@ -151,7 +151,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> private void button2_Click(objectsender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Form3 fr3 = new Form3(<span class="string">&quot;要传的值啊&quot;</span>);</span><br><span class="line">            fr3.ShowDialog();</span><br><span class="line">        &#125;</span><br><span class="line">接值，对了，这里需要重载一个Form3的构造函数，然后将拿到的值显示出来</span><br><span class="line"></span><br><span class="line"> public Form3(string canshu)</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">            label1.Text =canshu;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2099/12/02/dotnet6/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2099/12/02/dotnet6/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
 	       
@@ -172,7 +172,7 @@
 		<h3 id="1-创建一个winform桌面程序的项目-NET-Framework"><a href="#1-创建一个winform桌面程序的项目-NET-Framework" class="headerlink" title="1.创建一个winform桌面程序的项目(.NET Framework)"></a>1.创建一个winform桌面程序的项目(.NET Framework)</h3><h3 id="2-然后创建一个通用方法的类库：Common"><a href="#2-然后创建一个通用方法的类库：Common" class="headerlink" title="2.然后创建一个通用方法的类库：Common"></a>2.然后创建一个通用方法的类库：Common</h3><h3 id="3-在类库中添加接口发送与请求的通用方法：HttpHelper-cs"><a href="#3-在类库中添加接口发送与请求的通用方法：HttpHelper-cs" class="headerlink" title="3.在类库中添加接口发送与请求的通用方法：HttpHelper.cs"></a>3.在类库中添加接口发送与请求的通用方法：HttpHelper.cs</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class HttpHelper</span><br><span class="line">    &#123;</span><br><span class="line">        /// &lt;summary&gt;</span><br><span class="line">               /// 调用api返回json</span><br><span class="line">               /// &lt;/summary&gt;</span><br><span class="line">               /// &lt;param name=&quot;url&quot;&gt;api地址&lt;/param&gt;</span><br><span class="line">               /// &lt;param name=&quot;jsonstr&quot;&gt;接收参数&lt;/param&gt;</span><br><span class="line">               /// &lt;param name=&quot;type&quot;&gt;类型&lt;/param&gt;</span><br><span class="line">               /// &lt;returns&gt;&lt;/returns&gt;</span><br><span class="line">        public static string HttpApi(string url, string jsonstr, string type)</span><br><span class="line">        &#123;</span><br><span class="line">            Encoding encoding = Encoding.UTF8;</span><br><span class="line">            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);//webrequest请求api地址</span><br><span class="line">            request.Accept = &quot;*/*&quot;;</span><br><span class="line">            request.ContentType = &quot;application/json&quot;;</span><br><span class="line">            request.Method = type.ToUpper().ToString();//get或者post</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">            byte[] buffer = encoding.GetBytes(jsonstr);</span><br><span class="line">            request.ContentLength = buffer.Length;</span><br><span class="line">            request.GetRequestStream().Write(buffer, 0, buffer.Length);</span><br><span class="line">            HttpWebResponse response = (HttpWebResponse)request.GetResponse();</span><br><span class="line">            using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8))</span><br><span class="line">            &#123;</span><br><span class="line">                return reader.ReadToEnd();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2022/10/13/csharp1/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2022/10/13/csharp1/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
 	       
@@ -232,45 +232,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
 		
 			<li><a href="/tags/网文/">网文<span>1</span></a></li>
 		
-			<li><a href="/tags/工具/">工具<span>12</span></a></li>
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
 		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
 			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>7</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>42</span></a></li>
