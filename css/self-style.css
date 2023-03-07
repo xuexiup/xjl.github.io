@@ -120,22 +120,22 @@ body {
     top: 0;
     background-repeat: repeat;
     background-size: cover;
-    opacity:1;
+    opacity: 1;
     filter: "grayscale(100%)";
-    color: #31332E !important;  
+    color: #31332E !important;
     position: fixed;
 }
 
 .navbar {
     background-color: #607339 !important;
-    background: transparent !important; 
+    background: transparent !important;
     box-shadow: -1px 1px 1px rgba(255, 255, 255, .5);
 }
 
 .container {
-    background: rgba(255, 255, 255, .7) !important;    
- 
-       
+    background: rgba(255, 255, 255, .7) !important;
+
+
 }
 
 #main-nav .container {
@@ -151,8 +151,12 @@ body {
     margin: 0px;
     width: 100%;
     padding: 10px;
-    padding-top: 1.5em !important;    
+    padding-top: 1.5em !important;
 
+}
+
+.content:hover {
+    background: rgba(255, 255, 255, 1) !important;
 }
 
 /*修改滚动条的样式-begin*/
@@ -161,13 +165,14 @@ body {
 }
 
 .content::-webkit-scrollbar-thumb {
-    background-color: #888888;
+    background-color: #2C400F;
     border-radius: 5px;
 }
 
 .content::-webkit-scrollbar-track {
     background-color: transparent;
     background-color: #F0E1CC;
+    background: transparent;
     box-shadow: 2px -2px 2px gray;
 }
 
@@ -183,8 +188,10 @@ body {
 
 .navbar-brand:hover,
 .navbar li a:Hover {
-    color: #9A3535 !important;
+    /* color: #9A3535 !important; */
+    color: #2D4110 !important;
     background-color: white !important;
+    font-weight: bolder;
 
 }
 
@@ -237,8 +244,39 @@ h3 {
 .slogan {
     color: #7AA621;
     text-shadow: 1px -1px rgba(0, 0, 0, .05);
-}
+    font-style: italic;
+    font-size: 1.1em;
+ 
 
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #EAAA3C), color-stop(.4, #A91E50), color-stop(.5, white), color-stop(.6, #EAAA3C), color-stop(1, #9A3535));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: animate 5s infinite;
+}
+/* 兼容写法，要放在@keyframes前面 */
+@-webkit-keyframes animate {
+
+    /* 背景从-100px的水平位置，移动到+100px的水平位置。如果要移动Y轴的，设置第二个数值 */
+    from {
+      background-position: -100px;
+    }
+  
+    to {
+      background-position: 300px;
+    }
+  }
+  
+  @keyframes animate {
+    from {
+      background-position: -100px;
+    }
+  
+    to {
+      background-position: 300px;
+    }
+  }
+
+  
 .article-title a {
     color: rgba(0, 0, 0, .75);
     text-shadow: -2px -2px #E9E9E9;
@@ -248,12 +286,13 @@ h3 {
     background-color: transparent;
     padding-left: 1px;
     text-decoration: underline;
+    color:#7AA621;
 }
 
 .title {
     height: 50px;
     line-height: 50px !important;
-    color: #7AA621 !important;    
+    color: #7AA621 !important;
 }
 
 
