@@ -251,14 +251,14 @@ h3 {
     background: -webkit-gradient(linear, left top, right top, color-stop(0, #EAAA3C), color-stop(.4, #A91E50), color-stop(.5, white), color-stop(.6, #EAAA3C), color-stop(1, #9A3535));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-animation: animate 5s infinite;
+    -webkit-animation: animate 8s infinite;
 }
 /* 兼容写法，要放在@keyframes前面 */
 @-webkit-keyframes animate {
 
     /* 背景从-100px的水平位置，移动到+100px的水平位置。如果要移动Y轴的，设置第二个数值 */
     from {
-      background-position: -100px;
+      background-position: -50px;
     }
   
     to {
@@ -268,7 +268,7 @@ h3 {
   
   @keyframes animate {
     from {
-      background-position: -100px;
+      background-position: -50px;
     }
   
     to {
