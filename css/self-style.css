@@ -10,6 +10,10 @@ h3 {
     color: #FEFE54 !important;
 }
 
+* {
+    cursor: url(/img/mouse.ico), auto;
+}
+
 
 .container {
     padding: 0px;
@@ -34,7 +38,7 @@ blockquote {
     /* background-color: #FAF3EB !important; */
     color: rgba(0, 0, 0, .45) !important;
 
-    background-color: #F9F9F6 !important;
+    background-color: #EAF2DA !important;
     color: #777777 !important;
 
     border: 3.5px dotted rgba(0, 0, 0, .15) !important;
@@ -254,9 +258,9 @@ h3 {
 
 .slogan {
     color: #7AA621;
-    text-shadow: 1px -1px rgba(0, 0, 0, .05);
+    text-shadow: 1px -1px rgba(0, 0, 0, .05);    
+    font-size: 1.02em;
     font-style: italic;
-    font-size: 1.1em;
 
 
     background: -webkit-gradient(linear, left top, right top, color-stop(0, #EAAA3C), color-stop(.4, #A91E50), color-stop(.5, white), color-stop(.6, #EAAA3C), color-stop(1, #9A3535));
