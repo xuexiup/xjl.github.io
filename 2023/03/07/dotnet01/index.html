@@ -1,0 +1,460 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ASP.Net MVC常用知识大全 | 月落星辰</title>
+  
+  <meta name="author" content="南疆">
+  
+  <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="ASP.Net MVC常用知识大全" />
+  <meta property="og:site_name" content="月落星辰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <!-- <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css"> -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> ASP.Net MVC常用知识大全</h1>
+		</div>		
+	
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h3 id="MVC中的TempData-ViewBag-ViewData区别"><a href="#MVC中的TempData-ViewBag-ViewData区别" class="headerlink" title="MVC中的TempData\ViewBag\ViewData区别?"></a>MVC中的TempData\ViewBag\ViewData区别?</h3><blockquote><p>TempData  保存在Session中，Controller每次执行请求的时候，会从Session中先获取 TempData，而后清除Session，获取完TempData数据，虽然保存在内部字典对象中，但是其集合中的每个条目访问一次后就从字典表中删 除，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换。</p>
+<p>ViewBag和ViewData只在当前Action中有效，等同于View，ViewBag比ViewData慢，ViewBag存dynamic类型数据，使用时不需要类型转换</p>
+<p>ViewData和ViewBag 中的值可以互相访问，因为ViewBag的实现中包含了ViewData，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换</p>
+</blockquote>
+<span id="more"></span>
+<h3 id="阐述下MVC框架的机制，各个模块的作用"><a href="#阐述下MVC框架的机制，各个模块的作用" class="headerlink" title="阐述下MVC框架的机制，各个模块的作用?"></a>阐述下MVC框架的机制，各个模块的作用?</h3><blockquote><p>所谓模型，就是MVC需要提供的数据源，负责数据的访问和维护。</p>
+<p>所谓视图，就是用于显示模型中数据的用户界面。</p>
+<p>所谓控制器，就是用来处理用户的输入，负责改变模型的状态并选择适当的视图来显示模型的数据。</p>
+</blockquote>
+<h3 id="ASP-NET和ASP-NET-MVC的关系"><a href="#ASP-NET和ASP-NET-MVC的关系" class="headerlink" title="ASP.NET和ASP.NET MVC的关系?"></a>ASP.NET和ASP.NET MVC的关系?</h3><blockquote><p>ASP.NET MVC是在核心ASP.NET基础之上构建的，从mvc命名空间System.Web.Mvc就能看出，因为System.Web是Asp.NET的核心命名空间。</p>
+<p>比如ASP.NET MVC依赖于HttpHandler，关于请求是怎么进入控制器的，其实就是用到了HttpHandler</p>
+<p>Session、Cookie、Cache和Application这些ASP.NET的对象保存机制在MVC中依然是需要用到的</p>
+<p>HttpContext、Request、Response、Server对象在MVC中仍然可以使用，在Controller中通过智能感知的形式很容易得到这些对象</p>
+</blockquote>
+<h3 id="MVC对ASP-NET好处在哪里？"><a href="#MVC对ASP-NET好处在哪里？" class="headerlink" title="MVC对ASP.NET好处在哪里？"></a>MVC对ASP.NET好处在哪里？</h3><blockquote><p>提供非常清晰的成绩管理，像ui层，也就是view, 数据层model和管理层controller。</p>
+<p>单元测试比较容易。</p>
+<p>改善了数据模型和视图的重用性。</p>
+<p>代码的结构更加优化。</p>
+</blockquote>
+<h3 id="什么是razor-view-engine"><a href="#什么是razor-view-engine" class="headerlink" title="什么是razor view engine?"></a>什么是razor view engine?</h3><p>这个引擎提供了数据绑定的显示模板。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@model MvcStore.Models.Customer</span><br><span class="line"></span><br><span class="line">@&#123;ViewBag.Title=<span class="string">&quot;Get Customers&quot;</span>;&#125;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">&quot;cust&quot;</span>&gt;&lt;h3&gt;&lt;em&gt;@Model.CustomerName&lt;/em&gt;&lt;/h3&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="view-bag-和-view-data之间的区别是什么？"><a href="#view-bag-和-view-data之间的区别是什么？" class="headerlink" title="view bag 和 view data之间的区别是什么？"></a>view bag 和 view data之间的区别是什么？</h3><blockquote><p>view bag是view data的一个扩展。扩展以后可以创建动态的属性。这样的好处有:</p>
+<p>不需要进行类型的转换。</p>
+<p>我们可以使用dynamic关键字。</p>
+<p>但是有一个缺点就是view bag要比view data慢一些。</p>
+</blockquote>
+<h3 id="解释一下sections"><a href="#解释一下sections" class="headerlink" title="解释一下sections?"></a>解释一下sections?</h3><p>Sections是html页面的一部分。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@rendersection(<span class="string">&quot;testsection&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>在子页面中我们定义如下的sections。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@section testsection &#123;</span><br><span class="line">&lt;h1&gt;<span class="built_in">test</span> content&lt;/h1&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果这个section没有定义的话会出错，我们可以使用一个required属性来防止页面出错。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@rendersection(<span class="string">&quot;testsection&quot;</span>, required: <span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="为什么要使用html-partial？"><a href="#为什么要使用html-partial？" class="headerlink" title="为什么要使用html.partial？"></a>为什么要使用html.partial？</h3><p>这个方法用来显示html string指定的某块视图。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html.partial(<span class="string">&quot;testpartialview&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="什么是partial-view？"><a href="#什么是partial-view？" class="headerlink" title="什么是partial view？"></a>什么是partial view？</h3><p>Partial view相当于传统网页表格中的user controls.</p>
+<p>它的主要目的是为了重复使用这些视图，他们一般被放在一个共享文件夹里面。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html.partial()</span><br><span class="line"></span><br><span class="line">html.renderpartial()</span><br></pre></td></tr></table></figure>
+<h3 id="MVC同时适用于Windows应用和Web应用吗"><a href="#MVC同时适用于Windows应用和Web应用吗" class="headerlink" title="MVC同时适用于Windows应用和Web应用吗?"></a>MVC同时适用于Windows应用和Web应用吗?</h3><p>相比Windows应用，MVC架构更适用于Web应用。对于Windows应用，MVP(Model View Presenter )架构更好一点。如果你使用WPF和Silverlight，MVVM更适合。</p>
+<h3 id="在MVC中如何保持Sessions"><a href="#在MVC中如何保持Sessions" class="headerlink" title="在MVC中如何保持Sessions?"></a>在MVC中如何保持Sessions?</h3><p>可以通过三种方式保持： tempdata, viewdata, 和viewbag。</p>
+<h3 id="已经有了ASPX，为什么还要Razor"><a href="#已经有了ASPX，为什么还要Razor" class="headerlink" title="已经有了ASPX，为什么还要Razor?"></a>已经有了ASPX，为什么还要Razor?</h3><p>相比ASPX，Razor是一个干净的、轻量级的和语法更简单。例如，ASPX去显示时间：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%=DateTime.Now%&gt;</span><br></pre></td></tr></table></figure>
+<p>在Razor中，只需要一行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@DateTime.Now</span><br></pre></td></tr></table></figure>
+<h3 id="在MVC中如何去执行Windows认证？"><a href="#在MVC中如何去执行Windows认证？" class="headerlink" title="在MVC中如何去执行Windows认证？"></a>在MVC中如何去执行Windows认证？</h3><p>你需要修改web.config文件，并设置验证模式为Windows。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;authentication mode=<span class="string">&quot;Windows&quot;</span>/&gt;</span><br><span class="line">&lt;authorization&gt;</span><br><span class="line">&lt;deny <span class="built_in">users</span>=<span class="string">&quot;?&quot;</span>/&gt;</span><br><span class="line">&lt;/authorization&gt;</span><br></pre></td></tr></table></figure>
+<p>然后在controlle或action中，你可以使用 Authorize 属性，指定哪个用户可以访问这个controller或action。下面的代码设置到只有指定的用户可以访问它。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Authorize(Users= @<span class="string">&quot;WIN-3LI600MWLQN\Administrator&quot;</span>)]</span><br><span class="line">public class StartController : Controller</span><br><span class="line">&#123;</span><br><span class="line">    //</span><br><span class="line">    // GET: /Start/</span><br><span class="line">    [Authorize(Users = @<span class="string">&quot;WIN-3LI600MWLQN\Administrator&quot;</span>)]</span><br><span class="line">    public ActionResult <span class="function"><span class="title">Index</span></span>()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">return</span> View(<span class="string">&quot;MyView&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="在MVC中如何用表单认证？"><a href="#在MVC中如何用表单认证？" class="headerlink" title="在MVC中如何用表单认证？"></a>在MVC中如何用表单认证？</h3><p>表单认证和ASP.NET的表单验证一样。第一步是设置认证模式为Forms。loginUrl是指向到controller，而不是一个页面。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;authentication mode=<span class="string">&quot;Forms&quot;</span>&gt;</span><br><span class="line">&lt;forms loginUrl=<span class="string">&quot;~/Home/Login&quot;</span>  <span class="built_in">timeout</span>=<span class="string">&quot;2880&quot;</span>/&gt;</span><br><span class="line">&lt;/authentication&gt;</span><br></pre></td></tr></table></figure>
+<p>我们也需要创建一个controller，去验证用户。如果验证通过，需要设置cookies值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public ActionResult <span class="function"><span class="title">Login</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> ((Request.Form[<span class="string">&quot;txtUserName&quot;</span>] == <span class="string">&quot;Shiv&quot;</span>) &amp;&amp; </span><br><span class="line">          (Request.Form[<span class="string">&quot;txtPassword&quot;</span>] == <span class="string">&quot;Shiv@123&quot;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        FormsAuthentication.SetAuthCookie(<span class="string">&quot;Shiv&quot;</span>,<span class="literal">true</span>);</span><br><span class="line">        <span class="built_in">return</span> View(<span class="string">&quot;About&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">return</span> View(<span class="string">&quot;Index&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其它需要验证的action都需要加一个 Authorize 属性，如果用户没权限将转向到登陆页面。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[Authorize]</span><br><span class="line">PublicActionResult <span class="function"><span class="title">Default</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">return</span> View();</span><br><span class="line">&#125;</span><br><span class="line">[Authorize]</span><br><span class="line">publicActionResult <span class="function"><span class="title">About</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">return</span> View();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="MVC有多少种不同类型的结果类型？"><a href="#MVC有多少种不同类型的结果类型？" class="headerlink" title="MVC有多少种不同类型的结果类型？"></a>MVC有多少种不同类型的结果类型？</h3><blockquote><p>注意： 很难去记住所有的12种类型。但是一些重要的你可以记住，例如： ActionResult ，  ViewResult ，和  JsonResult 。详情如下:</p>
+<p>MVC中的12种结果类型，最主要的是ActionResult类，它是一个基础类，它有11个子类型，如下：</p>
+<p>ViewResult  - 给响应流渲染指定的视图</p>
+<p>PartialViewResult  - 给响应流渲染指定的局部视图</p>
+<p>EmptyResult  - 返回空的响应结果。</p>
+<p>RedirectResult  - 执行一个HTTP转向到指定的URL。</p>
+<p>RedirectToRouteResult  - 执行一个HTTP转向到一个URL，这个URL由基于路由数据的路由引擎来决定</p>
+<p>JsonResult  - 序列化一个ViewData对像到JSON格式。</p>
+<p>JavaScriptResult  - 返回一段Javascript代码，它可以在客户端执行。</p>
+<p>ContentResult  - 写内容到响应流，不需要视图支持。</p>
+<p>FileContentResult  - 返回一个文件到客户端。</p>
+<p>FileStreamResult  - 返回一个文件到客户端，它提供的是流。</p>
+<p>FilePathResult  - 返回一个文件到客户端。</p>
+</blockquote>
+<h3 id="什么是WebAPI"><a href="#什么是WebAPI" class="headerlink" title="什么是WebAPI?"></a>什么是WebAPI?</h3><blockquote><p>HTTP是最常用的协议。过去的很多年，浏览器是我们使用HTTP方式公开数据的首选客户端。但是日新月异，客户端发展到多种形式。我们需要使用HTTP方式传递数据给不同的客户端，例如：移动手机、Javascript，Windows应用等等。</p>
+<p>WebAPI是一个通过HTTP方式公开数据的技术，它跟随REST规则。</p>
+</blockquote>
+<h3 id="什么是MVC中的打包也压缩"><a href="#什么是MVC中的打包也压缩" class="headerlink" title="什么是MVC中的打包也压缩?"></a>什么是MVC中的打包也压缩?</h3><blockquote><p>打包与压缩帮助我们减少一个页面的请求时间，从而提高页面执行性能。</p>
+<p>打包如何搞高性能？</p>
+<p>我们的项目总是需要CSS和脚本文件。打包帮助你合并多个Javascript和css文件到单个文件，从而最小化多个请求到一个请求。</p>
+<p>例如，包含下面的web请求到一个页。这个页面要求两个Javascript文件， Javascript1.js 和 Javascript2.js 。</p>
+</blockquote>
+<h3 id="简述Func与Action的区别？"><a href="#简述Func与Action的区别？" class="headerlink" title="简述Func与Action的区别？"></a>简述Func与Action的区别？</h3><p>Func是有返回值的委托，Action是没有返回值的委托。</p>
+<h3 id="在项目中如何解决高并发问题？"><a href="#在项目中如何解决高并发问题？" class="headerlink" title="在项目中如何解决高并发问题？"></a>在项目中如何解决高并发问题？</h3><blockquote><p>答案：尽量使用缓存，包括用户缓存，信息缓存等，多花点内存来做缓存，可以大量减少与数据库的交互，提高性能。</p>
+<p>优化数据库查询语句。</p>
+<p>优化数据库结构，多做索引，提高查询效率。</p>
+<p>统计的功能尽量做缓存，或按每天一统计或定时统计相关报表，避免需要时进行统计的功能。</p>
+<p>能使用静态页面的地方尽量使用，减少容器的解析（尽量将动态内容生成静态html来显示）。</p>
+<p>解决以上问题后，使用服务器集群来解决单台的瓶颈问题。</p>
+</blockquote>
+<h3 id="MVC中还有哪些注释属性用来验证？"><a href="#MVC中还有哪些注释属性用来验证？" class="headerlink" title="MVC中还有哪些注释属性用来验证？"></a>MVC中还有哪些注释属性用来验证？</h3><p>如果你要去检查字符的长度，你可以使用StringLength</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[StringLength(160)]</span><br><span class="line">public string FirstName &#123; get; <span class="built_in">set</span>; &#125;</span><br></pre></td></tr></table></figure>
+<p>如果你想使用注册表达式，你可以使用 RegularExpression 。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[RegularExpression(@<span class="string">&quot;[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]&#123;2,4&#125;&quot;</span>)]public string Email &#123; get; <span class="built_in">set</span>; &#125;</span><br></pre></td></tr></table></figure>
+<p>如果你想检查数字是否在一个范围内，你可以使用 Range 。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Range(10,25)]public int Age &#123; get; <span class="built_in">set</span>; &#125;</span><br></pre></td></tr></table></figure>
+<p>有时你想比较两个字段的值，我们可以使用 Compare。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public string Password &#123; get; <span class="built_in">set</span>; &#125;</span><br><span class="line">[Compare(<span class="string">&quot;Password&quot;</span>)]</span><br><span class="line">public string ConfirmPass &#123; get; <span class="built_in">set</span>; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="ActionResult-和-ViewResult有什么不同"><a href="#ActionResult-和-ViewResult有什么不同" class="headerlink" title="ActionResult 和 ViewResult有什么不同?"></a>ActionResult 和 ViewResult有什么不同?</h3><blockquote><p>ActionResult 是一个抽象类，ViewResult衍生于 ActionResult 类。 ActionResult有几种衍生类，例如： ViewResult，JsonResult，FileStreamResult， 等等。</p>
+<p>ActionResult 可以用来开发多态和动态动象。所以如果你动态运行不同类型的视图，ActionResult 是最好的选择。例如下面的代码，你可以看见我们有一个DynamicView。基于标记（IsHtmlView），它会返回ViewResult 或 JsonResult。</p>
+</blockquote>
+<h3 id="MVC中如何执行打包？"><a href="#MVC中如何执行打包？" class="headerlink" title="MVC中如何执行打包？"></a>MVC中如何执行打包？</h3><p>打开App_Start文件夹中的BundleConfig.cs</p>
+<p>在BundleConfig.cs中，添加你想打包的JS文件路径到打包集合。如下所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bundles.Add(new ScriptBundle(<span class="string">&quot;~/Scripts/MyScripts&quot;</span>).Include(</span><br><span class="line"><span class="string">&quot;~/Scripts/*.js&quot;</span>));</span><br></pre></td></tr></table></figure>
+<p>下面是 BundleConfig.cs 文件的代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  public  class BundleConfig</span><br><span class="line">&#123;</span><br><span class="line">    public static void RegisterBundles(BundleCollection bundles)</span><br><span class="line">    &#123;</span><br><span class="line">        bundles.Add(new ScriptBundle(<span class="string">&quot;~/Scripts/MyScripts&quot;</span>).Include(</span><br><span class="line">           <span class="string">&quot;~/Scripts/*.js&quot;</span>));</span><br><span class="line">        BundleTable.EnableOptimizations = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一旦你合并了脚本到一个文件，你可以使用下面的代码去调用它：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= Scripts.Render(<span class="string">&quot;~/Scripts/MyScripts&quot;</span>)  %&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="MVC的路由选择是什么"><a href="#MVC的路由选择是什么" class="headerlink" title="MVC的路由选择是什么?"></a>MVC的路由选择是什么?</h3><p>路由选择功能帮你定义一个URL规则，映射URL到控制器。</p>
+<h3 id="在哪里写路由映射表？"><a href="#在哪里写路由映射表？" class="headerlink" title="在哪里写路由映射表？"></a>在哪里写路由映射表？</h3><p>在 “global.asax” 文件。</p>
+<h3 id="在MVC中提到Area的好处"><a href="#在MVC中提到Area的好处" class="headerlink" title="在MVC中提到Area的好处?"></a>在MVC中提到Area的好处?</h3><blockquote><p>在MVC中Area的好处如下：</p>
+<p>它允许我们将模型、视图和控制器组织成应用程序的单独功能部分，如管理、计费，客户支持和更多。</p>
+<p>很容易与另一个创建的其他区域集成。</p>
+<p>也很容易进行单元测试。</p>
+</blockquote>
+<h3 id="你能解释一下MVC中的RenderBody和RenderPage吗？"><a href="#你能解释一下MVC中的RenderBody和RenderPage吗？" class="headerlink" title="你能解释一下MVC中的RenderBody和RenderPage吗？"></a>你能解释一下MVC中的RenderBody和RenderPage吗？</h3><p>RenderBody就像web表单中的ContentPlaceHolder。这将存在于布局页中，并将呈现子页&#x2F;视图。布局页将只有一个RenderBody（）方法。RenderPage也存在于布局页中，多个RenderPage（）可以存在于布局页中。</p>
+<h3 id="ASP-NET-MVC的过滤器有哪些？"><a href="#ASP-NET-MVC的过滤器有哪些？" class="headerlink" title="ASP.NET MVC的过滤器有哪些？"></a>ASP.NET MVC的过滤器有哪些？</h3><blockquote><p>APS.NET MVC中（以下简称“MVC”）的每一个请求，都会分配给相应的控制器和对应的行为方法去处理，而在这些处理的前前后后如果想再加一些额外的逻辑处理。这时候就用到了过滤器。</p>
+<p>MVC支持的过滤器类型有四种，分别是：Authorization(授权),Action（行为）,Result（结果）和Exception（异常）。</p>
+<p>Authorization：此类型（或过滤器）用于限制进入控制器或控制器的某个行为方法。</p>
+<p>Exception：用于指定一个行为，这个被指定的行为处理某个行为方法或某个控制器里面抛出的异常。</p>
+<p>Action：用于进入行为之前或之后的处理。</p>
+<p>Result：用于返回结果的之前或之后的处理。</p>
+</blockquote>	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2099/12/02/dotnet0/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
+
+		
+		   <li class="next"><a href="/2023/03/05/abp1/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+
+<!-- <section id="comment">
+  <h2 class="title">留言</h2>
+  
+</section> -->
+
+
+
+	
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2023-03-07 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>92</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Net/">.Net<span>9</span></a></li> <li><a href="/tags/c/">c#<span>8</span></a></li> <li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    
+      <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
+  role="navigation">
+  <div class="container">
+    <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">月落星辰</a>
+    <div class="collapse navbar-collapse nav-menu">
+      <ul class="nav navbar-nav">
+        
+        <li>
+          <a href="/archives" title="所有发表记录">
+            <i class="fa fa-archive"></i>Archives
+          </a>
+        </li>
+        
+        <li>
+          <a href="/note" title="我的速记">
+            <i class="fa fa-user"></i>Note
+          </a>
+        </li>
+        
+        <li>
+          <a href="/mark" title="mark清单">
+            <i class="fa fa-list-ol"></i>Mark
+          </a>
+        </li>
+        
+        <li>
+          <a href="/message" title="messagebord">
+            <i class="fa fa-book"></i>Messagebord
+          </a>
+        </li>
+        
+        <li>
+          <a href="/about" title="关于我">
+            <i class="fa fa-user"></i>About
+          </a>
+        </li>
+        
+
+        <li>
+          <div class="music-player">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0"
+              src="//music.163.com/outchain/player?type=0&id=8218805597&auto=1&height=66"></iframe>
+        </li>
+      </ul>
+    </div>
+  </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+      <div class="container-narrow">
+        <footer> <p style="padding-bottom:3em;">
+  &copy; 2023 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container-narrow">
+    <footer> <p style="padding-bottom:3em;">
+  &copy; 2023 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> container-narrow -->
+
+  
+
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+
+</body>
+
+</html>

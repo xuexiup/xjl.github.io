@@ -495,6 +495,80 @@
 <h3 id="TCP和UDP的应用场景"><a href="#TCP和UDP的应用场景" class="headerlink" title="TCP和UDP的应用场景"></a>TCP和UDP的应用场景</h3><blockquote><p>TCP应用场景：<br>    1.当对网络通讯质量有要求时，比如整个数据要准确无误的传递给对方，<br>    2.用于一些要求可靠的应用，比如HTTP、HTTPS、FTP等传输文件的协议，POP、SMTP等邮件传输的协议。<br>    3.在日常生活中，常见使用TCP协议的应用，比如浏览器使用HTTP，Outlook使用POP、SMTP，QQ文件传输等。</p>
 <p>UDP应用场景：<br>  1.面向数据报方式<br>  2.网络数据大多为短消息<br>  3.拥有大量Client<br>  4.对数据安全性无特殊要求<br>  5.网络负担非常重，但对响应速度要求高
   </p>
+</blockquote>
+
+<h3 id="linq、lambda、entity-framework之间的关系"><a href="#linq、lambda、entity-framework之间的关系" class="headerlink" title="linq、lambda、entity framework之间的关系"></a>linq、lambda、entity framework之间的关系</h3>  <blockquote><p>  lambda： 一种匿名委托的精简版写法，明显的标志是&#x3D;&gt;符号</p>
+<p>entity framework（简称EF）： 微软访问数据库的最快捷最成熟的框架（ORM），在EF出现以前有SqlHelper、NHibernate等访问数据库的框架</p>
+<p>Linq： .net 3.5以后的一种语法，使用它可以像用sql语句那样方面地查询内存、xml、数据库等，大大减少了for循环的数量和增加了可靠性</p>
+<p>lambda与entity framework什么关系： 可以说没多大关系</p>
+<p>lambda与linq什么关系：linq一般有两种等价写法，一是类似sql的from…where…select，一是arr.where().select()，后者就是lamda的写法，看上去更紧凑，但lambda只是linq可选的一种写法</p>
+<p>linq与entity framework什么关系： 相辅相成的关系，linq可以查询内存、xml、数据库，用于查数据库的部分在微软的.net的实现就称为entity framework。EF在研发的时候就考虑到尽量使用linq的优势。linq是C#语法的一部分，但EF不是。</p>
+<p>“Lambda 表达式”是一个匿名函数，它可以包含表达式和语句，并且可用于创建委托或表达式树类型。</p>
+<p>LINQ是语言集成查询，它允许编写C#或者Visual Basic代码以查询数据库相同的方式操作内存数据。所以，Lambda 是实现LINQ查询的方式。</p>
+<p>Linq是在.NET Framework 3.5 中出现的技术，所以在创建新项目的时候必须要选3.5或者更高版 本，否则无法使用。选择3.5或更高版本的.NET Framework之后，创建类文件中会自动包含System.Linq 的命名空间。
+  </p>
+</blockquote>
+
+<h3 id="EF-Entity-Framework-是什么？"><a href="#EF-Entity-Framework-是什么？" class="headerlink" title="EF(Entity Framework)是什么？"></a>EF(Entity Framework)是什么？</h3><blockquote><p>实体框架EF是<a target="_blank" rel="noopener" href="http://ado.net中的一组支持开发面向数据的软件应用程序的技术,是微软的一个orm框架./">http://ADO.NET中的一组支持开发面向数据的软件应用程序的技术，是微软的一个ORM框架。</a></p>
+<p>主要有三种方式：</p>
+<p>Database FirstDatabase First”模式</p>
+<p>我们称之为“数据库优先”，前提是你的应用已经有相应的数据库，你可以使用EF设计工具根据数据库生成数据数据类，你可以使用Visual Studio模型设计器修改这些模型之间对应关系。</p>
+<p>Model FirstModel First我们称之为“模型优先”，这里的模型指的是“ADO.NET Entity Framework Data Model”，此时你的应用并没有设计相关数据库，在Visual Studio中我们通过设计对于的数据模型来生成数据库和数据类。</p>
+<p>Code FirstCode First模式我们称之为“代码优先”模式，是从EF4.1开始新建加入的功能。</p>
+<p>使用Code First模式进行EF开发时开发人员只需要编写对应的数据类（其实就是领域模型的实现过程），然后自动生成数据库。这样设计的好处在于我们可以针对概念模型进行所有数据操作而不必关心数据的存储关系，使我们可以更加自然的采用面向对象的方式进行面向数据的应用程序开发。</p>
+</blockquote>
+<h3 id="什么是ORM"><a href="#什么是ORM" class="headerlink" title="什么是ORM?"></a>什么是ORM?</h3><blockquote><p>ORM指的是面向对象的对象模型和关系型数据库的数据结构之间的互相转换。</p>
+<p>(表实体跟表之间的相互转换)</p>
+<p>ORM框架有很多，EF框架是ORM框架的其中一种，是实现了ORM思想的框架。</p>
+<p>O&#x3D;&gt;表实体</p>
+<p>M&#x3D;&gt;映射关系</p>
+<p>R&#x3D;&gt;数据库.表</p>
+<p>—&gt;详解</p>
+</blockquote>
+<h3 id="为什么用EF而不用原生的ADO-NET"><a href="#为什么用EF而不用原生的ADO-NET" class="headerlink" title="为什么用EF而不用原生的ADO.NET?"></a>为什么用EF而不用原生的ADO.NET?</h3><blockquote><p>1）.极大的提高开发效率:EF是微软自己的产品,开发中代码都是强类型的,</p>
+<p>xiefl代码效率非常高,自动化程度非常高,命令式的编程.</p>
+<p>2）.EF提供的模型设计器非常强大,不仅仅带来了设计数据库的革命,也附带来的自动化模型代码的</p>
+<p>功能也极大的提高开发和架构设计的效率.</p>
+<p>3）.EF跨数据支持的是ORM框架主要功能点之一,带来的是可以通过仅仅改变配置就可以做到跨数据库的能力</p>
+</blockquote>
+<h3 id="如何提高LINQ性能问题？"><a href="#如何提高LINQ性能问题？" class="headerlink" title="如何提高LINQ性能问题？"></a>如何提高LINQ性能问题？</h3><blockquote><p>提升从数据库中拿数据的速度，可以参考以下几种方法：</p>
+<p>1).在数据库中的表中定义合适的索引和键</p>
+<p>2).只获得你需要的列（使用ViewModel或者改进查询）和行（使用IQueryable）</p>
+<p>3).尽可能使用一条查询而不是多条</p>
+<p>4).只为了展示数据，而不进行后续修改时，可以使用AsNoTracking。它不会影响生成的SQL，但它可以令系统少维护很多数据，从而提高性能</p>
+<p>5).使用Reshaper等工具，它可能会在你写出较差的代码时给出提醒</p>
+</blockquote>
+
+<h3 id="什么是IEnumerable？"><a href="#什么是IEnumerable？" class="headerlink" title="什么是IEnumerable？"></a>什么是IEnumerable？</h3><blockquote><p>IEnumerable及IEnumerable的泛型版本IEnumerable是一个接口，它只含有一个方法GetEnumerator。Enumerable这个静态类型含有很多扩展方法，其扩展的目标是IEnumerable。</p>
+<p>实现了这个接口的类可以使用Foreach关键字进行迭代（迭代的意思是对于一个集合，可以逐一取出元素并遍历之）。实现这个接口必须实现方法GetEnumerator。</p>
+</blockquote>
+
+<h3 id="IEnumerable的缺点有哪些？"><a href="#IEnumerable的缺点有哪些？" class="headerlink" title="IEnumerable的缺点有哪些？"></a>IEnumerable的缺点有哪些？</h3><blockquote><p>IEnumerable功能有限，不能插入和删除。</p>
+<p>访问IEnumerable只能通过迭代，不能使用索引器。迭代显然是非线程安全的，每次IEnumerable都会生成新的IEnumerator，从而形成多个互相不影响的迭代过程。</p>
+<p>在迭代时，只能前进不能后退。新的迭代不会记得之前迭代后值的任何变化。</p>
+</blockquote>
+<h3 id="延迟执行-Lazy-Loading-是什么？"><a href="#延迟执行-Lazy-Loading-是什么？" class="headerlink" title="延迟执行 (Lazy Loading)是什么？"></a>延迟执行 (Lazy Loading)是什么？</h3><blockquote><p>大部分LINQ语句是在最终结果的第一个元素被访问的时候（即在foreach中调用MoveNext方法）才真正开始运算的，这个特点称为延迟执行。一般来说，返回另外一个序列（通常为IEnumerable或IQueryable）的操作，使用延迟执行，而返回单一值的运算，使用立即执行。</p>
+<p>IEnumerable是延迟执行的，当没有触发执行时，就不会进行任何运算。Select方法不会触发LINQ的执行。一些触发的方式是：foreach循环，ToList，ToArray，ToDictionary方法等</p>
+</blockquote>
+<h3 id="LINQ可视化工具简单介绍一下？"><a href="#LINQ可视化工具简单介绍一下？" class="headerlink" title="LINQ可视化工具简单介绍一下？"></a>LINQ可视化工具简单介绍一下？</h3><blockquote><p>LINQPad工具是一个很好的LINQ查询可视化工具。它由Threading in C#和C# in a Nutshell的作者Albahari编写，完全免费。它的下载地址是<a target="_blank" rel="noopener" href="http://www.linqpad.net/">http://www.linqpad.net/</a></p>
+<p>进入界面后，LINQPad可以连接到已经存在的数据库（不过就仅限微软的SQL Server系，如果要连接到其他类型的数据库则需要安装插件）。某种程度上可以代替SQL Management Studio，是使用SQL Management Studio作为数据库管理软件的码农的强力工具，可以用于调试和性能优化（通过改善编译后的SQL规模）。</p>
+<p>LINQPad支持使用SQL或C#语句（点标记或查询表达式）进行查询。你也可以通过点击橙色圈内的各种不同格式，看到查询表达式的各种不同表达方式：</p>
+<p>Lambda：查询表达式的Lambda表达式版本，</p>
+<p>SQL：由编译器转化成的SQL，通常这是我们最关心的部分，</p>
+<p>IL：IL语言</p>
+</blockquote>
+<h3 id="LINQ-to-Object和LINQ-to-SQL有何区别？"><a href="#LINQ-to-Object和LINQ-to-SQL有何区别？" class="headerlink" title="LINQ to Object和LINQ to SQL有何区别？"></a>LINQ to Object和LINQ to SQL有何区别？</h3><blockquote><p>LINQ to SQL可以将查询表达式转换为SQL语句，然后在数据库中执行。相比LINQ to Object，则是将查询表达式直接转化为Enumerable的一系列方法，最终在C#内部执行。LINQ to Object的数据源总是实现IEnumerable（所以不如叫做LINQ to IEnumerable），相对的，LINQ to SQL的数据源总是实现IQueryable并使用Queryable的扩展方法。</p>
+<p>将查询表达式转换为SQL语句并不保证一定可以成功。</p>
+</blockquote>
+<h3 id="除了EF，列举出你知道的ORM框架？"><a href="#除了EF，列举出你知道的ORM框架？" class="headerlink" title="除了EF，列举出你知道的ORM框架？"></a>除了EF，列举出你知道的ORM框架？</h3><blockquote><p>dapper EntityFramework、 EJB、Hibernate、IBATIS、SqlSugar 、freesql</p>
+</blockquote>
+<h3 id="在哪些类型额项目中你会选择EF-为什么？"><a href="#在哪些类型额项目中你会选择EF-为什么？" class="headerlink" title="在哪些类型额项目中你会选择EF? 为什么？"></a>在哪些类型额项目中你会选择EF? 为什么？</h3><blockquote><p>这个要结合EF的特点来说：EF主要是以面向对象的思想来做数据库数据操作，对Sql语句能力没什么要求，开发使用效率高！便于上手，一般来说，使用EF框架，肯定会比直接使用ADO.NET，消耗的时间多一些。所以在一般企业级开发，管理型系统，对数据性能要求不是特别高的情况下，优先选择EF,这样可以大大的推进开发效率！如果像一些互联网项目中，对性能要求精度很高！可以另外做技术选型，选择原生ADO.NET。</p>
+</blockquote>
+<h3 id="请说明EF中映射实体对象的几种状态？"><a href="#请说明EF中映射实体对象的几种状态？" class="headerlink" title="请说明EF中映射实体对象的几种状态？"></a>请说明EF中映射实体对象的几种状态？</h3><blockquote><p>Detached：该实体未由上下文跟踪。刚使用新运算符或某个 System.Data.Entity.DbSet Create 方法创建实体后，实体就处于此状态。</p>
+<p>Unchanged：实体将由上下文跟踪并存在于数据库中，其属性值与数据库中的值相同。</p>
+<p>Added：实体将由上下文跟踪，但是在数据库中还不存在。</p>
+<p>Deleted：实体将由上下文跟踪并存在于数据库中，但是已被标记为在下次调用 SaveChanges 时从数据库中删除。</p>
+<p>Modified：实体将由上下文跟踪并存在于数据库中，已修改其中的一些或所有属性值。</p>
 </blockquote>	  
 	</div>
 
@@ -513,7 +587,7 @@
         <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
 
 		
-		   <li class="next"><a href="/2023/03/05/abp1/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2023/03/07/dotnet01/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -597,7 +671,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/IT/">IT<span>91</span></a></li>
+    <li><a href="/categories/IT/">IT<span>92</span></a></li>
   </li>
 
     </ul>
@@ -610,7 +684,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Net/">.Net<span>8</span></a></li> <li><a href="/tags/c/">c#<span>7</span></a></li>
+  <li><a href="/tags/Net/">.Net<span>9</span></a></li> <li><a href="/tags/c/">c#<span>8</span></a></li>
     </ul>
 	</div>
 	

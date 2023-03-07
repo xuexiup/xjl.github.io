@@ -102,6 +102,113 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis6/" >Redis keys 命令</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<table>
+<thead>
+<tr>
+<th>1</th>
+<th><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3528.html">DEL key 该命令用于在 key 存在是删除 key。</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3529.html">DUMP key 序列化给定 key ，并返回被序列化的值。</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3530.html">EXISTS key 检查给定 key 是否存在。</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3531.html">EXPIRE key seconds 为给定 key 设置过期时间。</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3532.html">EXPIREAT key timestamp EXPIREAT 的作用和 EXPIRE 类似，都用于为 key 设置过期时间。 不同在于 EXPIREAT 命令接受的时间参数是 UNIX 时间戳(unix timestamp)。</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3533.html">PEXPIRE key milliseconds 设置 key 的过期时间亿以毫秒计。</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3534.html">PEXPIREAT key milliseconds-timestamp 设置 key 过期时间的时间戳(unix timestamp) 以毫秒计</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3535.html">KEYS pattern 查找所有符合给定模式( pattern)的 key 。</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3536.html">MOVE key db 将当前数据库的 key 移动到给定的数据库 db 当中。</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3537.html">PERSIST key 移除 key 的过期时间，key 将持久保持。</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3538.html">PTTL key 以毫秒为单位返回 key 的剩余的过期时间。</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3539.html">TTL key 以秒为单位，返回给定 key 的剩余生存时间(TTL, time to live)。</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3540.html">RANDOMKEY 从当前数据库中随机返回一个 key 。</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3541.html">RENAME key newkey 修改 key 的名称</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3542.html">RENAMENX key newkey 仅当 newkey 不存在时，将 key 改名为 newkey 。</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3543.html">TYPE key 返回 key 所储存的值的类型。</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis6/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
 			<div class="article-title"><a href="/2022/10/13/redis5/" >Redis五大数据类型的基本使用</a></div>						
 		</h3>
 	
@@ -282,35 +389,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis1/" >Redis连接</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Redis 连接命令主要是用于连接 redis 服务。</p>
-<p>以下实例演示了客户端如何通过密码验证连接到 redis 服务，并检测服务是否在运行：</p>
-<blockquote><p>1.redis 127.0.0.1:6379&gt; AUTH “password”</p>
-<p>2.OK</p>
-<p>3.redis 127.0.0.1:6379&gt; PING</p>
-<p>4.PONG</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis1/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -364,7 +442,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>91</span></a></li>
+			<li><a href="/categories/IT/">IT<span>92</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
@@ -381,48 +459,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
-		
-			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
 			<li><a href="/tags/UI/">UI<span>3</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>2</span></a></li>
 		
 			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
 			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/winform/">winform<span>2</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+		
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>42</span></a></li>
+		   <li><a href="/tags">...<span>43</span></a></li>
 		 
 		</ul>
 	</div>
@@ -451,7 +529,7 @@
       </li>
     
       <li>
-        <a href="/2023/03/05/abp1/"  title="资料来源于实际实践或网络查找" ><i class="fa fa-file-o"></i>.NET开发框架 ABP</a>
+        <a href="/2023/03/07/dotnet01/" ><i class="fa fa-file-o"></i>ASP.Net MVC常用知识大全</a>
       </li>
     
   </ul>
