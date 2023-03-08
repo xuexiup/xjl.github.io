@@ -56,7 +56,7 @@ blockquote {
     }
 
     .topimg {
-        z-index: 1;     
+        z-index: 1;
     }
 
     .nav {
@@ -93,11 +93,11 @@ blockquote {
 }
 
 :not(.fa) {
-    /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-family: 微软雅黑; */
+    /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
+    /* font-family: 微软雅黑;  */
     /* font-family: Trebuchet MS; */
-    /* font-family: Tahoma;
-    font-family: Verdana; */
+    /* font-family: Tahoma; */
+    /* font-family: Verdana;  */
     /* font-family: Helvetica; */
     /* font-family: Arial; */
     font-family: Lucida Family;
@@ -425,4 +425,39 @@ a {
     word-wrap: break-word;
 }
 
+.distant_1 {
+    height: 1px;
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px dotted rgba(144, 0, 0);
+    border-bottom: 1px double #EAECEF;
+}
+
+.baurl {
+    color: rgba(0, 0, 0, .4);
+}
+
+.baurl:hover {
+    color: #a91e50;
+    text-decoration: underline;
+}
+
+.articlenums {
+    font-size: .4em;
+    color: rgba(0, 0, 0, .2);
+    text-shadow: 1px 1px rgba(229,151,92,.15);
+}
+.visitips {
+    font-size:.95em;
+    color: rgba(0, 0, 0, .35);    
+    text-shadow: 1px 1px rgba(0, 0, 0, .03);
+}
+
+#busuanzi_value_site_pv,#busuanzi_value_site_uv{
+    font-style: italic;
+    color:#F3E4CF;
+}
 /*修改样式end*/
+
+
