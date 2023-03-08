@@ -60,7 +60,7 @@
   
 
 
-
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -79,18 +79,23 @@
 
 
 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_page_pv" style='display:none' >
+	<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+</span>
+
 <div class="row post">
 	<!-- cols -->
 	
 	<div id="top_meta"></div>
 	<div class="col-md-9">
-	
+		
 
-	<!-- content -->
-	<div class="mypage">		
-	  		
+			<!-- content -->
+			<div class="mypage">
+				
 
-	  <h3 id="MVC中的TempData-ViewBag-ViewData区别"><a href="#MVC中的TempData-ViewBag-ViewData区别" class="headerlink" title="MVC中的TempData\ViewBag\ViewData区别?"></a>MVC中的TempData\ViewBag\ViewData区别?</h3><blockquote><p>TempData  保存在Session中，Controller每次执行请求的时候，会从Session中先获取 TempData，而后清除Session，获取完TempData数据，虽然保存在内部字典对象中，但是其集合中的每个条目访问一次后就从字典表中删 除，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换。</p>
+				<h3 id="MVC中的TempData-ViewBag-ViewData区别"><a href="#MVC中的TempData-ViewBag-ViewData区别" class="headerlink" title="MVC中的TempData\ViewBag\ViewData区别?"></a>MVC中的TempData\ViewBag\ViewData区别?</h3><blockquote><p>TempData  保存在Session中，Controller每次执行请求的时候，会从Session中先获取 TempData，而后清除Session，获取完TempData数据，虽然保存在内部字典对象中，但是其集合中的每个条目访问一次后就从字典表中删 除，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换。</p>
 <p>ViewBag和ViewData只在当前Action中有效，等同于View，ViewBag比ViewData慢，ViewBag存dynamic类型数据，使用时不需要类型转换</p>
 <p>ViewData和ViewBag 中的值可以互相访问，因为ViewBag的实现中包含了ViewData，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换</p>
 </blockquote>
@@ -205,15 +210,15 @@
 <p>Exception：用于指定一个行为，这个被指定的行为处理某个行为方法或某个控制器里面抛出的异常。</p>
 <p>Action：用于进入行为之前或之后的处理。</p>
 <p>Result：用于返回结果的之前或之后的处理。</p>
-</blockquote>	  
-	</div>
+</blockquote>
+			</div>
 
-	<!-- recommended posts -->
-	
+			<!-- recommended posts -->
+			
 
-	<div>
-  	<center>
-	<div class="pagination">
+			<div>
+				<center>
+					<div class="pagination">
 <ul class="pagination">
 	 
 				
@@ -229,12 +234,12 @@
 </ul>
 </div>
 
-    </center>
-	</div>
+				</center>
+			</div>
 
-    <!-- share -->
-    
-        
+			<!-- share -->
+			
+			
     <div class="bdsharebuttonbox">
         <a href="#" class="bds_more" data-cmd="more"></a>
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
@@ -252,12 +257,12 @@
     </script>
 
 
-        
+			
 
-    
-	
-	<!-- comment -->
-	
+			
+
+			<!-- comment -->
+			
 
 <!-- <section id="comment">
   <h2 class="title">留言</h2>
@@ -266,8 +271,8 @@
 
 
 
-	
-		<!-- 来必力City版安装代码 -->
+			
+			<!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
 	<script type="text/javascript">
    (function(d, s) {
@@ -285,12 +290,12 @@
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 <!-- City版安装代码已完成 -->
-	  
-	</div> <!-- col-md-9/col-md-12 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
 		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
 
 	<!-- date -->
 	
@@ -334,13 +339,11 @@
 	
 </div><!-- col-md-3 -->
 
-	</div>
+		</div>
 		
 
-</div><!-- row -->
-
-
-
+	</div><!-- row -->
+	
     
       <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
   role="navigation">
@@ -397,7 +400,19 @@
 </nav>
 <div class="clearfix"></div>
       <div class="container-narrow">
-        <footer> <p style="padding-bottom:3em;">
+        <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
@@ -407,7 +422,19 @@
     </div>
   </div>
   <!-- <div class="container-narrow">
-    <footer> <p style="padding-bottom:3em;">
+    <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"

@@ -60,7 +60,7 @@
   
 
 
-
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -79,28 +79,33 @@
 
 
 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_page_pv" style='display:none' >
+	<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+</span>
+
 <div class="row post">
 	<!-- cols -->
 	
 	<div id="top_meta"></div>
 	<div class="col-md-9">
-	
+		
 
-	<!-- content -->
-	<div class="mypage">		
-	  		
+			<!-- content -->
+			<div class="mypage">
+				
 
-	  <h3 id="方法一：textarea赋值"><a href="#方法一：textarea赋值" class="headerlink" title="方法一：textarea赋值"></a>方法一：textarea赋值</h3><p>　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。</p>
+				<h3 id="方法一：textarea赋值"><a href="#方法一：textarea赋值" class="headerlink" title="方法一：textarea赋值"></a>方法一：textarea赋值</h3><p>　　当我们拿到后端返回的数据时，直接通过v-model绑定给textarea，就会有默认的换行，但是它不能随内容高度增加textarea高度实现自适应，如果用JS来实现的话，相对麻烦一点。</p>
 <h3 id="方法二：使用v-html输出文本"><a href="#方法二：使用v-html输出文本" class="headerlink" title="方法二：使用v-html输出文本"></a>方法二：使用v-html输出文本</h3><p>　　“↵”符号在html中会识别别为\r,\n等转义字符，所以我们可以使用\r\n去替换（.replace(&#x2F;(\r\n|\n|\r)&#x2F;gm, ‘ &lt; br &#x2F;&gt; ‘)）</p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;span v-html=<span class="string">&quot;detail.replace(/(\r\n|\n|\r)/gm, &#x27;&lt;br /&gt;&#x27;)&quot;</span>&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>	  
-	</div>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;span v-html=<span class="string">&quot;detail.replace(/(\r\n|\n|\r)/gm, &#x27;&lt;br /&gt;&#x27;)&quot;</span>&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+			</div>
 
-	<!-- recommended posts -->
-	
+			<!-- recommended posts -->
+			
 
-	<div>
-  	<center>
-	<div class="pagination">
+			<div>
+				<center>
+					<div class="pagination">
 <ul class="pagination">
 	 
 				
@@ -116,12 +121,12 @@
 </ul>
 </div>
 
-    </center>
-	</div>
+				</center>
+			</div>
 
-    <!-- share -->
-    
-        
+			<!-- share -->
+			
+			
     <div class="bdsharebuttonbox">
         <a href="#" class="bds_more" data-cmd="more"></a>
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
@@ -139,12 +144,12 @@
     </script>
 
 
-        
+			
 
-    
-	
-	<!-- comment -->
-	
+			
+
+			<!-- comment -->
+			
 
 <!-- <section id="comment">
   <h2 class="title">留言</h2>
@@ -153,8 +158,8 @@
 
 
 
-	
-		<!-- 来必力City版安装代码 -->
+			
+			<!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
 	<script type="text/javascript">
    (function(d, s) {
@@ -172,12 +177,12 @@
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 <!-- City版安装代码已完成 -->
-	  
-	</div> <!-- col-md-9/col-md-12 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
 		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
 
 	<!-- date -->
 	
@@ -221,13 +226,11 @@
 	
 </div><!-- col-md-3 -->
 
-	</div>
+		</div>
 		
 
-</div><!-- row -->
-
-
-
+	</div><!-- row -->
+	
     
       <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
   role="navigation">
@@ -284,7 +287,19 @@
 </nav>
 <div class="clearfix"></div>
       <div class="container-narrow">
-        <footer> <p style="padding-bottom:3em;">
+        <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
@@ -294,7 +309,19 @@
     </div>
   </div>
   <!-- <div class="container-narrow">
-    <footer> <p style="padding-bottom:3em;">
+    <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"

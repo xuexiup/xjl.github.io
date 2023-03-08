@@ -60,7 +60,7 @@
   
 
 
-
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -79,18 +79,23 @@
 
 
 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_page_pv" style='display:none' >
+	<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+</span>
+
 <div class="row post">
 	<!-- cols -->
 	
 	<div id="top_meta"></div>
 	<div class="col-md-9">
-	
+		
 
-	<!-- content -->
-	<div class="mypage">		
-	  		
+			<!-- content -->
+			<div class="mypage">
+				
 
-	  <h2 id="Winform的窗体之间的几种传值方法？"><a href="#Winform的窗体之间的几种传值方法？" class="headerlink" title="Winform的窗体之间的几种传值方法？"></a>Winform的窗体之间的几种传值方法？</h2><p> 1、构造函数传值，但这种方法是单向的（推荐)</p>
+				<h2 id="Winform的窗体之间的几种传值方法？"><a href="#Winform的窗体之间的几种传值方法？" class="headerlink" title="Winform的窗体之间的几种传值方法？"></a>Winform的窗体之间的几种传值方法？</h2><p> 1、构造函数传值，但这种方法是单向的（推荐)</p>
 <p>上代码，先传值</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> private void button2_Click(objectsender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Form3 fr3 = new Form3(<span class="string">&quot;要传的值啊&quot;</span>);</span><br><span class="line">            fr3.ShowDialog();</span><br><span class="line">        &#125;</span><br><span class="line">接值，对了，这里需要重载一个Form3的构造函数，然后将拿到的值显示出来</span><br><span class="line"></span><br><span class="line"> public Form3(string canshu)</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">            label1.Text =canshu;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
@@ -118,15 +123,15 @@
 <p>（1）先在Form3中申明委托</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">public delegate void PutHandler(stringtext);</span><br><span class="line">       public PutHandler putTextHandler;//委托对象</span><br><span class="line">       private void button1_Click(objectsender, EventArgs e)</span><br><span class="line">       &#123;</span><br><span class="line">           if (putTextHandler != null)</span><br><span class="line">           &#123;</span><br><span class="line">               putTextHandler(textBox1.Text.ToString());</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>        
 <p>（2）在Form2中绑定委托事件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">public void getValue(stringstrV)</span><br><span class="line">         &#123;</span><br><span class="line">            this.textBox1.Text =strV;</span><br><span class="line">        &#125;</span><br><span class="line">      </span><br><span class="line">       private void button1_Click(objectsender, EventArgs e)</span><br><span class="line">       &#123;</span><br><span class="line">           Form3 fr3 = newForm3();</span><br><span class="line">           fr3.putTextHandler =getValue;</span><br><span class="line">           fr3.ShowDialog();          </span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>   	  
-	</div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">public void getValue(stringstrV)</span><br><span class="line">         &#123;</span><br><span class="line">            this.textBox1.Text =strV;</span><br><span class="line">        &#125;</span><br><span class="line">      </span><br><span class="line">       private void button1_Click(objectsender, EventArgs e)</span><br><span class="line">       &#123;</span><br><span class="line">           Form3 fr3 = newForm3();</span><br><span class="line">           fr3.putTextHandler =getValue;</span><br><span class="line">           fr3.ShowDialog();          </span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>   
+			</div>
 
-	<!-- recommended posts -->
-	
+			<!-- recommended posts -->
+			
 
-	<div>
-  	<center>
-	<div class="pagination">
+			<div>
+				<center>
+					<div class="pagination">
 <ul class="pagination">
 	 
 				
@@ -142,12 +147,12 @@
 </ul>
 </div>
 
-    </center>
-	</div>
+				</center>
+			</div>
 
-    <!-- share -->
-    
-        
+			<!-- share -->
+			
+			
     <div class="bdsharebuttonbox">
         <a href="#" class="bds_more" data-cmd="more"></a>
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
@@ -165,12 +170,12 @@
     </script>
 
 
-        
+			
 
-    
-	
-	<!-- comment -->
-	
+			
+
+			<!-- comment -->
+			
 
 <!-- <section id="comment">
   <h2 class="title">留言</h2>
@@ -179,8 +184,8 @@
 
 
 
-	
-		<!-- 来必力City版安装代码 -->
+			
+			<!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
 	<script type="text/javascript">
    (function(d, s) {
@@ -198,12 +203,12 @@
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 <!-- City版安装代码已完成 -->
-	  
-	</div> <!-- col-md-9/col-md-12 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
 		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
 
 	<!-- date -->
 	
@@ -247,13 +252,11 @@
 	
 </div><!-- col-md-3 -->
 
-	</div>
+		</div>
 		
 
-</div><!-- row -->
-
-
-
+	</div><!-- row -->
+	
     
       <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
   role="navigation">
@@ -310,7 +313,19 @@
 </nav>
 <div class="clearfix"></div>
       <div class="container-narrow">
-        <footer> <p style="padding-bottom:3em;">
+        <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
@@ -320,7 +335,19 @@
     </div>
   </div>
   <!-- <div class="container-narrow">
-    <footer> <p style="padding-bottom:3em;">
+    <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"

@@ -60,7 +60,7 @@
   
 
 
-
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -79,18 +79,23 @@
 
 
 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_page_pv" style='display:none' >
+	<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+</span>
+
 <div class="row post">
 	<!-- cols -->
 	
 	<div id="top_meta"></div>
 	<div class="col-md-9">
-	
+		
 
-	<!-- content -->
-	<div class="mypage">		
-	  		
+			<!-- content -->
+			<div class="mypage">
+				
 
-	  <h3 id="Net中所有内建类型基类是什么？"><a href="#Net中所有内建类型基类是什么？" class="headerlink" title=".Net中所有内建类型基类是什么？"></a>.Net中所有内建类型基类是什么？</h3><p>System.Object</p>
+				<h3 id="Net中所有内建类型基类是什么？"><a href="#Net中所有内建类型基类是什么？" class="headerlink" title=".Net中所有内建类型基类是什么？"></a>.Net中所有内建类型基类是什么？</h3><p>System.Object</p>
 <h3 id="System-Object-中包含哪些方法，哪些是虚方法？"><a href="#System-Object-中包含哪些方法，哪些是虚方法？" class="headerlink" title="System.Object 中包含哪些方法，哪些是虚方法？"></a>System.Object 中包含哪些方法，哪些是虚方法？</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">virtual bool Equals(object obj);//虚方法</span><br><span class="line">virtual int GetHashCode(object obj);//虚方法</span><br><span class="line">Type GetType();</span><br><span class="line">virtual string ToString();//虚方法</span><br><span class="line"></span><br><span class="line">//public static method</span><br><span class="line">bool Equals(object objA,object objB);</span><br><span class="line">bool RefernceEquals(object objA,object objB);</span><br><span class="line"></span><br><span class="line">//protected</span><br><span class="line">object MemberwiseClone();//浅拷贝</span><br><span class="line">Finalize();//析构方法，用于释放非托管资源</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 <h3 id="值类型与引用类型？"><a href="#值类型与引用类型？" class="headerlink" title="值类型与引用类型？"></a>值类型与引用类型？</h3><h3 id="ASP-NET和ASP的区别？"><a href="#ASP-NET和ASP的区别？" class="headerlink" title="ASP.NET和ASP的区别？"></a>ASP.NET和ASP的区别？</h3><p>ASP.NET和ASP的最大区别在于编程思维的转换以及功能的增强。</p>
@@ -569,15 +574,15 @@
 <p>Added：实体将由上下文跟踪，但是在数据库中还不存在。</p>
 <p>Deleted：实体将由上下文跟踪并存在于数据库中，但是已被标记为在下次调用 SaveChanges 时从数据库中删除。</p>
 <p>Modified：实体将由上下文跟踪并存在于数据库中，已修改其中的一些或所有属性值。</p>
-</blockquote>	  
-	</div>
+</blockquote>
+			</div>
 
-	<!-- recommended posts -->
-	
+			<!-- recommended posts -->
+			
 
-	<div>
-  	<center>
-	<div class="pagination">
+			<div>
+				<center>
+					<div class="pagination">
 <ul class="pagination">
 	 
 				
@@ -593,12 +598,12 @@
 </ul>
 </div>
 
-    </center>
-	</div>
+				</center>
+			</div>
 
-    <!-- share -->
-    
-        
+			<!-- share -->
+			
+			
     <div class="bdsharebuttonbox">
         <a href="#" class="bds_more" data-cmd="more"></a>
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
@@ -616,12 +621,12 @@
     </script>
 
 
-        
+			
 
-    
-	
-	<!-- comment -->
-	
+			
+
+			<!-- comment -->
+			
 
 <!-- <section id="comment">
   <h2 class="title">留言</h2>
@@ -630,8 +635,8 @@
 
 
 
-	
-		<!-- 来必力City版安装代码 -->
+			
+			<!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
 	<script type="text/javascript">
    (function(d, s) {
@@ -649,12 +654,12 @@
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 <!-- City版安装代码已完成 -->
-	  
-	</div> <!-- col-md-9/col-md-12 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
 		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
 
 	<!-- date -->
 	
@@ -698,13 +703,11 @@
 	
 </div><!-- col-md-3 -->
 
-	</div>
+		</div>
 		
 
-</div><!-- row -->
-
-
-
+	</div><!-- row -->
+	
     
       <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
   role="navigation">
@@ -761,7 +764,19 @@
 </nav>
 <div class="clearfix"></div>
       <div class="container-narrow">
-        <footer> <p style="padding-bottom:3em;">
+        <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
@@ -771,7 +786,19 @@
     </div>
   </div>
   <!-- <div class="container-narrow">
-    <footer> <p style="padding-bottom:3em;">
+    <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"

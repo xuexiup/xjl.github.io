@@ -60,7 +60,7 @@
   
 
 
-
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -79,18 +79,23 @@
 
 
 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_page_pv" style='display:none' >
+	<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+</span>
+
 <div class="row post">
 	<!-- cols -->
 	
 	<div id="top_meta"></div>
 	<div class="col-md-9">
-	
+		
 
-	<!-- content -->
-	<div class="mypage">		
-	  		
+			<!-- content -->
+			<div class="mypage">
+				
 
-	  <p>1.1 值类型和引用类型的使用特点</p>
+				<p>1.1 值类型和引用类型的使用特点</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：变量直接存储值，内存通常在栈中分配</span><br><span class="line">2). 引用类型：变量存储的是一个地址，这个地址对应的空间才真正存储数据(值)，内存通常在堆上分配，</span><br><span class="line">当没有任何变量引用这个地址时，该地址对应的数据空间就成为一个垃圾，由GC来回收</span><br></pre></td></tr></table></figure>
 <p>1.2值类型和引用类型的说明</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：主要有 int（整型），bool（bool型），<span class="built_in">float</span>（单精度浮点数），double（双精度浮点数），</span><br><span class="line">char（字符串类型），struct（结构体），enum（枚举），sbyte，byte，short，ushort，uint，long，ulong</span><br><span class="line">2). 引用类型：主要有 string（字符串），object（对象），list（集合），class（类），interface（接口），</span><br><span class="line">array（数组），delegate（委托）、指针、slice切片、map、管道chan等都是引用类型</span><br></pre></td></tr></table></figure>
@@ -103,15 +108,15 @@
 <p>任何枚举类型。<br>任何指针类型。<br>任何仅包含非托管类型字段的用户定义的结构类型</p>
 <pre><code>
 </code></pre>
-	  
-	</div>
 
-	<!-- recommended posts -->
-	
+			</div>
 
-	<div>
-  	<center>
-	<div class="pagination">
+			<!-- recommended posts -->
+			
+
+			<div>
+				<center>
+					<div class="pagination">
 <ul class="pagination">
 	 
 				
@@ -127,12 +132,12 @@
 </ul>
 </div>
 
-    </center>
-	</div>
+				</center>
+			</div>
 
-    <!-- share -->
-    
-        
+			<!-- share -->
+			
+			
     <div class="bdsharebuttonbox">
         <a href="#" class="bds_more" data-cmd="more"></a>
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
@@ -150,12 +155,12 @@
     </script>
 
 
-        
+			
 
-    
-	
-	<!-- comment -->
-	
+			
+
+			<!-- comment -->
+			
 
 <!-- <section id="comment">
   <h2 class="title">留言</h2>
@@ -164,8 +169,8 @@
 
 
 
-	
-		<!-- 来必力City版安装代码 -->
+			
+			<!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
 	<script type="text/javascript">
    (function(d, s) {
@@ -183,12 +188,12 @@
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 <!-- City版安装代码已完成 -->
-	  
-	</div> <!-- col-md-9/col-md-12 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
 		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
 
 	<!-- date -->
 	
@@ -232,13 +237,11 @@
 	
 </div><!-- col-md-3 -->
 
-	</div>
+		</div>
 		
 
-</div><!-- row -->
-
-
-
+	</div><!-- row -->
+	
     
       <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
   role="navigation">
@@ -295,7 +298,19 @@
 </nav>
 <div class="clearfix"></div>
       <div class="container-narrow">
-        <footer> <p style="padding-bottom:3em;">
+        <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
@@ -305,7 +320,19 @@
     </div>
   </div>
   <!-- <div class="container-narrow">
-    <footer> <p style="padding-bottom:3em;">
+    <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"

@@ -61,7 +61,7 @@
   
 
 
-
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -80,18 +80,23 @@
 
 
 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_page_pv" style='display:none' >
+	<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+</span>
+
 <div class="row post">
 	<!-- cols -->
 	
 	<div id="top_meta"></div>
 	<div class="col-md-9">
-	
+		
 
-	<!-- content -->
-	<div class="mypage">		
-	  		
+			<!-- content -->
+			<div class="mypage">
+				
 
-	  <h2 id="1、切换数据库-x2F-如果数据库不存在则创建数据库-test是具体的数据库名称"><a href="#1、切换数据库-x2F-如果数据库不存在则创建数据库-test是具体的数据库名称" class="headerlink" title="1、切换数据库&#x2F;如果数据库不存在则创建数据库[test是具体的数据库名称]"></a>1、切换数据库&#x2F;如果数据库不存在则创建数据库[test是具体的数据库名称]</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+				<h2 id="1、切换数据库-x2F-如果数据库不存在则创建数据库-test是具体的数据库名称"><a href="#1、切换数据库-x2F-如果数据库不存在则创建数据库-test是具体的数据库名称" class="headerlink" title="1、切换数据库&#x2F;如果数据库不存在则创建数据库[test是具体的数据库名称]"></a>1、切换数据库&#x2F;如果数据库不存在则创建数据库[test是具体的数据库名称]</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="2、如果你想查看所有数据库，可以使用-show-dbs-命令"><a href="#2、如果你想查看所有数据库，可以使用-show-dbs-命令" class="headerlink" title="2、如果你想查看所有数据库，可以使用 show dbs 命令"></a>2、如果你想查看所有数据库，可以使用 show dbs 命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br></pre></td></tr></table></figure>
 
@@ -126,15 +131,15 @@
 <h2 id="18、删除指定order排序的第一个文档"><a href="#18、删除指定order排序的第一个文档" class="headerlink" title="18、删除指定order排序的第一个文档"></a>18、删除指定order排序的第一个文档</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table3.findOneAndDelete(&#123; url: <span class="string">&#x27;http://www.runoob.com&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure>
 
 <h2 id="19、批量写入、更新、删除操作【有序、无序】-默认情况下，bulkWrite-执行有序的写入。"><a href="#19、批量写入、更新、删除操作【有序、无序】-默认情况下，bulkWrite-执行有序的写入。" class="headerlink" title="19、批量写入、更新、删除操作【有序、无序】;默认情况下，bulkWrite() 执行有序的写入。"></a>19、批量写入、更新、删除操作【有序、无序】;默认情况下，bulkWrite() 执行有序的写入。</h2><h3 id="要指定无序的写入，请在选项文档中设置ordered-false"><a href="#要指定无序的写入，请在选项文档中设置ordered-false" class="headerlink" title="要指定无序的写入，请在选项文档中设置ordered:false"></a>要指定无序的写入，请在选项文档中设置ordered:false</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">    db.table1.bulkWrite(</span><br><span class="line">        [</span><br><span class="line">            &#123;</span><br><span class="line">                insertOne: &#123;</span><br><span class="line">                    <span class="string">&quot;document&quot;</span>:</span><br><span class="line">                        &#123;</span><br><span class="line">                            o1: <span class="string">&quot;4&quot;</span></span><br><span class="line">                        &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                updateOne: &#123;</span><br><span class="line">                    <span class="string">&quot;filter&quot;</span>: &#123; o1: <span class="string">&quot;4&quot;</span> &#125;,</span><br><span class="line">                    <span class="string">&quot;update&quot;</span>: &#123; o1: <span class="string">&#x27;3&#x27;</span> &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                deleteOne: &#123;</span><br><span class="line">                    <span class="string">&quot;filter&quot;</span>: &#123; o1: <span class="string">&#x27;4&#x27;</span> &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                replaceOne: &#123;</span><br><span class="line">                    <span class="string">&quot;filter&quot;</span>: &#123; o1: <span class="string">&#x27;3&#x27;</span> &#125;,</span><br><span class="line">                    <span class="string">&quot;replacement&quot;</span>: &#123; o1: <span class="string">&#x27;5&#x27;</span>, o2: <span class="string">&#x27;6&#x27;</span> &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line">catch (e) &#123; <span class="built_in">print</span>(e) &#125;</span><br><span class="line">db.table1.insertOne(&#123; o3: <span class="string">&#x27;这是一句话&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="20、使用-text查询操作符对具有文本索引的集合执行文本索引。"><a href="#20、使用-text查询操作符对具有文本索引的集合执行文本索引。" class="headerlink" title="20、使用$text查询操作符对具有文本索引的集合执行文本索引。"></a>20、使用$text查询操作符对具有文本索引的集合执行文本索引。</h2><h3 id="查询后排序：sort-1（升序）-x2F-1-降序"><a href="#查询后排序：sort-1（升序）-x2F-1-降序" class="headerlink" title="查询后排序：sort:1（升序）&#x2F;	-1(降序)"></a>查询后排序：sort:1（升序）&#x2F;	-1(降序)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.find().<span class="built_in">sort</span>(&#123;o1:1&#125;)</span><br></pre></td></tr></table></figure>	  
-	</div>
+<h2 id="20、使用-text查询操作符对具有文本索引的集合执行文本索引。"><a href="#20、使用-text查询操作符对具有文本索引的集合执行文本索引。" class="headerlink" title="20、使用$text查询操作符对具有文本索引的集合执行文本索引。"></a>20、使用$text查询操作符对具有文本索引的集合执行文本索引。</h2><h3 id="查询后排序：sort-1（升序）-x2F-1-降序"><a href="#查询后排序：sort-1（升序）-x2F-1-降序" class="headerlink" title="查询后排序：sort:1（升序）&#x2F;	-1(降序)"></a>查询后排序：sort:1（升序）&#x2F;	-1(降序)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.table1.find().<span class="built_in">sort</span>(&#123;o1:1&#125;)</span><br></pre></td></tr></table></figure>
+			</div>
 
-	<!-- recommended posts -->
-	
+			<!-- recommended posts -->
+			
 
-	<div>
-  	<center>
-	<div class="pagination">
+			<div>
+				<center>
+					<div class="pagination">
 <ul class="pagination">
 	 
 				
@@ -150,12 +155,12 @@
 </ul>
 </div>
 
-    </center>
-	</div>
+				</center>
+			</div>
 
-    <!-- share -->
-    
-        
+			<!-- share -->
+			
+			
     <div class="bdsharebuttonbox">
         <a href="#" class="bds_more" data-cmd="more"></a>
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
@@ -173,12 +178,12 @@
     </script>
 
 
-        
+			
 
-    
-	
-	<!-- comment -->
-	
+			
+
+			<!-- comment -->
+			
 
 <!-- <section id="comment">
   <h2 class="title">留言</h2>
@@ -187,8 +192,8 @@
 
 
 
-	
-		<!-- 来必力City版安装代码 -->
+			
+			<!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
 	<script type="text/javascript">
    (function(d, s) {
@@ -206,12 +211,12 @@
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 <!-- City版安装代码已完成 -->
-	  
-	</div> <!-- col-md-9/col-md-12 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
 		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
 
 	<!-- date -->
 	
@@ -255,13 +260,11 @@
 	
 </div><!-- col-md-3 -->
 
-	</div>
+		</div>
 		
 
-</div><!-- row -->
-
-
-
+	</div><!-- row -->
+	
     
       <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
   role="navigation">
@@ -318,7 +321,19 @@
 </nav>
 <div class="clearfix"></div>
       <div class="container-narrow">
-        <footer> <p style="padding-bottom:3em;">
+        <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
@@ -328,7 +343,19 @@
     </div>
   </div>
   <!-- <div class="container-narrow">
-    <footer> <p style="padding-bottom:3em;">
+    <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"

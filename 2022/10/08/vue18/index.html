@@ -60,7 +60,7 @@
   
 
 
-
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -79,18 +79,23 @@
 
 
 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_page_pv" style='display:none' >
+	<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+</span>
+
 <div class="row post">
 	<!-- cols -->
 	
 	<div id="top_meta"></div>
 	<div class="col-md-9">
-	
+		
 
-	<!-- content -->
-	<div class="mypage">		
-	  		
+			<!-- content -->
+			<div class="mypage">
+				
 
-	  <p>1.原页面刷新，类似于F5</p>
+				<p>1.原页面刷新，类似于F5</p>
 <blockquote><p>this.$router.go(0)<br>或者<br>location.reload()</p>
 </blockquote>
 
@@ -108,15 +113,15 @@
 <p>2）在data函数中添加：isRouterAlive: true,</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">      isRouterAlive: <span class="literal">true</span>,</span><br><span class="line">      leftheight: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      csscenter: &#123;</span><br><span class="line">        height: this.leftheight,</span><br><span class="line">      &#125;,</span><br><span class="line">      slideTop: <span class="literal">true</span>,</span><br><span class="line">      backgroundDiv: &#123;</span><br><span class="line">        // backgroundImage: <span class="string">&quot;url(&quot;</span> + require(<span class="string">&quot;../static/img/n3.jpg&quot;</span>) + <span class="string">&quot;)&quot;</span>,</span><br><span class="line">        backgroundRepeat: <span class="string">&quot;no-repeat&quot;</span>,</span><br><span class="line">        backgroundSize: <span class="string">&quot;110% 100%&quot;</span>,</span><br><span class="line">        backgroundAttachment: <span class="string">&quot;fixed&quot;</span>,</span><br><span class="line">        backgroundposition: <span class="string">&quot;left&quot;</span>,</span><br><span class="line">        // filter: <span class="string">&quot;grayscale(10%)&quot;</span>,</span><br><span class="line">        //  filter: <span class="string">&quot;blur(1px)&quot;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 <p>  3)添加一个provide类型，内容如下：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="title">provide</span></span>() &#123;</span><br><span class="line">  <span class="built_in">return</span> &#123;</span><br><span class="line">    reload: this.reload,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><br>  4)在method方法中添加以下内容：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="title">reload</span></span>() &#123;</span><br><span class="line">      this.isRouterAlive = <span class="literal">false</span>; //先关闭，</span><br><span class="line">      this.<span class="variable">$nextTick</span>(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        console.log(<span class="string">&#x27;inject&#x27;</span>);</span><br><span class="line">        this.isRouterAlive = <span class="literal">true</span>; //再打开</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">```      </span><br><span class="line">(2)引用：inject</span><br><span class="line"></span><br><span class="line">在需要刷新的页面注入inject</span><br><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">inject: [<span class="string">&quot;reload&quot;</span>]</span><br><span class="line">this.reload();</span><br><span class="line">&#123;% endblockquote %&#125;</span><br><span class="line">使用范例：</span><br><span class="line">```bash</span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">  inject: [<span class="string">&quot;reload&quot;</span>],</span><br><span class="line">  <span class="function"><span class="title">beforeCreate</span></span>() &#123;</span><br><span class="line">    window.setTimeout(() =&gt; &#123;</span><br><span class="line">      this.orderlist1 = JSON.parse(sessionStorage.getItem(<span class="string">&quot;orderlist1&quot;</span>));</span><br><span class="line">      this.orderlist2 = JSON.parse(sessionStorage.getItem(<span class="string">&quot;orderlist2&quot;</span>));</span><br><span class="line">      this.showinfo();      </span><br><span class="line">    &#125;, 500);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">created</span></span>() &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">      this.reload();</span><br><span class="line">    &#125;, 2000);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这里做了一个延迟刷新，因为是静态的，为了验证是否起到作用，可以在relolad()方法中打印有一些标识信息；</p>
-	  
-	</div>
 
-	<!-- recommended posts -->
-	
+			</div>
 
-	<div>
-  	<center>
-	<div class="pagination">
+			<!-- recommended posts -->
+			
+
+			<div>
+				<center>
+					<div class="pagination">
 <ul class="pagination">
 	 
 				
@@ -132,12 +137,12 @@
 </ul>
 </div>
 
-    </center>
-	</div>
+				</center>
+			</div>
 
-    <!-- share -->
-    
-        
+			<!-- share -->
+			
+			
     <div class="bdsharebuttonbox">
         <a href="#" class="bds_more" data-cmd="more"></a>
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
@@ -155,12 +160,12 @@
     </script>
 
 
-        
+			
 
-    
-	
-	<!-- comment -->
-	
+			
+
+			<!-- comment -->
+			
 
 <!-- <section id="comment">
   <h2 class="title">留言</h2>
@@ -169,8 +174,8 @@
 
 
 
-	
-		<!-- 来必力City版安装代码 -->
+			
+			<!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
 	<script type="text/javascript">
    (function(d, s) {
@@ -188,12 +193,12 @@
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 <!-- City版安装代码已完成 -->
-	  
-	</div> <!-- col-md-9/col-md-12 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
 		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
 
 	<!-- date -->
 	
@@ -237,13 +242,11 @@
 	
 </div><!-- col-md-3 -->
 
-	</div>
+		</div>
 		
 
-</div><!-- row -->
-
-
-
+	</div><!-- row -->
+	
     
       <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
   role="navigation">
@@ -300,7 +303,19 @@
 </nav>
 <div class="clearfix"></div>
       <div class="container-narrow">
-        <footer> <p style="padding-bottom:3em;">
+        <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
@@ -310,7 +325,19 @@
     </div>
   </div>
   <!-- <div class="container-narrow">
-    <footer> <p style="padding-bottom:3em;">
+    <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"

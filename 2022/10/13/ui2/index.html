@@ -61,7 +61,7 @@
   
 
 
-
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -80,18 +80,23 @@
 
 
 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_page_pv" style='display:none' >
+	<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+</span>
+
 <div class="row post">
 	<!-- cols -->
 	
 	<div id="top_meta"></div>
 	<div class="col-md-9">
-	
+		
 
-	<!-- content -->
-	<div class="mypage">		
-	  		
+			<!-- content -->
+			<div class="mypage">
+				
 
-	  <p>renderContent并不会影响代码中既定tree数据层结构渲染加载；</p>
+				<p>renderContent并不会影响代码中既定tree数据层结构渲染加载；</p>
 <p>这里的作用是根据tree的特定level调整其样式：</p>
 <h2 id="el-tree"><a href="#el-tree" class="headerlink" title="el-tree"></a>el-tree</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tree</span><br><span class="line"></span><br><span class="line">                :render-content=<span class="string">&quot;renderContent&quot;</span></span><br><span class="line"></span><br><span class="line">                :data=<span class="string">&quot;treedata&quot;</span></span><br><span class="line"></span><br><span class="line">                default-expand-all</span><br><span class="line"></span><br><span class="line">                :show-checkbox=<span class="string">&quot;showcheckbox&quot;</span></span><br><span class="line"></span><br><span class="line">                highlight-current</span><br><span class="line"></span><br><span class="line">                node-key=<span class="string">&quot;itemId&quot;</span></span><br><span class="line"></span><br><span class="line">                :expand-on-click-node=<span class="string">&quot;false&quot;</span></span><br><span class="line"></span><br><span class="line">                @node-click=<span class="string">&quot;handleNodeClick&quot;</span></span><br><span class="line"></span><br><span class="line">                :props=<span class="string">&quot;ItemProps&quot;</span></span><br><span class="line"></span><br><span class="line">                v-loading=<span class="string">&quot;ISload&quot;</span></span><br><span class="line"></span><br><span class="line">                ref=<span class="string">&quot;tree&quot;</span></span><br><span class="line"></span><br><span class="line">                @check-change=<span class="string">&quot;itemCheckChange&quot;</span></span><br><span class="line"></span><br><span class="line">                style=<span class="string">&quot;margin-top: 1em;&quot;</span></span><br><span class="line"></span><br><span class="line">              &gt;&lt;/el-tree&gt;</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
@@ -109,15 +114,15 @@
 
     &#125;,
 </code></pre>
-	  
-	</div>
 
-	<!-- recommended posts -->
-	
+			</div>
 
-	<div>
-  	<center>
-	<div class="pagination">
+			<!-- recommended posts -->
+			
+
+			<div>
+				<center>
+					<div class="pagination">
 <ul class="pagination">
 	 
 				
@@ -133,12 +138,12 @@
 </ul>
 </div>
 
-    </center>
-	</div>
+				</center>
+			</div>
 
-    <!-- share -->
-    
-        
+			<!-- share -->
+			
+			
     <div class="bdsharebuttonbox">
         <a href="#" class="bds_more" data-cmd="more"></a>
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
@@ -156,12 +161,12 @@
     </script>
 
 
-        
+			
 
-    
-	
-	<!-- comment -->
-	
+			
+
+			<!-- comment -->
+			
 
 <!-- <section id="comment">
   <h2 class="title">留言</h2>
@@ -170,8 +175,8 @@
 
 
 
-	
-		<!-- 来必力City版安装代码 -->
+			
+			<!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
 	<script type="text/javascript">
    (function(d, s) {
@@ -189,12 +194,12 @@
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 <!-- City版安装代码已完成 -->
-	  
-	</div> <!-- col-md-9/col-md-12 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
 		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
 
 	<!-- date -->
 	
@@ -238,13 +243,11 @@
 	
 </div><!-- col-md-3 -->
 
-	</div>
+		</div>
 		
 
-</div><!-- row -->
-
-
-
+	</div><!-- row -->
+	
     
       <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
   role="navigation">
@@ -301,7 +304,19 @@
 </nav>
 <div class="clearfix"></div>
       <div class="container-narrow">
-        <footer> <p style="padding-bottom:3em;">
+        <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
@@ -311,7 +326,19 @@
     </div>
   </div>
   <!-- <div class="container-narrow">
-    <footer> <p style="padding-bottom:3em;">
+    <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"

@@ -60,7 +60,7 @@
   
 
 
-
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -79,18 +79,23 @@
 
 
 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_page_pv" style='display:none' >
+	<i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+</span>
+
 <div class="row post">
 	<!-- cols -->
 	
 	<div id="top_meta"></div>
 	<div class="col-md-9">
-	
+		
 
-	<!-- content -->
-	<div class="mypage">		
-	  		
+			<!-- content -->
+			<div class="mypage">
+				
 
-	  <h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
+				<h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
 
 <span id="more"></span>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-menu</span><br><span class="line">      mode=<span class="string">&quot;horizontal&quot;</span></span><br><span class="line">      triggerSubMenuAction=<span class="string">&quot;click&quot;</span></span><br><span class="line">      :overflowedIndicator=<span class="string">&quot;hideico&quot;</span></span><br><span class="line">    &gt;</span><br><span class="line">      &lt;a-menu-item @click=<span class="string">&quot;removekind()&quot;</span>&gt;</span><br><span class="line">        &lt;img class=<span class="string">&quot;loginimg&quot;</span> v-bind:src=<span class="string">&quot;headimg&quot;</span> alt=<span class="string">&quot;&quot;</span> /&gt;</span><br><span class="line">      &lt;a-menu-item&gt;</span><br><span class="line">        &lt;span&gt;</span><br><span class="line">          &lt;audio</span><br><span class="line">            style=<span class="string">&quot;height: 0px; width: 0px&quot;</span></span><br><span class="line">            <span class="built_in">id</span>=<span class="string">&quot;audio&quot;</span></span><br><span class="line">            ref=<span class="string">&quot;audio&quot;</span></span><br><span class="line">            controls</span><br><span class="line">            muted</span><br><span class="line">            :src=<span class="string">&quot;musicsrc&quot;</span></span><br><span class="line">            <span class="built_in">type</span>=<span class="string">&quot;audio/mpeg&quot;</span></span><br><span class="line">          &gt;&lt;/audio&gt;</span><br><span class="line">        &lt;/span&gt;</span><br><span class="line">        &lt;i</span><br><span class="line">          class=<span class="string">&quot;el-icon-caret-left&quot;</span></span><br><span class="line">          @click=<span class="string">&quot;musicplay(2)&quot;</span></span><br><span class="line">          style=<span class="string">&quot;color: white; margin-right: 1em&quot;</span></span><br><span class="line">        &gt;&lt;/i&gt;</span><br><span class="line">        &lt;i</span><br><span class="line">          class=<span class="string">&quot;el-icon-headset&quot;</span></span><br><span class="line">          @click=<span class="string">&quot;musicplay(0)&quot;</span></span><br><span class="line">          style=<span class="string">&quot;color: white; margin-right: 1em&quot;</span></span><br><span class="line">        &gt;&lt;/i&gt;</span><br><span class="line">        &lt;i</span><br><span class="line">          class=<span class="string">&quot;el-icon-caret-right&quot;</span></span><br><span class="line">          @click=<span class="string">&quot;musicplay(1)&quot;</span></span><br><span class="line">          style=<span class="string">&quot;color: white; margin-right: 1em&quot;</span></span><br><span class="line">        &gt;&lt;/i&gt;</span><br><span class="line">        &lt;span v-text=<span class="string">&quot;musicname&quot;</span> class=<span class="string">&quot;musicname&quot;</span>&gt;&lt;/span&gt;</span><br><span class="line">      &lt;/a-menu-item&gt;</span><br><span class="line">      &lt;a-menu-item&gt;</span><br><span class="line">        &lt;a-switch</span><br><span class="line">          checked-children=<span class="string">&quot;Light&quot;</span></span><br><span class="line">          un-checked-children=<span class="string">&quot;Dark&quot;</span></span><br><span class="line">          default-checked</span><br><span class="line">          @click=<span class="string">&quot;toggleDark&quot;</span></span><br><span class="line">        /&gt;</span><br><span class="line">      &lt;/a-menu-item&gt;</span><br><span class="line">      &lt;a-menu-item @click=<span class="string">&quot;writeblog()&quot;</span>&gt;</span><br><span class="line">        &lt;i class=<span class="string">&quot;el-icon-edit-outline&quot;</span>&gt;&lt;/i&gt;&lt;span&gt; 文章发布&lt;/span&gt;</span><br><span class="line">      &lt;/a-menu-item&gt;</span><br><span class="line"></span><br><span class="line">      &lt;a-menu-item @click=<span class="string">&quot;writemessage()&quot;</span>&gt;</span><br><span class="line">        &lt;i class=<span class="string">&quot;el-icon-position&quot;</span>&gt; &lt;/i&gt;</span><br><span class="line">        &lt;span class=<span class="string">&quot;csdot&quot;</span>&gt; 留言板块&lt;/span&gt;</span><br><span class="line">      &lt;/a-menu-item&gt;</span><br><span class="line">      &lt;a-menu-item&gt;</span><br><span class="line">        &lt;a-input-search</span><br><span class="line">          <span class="built_in">id</span>=<span class="string">&quot;searchtxt&quot;</span></span><br><span class="line">          clearable</span><br><span class="line">          placeholder=<span class="string">&quot;Search...&quot;</span></span><br><span class="line">          @search=<span class="string">&quot;onSearch&quot;</span></span><br><span class="line">          class=<span class="string">&quot;border_radius1&quot;</span></span><br><span class="line">        /&gt;</span><br><span class="line">      &lt;/a-menu-item&gt;</span><br><span class="line">    &lt;/a-menu&gt;</span><br></pre></td></tr></table></figure>
@@ -114,15 +119,15 @@
 <p>这里用的是elementui的一个图标，如果是Ant Design Vue 的icon就是：</p>
 <pre><code class="bash">hideico:&quot;&lt;a-icon type=&#39;menu&#39; /&gt;&quot;
 </code></pre>
-	  
-	</div>
 
-	<!-- recommended posts -->
-	
+			</div>
 
-	<div>
-  	<center>
-	<div class="pagination">
+			<!-- recommended posts -->
+			
+
+			<div>
+				<center>
+					<div class="pagination">
 <ul class="pagination">
 	 
 				
@@ -138,12 +143,12 @@
 </ul>
 </div>
 
-    </center>
-	</div>
+				</center>
+			</div>
 
-    <!-- share -->
-    
-        
+			<!-- share -->
+			
+			
     <div class="bdsharebuttonbox">
         <a href="#" class="bds_more" data-cmd="more"></a>
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
@@ -161,12 +166,12 @@
     </script>
 
 
-        
+			
 
-    
-	
-	<!-- comment -->
-	
+			
+
+			<!-- comment -->
+			
 
 <!-- <section id="comment">
   <h2 class="title">留言</h2>
@@ -175,8 +180,8 @@
 
 
 
-	
-		<!-- 来必力City版安装代码 -->
+			
+			<!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
 	<script type="text/javascript">
    (function(d, s) {
@@ -194,12 +199,12 @@
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 <!-- City版安装代码已完成 -->
-	  
-	</div> <!-- col-md-9/col-md-12 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
 		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
 
 	<!-- date -->
 	
@@ -243,13 +248,11 @@
 	
 </div><!-- col-md-3 -->
 
-	</div>
+		</div>
 		
 
-</div><!-- row -->
-
-
-
+	</div><!-- row -->
+	
     
       <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
   role="navigation">
@@ -306,7 +309,19 @@
 </nav>
 <div class="clearfix"></div>
       <div class="container-narrow">
-        <footer> <p style="padding-bottom:3em;">
+        <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
@@ -316,7 +331,19 @@
     </div>
   </div>
   <!-- <div class="container-narrow">
-    <footer> <p style="padding-bottom:3em;">
+    <footer> 
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人
+</span>
+
+
+
+<p style="padding-bottom:3em;">
   &copy; 2023 南疆
   
   with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
