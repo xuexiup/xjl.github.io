@@ -102,6 +102,109 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue20/" >Vue中UI库Ant Design Vue 回到顶部（BackTop）组件的使用</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>首先看下官方文档的使用说明，写出了以下范例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;components-back-top-demo-custom&quot;</span>&gt;</span><br><span class="line">      &lt;a-back-top&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;ant-back-top-inner&quot;</span>&gt;</span><br><span class="line">          &lt;a-icon <span class="built_in">type</span>=<span class="string">&quot;up&quot;</span>&gt;&lt;/a-icon&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/a-back-top&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/template&gt;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue20/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue19/" >vue项目中使用分享插件social-share</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>老规矩先安装依赖：</p>
+<blockquote><p>cnpm install vue-social-share -S</p>
+</blockquote>
+<p>安装完后从main.js中引入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Share from <span class="string">&#x27;vue-social-share&#x27;</span></span><br><span class="line">import <span class="string">&#x27;vue-social-share/dist/client.css&#x27;</span>;</span><br><span class="line">Vue.use(Share)</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue19/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue18/" >Vue中实现页面刷新的几种方式</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.原页面刷新，类似于F5</p>
+<blockquote><p>this.$router.go(0)<br>或者<br>location.reload()</p>
+</blockquote>
+
+<p>2.创建一个空白页面（blank.vue），通过路由的方式先跳转到空白页面再跳转回来</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue18/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue17/" >Vue中使用AOS动画插件，让你的网页更酷炫</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>根据官方文档，使用此插件可以通过直接引用的方式，也可以是下载安装本地包；<br>1.直接使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.css&quot;</span>/&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://unpkg.com/aos@next/dist/aos.js”</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">AOS.init();</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这种引入方式如果是在Vue项目中，自然是从首页（index.html）中引入。</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue17/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
 			<div class="article-title"><a href="/2022/10/08/vue16/" >Ant Design Vue icon 图标的使用方法</a></div>						
 		</h3>
 	
@@ -119,117 +222,6 @@
 	
 	</div>
   <a type="button" href="/2022/10/08/vue16/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue15/" >Ant Design Vue 菜单（Menu）的用法介绍</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h4> 根据：<a href="https://2x.antdv.com/components/menu-cn" title="" target="">Ant DesiGN Vue 官网</a> 文档，常用属性参考如下：</h4>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue15/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue14/" title="注意：以下三个方案中，方案一，方案二皆为不兼容IE【网站无法访问】的失败方案；方案三为兼容IE的可行方案；">Vue中引入highlight.js实现代码高亮，兼容IE</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>【方案一】</p>
-<p>根据highlight.js官网的介绍，我们在main.js文件中通过import的方式引入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import hljs from <span class="string">&quot;highlight.js&quot;</span>;</span><br><span class="line">import <span class="string">&quot;highlight.js/styles/monokai-sublime.css&quot;</span>;</span><br><span class="line">Vue.use(hljs)</span><br></pre></td></tr></table></figure>
-<p>这里用到了富文本框WandEditor，引入高亮；</p>
-<blockquote><p>this.editor.highlight &#x3D; hljs</p>
-</blockquote>
-<p>以上测试环境和打包后在IE上都不兼容，其它浏览器正常运行；</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue14/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue13/" >在Vue中引入静态图片</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.将图片放在assets或其某文件下</p>
-<p>2.通过以下两种方法引入</p>
-<p>1).import  img1 from ‘..&#x2F;assets&#x2F;images&#x2F;img1.jpg’</p>
-<p>在data中定义地址变量：pic:img1</p>
-<p>2)直接在data中通过require引入:</p>
-<p>pic: require(“..&#x2F;assets&#x2F;images&#x2F;img1.jpg”) </p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue13/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue12/" >Visual Studio Code常用的扩展插件</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<ol>
-<li><p>Vetur<br>vue 代码?亮插件,vue开发神器</p>
-</li>
-<li><p>Auto Close Tag<br>html?动闭合标签插件</p>
-</li>
-<li><p>Beautify<br>格式化插件</p>
-</li>
-<li><p>Chinese (Simplified) vscode<br>汉化插件</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue12/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
            
@@ -291,6 +283,8 @@
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
+			<li><a href="/categories/数据库/">数据库<span>4</span></a></li>
+		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
 			<li><a href="/categories/百科知识/">百科知识<span>3</span></a></li>
@@ -310,42 +304,42 @@
 		
 			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
-		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
 			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
 		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>8</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
 		
 			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
 		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+			<li><a href="/tags/winform/">winform<span>2</span></a></li>
 		
-			<li><a href="/tags/工具/">工具<span>12</span></a></li>
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
 		
 			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
 		
+			<li><a href="/tags/工具/">工具<span>12</span></a></li>
 		
-		   <li><a href="/tags">...<span>43</span></a></li>
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>44</span></a></li>
 		 
 		</ul>
 	</div>
@@ -374,7 +368,7 @@
       </li>
     
       <li>
-        <a href="/2023/03/07/dotnet01/" ><i class="fa fa-file-o"></i>ASP.Net MVC常用知识大全</a>
+        <a href="/2023/04/02/sql4/" ><i class="fa fa-file-o"></i>sqlserver row_num()的用法</a>
       </li>
     
   </ul>

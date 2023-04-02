@@ -101,6 +101,120 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2022-10-21 </div>
+			<div class="article-title"><a href="/2022/10/21/vue28/" >package.json 和 package-lock.json 解析</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p> <a href="https://docs.npmjs.com/cli/v8/configuring-npm/package-json" title="" target="">package.json npm官方文档</a> </p>
+前端每个项目的根目录上有一个 package.json 文件，定义了当前项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等）。当运行 npm install命令时，会根据文件中的配置自动下载所需的模块配置项目所需的运行和开发环境。
+
+<p>package.json文件是一个JSON对象，该对象的每一个成员就是当前项目的一项设置。比如name就是项目名称，version是版本号。</p>
+	
+	</div>
+  <a type="button" href="/2022/10/21/vue28/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-20 </div>
+			<div class="article-title"><a href="/2022/10/20/html9/" >磁盘 硬盘 软盘和内存之间的关系</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>对于“软盘、硬盘、磁盘和内存”这4个概念想必很多小伙伴都有听说过。</p>
+<p>尤其是硬盘和内存。我们去买电脑时有两个必须要考虑的参数，就是内存大小和硬盘大小，一般来说内存越大电脑运行速度会越快，硬盘越大能够存储的文件就越多。这么看来硬盘和内存好像毫无关联，其实不然，不管是内存和硬盘还是软盘和磁盘，它们本质上来说都是用来存储数据的。</p>
+<p>一、磁盘</p>
+<p>先来说说磁盘、硬盘和软盘之间的关系。</p>
+<p>磁盘分为硬盘和软盘，它们都是外部存储器。外部存储器的特点就是不受断电的影响。那硬盘和软盘又有什么区别呢？</p>
+<p>硬盘一般都装在机箱里面，容量较大，能够存储的文件比较多。</p>
+<p>而软盘并不是装在电脑里面的，而是可移动的，一般用来存储文件和不同电脑之间进行拷贝文件，就功能上来说它和现在的U盘是一样的，只是外形、存储原理不一样，它的容量要比硬盘小的多，比如最常用的3.5英寸的软盘容量只有1.44MB，这么小的存储空间对于目前的我们来说基本上什么也干不了，而且它的存储速度要比硬盘慢很多。所以只有早期的电脑才会用软盘，目前已经被淘汰。</p>
+<p>二、内存</p>
+<p>前面说了外部存储器，再来说说内部存储器，也就是我们所说的内存。内存的的存储速度要比硬盘快很多，但是内存会受断电的影响，也就是说一断电里面存储的所有数据都会丢失。</p>
+<p>举个例子，如果我们做了半天的word没点保存键，结果这时候家里停电了（或者死机了），那么再开机的时候我们做的那份word就没了。因为没点保存键的话，这些还没保存的数据就是暂时存储在内存里面的，一旦断电就会丢失，只有我们点击保存按钮后才会永久存储在磁盘中。 之前在网上看到了一个特别通俗好理解的说法：</p>
+<p>做菜时，我们聪明的大脑和灵巧的双手就好比是CPU，切下来的菜好比是数据，切下来的菜总是先临时放在砧板上，砧板就好比是内存，砧板小了菜容易掉到地上，就象内存小了容易卡一样，最后菜才进锅子（硬盘）。</p>
+
+	
+	</div>
+  <a type="button" href="/2022/10/20/html9/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-19 </div>
+			<div class="article-title"><a href="/2022/10/19/html8/" >对HTML转义符号转换</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> function escape2Html(str) &#123;</span><br><span class="line">    var arrEntities=&#123;&#x27;lt&#x27;:&#x27;&lt;&#x27;,&#x27;gt&#x27;:&#x27;&gt;&#x27;,&#x27;nbsp&#x27;:&#x27; &#x27;,&#x27;amp&#x27;:&#x27;&amp;&#x27;,&#x27;quot&#x27;:&#x27;&quot;&#x27;&#125;;</span><br><span class="line">   return str.replace(/&amp;(lt|gt|nbsp|amp|quot);/ig,function(all,t)&#123;return arrEntities[t];&#125;);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">var s = escape2Html(&quot;&amp;lt;p&amp;gt;fasfas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;fkasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasfjalsk&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://t12.baidu.com/it/u=2506809329,284241162&amp;amp;amp;fm=76&amp;quot; style=&amp;quot;max-width:100%;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&quot;);</span><br><span class="line"> </span><br><span class="line">alert(s);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/19/html8/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-19 </div>
+			<div class="article-title"><a href="/2022/10/19/electron2/" title="此篇文章信息来源于Electron官网资料和自己实践查阅资料所得。">Electron中使用Vue2网站构建跨平台的桌面应用程序</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Electron是一个可使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序的工具；</p>
+<p>详细信息可查看博主整理的文档：<a target="_blank" rel="noopener" href="https://xuexiup.github.io/2022/10/13/special3/">https://xuexiup.github.io/2022/10/13/special3/</a></p>
+<p>这里我们详细介绍下Electron结合Vue2的使用（Vue3项目类似只是网站开发方式变了，Vue3用到了TS）</p>
+<p>1）搭建 <a href="https://www.romanticlife.top/blog/0/256" title="" target="">Vue2.x的网站</a> 这里我命名为：my_electron_vue</p>
+<p>2）进入网站目录安装Electron及打包工具</p>
+<p>cd my_electron_vue</p>
+<p>cnpm install –save-dev electron electron-packager</p>
+<p>3)执行命令：cnpm install</p>
+<p>4)在根目录下创建一个名为：main.js的文件</p>
+	
+	</div>
+  <a type="button" href="/2022/10/19/electron2/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2022-10-18 </div>
 			<div class="article-title"><a href="/2022/10/18/tool11/" >Selenium和Python的区别</a></div>						
 		</h3>
@@ -116,126 +230,6 @@
 	
 	</div>
   <a type="button" href="/2022/10/18/tool11/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-18 </div>
-			<div class="article-title"><a href="/2022/10/18/special5/" >nginx学习之路</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<blockquote><p>1、解决nginx报错：No mapping for the Unicode character exists in the target multi-byte code pa.. </p>
-</blockquote>
-
-<h2 id="原因：nginx-路径中有中文"><a href="#原因：nginx-路径中有中文" class="headerlink" title="原因：nginx 路径中有中文"></a>原因：nginx 路径中有中文</h2><blockquote><p>2、[emerg] 12080#3204: bind() to 0.0.0.0:10099 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)</p>
-</blockquote>
-
-<h2 id="原因：10099端口被占用了"><a href="#原因：10099端口被占用了" class="headerlink" title="原因：10099端口被占用了"></a>原因：10099端口被占用了</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">切换另一个没被占用的端口便可以解决问题。</span><br></pre></td></tr></table></figure>
-
-<h3 id="如果我们想要查看10099端口被什么应用占用？"><a href="#如果我们想要查看10099端口被什么应用占用？" class="headerlink" title="如果我们想要查看10099端口被什么应用占用？"></a>如果我们想要查看10099端口被什么应用占用？</h3><p>1、按键盘win+r 打开运行界面，输入cmd，确定，打开管理员界<br>2、输入netstat -aon | findstr :10099  –查看对应的pid<br>3、输入 tasklist|findstr “对应的pid”    </p>
-	
-	</div>
-  <a type="button" href="/2022/10/18/special5/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/article1/" >不要制止雨，愿将此生化作雨</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>阳春三月，细雨霏霏，连绵不绝。而此刻，想必江南已是烟雨迷蒙时，只撑一把油纸伞，轻轻地踱步在其青石小巷上，便能够邂逅那份纯净与美好。</p>
-<p>而在这春日芳菲的季节里，一场雨的到来，就足以给予世间万物以生机。也许在众人眼中，晴天乃是真正的挚爱，然于我而言，晴天虽好，若一味只是晴天，万物便会陷入贫瘠枯萎的境地;而雨天，却能润泽万物，洗涤净所有的尘埃，带走所有的阴霾与不快，留下的是纯净与质朴，清新与湿润的美好。</p>
-<p>一场雨，在不同的人看来，自是有着不同的意义，也拥有着不同的情感。许是我们世人给予了雨水以生命，又或许是雨水本就同我们一般，拥有着专属于自己的情感。或喜或悲，或怒或伤，在不同的季节里，它总以自己独特得方式，带给人们更多的感动。</p>
-<p>在诗词的境界里，有其清新明媚的雨，一如王维所看到的雨：“空山新雨后，天气晚来秋。明月松间照，清泉石上流。”此等雨水，饱含生机，如幽静山谷里的溪流，缓缓流淌，润物细无声。亦有沧桑之雨的状态：“雨中黄叶树，灯下白头人。”下着这般的雨，却让人有着历经沧桑世态过后的几许悲凉感叹。而在纳兰容若看来，却是一场极为深情的雨：“一往情深深几许?深山夕照深秋雨。”</p>
-<p>亦有李商隐笔下最为缠绵之雨∶“何当共剪西窗烛，却话巴山夜雨时。”而在李清照看来，却是另一番的忧愁∶“梧桐更兼细雨，到黄昏，点点滴滴。这次第，怎一个愁字了得?”然我最喜欢的雨，是其宋代诗人蒋捷的诗∶“悲欢离合总无情，一任阶前，点滴到天明。”</p>
-<p>也许一场雨的到来，总能够让我们世人为此而触景生情，得以挥洒出不同的行文来记录于此，但或许在千万人之中，没有谁能与自己的想法一致。同样一场雨，然赏雨之人、听雨之人，心境却大不相同。可在我看来，雨就是雨，它就是如此来去匆匆，去留无意，无论是春日的绵绵细雨，还是夏日里的滂沱大雨，又或是秋日里的缠绵细雨，或是那冬日里深沉寂静的冬雨，它都是一如既往，在该来的时候来，在离去的时候潇洒离去。</p>
-<p>我爱雨，亦惜雨。每逢雨天，总爱倚着门扉听雨，听那豆的雨滴敲打我的屋檐，听那雨水的欢唱，随着门前的溪流缓缓流淌，泉水叮咚响，别有一番情趣。亦或是，独自一人，沏一盏茶，漫漫细饮，回忆一段经年往事。也可以独自品读一本好书，从初时落雨敲窗，直至风停雨住。那空气中泛着湿润的气息，而那书卷里，亦夹杂着旧日的余温，乃至淡淡的书香。我总可以，在雨天搁置下平日里的繁杂琐事，洒扫庭除、倚楼听雨、赌书泼茶，如此岁月，莫不静好。</p>
-<p>当雨期渐渐久些的时候，身旁所有人都在抱怨雨天出行不便的怨言之时，我却不以为然，反倒一直乐在其中。我从不刻意地期盼雨过天晴，因为我知道，每一场雨的到来，都自有它的安排与道理，我们又何须执着，何须追问它何去何从?与其抱怨雨天，不如怀揣希望，等待雨过天晴之后，万物欣荣繁茂的景象，乃至空气间弥漫着的清新与温润，如此纯净的美景，置身其中，又何尝不是一件人生乐事?</p>
-<p>不要制止风，愿将此生化作风;不要制止雨，愿将此生化作雨。如若可以，我愿化作那一场雨，或细腻柔情，或大气磅礴，每次来到人间，都以最好的姿态，洗礼与滋润万物，涤荡净人世的丑恶与肮脏，只留下至真、至善、至美，乃至留下一丝温情与感动。不问是否能停留于世间多久，尽管尽到自己本职，挥洒甘霖，沐浴众生。</p>
-<p>每逢雨天，我也常常这般祈愿：但愿这世间的雨，不会像天上的雨那般滂沱;但愿这天上的雨，不会如人间的泪如此污浊;但愿人人都能因雨水的洗礼而成为明净的人。也愿人人都能找寻到属于自己那柄可以遮挡风雨的伞。</p>
-<p>但或许，我们从无需刻意去找寻可以躲避风雨的屋檐，也无需苦苦等待那把属于自己的伞出现，时机一到，该来的终会来，该散的亦终会散，你又何须急于一时，而忽视了当下。</p>
-<p>等风来，不如追风去;等雨停，不如同那暴风雨搏斗到底，在风雨中穿行，终有一日，走到风停雨住，便是生命的美好晴天。</p>
-<p>人世红尘，修行之路更是如此。虽千难万险，布满荆棘，可如若你一味地退缩与逃避，就只会止步于前。唯有不断迎难而上，克服重重困难与考验，你才能从荒芜之地，走向那繁华似锦的地方，领略到那山清水秀，天地万物纯净明朗的一番美景。</p>
-<p>雨声依旧，我心仍如明镜秋水，不为外物所动。一个人听雨，一个人做梦。掩上门扉，卸下心上的重担，得以在雨天放松自己的身心。任那窗外风雨飘摇，我只守着那片刻的安稳与宁静。在寂寞的时候，可以清澈地看到自己的内心，没有纷扰与纷乱，亦无恐惧与愁烦。</p>
-<p>此后，无论晴天雨季，都坦然接受，欣然面对。只因我深信，无风雨不人生，而人生本就是风霜雨雪俱全，唯有百味皆尝，世情百态皆亲历亲尝，才能享受到最后那份怡然自得的满足与幸福，亦才能知晓其人生的真理。</p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/article1/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis8/" >Redis简介</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。<br>它通常被称为数据结构服务器，因为值（value）支持五种数据类型：</p>
-<blockquote><p>string（字符串）<br>hash（哈希）<br>list（列表）<br>set（集合）<br>zset(sorted set：有序集合)。</p>
-</blockquote>
-
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis8/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis7/" >Redis配置与命令</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Redis 的配置文件位于 Redis 安装目录下，文件名为 redis.conf。<br>你可以通过修改 redis.conf 文件或使用 CONFIG set 命令来修改配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.redis 127.0.0.1:6379&gt; CONFIG SET CONFIG_SETTING_NAME NEW_CONFIG_VALUE</span><br><span class="line">实例</span><br><span class="line">1.redis 127.0.0.1:6379&gt; CONFIG SET loglevel <span class="string">&quot;notice&quot;</span></span><br><span class="line">2.OK</span><br><span class="line">3.redis 127.0.0.1:6379&gt; CONFIG GET loglevel</span><br><span class="line">4. </span><br><span class="line">5.1) <span class="string">&quot;loglevel&quot;</span></span><br><span class="line">6.2) <span class="string">&quot;notice&quot;</span></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis7/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
            
@@ -297,6 +291,8 @@
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
+			<li><a href="/categories/数据库/">数据库<span>4</span></a></li>
+		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
 			<li><a href="/categories/百科知识/">百科知识<span>3</span></a></li>
@@ -310,48 +306,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
-		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
 		
 			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
 		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
+			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
 		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 			<li><a href="/tags/winform/">winform<span>2</span></a></li>
 		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
 		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>8</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>43</span></a></li>
+		   <li><a href="/tags">...<span>44</span></a></li>
 		 
 		</ul>
 	</div>
@@ -380,7 +376,7 @@
       </li>
     
       <li>
-        <a href="/2023/03/07/dotnet01/" ><i class="fa fa-file-o"></i>ASP.Net MVC常用知识大全</a>
+        <a href="/2023/04/02/sql4/" ><i class="fa fa-file-o"></i>sqlserver row_num()的用法</a>
       </li>
     
   </ul>

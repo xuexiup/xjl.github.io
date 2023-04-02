@@ -303,6 +303,14 @@
 		
             
 		
+            
+		
+            
+		
+            
+		
+            
+		
         
         <!-- render other articles -->
         
@@ -416,8 +424,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2023-03-07 </div>
-			<div class="article-title"><a href="/2023/03/07/dotnet01/" >ASP.Net MVC常用知识大全</a></div>						
+			<div class="date"> 2023-04-02 </div>
+			<div class="article-title"><a href="/2023/04/02/sql4/" >sqlserver row_num()的用法</a></div>						
 		</h3>
 	
 
@@ -426,13 +434,12 @@
   <div class="row">
 	
 	
-		<h3 id="MVC中的TempData-ViewBag-ViewData区别"><a href="#MVC中的TempData-ViewBag-ViewData区别" class="headerlink" title="MVC中的TempData\ViewBag\ViewData区别?"></a>MVC中的TempData\ViewBag\ViewData区别?</h3><blockquote><p>TempData  保存在Session中，Controller每次执行请求的时候，会从Session中先获取 TempData，而后清除Session，获取完TempData数据，虽然保存在内部字典对象中，但是其集合中的每个条目访问一次后就从字典表中删 除，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换。</p>
-<p>ViewBag和ViewData只在当前Action中有效，等同于View，ViewBag比ViewData慢，ViewBag存dynamic类型数据，使用时不需要类型转换</p>
-<p>ViewData和ViewBag 中的值可以互相访问，因为ViewBag的实现中包含了ViewData，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换</p>
-</blockquote>
+		<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select row_number() over(order by 表名 desc) as RowNumber_ID,*from </span><br><span class="line">(</span><br><span class="line">   select t.name as <span class="string">&#x27;表名&#x27;</span> ,i.name as <span class="string">&#x27;主键&#x27;</span> </span><br><span class="line">   ,s.avg_fragmentation_in_percent as <span class="string">&#x27;阈值&#x27;</span> from sys.tables t </span><br><span class="line">	<span class="built_in">join</span> sys.indexes i on i.object_id=t.object_id  </span><br><span class="line">	<span class="built_in">join</span> sys.dm_db_index_physical_stats(db_id(),object_id(0),null,null,<span class="string">&#x27;limited&#x27;</span>) s  </span><br><span class="line">	on s.object_id=i.object_id and s.index_id=i.index_id </span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select row_number() over( partition by 阈值 order by 表名 desc) as RowNumber_ID,*from </span><br><span class="line">(</span><br><span class="line">   select t.name as <span class="string">&#x27;表名&#x27;</span> ,i.name as <span class="string">&#x27;主键&#x27;</span> </span><br><span class="line">   ,s.avg_fragmentation_in_percent as <span class="string">&#x27;阈值&#x27;</span> from sys.tables t </span><br><span class="line">	<span class="built_in">join</span> sys.indexes i on i.object_id=t.object_id  </span><br><span class="line">	<span class="built_in">join</span> sys.dm_db_index_physical_stats(db_id(),object_id(0),null,null,<span class="string">&#x27;limited&#x27;</span>) s  </span><br><span class="line">	on s.object_id=i.object_id and s.index_id=i.index_id </span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
 	
 	</div>
-  <a type="button" href="/2023/03/07/dotnet01/#more" class="btn btn-default more">阅读更多</a>
+  <a type="button" href="/2023/04/02/sql4/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
            
@@ -494,6 +501,8 @@
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
 		
+			<li><a href="/categories/数据库/">数据库<span>4</span></a></li>
+		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
 			<li><a href="/categories/百科知识/">百科知识<span>3</span></a></li>
@@ -507,48 +516,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
 		
 			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
 		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
 			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
 		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
-		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/工具/">工具<span>12</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
 		
 			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-		   <li><a href="/tags">...<span>43</span></a></li>
+			<li><a href="/tags/工具/">工具<span>12</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>44</span></a></li>
 		 
 		</ul>
 	</div>
@@ -577,7 +586,7 @@
       </li>
     
       <li>
-        <a href="/2023/03/07/dotnet01/" ><i class="fa fa-file-o"></i>ASP.Net MVC常用知识大全</a>
+        <a href="/2023/04/02/sql4/" ><i class="fa fa-file-o"></i>sqlserver row_num()的用法</a>
       </li>
     
   </ul>
