@@ -446,18 +446,19 @@ a {
 .articlenums {
     font-size: .4em;
     color: rgba(0, 0, 0, .2);
-    text-shadow: 1px 1px rgba(229,151,92,.15);
+    text-shadow: 1px 1px rgba(229, 151, 92, .15);
 }
+
 .visitips {
-    font-size:.95em;
-    color: rgba(0, 0, 0, .35);    
+    font-size: .95em;
+    color: rgba(0, 0, 0, .35);
     text-shadow: 1px 1px rgba(0, 0, 0, .03);
 }
 
-#busuanzi_value_site_pv,#busuanzi_value_site_uv{
+#busuanzi_value_site_pv,
+#busuanzi_value_site_uv {
     font-style: italic;
-    color:#F3E4CF;
+    color: #F3E4CF;
 }
+
 /*修改样式end*/
-
-
