@@ -460,5 +460,16 @@ a {
     font-style: italic;
     color: #F3E4CF;
 }
+.mypage table{
+    border:1px solid gray;
+   
+}
+.mypage table th{
+    border:1px dotted gray;
+    font-weight: bold;
+}
 
+.mypage table tbody td{
+    border:1px dotted gray;
+}
 /*修改样式end*/

@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>SuperMap GIS数据组织结构 | 月落星辰</title>
+  
+  <meta name="author" content="南疆">
+  
+  <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
+  
+  
+  <meta name="keywords" content="SuperMap GIS">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="SuperMap GIS数据组织结构" />
+  <meta property="og:site_name" content="月落星辰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <!-- <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css"> -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> SuperMap GIS数据组织结构</h1>
+		</div>		
+	
+
+
+
+
+<!-- 不蒜子统计 -->
+<div id="busuanzi_container_page_pv" class="articlenums">
+	<i class="icon-smile icon"></i>文章已阅读<span id="busuanzi_value_page_pv"></span>次
+</div>
+<div>&nbsp;</div>
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+		
+
+			<!-- content -->
+			<div class="mypage">
+				
+
+				<p>SuperMap GIS 的数据组织结构，主要包括工作空间、数据源、数据集、地图、场景、布局等。为了方便您更快更好的了解和使用SuperMap iDesktop 8C 系列产品，本部分将这些数据组织成分予以详细介绍。</p>
+<p>SuperMap GIS 的数据组织形式为类似于树状层次结构，这种结构可以通过应用程序界面上的工作空间管理器表现。如下图所示，左图为工作空间管理器，工作空间管理器当前打开了一个工作空间，右图为对应抽象出来的 SuperMap GIS 数据组织结构的示意图。在SuperMap iDesktop 8C 系列产品中用户的一个工作环境对应一个工作空间，每一个工作空间都具有下图（右图）所示的树状层次结构，该结构中工作空间对应根结点。一个工作空间包含唯一的数据源集合、唯一的地图集合、唯一的布局集合、唯一的场景集合和唯一的资源集合（符号库集合），对应着工作空间的子结点。</p>
+<span id="more"></span>
+
+<h3 id="数据源集合"><a href="#数据源集合" class="headerlink" title="数据源集合"></a>数据源集合</h3><p>组织和管理着工作空间中的所有数据源，数据源是由各种类型的数据集（如点、线、面、栅格&#x2F;影像等类型数据）组成的数据集集合。一个数据源可包含一个或多个不同类型的数据集；也可以同时存储矢量数据集和栅格数据集。</p>
+<h3 id="地图集合"><a href="#地图集合" class="headerlink" title="地图集合"></a>地图集合</h3><p>用来管理存储在工作空间中的地图数据，用户在工作空间中显示和制作的地图都可以保存在工作空间中，便于下次打开工作空间时浏览地图。</p>
+<h3 id="布局集合"><a href="#布局集合" class="headerlink" title="布局集合"></a>布局集合</h3><p>用来管理工作空间的布局数据，布局主要用于对地图进行排版打印。</p>
+<h3 id="场景集合"><a href="#场景集合" class="headerlink" title="场景集合"></a>场景集合</h3><p>用来管理存储在工作空间中的场景数据，用户在工作空间中显示和制作的场景都可以保存在工作空间中。</p>
+<h3 id="资源集合"><a href="#资源集合" class="headerlink" title="资源集合"></a>资源集合</h3><p>即符号库集合，用来管理工作空间中的地图和场景中所使用的符号库资源，包括点符号库、线符号库和填充符号库。</p>
+<h3 id="工作空间"><a href="#工作空间" class="headerlink" title="工作空间"></a>工作空间</h3><p>即用户的工作环境，用户在进行数据操作时，都需要先创建一个工作空间，才能进一步操作 GIS数据。工作空间会保存用户在该工作环境中的操作结果，包括用户在该工作空间中打开的数据源、保存的地图、布局和三维场景等，当用户打开工作空间时可以继续上一次的工作成果来工作。<br>应用程序启动时，默认为用户建立了一个空的工作空间，用户可以在此基础上进行数据操作，或者打开已有工作空间进行操作。</p>
+<h2 id="工作空间的类型"><a href="#工作空间的类型" class="headerlink" title="工作空间的类型"></a>工作空间的类型</h2><p>按照工作空间的存储形式，工作空间可以分为两大类型，文件型工作空间和数据库型工作空间。<br>文件型工作空间以文件的形式进行存储，SuperMap iDesktop 8C 和SuperMap Deskpro 6R 文件格式为 <em>.smwu和</em>.sxwu，SuperMap GIS 6 及以前版本文件格式为 *.smw 和 *.sxw ，每一个工作空间文件中只存储在一个工作空间；<br>数据库型工作空间，是将工作空间保存在数据库中，目前仅支持存储在 Oracle 和 SQL Server 数据库中。</p>
+<h3 id="工作空间的层次结构"><a href="#工作空间的层次结构" class="headerlink" title="工作空间的层次结构"></a>工作空间的层次结构</h3><blockquote><p>数据源集合，用于管理在工作空间打开的所有数据源；<br>地图集合，用来保存工作空间中的地图；<br>布局集合，用来保存工作空间中的布局；<br>三维场景集合，用来保存工作空间中的三维场景；<br>符号库集合，主要管理符号库、线型库和填充库。</p>
+</blockquote>
+<p>    工作空间中的地图、布局、三维场景和资源都是依附于工作空间存在的，即这些内容都保存在工作空间中，删除工作空间时，其中的地图、布局、三维场景和符号库资源也相应的随之删除；<br>    而数据源是独立存储的，与工作空间只是关联关系，并没有保存在工作空间中，当删除工作空间时，只是删除了工作空间与数据源的关联关系，并不能删除数据源。</p>
+<h2 id="数据源集合-1"><a href="#数据源集合-1" class="headerlink" title="数据源集合"></a>数据源集合</h2><p>工作空间中的数据源集合主要管理工作空间中打开的所有数据源，通过工作空间中的数据源集合可以实现数据源的创建、打开、关闭等操作功能。<br>数据源用于存储空间数据，独立于工作空间，因此存储在数据源中的所有空间数据也独立于工作空间存储。SuperMap iDesktop 8C 系列产品的空间数据可以存储在文件中和数据库中，即数据源可以保存在文件中或者数据库中，因此，数据源可以分为三大类：文件型数据源、数据库型数据源和 Web 数据源。</p>
+<h3 id="文件型数据源"><a href="#文件型数据源" class="headerlink" title="文件型数据源"></a>文件型数据源</h3><p>即 UDB 类型数据源，存储于扩展名为 <em>.udb&#x2F;</em>.udd 的文件中。<br>新建 UDB 数据源时，会同时产生两个文件，*.udb 文件和与之相对应的 *.udd 文件;<br>GIS 空间数据除了包含空间几何对象外，还包含对象的属性信息;<br><u><strong>在文件型数据源中 <em>.udb 文件主要存储空间数据的空间几何信息，</em>.udd文件存储属性信息</strong>。</u><br>一个数据源文件只对应一个数据源；UDB 数据源，是一个跨平台、支持海量数据高效存取的文件型数据源，UDB 可以存储的数据上限达到 128TB 大小。</p>
+<h3 id="数据库型数据源"><a href="#数据库型数据源" class="headerlink" title="数据库型数据源"></a>数据库型数据源</h3><p>存储于数据库中，如 Oracle Plus 数据库、SQL Server Plus 数据库等。对应数据库型数据源，其空间数据的空间几何信息和属性信息都存储在数据库中。要对数据源中的空间数据操作，必须先通过工作空间中的数据源集合打开数据源，并且对数据源及其中的空间数据的所有操作将直接保存在数据源中而不是保存在工作空间中。数据源是独立于工作空间存储的，删除工作空间本身，工作空间中的数据源不会随之删除和变化。</p>
+<h3 id="Web-数据源"><a href="#Web-数据源" class="headerlink" title="Web 数据源"></a>Web 数据源</h3><p>存储于网络上的某个服务器上，在使用该类型的数据源时，通过 URL 地址来获取相应的数据源。<br>一个工作空间中可以包含多个不同类型的数据源，通常一个数据源中组织一类用途的空间数据，从而便于数据的归类和使用。</p>
+<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><p>数据源中的空间数据是对现实世界的抽象，即将现实世界中的地理事物抽象为计算机世界中可以处理的各种图形对象，现实世界中的点状事物就抽象为点几何对象，线状事物就抽象为线几何对象，面状事物就抽象为面几何对象，为了便于数据的统一管理，引入数据集的概念，即将同类事物存储在一类数据集中，例如，点数据集就只能存储点几何对象、线数据集就只能存储线几何对象、面数据集就只能存储面几何对象。因此，一个数据源中的空间数据被组织为各种类型数据集，即数据源实际是一个数据集集合，包含了各种类型的多个数据集。</p>
+<p> SuperMap GIS的数据集类型包括：点数据集（Point）、线数据集（Line）、面数据集（Region）、纯属性数据集（Tabular）、网络数据集（Network）、复合数据集（CAD）、文本数据集（Text）、路由数据集（LineM）、影像数据集（Image）、栅格数据集（Grid）、模型数据集（Model）。</p>
+<p>数据集是 SuperMap GIS空间数据的基本组织单位之一，是数据组织的最小单位，数据集可以作为图层在地图窗口中实现可视化显示，即可以将数据集中存储的几何对象以图形的方式呈现在地图窗口中，对于栅格和影像数据集，则根据其存储的像元值以图像的方式显示在地图窗口中。并且数据集的可视化编辑也是通过地图窗口来实现的，如编辑数据集中几何对象的空间位置和形状或者通过矢量化获取新的数据集等。</p>
+<p>一个数据源中可以包含多个各种类型的数据集，可以通过工作空间中的数据源来管理数据源中的数据集，包括创建数据集或者导入其他来源的数据作为数据集以及其他操作等。</p>
+<h2 id="地图集合-1"><a href="#地图集合-1" class="headerlink" title="地图集合"></a>地图集合</h2><p>地图集合用来管理存储在工作空间中的地图数据，用户在工作空间中显示和制作的地图都可以保存在工作空间中，便于下次打开工作空间时浏览地图。<br>应用程序可以同时打开多个地图窗口，每一个地图窗口中当前显示的内容为一幅地图，工作空间中的地图都包含在地图集合中，由于地图是保存在工作空间中的，因此，只有保存了工作空间，其中的地图才能被保存下来。<br>将数据集添加到地图窗口中，被赋予了显示属性，如：显示风格、专题地图等，就成为图层。一个或者多个图层按照某种顺序叠放在一块，显示在一个地图窗口中，就可以成为一个地图。一般而言，一个图层对应着一个数据集；同一个数据集可以被多次添加到不同的地图窗口中，而且可以赋予不同的显示风格。对于不存储风格的数据集（点数据集、线数据集、面数据集），在显示时系统将赋予默认的风格；存储风格的数据集（CAD数据集和文本数据集）则按每个对象内置的风格来显示。地图窗口中图层的风格可以随时根据需要进行修改，通过修改图层风格或制作专题地图两种方法即可实现。在地图窗口中可以对图层中的空间几何对象进行可视化编辑，如改变对象的位置、大小和形状等，这些操作都会直接反映到图层对应的数据集中，也就是说，对图层的编辑实质是对图层关联的数据集中数据的编辑。</p>
+<h2 id="布局集合-1"><a href="#布局集合-1" class="headerlink" title="布局集合"></a>布局集合</h2><p>工作空间中的布局集合管理工作空间中保存的所有布局，通过布局集合可以实现布局的创建、保存、输出、打印以及删除等操作。<br>布局主要用于对地图进行排版打印，是地图、图例、地图比例尺、指北针、文本等各种不同元素的混合排版与布置。布局窗口提供了进行布局可视化编辑的场所，一个布局窗口对应一个布局。布局保存在工作空间中，因此，要保存布局，必须同时保存其所在的工作空间。</p>
+<h2 id="场景集合-1"><a href="#场景集合-1" class="headerlink" title="场景集合"></a>场景集合</h2><p>工作空间中的场景集合管理工作空间中保存的所有场景。<br>场景是以抽象的球模式来模拟现实的地球，并将现实世界抽象出来的地理事物在球体上进行展示，从而更直观形象地反映现实地理事物的实际空间位置和相互关系。用户可以将二维或者三维数据直接加载到球上进行浏览，制作专题图等。除此之外，场景还模拟了地球所处的环境，包括：宇宙的星空，地球的大气环境，地球表面的雾环境等。场景还提供了相机的设置，相机可以用来控制对球体的观测角度、方位和观测范围，从而以不同的视角呈现球体的不同部位。<br>场景显示在场景窗口中，一个场景窗口对应一个场景。场景是保存在工作空间中的，因此，要保存场景，必须同时保存场景所在的工作空间。</p>
+<h2 id="资源集合-1"><a href="#资源集合-1" class="headerlink" title="资源集合"></a>资源集合</h2><p>工作空间中的资源集合主要管理工作空间中的地图所使用的符号库资源，包括符号库、线型库和填充库。</p>
+<h2 id="符号库"><a href="#符号库" class="headerlink" title="符号库"></a>符号库</h2><p>使用点符号库设置图层中点的风格，包括符号类型、大小、颜色等；使用线符号库设置图层中线的风格，包括线型、线宽、线的颜色等；使用填充符号库，设置图层中面对象的填充风格。</p>
+
+			</div>
+
+			<!-- recommended posts -->
+			
+
+			<div>
+				<center>
+					<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2099/12/02/dotnet0/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
+
+		
+		   <li class="next"><a href="/2023/05/31/supermap1/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+				</center>
+			</div>
+
+			<!-- share -->
+			
+			
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+			
+
+			
+
+			<!-- comment -->
+			
+
+<!-- <section id="comment">
+  <h2 class="title">留言</h2>
+  
+</section> -->
+
+
+
+			
+			<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
+		
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2023-05-31 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>94</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/超图/">超图<span>2</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+		</div>
+		
+
+
+	</div><!-- row -->
+
+
+	
+    
+      <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
+  role="navigation">
+  <div class="container">
+    <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">月落星辰</a>
+    <div class="collapse navbar-collapse nav-menu">
+      <ul class="nav navbar-nav">
+        
+        <li>
+          <a href="/archives" title="所有发表记录">
+            <i class="fa fa-archive"></i>Archives
+          </a>
+        </li>
+        
+        <li>
+          <a href="/note" title="我的速记">
+            <i class="fa fa-user"></i>Note
+          </a>
+        </li>
+        
+        <li>
+          <a href="/mark" title="mark清单">
+            <i class="fa fa-list-ol"></i>Mark
+          </a>
+        </li>
+        
+        <li>
+          <a href="/message" title="messagebord">
+            <i class="fa fa-book"></i>Messagebord
+          </a>
+        </li>
+        
+        <li>
+          <a href="/about" title="关于我">
+            <i class="fa fa-user"></i>About
+          </a>
+        </li>
+        
+
+        <li>
+          <div class="music-player">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0"
+              src="//music.163.com/outchain/player?type=0&id=8218805597&auto=0&height=66"></iframe>
+        </li>
+      </ul>
+    </div>
+  </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+      <div class="container-narrow">
+        <footer> <a class="baurl" target="_blank;" href="https://beian.miit.gov.cn/">蜀ICP备2020030582号</a>
+|
+
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  浏览 <span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  访客 <span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+
+
+<div class="distant_1"></div>
+
+<p style="padding-bottom:3em;">
+  &copy; 2023 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container-narrow">
+    <footer> <a class="baurl" target="_blank;" href="https://beian.miit.gov.cn/">蜀ICP备2020030582号</a>
+|
+
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  浏览 <span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  访客 <span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+
+
+<div class="distant_1"></div>
+
+<p style="padding-bottom:3em;">
+  &copy; 2023 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> container-narrow -->
+
+  
+
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+
+</body>
+
+</html>

@@ -101,6 +101,112 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool2/" >VScode常用的插件集合</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<ol>
+<li>Vetur&#x2F;Volar ：vue&#x2F;vue3语法高亮、智能感知、Emmet等, 包含格式化功能， Alt+Shift+F （格式化全文）</li>
+<li>ESLint : 校验js代码规范</li>
+<li>Prettier - Code formatter ： 格式化js、css代码插件</li>
+<li>open in browser ： 在文件右键 可以选择在浏览器预览</li>
+<li>Auto Rename Tag : 重命名一个HTML &#x2F; XML标签时，自动重命名配对的HTML &#x2F; XML标签
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool2/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool1/" >npm 实现一次执行多个指令</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>现在有这么一个情况是存在以下指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;dev&quot;</span>: <span class="string">&quot;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;npm run dev&quot;</span>,</span><br><span class="line">    <span class="string">&quot;electron&quot;</span>: <span class="string">&quot;electron-forge start&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;node build/build.js&quot;</span>,       </span><br><span class="line">    <span class="string">&quot;package&quot;</span>:<span class="string">&quot;electron-packager . Electron_Vue应用 --platform=win32 --arch=x64 --icon=favicon.ico --out=./out --asar --app-version=1.0.1 --overwrite --ignore=node_modules&quot;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>我们将要执行start和electron指令，常规的做法是依次npm run start和npm run electron即可；</p>
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue27/" >Vue 常用的UI组件与框架总结</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="一、UI组件及框架（原文地址：https-tangjiusheng-com-vue-155-html）"><a href="#一、UI组件及框架（原文地址：https-tangjiusheng-com-vue-155-html）" class="headerlink" title="一、UI组件及框架（原文地址：https://tangjiusheng.com/vue/155.html）"></a>一、UI组件及框架（原文地址：<a target="_blank" rel="noopener" href="https://tangjiusheng.com/vue/155.html%EF%BC%89">https://tangjiusheng.com/vue/155.html）</a></h3><p>element - 饿了么出品的Vue2的web UI工具套件</p>
+<p>mint-ui - Vue 2的移动UI元素</p>
+<p>iview - 基于 Vuejs 的开源 UI 组件库</p>
+<p>Keen-UI - 轻量级的基本UI组件合集</p>
+<p>vue-material - 通过Vue Material和Vue 2建立精美的app应用</p>
+<p>muse-ui - 三端样式一致的响应式 UI 库</p>
+<p>vuetify - 为移动而生的Vue JS 2组件框架</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue27/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue26/" >Vue2和Vue3的区别</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="一、vue2和vue3双向数据绑定原理的区别？"><a href="#一、vue2和vue3双向数据绑定原理的区别？" class="headerlink" title="一、vue2和vue3双向数据绑定原理的区别？"></a>一、vue2和vue3双向数据绑定原理的区别？</h3><p>vue2 的双向数据绑定是利用ES5 的一个 API Object.definePropert()对数据进行劫持 结合 发布订阅模式的方式来实现的<br>vue3发生了改变，使用proxy替换Object.defineProerty,使用Proxy的优势：<br>可直接监听数组类型的数据变化<br>性能的提升<br>监听的目标为对象本身，不需要像Object.defineProperty一样遍历每个属性，有一定的性能提升<br>可直接实现对象属性的新增&#x2F;删除</p>
+<h3 id="二、根节点的不同"><a href="#二、根节点的不同" class="headerlink" title="二、根节点的不同"></a>二、根节点的不同</h3><p>vue2只接受一个跟几点，而vue3在组件中支持多个根节点.</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue26/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
 			<div class="article-title"><a href="/2022/10/08/vue25/" >使用vite创建Vue3项目</a></div>						
 		</h3>
@@ -119,112 +225,6 @@
 	
 	</div>
   <a type="button" href="/2022/10/08/vue25/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue24/" title="本文档适用于Vue2的项目创建，不适用于Vue3">Vue 2.x项目完整搭建步骤</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1）安装Node（转淘宝镜像）和2.x版本的vue-cli</p>
-<blockquote><p>安装node后可通过指令：node –version</p>
-<p>查看版本号</p>
-<p>安装vue-cli后可通过指令：vue –version 或 vue -V</p>
-<p>查看版本号</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue24/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue23/" >Vue实现通过npm启动和打包时自动切换assetsPublicPath的路径</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>通常情况下我们是修改config》index.js》assetsPublicPath的值：<br>开发环境：’&#x2F;‘<br>生产环境：’.&#x2F;‘</p>
-<p>来解决这个问题，但是我们每次在开发和生产环境（测试与打包）切换的时候，就要手动去修改这个值，这是比较麻烦的，万一忘记修改了，打包到线上就会出现异常，相当烦人！<br>有没有一个让npm进行测试运行和打包的时候自动切换这个路径的一劳永逸的办法呢？</p>
-<p>答案是有的！</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue23/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue22/" >Vue中引入ElementUi</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.安装Element-UI框架</p>
-<blockquote><p>官网：npm i element-ui -S<br>也可以是<br>npm install element-ui –save</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue22/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue21/" >Vue项目中加入百度统计</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>原本我用的是CNZZ插件来做访客统计的功能，但是现在不免费了，一年最低要近1000块大洋才能使用，我只能呵呵。</p>
-<p>主要是网站没人气嘛没必要花这笔钱，而且还穷。</p>
-<p>那就这样吧，再用下下去，就不划算了！！！</p>
-<p>于是在百度搜罗资料，寻求一个Vue项目能做访客统计的插件。</p>
-<p>最终选中了百度统计这款插件，话不多说，用起来先！</p>
-<p>1.申请百度统计的账号（已有账号请跳过此步。）</p>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue21/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
            
@@ -282,11 +282,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>92</span></a></li>
+			<li><a href="/categories/IT/">IT<span>94</span></a></li>
 		
-			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
+			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
-			<li><a href="/categories/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/categories/数据库/">数据库<span>5</span></a></li>
 		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
@@ -301,48 +301,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>8</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
 			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
 		
 			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+			<li><a href="/tags/c/">c#<span>8</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
 		
 			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
 			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
 		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
+		
+			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>44</span></a></li>
+		   <li><a href="/tags">...<span>47</span></a></li>
 		 
 		</ul>
 	</div>
@@ -371,7 +371,7 @@
       </li>
     
       <li>
-        <a href="/2023/04/02/sql4/" ><i class="fa fa-file-o"></i>sqlserver row_num()的用法</a>
+        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

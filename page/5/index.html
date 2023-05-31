@@ -101,6 +101,119 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/dotnet3/" >c#中的值类型和引用类型</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.1 值类型和引用类型的使用特点</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：变量直接存储值，内存通常在栈中分配</span><br><span class="line">2). 引用类型：变量存储的是一个地址，这个地址对应的空间才真正存储数据(值)，内存通常在堆上分配，</span><br><span class="line">当没有任何变量引用这个地址时，该地址对应的数据空间就成为一个垃圾，由GC来回收</span><br></pre></td></tr></table></figure>
+<p>1.2值类型和引用类型的说明</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：主要有 int（整型），bool（bool型），<span class="built_in">float</span>（单精度浮点数），double（双精度浮点数），</span><br><span class="line">char（字符串类型），struct（结构体），enum（枚举），sbyte，byte，short，ushort，uint，long，ulong</span><br><span class="line">2). 引用类型：主要有 string（字符串），object（对象），list（集合），class（类），interface（接口），</span><br><span class="line">array（数组），delegate（委托）、指针、slice切片、map、管道chan等都是引用类型</span><br></pre></td></tr></table></figure>
+
+<p>指针类型</p>
+<p>在不安全的上下文中，类型可以是指针类型、值类型或引用类型。 指针类型声明采用下列形式之一：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>* identifier;</span><br><span class="line">void* identifier; //allowed but not recommended</span><br></pre></td></tr></table></figure>
+<p>以下任一类型均可为指针类型：</p>
+<p>sbyte、byte、short、ushort、int、uint、long、ulong、char、float、double、decimal 或 bool。</p>
+<p>任何枚举类型。<br>任何指针类型。<br>任何仅包含非托管类型字段的用户定义的结构类型</p>
+<pre><code>
+</code></pre>
+
+	
+	</div>
+  <a type="button" href="/2023/02/02/dotnet3/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/javascript6/" >es6新特性有哪些？</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>es6新特性：const与let变量、模板字面量、解构、增强的对象字面量、for…of循环、展开运算符(…)、剩余参数(可变参数)、ES6箭头函数、类的支持、字符串模板、iterator、generator、模块、Symbols等。</p>
+<p>1.let const<br>let 表示申明变量。const 表示申明常量。</p>
+<p>常量定义了就不能改了。对象除外，因为对象指向的地址没变。</p>
+<p>const在申明是必须被赋值。</p>
+<p>两者都为块级作用域。</p>
+<p>块级作用域与函数作用域。任何一对花括号({和｝)中的语句集都属于一个块，在这之中定义的所有变量在代码块外都是不可见的，我们称之为块级作用域。函数作用域就好理解了，定义在函数中的参数和变量在函数外部是不可见的。</p>
+<p>const a &#x3D; 1<br>a &#x3D; 0 &#x2F;&#x2F;报错</p>
+	
+	</div>
+  <a type="button" href="/2023/02/02/javascript6/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/dotnet2/" >ASP.NET.MVC 网站创建流程</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>1).创建空解决方案文件夹：Test<br>2).右键Test&#x3D;》添加&#x3D;》新建解决方案文件夹（3个）<br>（1）Common<br>    右键&#x3D;》添加&#x3D;》新建项目&#x3D;》类库(.NET Standard),名为Common,用于存放通用类（连接类，加密算法…）<br>（2）DAL 为其添加2个类库<br>    Domain：添加实体类型数据类型<br>    Severice：存放业务接口<br>（3）Web<br>    右键&#x3D;》添加新建项目&#x3D;》ASP.NET应用程序（.NET Framework）选择MVC，去掉https项，创建MVC网站</p>
+<p>至此 MVC项目网站创建完毕。        </p>
+
+	
+	</div>
+  <a type="button" href="/2023/02/02/dotnet2/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/dotnet1/" >ASP.NET.MVC中Linq的基本语法</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>LINQ即Language Integrated  Query(语言集成查询)<br>在平常的编写代码中，Linq提供了丰富的查询功能，就是有一点要注意，Linq中 where 的查询与SQL命令中的 Where 作用相似，都是起到范围限定，也就是的过滤作用，而判断条件就是它后面所接的子句<br>一、整理了一下，LINQ的基本语法有8种上下文关键字，注意是关键字，这些关键字的具体说明如下：<br>①from：指定范围变量和数据源<br>②where：根据bool表达式从数据源中筛选数据<br>③select：指定查询结果中的元素所具有的类型或变现形式<br>④group：对查询结果按照键值进行分组<br>⑤into：提供一个标识符，它可以充当对join、group、或者select子句结果的引用<br>⑥orderby：对查询出的元素进行排序<br>⑦join：按照两个指定匹配条件并使用 equals 来连接两个数据源<br>⑧let：产生一个用于储存查询表达式中的子表达式查询结果的变量范围</p>
+	
+	</div>
+  <a type="button" href="/2023/02/02/dotnet1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2022-10-21 </div>
 			<div class="article-title"><a href="/2022/10/21/vue28/" >package.json 和 package-lock.json 解析</a></div>						
 		</h3>
@@ -118,118 +231,6 @@
 	
 	</div>
   <a type="button" href="/2022/10/21/vue28/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-20 </div>
-			<div class="article-title"><a href="/2022/10/20/html9/" >磁盘 硬盘 软盘和内存之间的关系</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>对于“软盘、硬盘、磁盘和内存”这4个概念想必很多小伙伴都有听说过。</p>
-<p>尤其是硬盘和内存。我们去买电脑时有两个必须要考虑的参数，就是内存大小和硬盘大小，一般来说内存越大电脑运行速度会越快，硬盘越大能够存储的文件就越多。这么看来硬盘和内存好像毫无关联，其实不然，不管是内存和硬盘还是软盘和磁盘，它们本质上来说都是用来存储数据的。</p>
-<p>一、磁盘</p>
-<p>先来说说磁盘、硬盘和软盘之间的关系。</p>
-<p>磁盘分为硬盘和软盘，它们都是外部存储器。外部存储器的特点就是不受断电的影响。那硬盘和软盘又有什么区别呢？</p>
-<p>硬盘一般都装在机箱里面，容量较大，能够存储的文件比较多。</p>
-<p>而软盘并不是装在电脑里面的，而是可移动的，一般用来存储文件和不同电脑之间进行拷贝文件，就功能上来说它和现在的U盘是一样的，只是外形、存储原理不一样，它的容量要比硬盘小的多，比如最常用的3.5英寸的软盘容量只有1.44MB，这么小的存储空间对于目前的我们来说基本上什么也干不了，而且它的存储速度要比硬盘慢很多。所以只有早期的电脑才会用软盘，目前已经被淘汰。</p>
-<p>二、内存</p>
-<p>前面说了外部存储器，再来说说内部存储器，也就是我们所说的内存。内存的的存储速度要比硬盘快很多，但是内存会受断电的影响，也就是说一断电里面存储的所有数据都会丢失。</p>
-<p>举个例子，如果我们做了半天的word没点保存键，结果这时候家里停电了（或者死机了），那么再开机的时候我们做的那份word就没了。因为没点保存键的话，这些还没保存的数据就是暂时存储在内存里面的，一旦断电就会丢失，只有我们点击保存按钮后才会永久存储在磁盘中。 之前在网上看到了一个特别通俗好理解的说法：</p>
-<p>做菜时，我们聪明的大脑和灵巧的双手就好比是CPU，切下来的菜好比是数据，切下来的菜总是先临时放在砧板上，砧板就好比是内存，砧板小了菜容易掉到地上，就象内存小了容易卡一样，最后菜才进锅子（硬盘）。</p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/20/html9/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-19 </div>
-			<div class="article-title"><a href="/2022/10/19/html8/" >对HTML转义符号转换</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> function escape2Html(str) &#123;</span><br><span class="line">    var arrEntities=&#123;&#x27;lt&#x27;:&#x27;&lt;&#x27;,&#x27;gt&#x27;:&#x27;&gt;&#x27;,&#x27;nbsp&#x27;:&#x27; &#x27;,&#x27;amp&#x27;:&#x27;&amp;&#x27;,&#x27;quot&#x27;:&#x27;&quot;&#x27;&#125;;</span><br><span class="line">   return str.replace(/&amp;(lt|gt|nbsp|amp|quot);/ig,function(all,t)&#123;return arrEntities[t];&#125;);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">var s = escape2Html(&quot;&amp;lt;p&amp;gt;fasfas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;fkasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasfjalsk&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://t12.baidu.com/it/u=2506809329,284241162&amp;amp;amp;fm=76&amp;quot; style=&amp;quot;max-width:100%;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&quot;);</span><br><span class="line"> </span><br><span class="line">alert(s);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/19/html8/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-19 </div>
-			<div class="article-title"><a href="/2022/10/19/electron2/" title="此篇文章信息来源于Electron官网资料和自己实践查阅资料所得。">Electron中使用Vue2网站构建跨平台的桌面应用程序</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Electron是一个可使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序的工具；</p>
-<p>详细信息可查看博主整理的文档：<a target="_blank" rel="noopener" href="https://xuexiup.github.io/2022/10/13/special3/">https://xuexiup.github.io/2022/10/13/special3/</a></p>
-<p>这里我们详细介绍下Electron结合Vue2的使用（Vue3项目类似只是网站开发方式变了，Vue3用到了TS）</p>
-<p>1）搭建 <a href="https://www.romanticlife.top/blog/0/256" title="" target="">Vue2.x的网站</a> 这里我命名为：my_electron_vue</p>
-<p>2）进入网站目录安装Electron及打包工具</p>
-<p>cd my_electron_vue</p>
-<p>cnpm install –save-dev electron electron-packager</p>
-<p>3)执行命令：cnpm install</p>
-<p>4)在根目录下创建一个名为：main.js的文件</p>
-	
-	</div>
-  <a type="button" href="/2022/10/19/electron2/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-18 </div>
-			<div class="article-title"><a href="/2022/10/18/tool11/" >Selenium和Python的区别</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Python是一门编程语言；<br>Selenium是一个用于Web应用程序测试的工具（IDE）。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样；<br>也就是说 selenium ide是用来录制， 录制完的脚本，通过RC启动不同浏览器运行测试；<br>python+selenium，是需要自己搭框架的，搭完框架后需要自己去写脚本，需要对selenium进行二次封装；<br>总结：Selenium可以用python语言来调用它(Selenium RC)进行测试，这样写脚本会更加灵活，更有效率，可读性强，重复运行稳定性高，而且也易于维护。</p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/18/tool11/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
            
@@ -287,11 +288,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>92</span></a></li>
+			<li><a href="/categories/IT/">IT<span>94</span></a></li>
 		
-			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
+			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
-			<li><a href="/categories/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/categories/数据库/">数据库<span>5</span></a></li>
 		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
@@ -306,48 +307,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
 		
 			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
 		
-			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
 		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>8</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
 			<li><a href="/tags/winform/">winform<span>2</span></a></li>
 		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+			<li><a href="/tags/工具/">工具<span>13</span></a></li>
 		
 			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
 			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
 		
 			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
 		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+		
+			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>44</span></a></li>
+		   <li><a href="/tags">...<span>47</span></a></li>
 		 
 		</ul>
 	</div>
@@ -376,7 +377,7 @@
       </li>
     
       <li>
-        <a href="/2023/04/02/sql4/" ><i class="fa fa-file-o"></i>sqlserver row_num()的用法</a>
+        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

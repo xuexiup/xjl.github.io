@@ -101,6 +101,102 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2023-04-02 </div>
+			<div class="article-title"><a href="/2023/04/02/sql2/" >sqlserver游标</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>@@fetch_status&#x3D; 0	fetch语句执行成功<br>@@fetch_status&#x3D;-1	fetch语句失败或行不在结果集中<br>@@fetch_status&#x3D;-2	提取的行不存在<br>@@fetch_status&#x3D;-9	光标未执行提取操作</p>
+<p>@@error&#x3D;0			表示执行出错</p>
+	
+	</div>
+  <a type="button" href="/2023/04/02/sql2/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-04-02 </div>
+			<div class="article-title"><a href="/2023/04/02/sql1/" >sqlserver常用知识</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>–<br>SQL Server(MSSQLSERVER)启动出现 17058的错误,双击服务点击登录,选择本地系统账户即可<br>–<br>SQL Server(MSSQLSERVER)启动出现 17058的错误,双击服务点击登录,选择本地系统账户即可</p>
+	
+	</div>
+  <a type="button" href="/2023/04/02/sql1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-03-07 </div>
+			<div class="article-title"><a href="/2023/03/07/dotnet01/" >ASP.Net MVC常用知识大全</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="MVC中的TempData-ViewBag-ViewData区别"><a href="#MVC中的TempData-ViewBag-ViewData区别" class="headerlink" title="MVC中的TempData\ViewBag\ViewData区别?"></a>MVC中的TempData\ViewBag\ViewData区别?</h3><blockquote><p>TempData  保存在Session中，Controller每次执行请求的时候，会从Session中先获取 TempData，而后清除Session，获取完TempData数据，虽然保存在内部字典对象中，但是其集合中的每个条目访问一次后就从字典表中删 除，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换。</p>
+<p>ViewBag和ViewData只在当前Action中有效，等同于View，ViewBag比ViewData慢，ViewBag存dynamic类型数据，使用时不需要类型转换</p>
+<p>ViewData和ViewBag 中的值可以互相访问，因为ViewBag的实现中包含了ViewData，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2023/03/07/dotnet01/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-03-05 </div>
+			<div class="article-title"><a href="/2023/03/05/abp1/" title="资料来源于实际实践或网络查找">.NET开发框架 ABP</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="ABP总体介绍"><a href="#ABP总体介绍" class="headerlink" title="ABP总体介绍"></a>ABP总体介绍</h3><p>ABP是ASP.NET Boilerplate Project，ASP.NET样板项目。<br>ABP框架定位于快速开发<br>ABP是一个用于最快实践和流行开发现代Web应用程序的新起点，旨在成为一个通用的Web应用程序框架和项目模板。<br>ABP基于DDD的经典分层架构思想，实现了众多DDD的概念。</p>
+	
+	</div>
+  <a type="button" href="/2023/03/05/abp1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2023-02-16 </div>
 			<div class="article-title"><a href="/2023/02/16/dotnet7/" title="资料来源于实践、网络查询">.Net基础十问</a></div>						
 		</h3>
@@ -121,105 +217,6 @@
 	
 	</div>
   <a type="button" href="/2023/02/16/dotnet7/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-15 </div>
-			<div class="article-title"><a href="/2023/02/15/dotnet6/" >winform知识理解</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Winform的窗体之间的几种传值方法？"><a href="#Winform的窗体之间的几种传值方法？" class="headerlink" title="Winform的窗体之间的几种传值方法？"></a>Winform的窗体之间的几种传值方法？</h2><p> 1、构造函数传值，但这种方法是单向的（推荐)</p>
-<p>上代码，先传值</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> private void button2_Click(objectsender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Form3 fr3 = new Form3(<span class="string">&quot;要传的值啊&quot;</span>);</span><br><span class="line">            fr3.ShowDialog();</span><br><span class="line">        &#125;</span><br><span class="line">接值，对了，这里需要重载一个Form3的构造函数，然后将拿到的值显示出来</span><br><span class="line"></span><br><span class="line"> public Form3(string canshu)</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">            label1.Text =canshu;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2023/02/15/dotnet6/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-09 </div>
-			<div class="article-title"><a href="/2023/02/09/html11/" >Sass的常见问题点</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1)定义SASS？<br>SASS表示语法很棒的样式表。它是一个CSS预处理程序, 用于减少与CSS的重复并节省时间。它为基本语言增添了力量和优雅, 并帮助你添加变量, 嵌套规则, mixin, 内联导入, 继承等, 所有这些都具有与CSS完全兼容的语法。<br>面试必备！常见SASS面试题合集</p>
-<p>2)谁是SASS的发明者？<br>Hampton Catlin被称为SASS的父亲。</p>
-<p>3)使用SASS的原因是什么？<br>以下是SASS受欢迎的一些重要原因。<br>你可以轻松高效地编写代码, 并且易于维护。<br>它是一种预处理语言, 提供了CSS语法。<br>它是CSS的超集, 包含CSS的所有功能, 并且是用Ruby编码的开源预处理器。<br>它是更稳定, 功能更强大的CSS扩展和样式文档, 结构更清晰。<br>它促进了可重用性方法, 逻辑语句以及一些内置功能, 例如颜色处理, 数学和参数列表项。</p>
-	
-	</div>
-  <a type="button" href="/2023/02/09/html11/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-09 </div>
-			<div class="article-title"><a href="/2023/02/09/vue29/" >axios 和 express的区别</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<blockquote><p>axios是工作在前端，向后端提出申请，等待返回数据的。<br>express，是工作在后端(node环境)，接受前端发出的请求，处理会返回数据的。二者是合作关系。<br>express不只是接收axios的请求，还可以接收其他请求，可以返回HTML，JSON，文件，图片等。<br>express不是用来做请求的~<br>作为node的一个框架，主要作用是开启一个web服务（监听请求的），所以它有路由<br>axios 被用来发送请求（你说的做请求~）<br>它们之间关系可以是  (axios 发送请求)(express 响应请求)<br>当然 express 作为一个框架，也是可以使用 axios 的，用于请求其他web服务<br>这个内部的实现就是 node 的 http&#x2F;https 模块的 request方法</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2023/02/09/vue29/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-09 </div>
-			<div class="article-title"><a href="/2023/02/09/html10/" >Sass的优缺点优点</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>优点：<br>Sass可以帮助您在编程结构中编写简洁，简单且更少的CSS。<br>1）它包含的代码更少，因此您可以更快地编写CSS。<br>2）它是CSS的扩展，因此更加稳定，功能强大和美观。因此，设计人员和开发人员可以更轻松，更高效地进行工作。<br>3）它与所有版本的CSS兼容。因此，您可以使用任何可用的CSS库。<br>4）它提供了嵌套功能，因此您可以使用嵌套语法和有用的函数，例如颜色处理，数学函数和其他值。</p>
-<p>缺点：<br>1）开发人员必须有足够的时间来学习此预处理器中存在的新功能，然后才能使用它。<br>2）使用Sass可能会失去浏览器内置元素检查器的优势。</p>
-
-	
-	</div>
-  <a type="button" href="/2023/02/09/html10/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
            
@@ -277,11 +274,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>92</span></a></li>
+			<li><a href="/categories/IT/">IT<span>94</span></a></li>
 		
-			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
+			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
-			<li><a href="/categories/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/categories/数据库/">数据库<span>5</span></a></li>
 		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
@@ -296,48 +293,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/winform/">winform<span>2</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
 			<li><a href="/tags/C/">C#<span>1</span></a></li>
-		
-			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/工具/">工具<span>12</span></a></li>
 		
 			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
 			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
 		
-			<li><a href="/tags/c/">c#<span>8</span></a></li>
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
 		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
 		
 			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>44</span></a></li>
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
+		
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>47</span></a></li>
 		 
 		</ul>
 	</div>
@@ -366,7 +363,7 @@
       </li>
     
       <li>
-        <a href="/2023/04/02/sql4/" ><i class="fa fa-file-o"></i>sqlserver row_num()的用法</a>
+        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

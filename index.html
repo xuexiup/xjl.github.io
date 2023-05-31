@@ -311,6 +311,14 @@
 		
             
 		
+            
+		
+            
+		
+            
+		
+            
+		
         
         <!-- render other articles -->
         
@@ -424,8 +432,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2023-04-02 </div>
-			<div class="article-title"><a href="/2023/04/02/sql4/" >sqlserver row_num()的用法</a></div>						
+			<div class="date"> 2023-05-31 </div>
+			<div class="article-title"><a href="/2023/05/31/supermap2/" >SuperMap GIS数据组织结构</a></div>						
 		</h3>
 	
 
@@ -434,12 +442,11 @@
   <div class="row">
 	
 	
-		<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select row_number() over(order by 表名 desc) as RowNumber_ID,*from </span><br><span class="line">(</span><br><span class="line">   select t.name as <span class="string">&#x27;表名&#x27;</span> ,i.name as <span class="string">&#x27;主键&#x27;</span> </span><br><span class="line">   ,s.avg_fragmentation_in_percent as <span class="string">&#x27;阈值&#x27;</span> from sys.tables t </span><br><span class="line">	<span class="built_in">join</span> sys.indexes i on i.object_id=t.object_id  </span><br><span class="line">	<span class="built_in">join</span> sys.dm_db_index_physical_stats(db_id(),object_id(0),null,null,<span class="string">&#x27;limited&#x27;</span>) s  </span><br><span class="line">	on s.object_id=i.object_id and s.index_id=i.index_id </span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select row_number() over( partition by 阈值 order by 表名 desc) as RowNumber_ID,*from </span><br><span class="line">(</span><br><span class="line">   select t.name as <span class="string">&#x27;表名&#x27;</span> ,i.name as <span class="string">&#x27;主键&#x27;</span> </span><br><span class="line">   ,s.avg_fragmentation_in_percent as <span class="string">&#x27;阈值&#x27;</span> from sys.tables t </span><br><span class="line">	<span class="built_in">join</span> sys.indexes i on i.object_id=t.object_id  </span><br><span class="line">	<span class="built_in">join</span> sys.dm_db_index_physical_stats(db_id(),object_id(0),null,null,<span class="string">&#x27;limited&#x27;</span>) s  </span><br><span class="line">	on s.object_id=i.object_id and s.index_id=i.index_id </span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
+		<p>SuperMap GIS 的数据组织结构，主要包括工作空间、数据源、数据集、地图、场景、布局等。为了方便您更快更好的了解和使用SuperMap iDesktop 8C 系列产品，本部分将这些数据组织成分予以详细介绍。</p>
+<p>SuperMap GIS 的数据组织形式为类似于树状层次结构，这种结构可以通过应用程序界面上的工作空间管理器表现。如下图所示，左图为工作空间管理器，工作空间管理器当前打开了一个工作空间，右图为对应抽象出来的 SuperMap GIS 数据组织结构的示意图。在SuperMap iDesktop 8C 系列产品中用户的一个工作环境对应一个工作空间，每一个工作空间都具有下图（右图）所示的树状层次结构，该结构中工作空间对应根结点。一个工作空间包含唯一的数据源集合、唯一的地图集合、唯一的布局集合、唯一的场景集合和唯一的资源集合（符号库集合），对应着工作空间的子结点。</p>
 	
 	</div>
-  <a type="button" href="/2023/04/02/sql4/#more" class="btn btn-default more">阅读更多</a>
+  <a type="button" href="/2023/05/31/supermap2/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
            
@@ -497,11 +504,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>92</span></a></li>
+			<li><a href="/categories/IT/">IT<span>94</span></a></li>
 		
-			<li><a href="/categories/学习专栏/">学习专栏<span>5</span></a></li>
+			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
-			<li><a href="/categories/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/categories/数据库/">数据库<span>5</span></a></li>
 		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
@@ -516,48 +523,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/工具/">工具<span>12</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>8</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
 		
 			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
 		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+			<li><a href="/tags/工具/">工具<span>13</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
 			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
 		
 			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
 		
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>8</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>2</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
 			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
-		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-		
-		   <li><a href="/tags">...<span>44</span></a></li>
+		   <li><a href="/tags">...<span>47</span></a></li>
 		 
 		</ul>
 	</div>
@@ -586,7 +593,7 @@
       </li>
     
       <li>
-        <a href="/2023/04/02/sql4/" ><i class="fa fa-file-o"></i>sqlserver row_num()的用法</a>
+        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>
