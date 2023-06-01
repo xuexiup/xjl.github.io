@@ -102,6 +102,35 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2023-04-02 </div>
+			<div class="article-title"><a href="/2023/04/02/sql3/" >sqlserver with as的用法</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>&#x2F;<strong><strong><strong><strong><strong><strong><strong>以下sql语法为优化前后，查看有何妙处</strong></strong></strong></strong></strong></strong></strong>*****&#x2F;<br>–前</p>
+<blockquote><p>select n.c1, n.c2,n.c3,n.c4,n.c5 from<br>  (<br>       select  count(t.c1), t.c1, t.c2,t.c3,t.c4,t.c5  from tab1 t<br>       where t.c2 not in (‘val1’,’val2’,’val3’,’val4’,’val5’)<br>       group by t.c1, t.c2,t.c3,t.c4,t.c5<br>  ) n<br>  where 1&#x3D;1<br>  and n.c1 is not null<br>  and not exists<br>  (<br>     select * from<br>     (<br>        select  count(s.c2), s.c1, s.c2<br>        from (<br>                select m.c1, m.c2,m.c3,m.c4,m.c5  from tab1 m<br>                where exists<br>                (<br>                    select c1 from tab2 n<br>                    where c2 &gt; sysdate - 14<br>                    and m.c1 &#x3D; n.c1<br>                )<br>                and m.c1 is not null<br>                and m.c2 not in  (‘val1’,’val2’, ‘val3’, ‘val4’, ‘val5’)<br>              ) s<br>        group by s.c1, s.c2<br>     )<br>     t1 where t1.c2 &#x3D; n.c2<br>  )</p>
+</blockquote> 
+<p>–后</p>
+<blockquote><p>with t1 as(<br> select count(t.c1), t.c1,t.c2,t.c3,t.c4,t.c5<br>   from tab1 t<br>  where t.c2 not in (‘val1’,’val2’,’val3’,’val4’,’val5’)<br>    and c1 is not null<br>  group by t.c1, t.c2,t.c3,t.c4,t.c5)</p>
+<p> select t1.c1,t1.c2,t1.c3,t1.c4,t1.c5<br>   from t1<br> where not exists(<br> select &#x2F;<em>+ use_hash(m,n)</em>&#x2F; m.c1, m.c2,m.c3,m.c4,m.c5<br>    from t1 m,tab2 n<br>   where n.c2 &gt; sysdate - 14<br>     and m.c1 &#x3D; n.c1<br>     and t1.c2 &#x3D; m.c2);</p>
+</blockquote>    
+	
+	</div>
+  <a type="button" href="/2023/04/02/sql3/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-04-02 </div>
 			<div class="article-title"><a href="/2023/04/02/sql2/" >sqlserver游标</a></div>						
 		</h3>
 	
@@ -192,35 +221,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-16 </div>
-			<div class="article-title"><a href="/2023/02/16/dotnet7/" title="资料来源于实践、网络查询">.Net基础十问</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>第一问：C#中变量类型分为哪两种？</p>
-<blockquote><p>值类型和引用类型；值类型变量自身存储数据，引用类型存储的是实际数据的引用，通过引用找到实际的数据。</p>
-</blockquote>        
-
-<p>第二问：Class和Struct的区别？</p>
-<blockquote><p>Class为引用类型，可以被实例化，存储实际的引用；Struct为值类型，值类型自身存储数据。</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2023/02/16/dotnet7/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -274,7 +274,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>94</span></a></li>
+			<li><a href="/categories/IT/">IT<span>95</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -293,45 +293,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
 		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/工具/">工具<span>13</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>8</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
 			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
 		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
-			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+		
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
+		
+			<li><a href="/tags/超图/">超图<span>2</span></a></li>
+		
+			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+		
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>47</span></a></li>
@@ -363,7 +363,7 @@
       </li>
     
       <li>
-        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
+        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
       </li>
     
   </ul>

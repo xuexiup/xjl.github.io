@@ -460,6 +460,7 @@ a {
     font-style: italic;
     color: #F3E4CF;
 }
+/*
 .mypage table{
     border:1px solid gray;
    
@@ -471,5 +472,20 @@ a {
 
 .mypage table tbody td{
     border:1px dotted gray;
+}
+*/
+.highlight,.bash,.gutter,.code,.code>pre{
+    background-color: #FBEBD4 !important;
+}
+
+.gutter>pre{
+    background-color: #FBEBD4 !important;    
+    border-right: 1px solid rgba(0, 0, 0, .25) !important;  
+    color:rgba(0, 0, 0, .2) !important;      
+}
+
+.code>pre{
+    color:#A3613D !important;
+    padding-left:8px;
 }
 /*修改样式end*/

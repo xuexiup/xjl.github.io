@@ -102,6 +102,31 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/ui2/" >ElementUI控件el-tree方法renderContent的使用</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>renderContent并不会影响代码中既定tree数据层结构渲染加载；</p>
+<p>这里的作用是根据tree的特定level调整其样式：</p>
+<h2 id="el-tree"><a href="#el-tree" class="headerlink" title="el-tree"></a>el-tree</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tree</span><br><span class="line"></span><br><span class="line">                :render-content=<span class="string">&quot;renderContent&quot;</span></span><br><span class="line"></span><br><span class="line">                :data=<span class="string">&quot;treedata&quot;</span></span><br><span class="line"></span><br><span class="line">                default-expand-all</span><br><span class="line"></span><br><span class="line">                :show-checkbox=<span class="string">&quot;showcheckbox&quot;</span></span><br><span class="line"></span><br><span class="line">                highlight-current</span><br><span class="line"></span><br><span class="line">                node-key=<span class="string">&quot;itemId&quot;</span></span><br><span class="line"></span><br><span class="line">                :expand-on-click-node=<span class="string">&quot;false&quot;</span></span><br><span class="line"></span><br><span class="line">                @node-click=<span class="string">&quot;handleNodeClick&quot;</span></span><br><span class="line"></span><br><span class="line">                :props=<span class="string">&quot;ItemProps&quot;</span></span><br><span class="line"></span><br><span class="line">                v-loading=<span class="string">&quot;ISload&quot;</span></span><br><span class="line"></span><br><span class="line">                ref=<span class="string">&quot;tree&quot;</span></span><br><span class="line"></span><br><span class="line">                @check-change=<span class="string">&quot;itemCheckChange&quot;</span></span><br><span class="line"></span><br><span class="line">                style=<span class="string">&quot;margin-top: 1em;&quot;</span></span><br><span class="line"></span><br><span class="line">              &gt;&lt;/el-tree&gt;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/ui2/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
 			<div class="article-title"><a href="/2022/10/13/ui1/" >ElementUI栅格系统布局与偏移</a></div>						
 		</h3>
 	
@@ -194,35 +219,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css7/" >标签添加自动换行的属性</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<blockquote><p>word-wrap:break-word;</p>
-<p>white-space: pre-wrap;</p>
-<p>white-space: -moz-pre-wrap;</p>
-<p>white-space: -pre-wrap;</p>
-<p>white-space:-o-pre-wrap;</p>
-<p>word-wrap: break-word;</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/13/css7/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -276,7 +272,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>94</span></a></li>
+			<li><a href="/categories/IT/">IT<span>95</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -295,45 +291,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>9</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
+		
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
 		
 			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
 		
 			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
 		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
-		
-			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/超图/">超图<span>2</span></a></li>
-		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>2</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
-		
 			<li><a href="/tags/UI/">UI<span>3</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>47</span></a></li>
@@ -365,7 +361,7 @@
       </li>
     
       <li>
-        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
+        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
       </li>
     
   </ul>

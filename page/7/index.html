@@ -101,6 +101,37 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2022-10-18 </div>
+			<div class="article-title"><a href="/2022/10/18/special5/" >nginx学习之路</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<blockquote><p>1、解决nginx报错：No mapping for the Unicode character exists in the target multi-byte code pa.. </p>
+</blockquote>
+
+<h2 id="原因：nginx-路径中有中文"><a href="#原因：nginx-路径中有中文" class="headerlink" title="原因：nginx 路径中有中文"></a>原因：nginx 路径中有中文</h2><blockquote><p>2、[emerg] 12080#3204: bind() to 0.0.0.0:10099 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)</p>
+</blockquote>
+
+<h2 id="原因：10099端口被占用了"><a href="#原因：10099端口被占用了" class="headerlink" title="原因：10099端口被占用了"></a>原因：10099端口被占用了</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">切换另一个没被占用的端口便可以解决问题。</span><br></pre></td></tr></table></figure>
+
+<h3 id="如果我们想要查看10099端口被什么应用占用？"><a href="#如果我们想要查看10099端口被什么应用占用？" class="headerlink" title="如果我们想要查看10099端口被什么应用占用？"></a>如果我们想要查看10099端口被什么应用占用？</h3><p>1、按键盘win+r 打开运行界面，输入cmd，确定，打开管理员界<br>2、输入netstat -aon | findstr :10099  –查看对应的pid<br>3、输入 tasklist|findstr “对应的pid”    </p>
+	
+	</div>
+  <a type="button" href="/2022/10/18/special5/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
 			<div class="article-title"><a href="/2022/10/13/article1/" >不要制止雨，愿将此生化作雨</a></div>						
 		</h3>
@@ -292,33 +323,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis5/" >Redis五大数据类型的基本使用</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.string</p>
-<p>redis最基本的类型，你可以理解成与Memcached一模一样的类型，一个key对应一个value。</p>
-<p>string类型是二进制安全的。意思是redis的string可以包含任何数据。比如jpg图片或者序列化的对象 。</p>
-<p>string类型是Redis最基本的数据类型，一个键最大能存储512MB。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. redis 127.0.0.1:6379&gt; SET name <span class="string">&quot;redis.net.cn&quot;</span></span><br><span class="line"></span><br><span class="line">2. OK</span><br><span class="line"></span><br><span class="line">3. redis 127.0.0.1:6379&gt; GET name</span><br><span class="line"></span><br><span class="line">4. <span class="string">&quot;redis.net.cn&quot;</span></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis5/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -372,7 +376,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>94</span></a></li>
+			<li><a href="/categories/IT/">IT<span>95</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -391,43 +395,43 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
 		
 			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
 		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
 		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
-			<li><a href="/tags/winform/">winform<span>2</span></a></li>
+			<li><a href="/tags/工具/">工具<span>13</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-			<li><a href="/tags/c/">c#<span>8</span></a></li>
+			<li><a href="/tags/超图/">超图<span>2</span></a></li>
 		
 			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
 		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
+		
+			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
 		
 			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
 		
@@ -461,7 +465,7 @@
       </li>
     
       <li>
-        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
+        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
       </li>
     
   </ul>
