@@ -90,6 +90,53 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis8/" >Redis简介</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。<br>它通常被称为数据结构服务器，因为值（value）支持五种数据类型：</p>
+<blockquote><p>string（字符串）<br>hash（哈希）<br>list（列表）<br>set（集合）<br>zset(sorted set：有序集合)。</p>
+</blockquote>
+
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis8/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis7/" >Redis配置与命令</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>Redis 的配置文件位于 Redis 安装目录下，文件名为 redis.conf。<br>你可以通过修改 redis.conf 文件或使用 CONFIG set 命令来修改配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.redis 127.0.0.1:6379&gt; CONFIG SET CONFIG_SETTING_NAME NEW_CONFIG_VALUE</span><br><span class="line">实例</span><br><span class="line">1.redis 127.0.0.1:6379&gt; CONFIG SET loglevel <span class="string">&quot;notice&quot;</span></span><br><span class="line">2.OK</span><br><span class="line">3.redis 127.0.0.1:6379&gt; CONFIG GET loglevel</span><br><span class="line">4. </span><br><span class="line">5.1) <span class="string">&quot;loglevel&quot;</span></span><br><span class="line">6.2) <span class="string">&quot;notice&quot;</span></span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis7/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
 			<div class="article-title"><a href="/2022/10/13/redis6/" >Redis keys 命令</a></div>						
 		</h3>
 	
@@ -320,54 +367,6 @@
 </div>
 
 	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis3/" >Redis发布订阅</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>Redis 发布订阅(pub&#x2F;sub)是一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。</p>
-<p>Redis 客户端可以订阅任意数量的频道。</p>
-<p>Redis 发布订阅命令</p>
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis3/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis2/" >Redis事务</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>Redis 事务可以一次执行多个命令， 并且带有以下两个重要的保证：</p>
-<p>1） 事务是一个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执行。事务在执行的过程中，不会被其他客户端发送来的命令请求所打断。</p>
-<p>2）事务是一个原子操作：事务中的命令要么全部被执行，要么全部都不执行。</p>
-<p>一个事务从开始到执行会经历以下三个阶段：</p>
-<p>开始事务》命令入队》执行事务</p>
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis2/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
 	     </div>
 	     <div>
 	       <center>
@@ -417,7 +416,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>95</span></a></li>
+			<li><a href="/categories/IT/">IT<span>97</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -436,45 +435,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/工具/">工具<span>13</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/超图/">超图<span>2</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>3</span></a></li>
-		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
-		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
-		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
 			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
 		
 			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+		
+			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
+		
+			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
 			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+		
+			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+		
+			<li><a href="/tags/超图/">超图<span>3</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>4</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>47</span></a></li>
@@ -506,7 +505,7 @@
       </li>
     
       <li>
-        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
+        <a href="/2023/06/01/supermap3/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

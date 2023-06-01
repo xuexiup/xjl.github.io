@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Winform中Form_Load函数和他的构造函数 public Form()有什么区别？ | 月落星辰</title>
+  
+  <meta name="author" content="南疆">
+  
+  <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
+  
+  
+  <meta name="keywords" content="c#">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="Winform中Form_Load函数和他的构造函数 public Form()有什么区别？" />
+  <meta property="og:site_name" content="月落星辰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <!-- <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css"> -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Winform中Form_Load函数和他的构造函数 public Form()有什么区别？</h1>
+		</div>		
+	
+
+
+
+
+<!-- 不蒜子统计 -->
+<div id="busuanzi_container_page_pv" class="articlenums">
+	<i class="icon-smile icon"></i>文章已阅读<span id="busuanzi_value_page_pv"></span>次
+</div>
+<div>&nbsp;</div>
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+		
+
+			<!-- content -->
+			<div class="mypage">
+				
+
+				<p>在WinForm中，他们虽然都可以用来初始化ＦＯＲＭ中的组件，<br>也存在以下区别:</p>
+<blockquote><p>(1): public Form()：程序入口,它的InitializeComponent()做了许多初始化的工作<br>所以Load才能成为一个事件，InitializeComponent为你的程序作了必要的初始化工作</p>
+<p>(2) Form_Load：装载窗口事件, 是窗体启动时触发的事件</p>
+</blockquote>
+<span id="more"></span>
+
+<p>总的来讲：<br>程序先执行InitializeComponent(); 后执行Form1_Load，InitializeComponent是进行一系列的初始化，Form1_Load是在窗体装载时发生的一个时间。一般写程序你把自己要初始化的东东可以放在Form1_Load中，当然也可以在InitializeComponent中，那就要重载InitializeComponent了。</p>
+<p>public Form是类的构造函数，负责对类成员进行初始化工作。比如所有控件的创建、指定大小、位置等等。习惯上构造函数会调用InitializeComponent来实现窗体的初始化工作（初始化为设计模式中指定的状态）。</p>
+<p>Form_Load是类的自定义方法，用来响应form的Load事件，该事件在窗体初始化完毕（包括所有控件初始化完毕），并且尚未显示的时候触发</p>
+<p>Form()是窗体类的构造方法，有来初始化类的字段属性（其中包括它拥有控件类），和其他构造方法一样他是一个窗体实例产生时最先执行的<br>Form_Load窗体加载方法，用来图形界面，这时候可以设置一些窗体属性，当然在构造函数里也可以</p>
+
+			</div>
+
+			<!-- recommended posts -->
+			
+
+			<div>
+				<center>
+					<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2023/06/01/supermap3/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
+
+		
+		   <li class="next"><a href="/2023/06/01/csharp2/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+				</center>
+			</div>
+
+			<!-- share -->
+			
+			
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+			
+
+			
+
+			<!-- comment -->
+			
+
+<!-- <section id="comment">
+  <h2 class="title">留言</h2>
+  
+</section> -->
+
+
+
+			
+			<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
+		
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2023-06-01 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>97</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/c/">c#<span>10</span></a></li> <li><a href="/tags/winform/">winform<span>4</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+		</div>
+		
+
+
+	</div><!-- row -->
+
+
+	
+    
+      <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
+  role="navigation">
+  <div class="container">
+    <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">月落星辰</a>
+    <div class="collapse navbar-collapse nav-menu">
+      <ul class="nav navbar-nav">
+        
+        <li>
+          <a href="/archives" title="所有发表记录">
+            <i class="fa fa-archive"></i>Archives
+          </a>
+        </li>
+        
+        <li>
+          <a href="/note" title="我的速记">
+            <i class="fa fa-user"></i>Note
+          </a>
+        </li>
+        
+        <li>
+          <a href="/mark" title="mark清单">
+            <i class="fa fa-list-ol"></i>Mark
+          </a>
+        </li>
+        
+        <li>
+          <a href="/message" title="messagebord">
+            <i class="fa fa-book"></i>Messagebord
+          </a>
+        </li>
+        
+        <li>
+          <a href="/about" title="关于我">
+            <i class="fa fa-user"></i>About
+          </a>
+        </li>
+        
+
+        <li>
+          <div class="music-player">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0"
+              src="//music.163.com/outchain/player?type=0&id=8218805597&auto=0&height=66"></iframe>
+        </li>
+      </ul>
+    </div>
+  </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+      <div class="container-narrow">
+        <footer> <a class="baurl" target="_blank;" href="https://beian.miit.gov.cn/">蜀ICP备2020030582号</a>
+|
+
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  浏览 <span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  访客 <span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+
+
+<div class="distant_1"></div>
+
+<p style="padding-bottom:3em;">
+  &copy; 2023 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container-narrow">
+    <footer> <a class="baurl" target="_blank;" href="https://beian.miit.gov.cn/">蜀ICP备2020030582号</a>
+|
+
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  浏览 <span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  访客 <span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+
+
+<div class="distant_1"></div>
+
+<p style="padding-bottom:3em;">
+  &copy; 2023 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> container-narrow -->
+
+  
+
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+
+</body>
+
+</html>

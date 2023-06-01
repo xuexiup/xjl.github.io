@@ -101,6 +101,54 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2023-05-19 </div>
+			<div class="article-title"><a href="/2023/05/19/oracle1/" >oracle表空间</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Oracle表空间之基本概念"><a href="#Oracle表空间之基本概念" class="headerlink" title="Oracle表空间之基本概念"></a>Oracle表空间之基本概念</h2><p>ORACLE的一个表空间相当于SQLSERVER的一个库。<br>ORACLE数据库被划分成称作为表空间 [1] 的逻辑区域——形成ORACLE数据库的逻辑结构。一个ORACLE数据库能够有一个或多个表空间,而一个表空间则对应着一个或多个物理的数据库文件。表空间是ORACLE数据库恢复的最小单位,容纳着许多数据库实体,如表、视图、索引、聚簇、回退段和临时段等。<br>每个ORACLE数据库均有SYSTEM表空间,这是数据库创建时自动创建的。SYSTEM表空间必须总要保持联机,因为其包含着数据库运行所要求的基本信息(关于整个数据库的数据字典、联机求助机制、所有回退段、临时段和自举段、所有的用户数据库实体、其它ORACLE软件产品要求的表)。<br>一个小型应用的ORACLE数据库通常仅包括SYSTEM表空间,然而一个稍大型应用的ORACLE数据库采用多个表空间会对数据库的使用带来更大的方便。<br>例如：便于理解，把oracle数据库看作一个实在房间，表空间可以看作这个房间的空间，是可以自由分配，在这空间里面可以堆放多个箱子（箱子可以看作数据库文件），箱子里面再装物件（物件看作表）。用户指定表空间也就是你希望把属于这个用户的表放在那个房间（表空间）里面。<br>表空间是一个虚拟的概念可以无限大，但是需要由数据文件作为载体。<br>Segment（段）<br>段是指占用数据文件空间的通称，或数据库对象使用的空间的集合；段可以有表段、索引段、回滚段、临时段和高速缓存段等。<br>Extent（区间）<br>分配给对象（如表）的任何连续块叫区间；区间也叫扩展，因为当它用完已经分配的区间后，再有新的记录插入就必须在分配新的区间（即扩展一些块）；一旦区间分配给某个对象（表、索引及簇），则该区间就不能再分配给其它的对象.</p>
+	
+	</div>
+  <a type="button" href="/2023/05/19/oracle1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-04-02 </div>
+			<div class="article-title"><a href="/2023/04/02/sql4/" >sqlserver row_num()的用法</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select row_number() over(order by 表名 desc) as RowNumber_ID,*from </span><br><span class="line">(</span><br><span class="line">   select t.name as <span class="string">&#x27;表名&#x27;</span> ,i.name as <span class="string">&#x27;主键&#x27;</span> </span><br><span class="line">   ,s.avg_fragmentation_in_percent as <span class="string">&#x27;阈值&#x27;</span> from sys.tables t </span><br><span class="line">	<span class="built_in">join</span> sys.indexes i on i.object_id=t.object_id  </span><br><span class="line">	<span class="built_in">join</span> sys.dm_db_index_physical_stats(db_id(),object_id(0),null,null,<span class="string">&#x27;limited&#x27;</span>) s  </span><br><span class="line">	on s.object_id=i.object_id and s.index_id=i.index_id </span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select row_number() over( partition by 阈值 order by 表名 desc) as RowNumber_ID,*from </span><br><span class="line">(</span><br><span class="line">   select t.name as <span class="string">&#x27;表名&#x27;</span> ,i.name as <span class="string">&#x27;主键&#x27;</span> </span><br><span class="line">   ,s.avg_fragmentation_in_percent as <span class="string">&#x27;阈值&#x27;</span> from sys.tables t </span><br><span class="line">	<span class="built_in">join</span> sys.indexes i on i.object_id=t.object_id  </span><br><span class="line">	<span class="built_in">join</span> sys.dm_db_index_physical_stats(db_id(),object_id(0),null,null,<span class="string">&#x27;limited&#x27;</span>) s  </span><br><span class="line">	on s.object_id=i.object_id and s.index_id=i.index_id </span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2023/04/02/sql4/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2023-04-02 </div>
 			<div class="article-title"><a href="/2023/04/02/sql3/" >sqlserver with as的用法</a></div>						
 		</h3>
@@ -172,55 +220,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-03-07 </div>
-			<div class="article-title"><a href="/2023/03/07/dotnet01/" >ASP.Net MVC常用知识大全</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="MVC中的TempData-ViewBag-ViewData区别"><a href="#MVC中的TempData-ViewBag-ViewData区别" class="headerlink" title="MVC中的TempData\ViewBag\ViewData区别?"></a>MVC中的TempData\ViewBag\ViewData区别?</h3><blockquote><p>TempData  保存在Session中，Controller每次执行请求的时候，会从Session中先获取 TempData，而后清除Session，获取完TempData数据，虽然保存在内部字典对象中，但是其集合中的每个条目访问一次后就从字典表中删 除，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换。</p>
-<p>ViewBag和ViewData只在当前Action中有效，等同于View，ViewBag比ViewData慢，ViewBag存dynamic类型数据，使用时不需要类型转换</p>
-<p>ViewData和ViewBag 中的值可以互相访问，因为ViewBag的实现中包含了ViewData，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2023/03/07/dotnet01/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-03-05 </div>
-			<div class="article-title"><a href="/2023/03/05/abp1/" title="资料来源于实际实践或网络查找">.NET开发框架 ABP</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="ABP总体介绍"><a href="#ABP总体介绍" class="headerlink" title="ABP总体介绍"></a>ABP总体介绍</h3><p>ABP是ASP.NET Boilerplate Project，ASP.NET样板项目。<br>ABP框架定位于快速开发<br>ABP是一个用于最快实践和流行开发现代Web应用程序的新起点，旨在成为一个通用的Web应用程序框架和项目模板。<br>ABP基于DDD的经典分层架构思想，实现了众多DDD的概念。</p>
-	
-	</div>
-  <a type="button" href="/2023/03/05/abp1/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -274,7 +273,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>95</span></a></li>
+			<li><a href="/categories/IT/">IT<span>97</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -293,45 +292,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
-		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
 			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
 		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
 		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
-		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
-		
-			<li><a href="/tags/超图/">超图<span>2</span></a></li>
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
 			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
 		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
-		
 			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
-			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>4</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>47</span></a></li>
@@ -363,7 +362,7 @@
       </li>
     
       <li>
-        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
+        <a href="/2023/06/01/supermap3/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

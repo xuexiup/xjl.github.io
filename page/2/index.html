@@ -101,6 +101,55 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2023-06-01 </div>
+			<div class="article-title"><a href="/2023/06/01/csharp3/" >Winform中Form_Load函数和他的构造函数 public Form()有什么区别？</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>在WinForm中，他们虽然都可以用来初始化ＦＯＲＭ中的组件，<br>也存在以下区别:</p>
+<blockquote><p>(1): public Form()：程序入口,它的InitializeComponent()做了许多初始化的工作<br>所以Load才能成为一个事件，InitializeComponent为你的程序作了必要的初始化工作</p>
+<p>(2) Form_Load：装载窗口事件, 是窗体启动时触发的事件</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2023/06/01/csharp3/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-06-01 </div>
+			<div class="article-title"><a href="/2023/06/01/csharp2/" >Winform中 EnableVisualStyles()的理解</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>应用程序入口文件Program.cs中以下代码的理解：<br>Application.EnableVisualStyles();<br>Application.EnableVisualStyles();<br>Application.SetCompatibleTextRenderingDefault(false);<br>Application.Run(new login());</p>
+	
+	</div>
+  <a type="button" href="/2023/06/01/csharp2/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2023-05-31 </div>
 			<div class="article-title"><a href="/2023/05/31/supermap2/" >SuperMap GIS数据组织结构</a></div>						
 		</h3>
@@ -197,54 +246,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-05-19 </div>
-			<div class="article-title"><a href="/2023/05/19/oracle1/" >oracle表空间</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Oracle表空间之基本概念"><a href="#Oracle表空间之基本概念" class="headerlink" title="Oracle表空间之基本概念"></a>Oracle表空间之基本概念</h2><p>ORACLE的一个表空间相当于SQLSERVER的一个库。<br>ORACLE数据库被划分成称作为表空间 [1] 的逻辑区域——形成ORACLE数据库的逻辑结构。一个ORACLE数据库能够有一个或多个表空间,而一个表空间则对应着一个或多个物理的数据库文件。表空间是ORACLE数据库恢复的最小单位,容纳着许多数据库实体,如表、视图、索引、聚簇、回退段和临时段等。<br>每个ORACLE数据库均有SYSTEM表空间,这是数据库创建时自动创建的。SYSTEM表空间必须总要保持联机,因为其包含着数据库运行所要求的基本信息(关于整个数据库的数据字典、联机求助机制、所有回退段、临时段和自举段、所有的用户数据库实体、其它ORACLE软件产品要求的表)。<br>一个小型应用的ORACLE数据库通常仅包括SYSTEM表空间,然而一个稍大型应用的ORACLE数据库采用多个表空间会对数据库的使用带来更大的方便。<br>例如：便于理解，把oracle数据库看作一个实在房间，表空间可以看作这个房间的空间，是可以自由分配，在这空间里面可以堆放多个箱子（箱子可以看作数据库文件），箱子里面再装物件（物件看作表）。用户指定表空间也就是你希望把属于这个用户的表放在那个房间（表空间）里面。<br>表空间是一个虚拟的概念可以无限大，但是需要由数据文件作为载体。<br>Segment（段）<br>段是指占用数据文件空间的通称，或数据库对象使用的空间的集合；段可以有表段、索引段、回滚段、临时段和高速缓存段等。<br>Extent（区间）<br>分配给对象（如表）的任何连续块叫区间；区间也叫扩展，因为当它用完已经分配的区间后，再有新的记录插入就必须在分配新的区间（即扩展一些块）；一旦区间分配给某个对象（表、索引及簇），则该区间就不能再分配给其它的对象.</p>
-	
-	</div>
-  <a type="button" href="/2023/05/19/oracle1/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-04-02 </div>
-			<div class="article-title"><a href="/2023/04/02/sql4/" >sqlserver row_num()的用法</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select row_number() over(order by 表名 desc) as RowNumber_ID,*from </span><br><span class="line">(</span><br><span class="line">   select t.name as <span class="string">&#x27;表名&#x27;</span> ,i.name as <span class="string">&#x27;主键&#x27;</span> </span><br><span class="line">   ,s.avg_fragmentation_in_percent as <span class="string">&#x27;阈值&#x27;</span> from sys.tables t </span><br><span class="line">	<span class="built_in">join</span> sys.indexes i on i.object_id=t.object_id  </span><br><span class="line">	<span class="built_in">join</span> sys.dm_db_index_physical_stats(db_id(),object_id(0),null,null,<span class="string">&#x27;limited&#x27;</span>) s  </span><br><span class="line">	on s.object_id=i.object_id and s.index_id=i.index_id </span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select row_number() over( partition by 阈值 order by 表名 desc) as RowNumber_ID,*from </span><br><span class="line">(</span><br><span class="line">   select t.name as <span class="string">&#x27;表名&#x27;</span> ,i.name as <span class="string">&#x27;主键&#x27;</span> </span><br><span class="line">   ,s.avg_fragmentation_in_percent as <span class="string">&#x27;阈值&#x27;</span> from sys.tables t </span><br><span class="line">	<span class="built_in">join</span> sys.indexes i on i.object_id=t.object_id  </span><br><span class="line">	<span class="built_in">join</span> sys.dm_db_index_physical_stats(db_id(),object_id(0),null,null,<span class="string">&#x27;limited&#x27;</span>) s  </span><br><span class="line">	on s.object_id=i.object_id and s.index_id=i.index_id </span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2023/04/02/sql4/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -298,7 +299,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>95</span></a></li>
+			<li><a href="/categories/IT/">IT<span>97</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -317,45 +318,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
 		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/工具/">工具<span>13</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>3</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
 		
 			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
 		
-			<li><a href="/tags/超图/">超图<span>2</span></a></li>
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
 			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>13</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>4</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>47</span></a></li>
@@ -387,7 +388,7 @@
       </li>
     
       <li>
-        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
+        <a href="/2023/06/01/supermap3/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

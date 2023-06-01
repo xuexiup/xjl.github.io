@@ -89,6 +89,51 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/dotnet1/" >ASP.NET.MVC中Linq的基本语法</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>LINQ即Language Integrated  Query(语言集成查询)<br>在平常的编写代码中，Linq提供了丰富的查询功能，就是有一点要注意，Linq中 where 的查询与SQL命令中的 Where 作用相似，都是起到范围限定，也就是的过滤作用，而判断条件就是它后面所接的子句<br>一、整理了一下，LINQ的基本语法有8种上下文关键字，注意是关键字，这些关键字的具体说明如下：<br>①from：指定范围变量和数据源<br>②where：根据bool表达式从数据源中筛选数据<br>③select：指定查询结果中的元素所具有的类型或变现形式<br>④group：对查询结果按照键值进行分组<br>⑤into：提供一个标识符，它可以充当对join、group、或者select子句结果的引用<br>⑥orderby：对查询出的元素进行排序<br>⑦join：按照两个指定匹配条件并使用 equals 来连接两个数据源<br>⑧let：产生一个用于储存查询表达式中的子表达式查询结果的变量范围</p>
+	
+	</div>
+  <a type="button" href="/2023/02/02/dotnet1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-21 </div>
+			<div class="article-title"><a href="/2022/10/21/vue28/" >package.json 和 package-lock.json 解析</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p> <a href="https://docs.npmjs.com/cli/v8/configuring-npm/package-json" title="" target="">package.json npm官方文档</a> </p>
+前端每个项目的根目录上有一个 package.json 文件，定义了当前项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等）。当运行 npm install命令时，会根据文件中的配置自动下载所需的模块配置项目所需的运行和开发环境。
+
+<p>package.json文件是一个JSON对象，该对象的每一个成员就是当前项目的一项设置。比如name就是项目名称，version是版本号。</p>
+	
+	</div>
+  <a type="button" href="/2022/10/21/vue28/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2022-10-20 </div>
 			<div class="article-title"><a href="/2022/10/20/html9/" >磁盘 硬盘 软盘和内存之间的关系</a></div>						
 		</h3>
@@ -160,53 +205,6 @@
 </div>
 
 	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis8/" >Redis简介</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。<br>它通常被称为数据结构服务器，因为值（value）支持五种数据类型：</p>
-<blockquote><p>string（字符串）<br>hash（哈希）<br>list（列表）<br>set（集合）<br>zset(sorted set：有序集合)。</p>
-</blockquote>
-
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis8/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis7/" >Redis配置与命令</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>Redis 的配置文件位于 Redis 安装目录下，文件名为 redis.conf。<br>你可以通过修改 redis.conf 文件或使用 CONFIG set 命令来修改配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.redis 127.0.0.1:6379&gt; CONFIG SET CONFIG_SETTING_NAME NEW_CONFIG_VALUE</span><br><span class="line">实例</span><br><span class="line">1.redis 127.0.0.1:6379&gt; CONFIG SET loglevel <span class="string">&quot;notice&quot;</span></span><br><span class="line">2.OK</span><br><span class="line">3.redis 127.0.0.1:6379&gt; CONFIG GET loglevel</span><br><span class="line">4. </span><br><span class="line">5.1) <span class="string">&quot;loglevel&quot;</span></span><br><span class="line">6.2) <span class="string">&quot;notice&quot;</span></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis7/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
 	     </div>
 	     <div>
 	       <center>
@@ -256,7 +254,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>95</span></a></li>
+			<li><a href="/categories/IT/">IT<span>97</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -275,45 +273,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
 		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
-		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/超图/">超图<span>2</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
-		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
-		
-			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+			<li><a href="/tags/winform/">winform<span>4</span></a></li>
 		
 			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
 		
-			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
+		
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>47</span></a></li>
@@ -345,7 +343,7 @@
       </li>
     
       <li>
-        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
+        <a href="/2023/06/01/supermap3/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

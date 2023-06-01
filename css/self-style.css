@@ -475,17 +475,26 @@ a {
 }
 */
 .highlight,.bash,.gutter,.code,.code>pre{
-    background-color: #FBEBD4 !important;
+    background-color: #FCF5ED !important;
+}
+.highlight .bash{
+    width:100%;
+    padding:0px;
+    margin:0px;
+}
+.code{
+    word-wrap: break-word;
 }
 
 .gutter>pre{
-    background-color: #FBEBD4 !important;    
+    background-color: #FCF5ED !important;    
     border-right: 1px solid rgba(0, 0, 0, .25) !important;  
-    color:rgba(0, 0, 0, .2) !important;      
+    color:rgba(0,0,0,.2)  !important;      
 }
 
 .code>pre{
-    color:#A3613D !important;
+    /* color:#A3613D !important; */
+    color: #333333  !important;
     padding-left:8px;
 }
 /*修改样式end*/

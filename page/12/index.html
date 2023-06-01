@@ -102,6 +102,55 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/netnote1/" >软件版本号释意</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="1、软件版本阶段说明"><a href="#1、软件版本阶段说明" class="headerlink" title="1、软件版本阶段说明"></a>1、软件版本阶段说明</h3><h2 id="Alpha版"><a href="#Alpha版" class="headerlink" title="*Alpha版"></a>*Alpha版</h2><p>此版本表示该软件在此阶段主要是以实现软件功能为主，通常只在软件开发者内部交流，一般而言，该版本软件的Bug较多，需要继续修改。</p>
+<h2 id="Beta版"><a href="#Beta版" class="headerlink" title="*Beta版"></a>*Beta版</h2><p>该版本相对于α版已有了很大的改进，消除了严重的错误，但还是存在着一些缺陷，需要经过多次测试来进一步消除，此版本主要的修改对像是软件的UI。</p>
+<h2 id="RC版"><a href="#RC版" class="headerlink" title="*RC版"></a>*RC版</h2><p>该版本已经相当成熟了，基本上不存在导致错误的BUG，与即将发行的正式版相差无几。</p>
+<h2 id="Release版"><a href="#Release版" class="headerlink" title="*Release版"></a>*Release版</h2><p>该版本意味“最终版本”，在前面版本的一系列测试版之后，终归会有一个正式版本，是最终交付用户使用的一个版本。该版本有时也称为标准版。一般情况下，Release不会以单词形式出现在软件封面上，取而代之的是符号(R)。</p>
+	
+	</div>
+  <a type="button" href="/2022/10/13/netnote1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/csharp1/" >Winform中如何调用JSON格式接口进行GET/POST</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="1-创建一个winform桌面程序的项目-NET-Framework"><a href="#1-创建一个winform桌面程序的项目-NET-Framework" class="headerlink" title="1.创建一个winform桌面程序的项目(.NET Framework)"></a>1.创建一个winform桌面程序的项目(.NET Framework)</h3><h3 id="2-然后创建一个通用方法的类库：Common"><a href="#2-然后创建一个通用方法的类库：Common" class="headerlink" title="2.然后创建一个通用方法的类库：Common"></a>2.然后创建一个通用方法的类库：Common</h3><h3 id="3-在类库中添加接口发送与请求的通用方法：HttpHelper-cs"><a href="#3-在类库中添加接口发送与请求的通用方法：HttpHelper-cs" class="headerlink" title="3.在类库中添加接口发送与请求的通用方法：HttpHelper.cs"></a>3.在类库中添加接口发送与请求的通用方法：HttpHelper.cs</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class HttpHelper</span><br><span class="line">    &#123;</span><br><span class="line">        /// &lt;summary&gt;</span><br><span class="line">               /// 调用api返回json</span><br><span class="line">               /// &lt;/summary&gt;</span><br><span class="line">               /// &lt;param name=&quot;url&quot;&gt;api地址&lt;/param&gt;</span><br><span class="line">               /// &lt;param name=&quot;jsonstr&quot;&gt;接收参数&lt;/param&gt;</span><br><span class="line">               /// &lt;param name=&quot;type&quot;&gt;类型&lt;/param&gt;</span><br><span class="line">               /// &lt;returns&gt;&lt;/returns&gt;</span><br><span class="line">        public static string HttpApi(string url, string jsonstr, string type)</span><br><span class="line">        &#123;</span><br><span class="line">            Encoding encoding = Encoding.UTF8;</span><br><span class="line">            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);//webrequest请求api地址</span><br><span class="line">            request.Accept = &quot;*/*&quot;;</span><br><span class="line">            request.ContentType = &quot;application/json&quot;;</span><br><span class="line">            request.Method = type.ToUpper().ToString();//get或者post</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">            byte[] buffer = encoding.GetBytes(jsonstr);</span><br><span class="line">            request.ContentLength = buffer.Length;</span><br><span class="line">            request.GetRequestStream().Write(buffer, 0, buffer.Length);</span><br><span class="line">            HttpWebResponse response = (HttpWebResponse)request.GetResponse();</span><br><span class="line">            using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8))</span><br><span class="line">            &#123;</span><br><span class="line">                return reader.ReadToEnd();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/csharp1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
 			<div class="article-title"><a href="/2022/10/13/css7/" >标签添加自动换行的属性</a></div>						
 		</h3>
 	
@@ -171,61 +220,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css4/" >css中的块元素与行内（内联元素）</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="块元素–常见元素div"><a href="#块元素–常见元素div" class="headerlink" title="块元素–常见元素div"></a>块元素–常见元素div</h3><blockquote><p>1.独占一行<br>2.默认宽度是父元素的宽度（即撑满父元素）<br>3.默认高度由其内容撑开，所以无内容时候（若没有其它样式，height…）就消失了</p>
-</blockquote>
-
-<h3 id="行内元素–常见元素span"><a href="#行内元素–常见元素span" class="headerlink" title="行内元素–常见元素span"></a>行内元素–常见元素span</h3><blockquote><p>1.只占本身内容大小（设定width,height不会生效）<br>如果源代码两个span，换行排列（存在换行），而浏览器对其识别成一个空格出现两个元素水平排列，之间存在缝隙。<br>2.多个行内元素渲染呈现从左往右依次排列，无法容纳时自动换行<br>3.默认宽高都是由内容撑开（行内元素是无法设置宽高的，若无内容区就消失了）</p>
-</blockquote>
-
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/css4/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css3/" >css 省略号表示溢出文本</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="1-先强制一行内显示文本"><a href="#1-先强制一行内显示文本" class="headerlink" title="1.先强制一行内显示文本"></a>1.先强制一行内显示文本</h2><p>white-space: nowrap;</p>
-<h2 id="2-超出部分隐藏"><a href="#2-超出部分隐藏" class="headerlink" title="2.超出部分隐藏"></a>2.超出部分隐藏</h2><p>overflow: hidden;</p>
-<h2 id="3-文字用省略号替代超出的部分"><a href="#3-文字用省略号替代超出的部分" class="headerlink" title="3.文字用省略号替代超出的部分"></a>3.文字用省略号替代超出的部分</h2><p>text-overflow: ellipsis;</p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/css3/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -279,7 +273,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>95</span></a></li>
+			<li><a href="/categories/IT/">IT<span>97</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -298,45 +292,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
 		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
 		
-			<li><a href="/tags/winform/">winform<span>3</span></a></li>
+			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
 		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>9</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/超图/">超图<span>2</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
-		
-			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
 			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
 		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
 		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+		
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>47</span></a></li>
@@ -368,7 +362,7 @@
       </li>
     
       <li>
-        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
+        <a href="/2023/06/01/supermap3/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>
