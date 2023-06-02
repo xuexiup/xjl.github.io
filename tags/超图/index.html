@@ -133,7 +133,7 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2023-05-31 </div>
-			<div class="article-title"><a href="/2023/05/31/supermap1/" >超图组件之数据（Data）篇</a></div>						
+			<div class="article-title"><a href="/2023/05/31/supermap1/" >超图组件之基础理解</a></div>						
 		</h3>
 	
 
@@ -142,36 +142,10 @@
   <div class="row">
 	
 	
-		<p>关键类型&#x2F;成员</p>
-<table>
-<thead>
-<tr>
-<th>控件&#x2F;类</th>
-<th>方法</th>
-<th>属性</th>
-<th>事件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>DatasetVector</td>
-<td>GetRecordset</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Recordset</td>
-<td>AddNew、Dispose</td>
-<td></td>
-<td>使用完之后，必须Dispose释放资源</td>
-</tr>
-<tr>
-<td>Recordset.BatchEditor</td>
-<td>Begin、Update</td>
-<td>MaxRecordCount</td>
-<td></td>
-</tr>
-</tbody></table>
-
+		<h2 id="Mapcontrol"><a href="#Mapcontrol" class="headerlink" title="Mapcontrol"></a>Mapcontrol</h2><blockquote><p>官方注释：<br>Mapcontrol.This class is used to provide an interface for displaying the map, and you can provide ways for the data and the map’s Interoperability.</p>
+</blockquote>
+<p>意思就是Mapcontrol这个类用于提供显示地图的接口，您可以为数据和地图的互操作性提供方法。<br>所以我们经常会看到如下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mapControl1.Map.Workspace = workspace1;//建立MapContorl和Workspace的连接</span><br><span class="line">...</span><br><span class="line">//mapControl1.Map.Open(<span class="string">&quot;世界地图_Day&quot;</span>);</span><br><span class="line">//通过this.workspace1.Maps.Count 查看该工作空间含有的地图的个数</span><br><span class="line">//这里我们打开第一张地图</span><br><span class="line">mapControl1.Map.Open(this.workspace1.Maps[0]);</span><br><span class="line">//刷新地图窗口</span><br><span class="line">mapControl1.Map.Refresh();</span><br></pre></td></tr></table></figure>
 	
 	</div>
   <a type="button" href="/2023/05/31/supermap1/#more" class="btn btn-default more">阅读更多</a>
@@ -217,7 +191,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>97</span></a></li>
+			<li><a href="/categories/IT/">IT<span>98</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -236,45 +210,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
 		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
 		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>4</span></a></li>
-		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/超图/">超图<span>3</span></a></li>
-		
-			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
 			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 			<li><a href="/tags/c/">c#<span>10</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
 		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+		
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>47</span></a></li>
@@ -290,23 +264,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2099/12/06/dotnetcore0/" ><i class="fa fa-file-o"></i>.NetCore常用知识大全</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/04/html0/" ><i class="fa fa-file-o"></i>前端系列问题</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/03/vue0/"  title="本文对 Vue 框架中一些重要的特性、框架的原理以问题的形式进行整理汇总，意在帮助作者及读者掌握 Vue的知识。" ><i class="fa fa-file-o"></i>vue知识巩固</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/02/dotnet0/" ><i class="fa fa-file-o"></i>.Net常用知识大全</a>
+        <a href="/2023/06/02/tool12/"  title="除了本身自带的主题外我们可以引入官方css主题" ><i class="fa fa-file-o"></i>Typora 配置主题</a>
       </li>
     
       <li>
         <a href="/2023/06/01/supermap3/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode功能与结构</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/01/csharp3/" ><i class="fa fa-file-o"></i>Winform中Form_Load函数和他的构造函数 ...</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
+      </li>
+    
+      <li>
+        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

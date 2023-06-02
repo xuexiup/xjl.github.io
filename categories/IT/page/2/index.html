@@ -89,8 +89,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2023-06-01 </div>
-			<div class="article-title"><a href="/2023/06/01/csharp3/" >Winform中Form_Load函数和他的构造函数 public Form()有什么区别？</a></div>						
+			<div class="date"> 2023-05-31 </div>
+			<div class="article-title"><a href="/2023/05/31/supermap1/" >超图组件之基础理解</a></div>						
 		</h3>
 	
 
@@ -99,103 +99,10 @@
   <div class="row">
 	
 	
-		<p>在WinForm中，他们虽然都可以用来初始化ＦＯＲＭ中的组件，<br>也存在以下区别:</p>
-<blockquote><p>(1): public Form()：程序入口,它的InitializeComponent()做了许多初始化的工作<br>所以Load才能成为一个事件，InitializeComponent为你的程序作了必要的初始化工作</p>
-<p>(2) Form_Load：装载窗口事件, 是窗体启动时触发的事件</p>
+		<h2 id="Mapcontrol"><a href="#Mapcontrol" class="headerlink" title="Mapcontrol"></a>Mapcontrol</h2><blockquote><p>官方注释：<br>Mapcontrol.This class is used to provide an interface for displaying the map, and you can provide ways for the data and the map’s Interoperability.</p>
 </blockquote>
-	
-	</div>
-  <a type="button" href="/2023/06/01/csharp3/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-06-01 </div>
-			<div class="article-title"><a href="/2023/06/01/csharp2/" >Winform中 EnableVisualStyles()的理解</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>应用程序入口文件Program.cs中以下代码的理解：<br>Application.EnableVisualStyles();<br>Application.EnableVisualStyles();<br>Application.SetCompatibleTextRenderingDefault(false);<br>Application.Run(new login());</p>
-	
-	</div>
-  <a type="button" href="/2023/06/01/csharp2/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-05-31 </div>
-			<div class="article-title"><a href="/2023/05/31/supermap2/" >SuperMap GIS数据组织结构</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>SuperMap GIS 的数据组织结构，主要包括工作空间、数据源、数据集、地图、场景、布局等。为了方便您更快更好的了解和使用SuperMap iDesktop 8C 系列产品，本部分将这些数据组织成分予以详细介绍。</p>
-<p>SuperMap GIS 的数据组织形式为类似于树状层次结构，这种结构可以通过应用程序界面上的工作空间管理器表现。如下图所示，左图为工作空间管理器，工作空间管理器当前打开了一个工作空间，右图为对应抽象出来的 SuperMap GIS 数据组织结构的示意图。在SuperMap iDesktop 8C 系列产品中用户的一个工作环境对应一个工作空间，每一个工作空间都具有下图（右图）所示的树状层次结构，该结构中工作空间对应根结点。一个工作空间包含唯一的数据源集合、唯一的地图集合、唯一的布局集合、唯一的场景集合和唯一的资源集合（符号库集合），对应着工作空间的子结点。</p>
-	
-	</div>
-  <a type="button" href="/2023/05/31/supermap2/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-05-31 </div>
-			<div class="article-title"><a href="/2023/05/31/supermap1/" >超图组件之数据（Data）篇</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>关键类型&#x2F;成员</p>
-<table>
-<thead>
-<tr>
-<th>控件&#x2F;类</th>
-<th>方法</th>
-<th>属性</th>
-<th>事件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>DatasetVector</td>
-<td>GetRecordset</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Recordset</td>
-<td>AddNew、Dispose</td>
-<td></td>
-<td>使用完之后，必须Dispose释放资源</td>
-</tr>
-<tr>
-<td>Recordset.BatchEditor</td>
-<td>Begin、Update</td>
-<td>MaxRecordCount</td>
-<td></td>
-</tr>
-</tbody></table>
-
+<p>意思就是Mapcontrol这个类用于提供显示地图的接口，您可以为数据和地图的互操作性提供方法。<br>所以我们经常会看到如下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mapControl1.Map.Workspace = workspace1;//建立MapContorl和Workspace的连接</span><br><span class="line">...</span><br><span class="line">//mapControl1.Map.Open(<span class="string">&quot;世界地图_Day&quot;</span>);</span><br><span class="line">//通过this.workspace1.Maps.Count 查看该工作空间含有的地图的个数</span><br><span class="line">//这里我们打开第一张地图</span><br><span class="line">mapControl1.Map.Open(this.workspace1.Maps[0]);</span><br><span class="line">//刷新地图窗口</span><br><span class="line">mapControl1.Map.Refresh();</span><br></pre></td></tr></table></figure>
 	
 	</div>
   <a type="button" href="/2023/05/31/supermap1/#more" class="btn btn-default more">阅读更多</a>
@@ -223,6 +130,76 @@
 	
 	</div>
   <a type="button" href="/2023/03/07/dotnet01/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-03-05 </div>
+			<div class="article-title"><a href="/2023/03/05/abp1/" title="资料来源于实际实践或网络查找">.NET开发框架 ABP</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="ABP总体介绍"><a href="#ABP总体介绍" class="headerlink" title="ABP总体介绍"></a>ABP总体介绍</h3><p>ABP是ASP.NET Boilerplate Project，ASP.NET样板项目。<br>ABP框架定位于快速开发<br>ABP是一个用于最快实践和流行开发现代Web应用程序的新起点，旨在成为一个通用的Web应用程序框架和项目模板。<br>ABP基于DDD的经典分层架构思想，实现了众多DDD的概念。</p>
+	
+	</div>
+  <a type="button" href="/2023/03/05/abp1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-27 </div>
+			<div class="article-title"><a href="/2023/02/27/dotnetcore0/" >.NetCore常用知识大全</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="谈一谈对DDD的理解"><a href="#谈一谈对DDD的理解" class="headerlink" title="谈一谈对DDD的理解?"></a>谈一谈对DDD的理解?</h3><blockquote><p>DDD，领域驱动设计。就是通过领域来指导软件设计，是一种十分抽象的软件设计思想;<br>它主要分为战略设计和战术设计:</p>
+<p>1）战略方面，通过事件风暴进行领域模型的划分，划分出核心域，子域，支撑域，定义通用语言，划分出界限上下文。</p>
+<p>2）战术设计方面，ddd将架构分层，“松耦合，高内聚”是架构设计的整体思想。按照DDD思想，可以分为领域层，基础设施层，应用层，接口层。</p>
+</blockquote>
+<p>接口层为前端用户提供api接口。基础设施层可以放一些第三方的服务，数据库连接等内容。应用层是对领域服务的编排，是很薄的一层（目前我自己的架构，应用的是cqrs，所有的相关逻辑都是放在了应用层，而领域层只是放了实体，因为暂时还不是特别理解领域层的服务和事件都应该写什么）。领域层包括实体，值对象，聚合根，领域服务，领域事件等内容。</p>
+	
+	</div>
+  <a type="button" href="/2023/02/27/dotnetcore0/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-21 </div>
+			<div class="article-title"><a href="/2023/02/21/vue0/" title="本文对 Vue 框架中一些重要的特性、框架的原理以问题的形式进行整理汇总，意在帮助作者及读者掌握 Vue的知识。">vue知识巩固</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1、说说你对 SPA 单页面的理解，它的优缺点分别是什么？</p>
+<blockquote><p>SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。一旦页面加载完成，SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。<br>优点：<br>用户体验好、快，内容的改变不需要重新加载整个页面，避免了不必要的跳转和重复渲染；<br>基于上面一点，SPA 相对对服务器压力小；<br>前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理；</p>
+<p>缺点：<br>初次加载耗时多：为实现单页 Web 应用功能及显示效果，需要在加载页面的时候将 JavaScript、CSS 统一加载，部分页面按需加载；<br>前进后退路由管理：由于单页应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理；<br>SEO 难度较大：由于所有的内容都在一个页面中动态替换显示，所以在 SEO 上其有着天然的弱势。</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2023/02/21/vue0/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
 	       
@@ -275,7 +252,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>97</span></a></li>
+			<li><a href="/categories/IT/">IT<span>98</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -294,45 +271,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
+		
 			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/mui/">mui<span>1</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>10</span></a></li>
-		
-			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
 		
 			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
 		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+		
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/超图/">超图<span>3</span></a></li>
 		
 			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
 			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+			<li><a href="/tags/winform/">winform<span>4</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
-			<li><a href="/tags/超图/">超图<span>3</span></a></li>
+			<li><a href="/tags/c/">c#<span>10</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>14</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>47</span></a></li>
@@ -348,23 +325,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2099/12/06/dotnetcore0/" ><i class="fa fa-file-o"></i>.NetCore常用知识大全</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/04/html0/" ><i class="fa fa-file-o"></i>前端系列问题</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/03/vue0/"  title="本文对 Vue 框架中一些重要的特性、框架的原理以问题的形式进行整理汇总，意在帮助作者及读者掌握 Vue的知识。" ><i class="fa fa-file-o"></i>vue知识巩固</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/02/dotnet0/" ><i class="fa fa-file-o"></i>.Net常用知识大全</a>
+        <a href="/2023/06/02/tool12/"  title="除了本身自带的主题外我们可以引入官方css主题" ><i class="fa fa-file-o"></i>Typora 配置主题</a>
       </li>
     
       <li>
         <a href="/2023/06/01/supermap3/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode功能与结构</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/01/csharp3/" ><i class="fa fa-file-o"></i>Winform中Form_Load函数和他的构造函数 ...</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
+      </li>
+    
+      <li>
+        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

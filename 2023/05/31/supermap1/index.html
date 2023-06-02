@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>超图组件之数据（Data）篇 | 月落星辰</title>
+  <title>超图组件之基础理解 | 月落星辰</title>
   
   <meta name="author" content="南疆">
   
@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:title" content="超图组件之数据（Data）篇" />
+  <meta property="og:title" content="超图组件之基础理解" />
   <meta property="og:site_name" content="月落星辰" />
 
   
@@ -72,7 +72,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> 超图组件之数据（Data）篇</h1>
+			<h1 class="title title-inverse "> 超图组件之基础理解</h1>
 		</div>		
 	
 
@@ -98,35 +98,14 @@
 			<div class="mypage">
 				
 
-				<p>关键类型&#x2F;成员</p>
-<table>
-<thead>
-<tr>
-<th>控件&#x2F;类</th>
-<th>方法</th>
-<th>属性</th>
-<th>事件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>DatasetVector</td>
-<td>GetRecordset</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Recordset</td>
-<td>AddNew、Dispose</td>
-<td></td>
-<td>使用完之后，必须Dispose释放资源</td>
-</tr>
-<tr>
-<td>Recordset.BatchEditor</td>
-<td>Begin、Update</td>
-<td>MaxRecordCount</td>
-<td></td>
-</tr>
-</tbody></table>
+				<h2 id="Mapcontrol"><a href="#Mapcontrol" class="headerlink" title="Mapcontrol"></a>Mapcontrol</h2><blockquote><p>官方注释：<br>Mapcontrol.This class is used to provide an interface for displaying the map, and you can provide ways for the data and the map’s Interoperability.</p>
+</blockquote>
+<p>意思就是Mapcontrol这个类用于提供显示地图的接口，您可以为数据和地图的互操作性提供方法。<br>所以我们经常会看到如下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mapControl1.Map.Workspace = workspace1;//建立MapContorl和Workspace的连接</span><br><span class="line">...</span><br><span class="line">//mapControl1.Map.Open(<span class="string">&quot;世界地图_Day&quot;</span>);</span><br><span class="line">//通过this.workspace1.Maps.Count 查看该工作空间含有的地图的个数</span><br><span class="line">//这里我们打开第一张地图</span><br><span class="line">mapControl1.Map.Open(this.workspace1.Maps[0]);</span><br><span class="line">//刷新地图窗口</span><br><span class="line">mapControl1.Map.Refresh();</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<h2 id="地图放大"><a href="#地图放大" class="headerlink" title="地图放大"></a>地图放大</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mapControl1.Action = SuperMap.UI.Action.ZoomIn; //地图放大</span><br><span class="line">mapControl1.Action = SuperMap.UI.Action.ZoomOut;    //地图缩小</span><br><span class="line">mapControl1.Action = SuperMap.UI.Action.ZoomFree;   //地图自由缩放</span><br><span class="line">mapControl1.Map.ViewEntire();   //地图全幅显示</span><br><span class="line">mapControl1.Action = SuperMap.UI.Action.Pan;    //地图漫游、平移</span><br></pre></td></tr></table></figure>
+
 
 			</div>
 
@@ -229,7 +208,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/IT/">IT<span>97</span></a></li>
+    <li><a href="/categories/IT/">IT<span>98</span></a></li>
   </li>
 
     </ul>

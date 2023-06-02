@@ -101,8 +101,8 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2023-03-07 </div>
-			<div class="article-title"><a href="/2023/03/07/dotnet01/" >ASP.Net MVC常用知识大全</a></div>						
+			<div class="date"> 2023-02-21 </div>
+			<div class="article-title"><a href="/2023/02/21/vue0/" title="本文对 Vue 框架中一些重要的特性、框架的原理以问题的形式进行整理汇总，意在帮助作者及读者掌握 Vue的知识。">vue知识巩固</a></div>						
 		</h3>
 	
 
@@ -111,36 +111,13 @@
   <div class="row">
 	
 	
-		<h3 id="MVC中的TempData-ViewBag-ViewData区别"><a href="#MVC中的TempData-ViewBag-ViewData区别" class="headerlink" title="MVC中的TempData\ViewBag\ViewData区别?"></a>MVC中的TempData\ViewBag\ViewData区别?</h3><blockquote><p>TempData  保存在Session中，Controller每次执行请求的时候，会从Session中先获取 TempData，而后清除Session，获取完TempData数据，虽然保存在内部字典对象中，但是其集合中的每个条目访问一次后就从字典表中删 除，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换。</p>
-<p>ViewBag和ViewData只在当前Action中有效，等同于View，ViewBag比ViewData慢，ViewBag存dynamic类型数据，使用时不需要类型转换</p>
-<p>ViewData和ViewBag 中的值可以互相访问，因为ViewBag的实现中包含了ViewData，ViewData存的是Key&#x2F;Value字典，使用时需要类型转换</p>
+		<p>1、说说你对 SPA 单页面的理解，它的优缺点分别是什么？</p>
+<blockquote><p>SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。一旦页面加载完成，SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。<br>优点：<br>用户体验好、快，内容的改变不需要重新加载整个页面，避免了不必要的跳转和重复渲染；<br>基于上面一点，SPA 相对对服务器压力小；<br>前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理；</p>
+<p>缺点：<br>初次加载耗时多：为实现单页 Web 应用功能及显示效果，需要在加载页面的时候将 JavaScript、CSS 统一加载，部分页面按需加载；<br>前进后退路由管理：由于单页应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理；<br>SEO 难度较大：由于所有的内容都在一个页面中动态替换显示，所以在 SEO 上其有着天然的弱势。</p>
 </blockquote>
 	
 	</div>
-  <a type="button" href="/2023/03/07/dotnet01/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-03-05 </div>
-			<div class="article-title"><a href="/2023/03/05/abp1/" title="资料来源于实际实践或网络查找">.NET开发框架 ABP</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="ABP总体介绍"><a href="#ABP总体介绍" class="headerlink" title="ABP总体介绍"></a>ABP总体介绍</h3><p>ABP是ASP.NET Boilerplate Project，ASP.NET样板项目。<br>ABP框架定位于快速开发<br>ABP是一个用于最快实践和流行开发现代Web应用程序的新起点，旨在成为一个通用的Web应用程序框架和项目模板。<br>ABP基于DDD的经典分层架构思想，实现了众多DDD的概念。</p>
-	
-	</div>
-  <a type="button" href="/2023/03/05/abp1/#more" class="btn btn-default more">阅读更多</a>
+  <a type="button" href="/2023/02/21/vue0/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
            
@@ -195,6 +172,34 @@
 	
 	</div>
   <a type="button" href="/2023/02/15/dotnet6/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-09 </div>
+			<div class="article-title"><a href="/2023/02/09/html0/" >前端系列问题</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="typescript跟es6有什么区别？"><a href="#typescript跟es6有什么区别？" class="headerlink" title="typescript跟es6有什么区别？"></a>typescript跟es6有什么区别？</h2><h3 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h3><blockquote><p>TypeScript是一种由微软开发的自由和开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+<p>TypeScript扩展了JavaScript的语法，所以任何现有的JavaScript程序可以不加改变的在TypeScript下工作。TypeScript是为大型应用之开发而设计，而编译时它产生 JavaScript 以确保兼容性。</p>
+<p>TypeScript 支持为已存在的 JavaScript 库添加类型信息的头文件，扩展了它对于流行的库如 jQuery，MongoDB，Node.js和 D3.js 的好处。</p>
+<p>TypeScript 的历史</p>
+<p>Anders Hejlsberg开发了 TypeScript。它于2012 年 10 月 1 日首次向公众推出。经过微软内部两年的开发，2013 年发布了新版 TypeScript 0.9。2019 年 4 月 24 日发布了TypeScript 3.4.5。</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2023/02/09/html0/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
            
@@ -277,7 +282,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>97</span></a></li>
+			<li><a href="/categories/IT/">IT<span>98</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -296,45 +301,45 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/winform/">winform<span>4</span></a></li>
-		
-			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
-		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>10</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
 		
 			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
 		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
 		
 			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
 		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
-		
 			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/超图/">超图<span>3</span></a></li>
+		
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+		
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
 		
 			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>47</span></a></li>
@@ -350,23 +355,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2099/12/06/dotnetcore0/" ><i class="fa fa-file-o"></i>.NetCore常用知识大全</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/04/html0/" ><i class="fa fa-file-o"></i>前端系列问题</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/03/vue0/"  title="本文对 Vue 框架中一些重要的特性、框架的原理以问题的形式进行整理汇总，意在帮助作者及读者掌握 Vue的知识。" ><i class="fa fa-file-o"></i>vue知识巩固</a>
-      </li>
-    
-      <li>
-        <a href="/2099/12/02/dotnet0/" ><i class="fa fa-file-o"></i>.Net常用知识大全</a>
+        <a href="/2023/06/02/tool12/"  title="除了本身自带的主题外我们可以引入官方css主题" ><i class="fa fa-file-o"></i>Typora 配置主题</a>
       </li>
     
       <li>
         <a href="/2023/06/01/supermap3/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode功能与结构</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/01/csharp3/" ><i class="fa fa-file-o"></i>Winform中Form_Load函数和他的构造函数 ...</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
+      </li>
+    
+      <li>
+        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>
