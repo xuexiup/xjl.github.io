@@ -102,6 +102,60 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2023-04-02 </div>
+			<div class="article-title"><a href="/2023/04/02/sql4/" >sqlserver row_num()的用法</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select row_number() over(order by 表名 desc) as RowNumber_ID,*from </span><br><span class="line">(</span><br><span class="line">   select t.name as <span class="string">&#x27;表名&#x27;</span> ,i.name as <span class="string">&#x27;主键&#x27;</span> </span><br><span class="line">   ,s.avg_fragmentation_in_percent as <span class="string">&#x27;阈值&#x27;</span> from sys.tables t </span><br><span class="line">	<span class="built_in">join</span> sys.indexes i on i.object_id=t.object_id  </span><br><span class="line">	<span class="built_in">join</span> sys.dm_db_index_physical_stats(db_id(),object_id(0),null,null,<span class="string">&#x27;limited&#x27;</span>) s  </span><br><span class="line">	on s.object_id=i.object_id and s.index_id=i.index_id </span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select row_number() over( partition by 阈值 order by 表名 desc) as RowNumber_ID,*from </span><br><span class="line">(</span><br><span class="line">   select t.name as <span class="string">&#x27;表名&#x27;</span> ,i.name as <span class="string">&#x27;主键&#x27;</span> </span><br><span class="line">   ,s.avg_fragmentation_in_percent as <span class="string">&#x27;阈值&#x27;</span> from sys.tables t </span><br><span class="line">	<span class="built_in">join</span> sys.indexes i on i.object_id=t.object_id  </span><br><span class="line">	<span class="built_in">join</span> sys.dm_db_index_physical_stats(db_id(),object_id(0),null,null,<span class="string">&#x27;limited&#x27;</span>) s  </span><br><span class="line">	on s.object_id=i.object_id and s.index_id=i.index_id </span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2023/04/02/sql4/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-04-02 </div>
+			<div class="article-title"><a href="/2023/04/02/sql3/" >sqlserver with as的用法</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>&#x2F;<strong><strong><strong><strong><strong><strong><strong>以下sql语法为优化前后，查看有何妙处</strong></strong></strong></strong></strong></strong></strong>*****&#x2F;<br>–前</p>
+<blockquote><p>select n.c1, n.c2,n.c3,n.c4,n.c5 from<br>  (<br>       select  count(t.c1), t.c1, t.c2,t.c3,t.c4,t.c5  from tab1 t<br>       where t.c2 not in (‘val1’,’val2’,’val3’,’val4’,’val5’)<br>       group by t.c1, t.c2,t.c3,t.c4,t.c5<br>  ) n<br>  where 1&#x3D;1<br>  and n.c1 is not null<br>  and not exists<br>  (<br>     select * from<br>     (<br>        select  count(s.c2), s.c1, s.c2<br>        from (<br>                select m.c1, m.c2,m.c3,m.c4,m.c5  from tab1 m<br>                where exists<br>                (<br>                    select c1 from tab2 n<br>                    where c2 &gt; sysdate - 14<br>                    and m.c1 &#x3D; n.c1<br>                )<br>                and m.c1 is not null<br>                and m.c2 not in  (‘val1’,’val2’, ‘val3’, ‘val4’, ‘val5’)<br>              ) s<br>        group by s.c1, s.c2<br>     )<br>     t1 where t1.c2 &#x3D; n.c2<br>  )</p>
+</blockquote> 
+<p>–后</p>
+<blockquote><p>with t1 as(<br> select count(t.c1), t.c1,t.c2,t.c3,t.c4,t.c5<br>   from tab1 t<br>  where t.c2 not in (‘val1’,’val2’,’val3’,’val4’,’val5’)<br>    and c1 is not null<br>  group by t.c1, t.c2,t.c3,t.c4,t.c5)</p>
+<p> select t1.c1,t1.c2,t1.c3,t1.c4,t1.c5<br>   from t1<br> where not exists(<br> select &#x2F;<em>+ use_hash(m,n)</em>&#x2F; m.c1, m.c2,m.c3,m.c4,m.c5<br>    from t1 m,tab2 n<br>   where n.c2 &gt; sysdate - 14<br>     and m.c1 &#x3D; n.c1<br>     and t1.c2 &#x3D; m.c2);</p>
+</blockquote>    
+	
+	</div>
+  <a type="button" href="/2023/04/02/sql3/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-04-02 </div>
 			<div class="article-title"><a href="/2023/04/02/sql2/" >sqlserver游标</a></div>						
 		</h3>
 	
@@ -169,56 +223,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-03-05 </div>
-			<div class="article-title"><a href="/2023/03/05/abp1/" title="资料来源于实际实践或网络查找">.NET开发框架 ABP</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="ABP总体介绍"><a href="#ABP总体介绍" class="headerlink" title="ABP总体介绍"></a>ABP总体介绍</h3><p>ABP是ASP.NET Boilerplate Project，ASP.NET样板项目。<br>ABP框架定位于快速开发<br>ABP是一个用于最快实践和流行开发现代Web应用程序的新起点，旨在成为一个通用的Web应用程序框架和项目模板。<br>ABP基于DDD的经典分层架构思想，实现了众多DDD的概念。</p>
-	
-	</div>
-  <a type="button" href="/2023/03/05/abp1/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-27 </div>
-			<div class="article-title"><a href="/2023/02/27/dotnetcore0/" >.NetCore常用知识大全</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="谈一谈对DDD的理解"><a href="#谈一谈对DDD的理解" class="headerlink" title="谈一谈对DDD的理解?"></a>谈一谈对DDD的理解?</h3><blockquote><p>DDD，领域驱动设计。就是通过领域来指导软件设计，是一种十分抽象的软件设计思想;<br>它主要分为战略设计和战术设计:</p>
-<p>1）战略方面，通过事件风暴进行领域模型的划分，划分出核心域，子域，支撑域，定义通用语言，划分出界限上下文。</p>
-<p>2）战术设计方面，ddd将架构分层，“松耦合，高内聚”是架构设计的整体思想。按照DDD思想，可以分为领域层，基础设施层，应用层，接口层。</p>
-</blockquote>
-<p>接口层为前端用户提供api接口。基础设施层可以放一些第三方的服务，数据库连接等内容。应用层是对领域服务的编排，是很薄的一层（目前我自己的架构，应用的是cqrs，所有的相关逻辑都是放在了应用层，而领域层只是放了实体，因为暂时还不是特别理解领域层的服务和事件都应该写什么）。领域层包括实体，值对象，聚合根，领域服务，领域事件等内容。</p>
-	
-	</div>
-  <a type="button" href="/2023/02/27/dotnetcore0/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -272,7 +276,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>98</span></a></li>
+			<li><a href="/categories/IT/">IT<span>100</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -291,48 +295,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
 		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
 		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
 		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+		
+			<li><a href="/tags/超图/">超图<span>4</span></a></li>
 		
 			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
 		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
 		
 			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
 		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-			<li><a href="/tags/c/">c#<span>10</span></a></li>
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
 		
 			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
 		
-			<li><a href="/tags/工具/">工具<span>14</span></a></li>
+			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
 		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
-		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
 		
 			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>47</span></a></li>
+		   <li><a href="/tags">...<span>48</span></a></li>
 		 
 		</ul>
 	</div>
@@ -345,6 +349,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/05/supermap4/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode关键类型与成员</a>
+      </li>
+    
+      <li>
         <a href="/2023/06/02/tool12/"  title="除了本身自带的主题外我们可以引入官方css主题" ><i class="fa fa-file-o"></i>Typora 配置主题</a>
       </li>
     
@@ -354,14 +366,6 @@
     
       <li>
         <a href="/2023/06/01/csharp3/" ><i class="fa fa-file-o"></i>Winform中Form_Load函数和他的构造函数 ...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

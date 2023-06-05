@@ -102,6 +102,55 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue10/" >axios中使用异步（async +await）</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.定义方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> getIteminfo(<span class="built_in">id</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">id</span> == null) <span class="built_in">id</span> = getPara();//获取页面参数</span><br><span class="line"></span><br><span class="line">    var item_options = [];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> await axios(&#123;</span><br><span class="line"></span><br><span class="line">        url: dev_proxyftpname + <span class="string">&quot;/api/findOneById&quot;</span>,</span><br><span class="line"></span><br><span class="line">        method: <span class="string">&quot;post&quot;</span>,</span><br><span class="line"></span><br><span class="line">        data: JSON.stringify(&#123; <span class="built_in">id</span>: <span class="built_in">id</span> &#125;),</span><br><span class="line"></span><br><span class="line">        headers: &#123; <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span> &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="built_in">timeout</span>: 1000 * 30,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">        .<span class="keyword">then</span>((res) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (res.data) &#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (res.data.data != null) &#123;</span><br><span class="line"></span><br><span class="line">                    <span class="built_in">return</span> res.data.data;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue10/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
+			<div class="article-title"><a href="/2022/10/08/vue9/" >Vue中全局变量和全局函数的使用</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>1.直接在main.js中通过prototype定义</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.accessToken = <span class="string">&#x27;xxx&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>在页面中调用：this.accessToken<br>这种方法简单但是，当需要定义变量很多的时候，管理就很繁杂，这个时候就不宜使用。</p>
+	
+	</div>
+  <a type="button" href="/2022/10/08/vue9/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-08 </div>
 			<div class="article-title"><a href="/2022/10/08/vue8/" title="Vuex是一个专为 Vue.js 应用程序开发的状态管理模式 + 库,其结构：">vuex状态管理模式</a></div>						
 		</h3>
 	
@@ -178,56 +227,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue5/" >cnpm 安装指定版本的脚手架vue-cli</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.安装npm</p>
-<p>去Node.js官网下载安装Node.js，npm也就安装上了。</p>
-<p>2.安装国内淘宝镜像，以后就可以通过cnpm代替npm指令，使用国内源，执行效率更高：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue5/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-08 </div>
-			<div class="article-title"><a href="/2022/10/08/vue4/" >vue-cli更新</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.卸载旧版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall vue-cli -g  </span><br><span class="line"></span><br><span class="line">或</span><br><span class="line"></span><br><span class="line">yarn global remove vue-cli</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/08/vue4/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -281,7 +280,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>98</span></a></li>
+			<li><a href="/categories/IT/">IT<span>100</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -300,48 +299,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
-		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
 			<li><a href="/tags/winform/">winform<span>4</span></a></li>
 		
-			<li><a href="/tags/工具/">工具<span>14</span></a></li>
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
 		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+		
+			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
 		
 			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
 		
 			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>47</span></a></li>
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>48</span></a></li>
 		 
 		</ul>
 	</div>
@@ -354,6 +353,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/05/supermap4/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode关键类型与成员</a>
+      </li>
+    
+      <li>
         <a href="/2023/06/02/tool12/"  title="除了本身自带的主题外我们可以引入官方css主题" ><i class="fa fa-file-o"></i>Typora 配置主题</a>
       </li>
     
@@ -363,14 +370,6 @@
     
       <li>
         <a href="/2023/06/01/csharp3/" ><i class="fa fa-file-o"></i>Winform中Form_Load函数和他的构造函数 ...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

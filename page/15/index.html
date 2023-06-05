@@ -102,6 +102,56 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/html4/" >响应式导航</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>以下是实现HTML5响应式导航的一个示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;<span class="built_in">head</span>&gt;</span><br><span class="line">    &lt;title&gt;响应式导航&lt;/title&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;utf-8&quot;</span>&gt;</span><br><span class="line">    &lt;style <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line">        body &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .topnav &#123;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            background-color: <span class="comment">#333;</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">            .topnav a &#123;</span><br><span class="line">                <span class="built_in">float</span>: left;</span><br><span class="line">                display: block;</span><br><span class="line">                color: <span class="comment">#f2f2f2;</span></span><br><span class="line">                text-align: center;</span><br><span class="line">                padding: 14px 16px;</span><br><span class="line">                text-decoration: none;</span><br><span class="line">                font-size: 17px;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">                .topnav a:hover &#123;</span><br><span class="line">                    background-color: <span class="comment">#ddd;</span></span><br><span class="line">                    color: black;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            .topnav .icon &#123;</span><br><span class="line">                display: none;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        @media screen and (max-width: 600px) &#123;</span><br><span class="line">            .topnav a:not(:first-child) &#123;</span><br><span class="line">                display: none;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .topnav a.icon &#123;</span><br><span class="line">                <span class="built_in">float</span>: right;</span><br><span class="line">                display: block;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">            .container &#123;</span><br><span class="line">                display: inline-block;</span><br><span class="line">                cursor: pointer;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">            .bar1, .bar2, .bar3 &#123;</span><br><span class="line">                width: 35px;</span><br><span class="line">                height: 5px;</span><br><span class="line">                background-color: <span class="comment">#333;</span></span><br><span class="line">                margin: 6px 0;</span><br><span class="line">                transition: 0.4s;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .change .bar1 &#123;</span><br><span class="line">                -webkit-transform: rotate(-45deg) translate(-9px, 6px);</span><br><span class="line">                transform: rotate(-45deg) translate(-9px, 6px);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .change .bar2 &#123;</span><br><span class="line">                opacity: 0;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .change .bar3 &#123;</span><br><span class="line">                -webkit-transform: rotate(45deg) translate(-8px, -8px);</span><br><span class="line">                transform: rotate(45deg) translate(-8px, -8px);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        @media screen and (max-width: 600px) &#123;</span><br><span class="line">            .topnav.responsive &#123;</span><br><span class="line">                position: relative;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">                .topnav.responsive .icon &#123;</span><br><span class="line">                    position: absolute;</span><br><span class="line">                    right: 0;</span><br><span class="line">                    top: 0;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                .topnav.responsive a &#123;</span><br><span class="line">                    <span class="built_in">float</span>: none;</span><br><span class="line">                    display: block;</span><br><span class="line">                    text-align: left;</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        <span class="keyword">function</span> myFunction(iconid) &#123;</span><br><span class="line">            iconid.classList.toggle(<span class="string">&quot;change&quot;</span>);</span><br><span class="line">            var x = document.getElementById(<span class="string">&quot;myTopnav&quot;</span>);</span><br><span class="line">            <span class="keyword">if</span> (x.className === <span class="string">&quot;topnav&quot;</span>) &#123;</span><br><span class="line">                x.className += <span class="string">&quot; responsive&quot;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                x.className = <span class="string">&quot;topnav&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=<span class="string">&quot;topnav&quot;</span> <span class="built_in">id</span>=<span class="string">&quot;myTopnav&quot;</span>&gt;</span><br><span class="line">        &lt;a href=<span class="string">&quot;#home&quot;</span>&gt;主页&lt;/a&gt;</span><br><span class="line">        &lt;a href=<span class="string">&quot;#news&quot;</span>&gt;新闻中心&lt;/a&gt;</span><br><span class="line">        &lt;a href=<span class="string">&quot;#contact&quot;</span>&gt;联系我们&lt;/a&gt;</span><br><span class="line">        &lt;a href=<span class="string">&quot;#about&quot;</span>&gt;关于&lt;/a&gt;</span><br><span class="line">        &lt;a href=<span class="string">&quot;javascript:void(0);&quot;</span> style=<span class="string">&quot;font-size:15px;&quot;</span> class=<span class="string">&quot;icon&quot;</span>&gt;</span><br><span class="line">            &lt;!--&amp;<span class="comment">#9776;--&gt;</span></span><br><span class="line">            &lt;div class=<span class="string">&quot;container&quot;</span> onclick=<span class="string">&quot;myFunction(this)&quot;</span>&gt;</span><br><span class="line">                &lt;div class=<span class="string">&quot;bar1&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">                &lt;div class=<span class="string">&quot;bar2&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">                &lt;div class=<span class="string">&quot;bar3&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div style=<span class="string">&quot;padding-left:16px&quot;</span>&gt;</span><br><span class="line">        &lt;h2&gt;标题&lt;/h2&gt;</span><br><span class="line">        &lt;p&gt;内容&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/html4/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/html3/" >路径中的点“./”、“../”、“/”代表的含义</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>.&#x2F; 代表当前目录</p>
+<p>..&#x2F; 代表上一层目录</p>
+<p>&#x2F; 代表根目录</p>
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/html3/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
 			<div class="article-title"><a href="/2022/10/13/special4/" >Abp生成模板项目</a></div>						
 		</h3>
 	
@@ -171,66 +221,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/special3/" >Electron学习之路 -基础教程篇</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>以下内容是根据 <a href="https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-prerequisites" title="" target="">官网</a> 资料和自己实践整理（查阅资料）所得；</p>
-<blockquote><p>根据官网说明：Electron是一个使用 JavaScript、HTML 和 CSS 构建桌面应用程序的框架。</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/13/special3/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/special2/" >HBuilder X 开发 5+App(mui项目)</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>根据 <a href="https://hx.dcloud.net.cn/" title="" target="">HBuilder X 官网</a> 介绍，工具具有以下特点:</p>
-<blockquote><ol>
-<li>轻巧<br>仅10余M的绿色发行包(不含插件)</li>
-<li>极速<br>不管是启动速度、大文档打开速度、编码提示，都极速响应<br>C++的架构性能远超Java或Electron架构</li>
-<li>vue开发强化<br><code>HX</code>对vue做了大量优化投入，开发体验远超其他开发工具<br><a target="_blank" rel="noopener" href="https://hx.dcloud.net.cn/Tutorial/Language/vue">详见</a> 按下Alt+鼠标左键可直接打开网址</li>
-<li>小程序支持<br>国外开发工具没有对中国的小程序开发优化，<code>HX</code>可开发<code>uni-app</code>或<code>小程序</code>、<code>快应用</code>等项目，为国人提供更高效工具</li>
-<li>markdown利器<br><code>HX</code>是唯一一个新建文件默认类型是markdown的编辑器，也是对md支持最强的编辑器<br><code>HX</code>为md强化了众多功能，请<strong>务必点击</strong>【菜单-帮助-markdown语法示例】，快速掌握md及<code>HX</code>的强化技巧！</li>
-<li>清爽护眼<br>HX的界面比其他工具更清爽简洁，绿柔主题经过科学的脑疲劳测试，是最适合人眼长期观看的主题界面<br><a target="_blank" rel="noopener" href="https://hx.dcloud.net.cn/Tutorial/Other/health">详见</a></li>
-<li>强大的语法提示<br><code>HX</code>是中国唯一一家拥有自主IDE语法分析引擎的公司，对前端语言提供准确的代码提示和转到定义(Alt+鼠标左键)</li>
-<li>高效极客工具<br>更强大的多光标、智能双击…让字处理的效率大幅提升<br>了解<code>HX</code>的极客技巧，<a target="_blank" rel="noopener" href="https://hx.dcloud.net.cn/Tutorial/UserGuide/skill">详见</a>，</li>
-<li>更强的json支持<br>现代js开发中大量json结构的写法，<code>HX</code>提供了比其他工具更高效的操作<br><a target="_blank" rel="noopener" href="https://hx.dcloud.net.cn/Tutorial/Language/json">详见</a></li>
-</ol>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/13/special2/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -284,7 +274,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>98</span></a></li>
+			<li><a href="/categories/IT/">IT<span>100</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -303,48 +293,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
-		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
-		
-			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>4</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
 			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
 		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+		
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+		
+			<li><a href="/tags/超图/">超图<span>4</span></a></li>
+		
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>14</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>10</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+		
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>47</span></a></li>
+		   <li><a href="/tags">...<span>48</span></a></li>
 		 
 		</ul>
 	</div>
@@ -357,6 +347,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/05/supermap4/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode关键类型与成员</a>
+      </li>
+    
+      <li>
         <a href="/2023/06/02/tool12/"  title="除了本身自带的主题外我们可以引入官方css主题" ><i class="fa fa-file-o"></i>Typora 配置主题</a>
       </li>
     
@@ -366,14 +364,6 @@
     
       <li>
         <a href="/2023/06/01/csharp3/" ><i class="fa fa-file-o"></i>Winform中Form_Load函数和他的构造函数 ...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>

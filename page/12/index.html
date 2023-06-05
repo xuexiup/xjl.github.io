@@ -102,6 +102,55 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/ui2/" >ElementUI控件el-tree方法renderContent的使用</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>renderContent并不会影响代码中既定tree数据层结构渲染加载；</p>
+<p>这里的作用是根据tree的特定level调整其样式：</p>
+<h2 id="el-tree"><a href="#el-tree" class="headerlink" title="el-tree"></a>el-tree</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tree</span><br><span class="line"></span><br><span class="line">                :render-content=<span class="string">&quot;renderContent&quot;</span></span><br><span class="line"></span><br><span class="line">                :data=<span class="string">&quot;treedata&quot;</span></span><br><span class="line"></span><br><span class="line">                default-expand-all</span><br><span class="line"></span><br><span class="line">                :show-checkbox=<span class="string">&quot;showcheckbox&quot;</span></span><br><span class="line"></span><br><span class="line">                highlight-current</span><br><span class="line"></span><br><span class="line">                node-key=<span class="string">&quot;itemId&quot;</span></span><br><span class="line"></span><br><span class="line">                :expand-on-click-node=<span class="string">&quot;false&quot;</span></span><br><span class="line"></span><br><span class="line">                @node-click=<span class="string">&quot;handleNodeClick&quot;</span></span><br><span class="line"></span><br><span class="line">                :props=<span class="string">&quot;ItemProps&quot;</span></span><br><span class="line"></span><br><span class="line">                v-loading=<span class="string">&quot;ISload&quot;</span></span><br><span class="line"></span><br><span class="line">                ref=<span class="string">&quot;tree&quot;</span></span><br><span class="line"></span><br><span class="line">                @check-change=<span class="string">&quot;itemCheckChange&quot;</span></span><br><span class="line"></span><br><span class="line">                style=<span class="string">&quot;margin-top: 1em;&quot;</span></span><br><span class="line"></span><br><span class="line">              &gt;&lt;/el-tree&gt;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/ui2/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/ui1/" >ElementUI栅格系统布局与偏移</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>以下内容参照 <a href="https://element.eleme.io/#/zh-CN/component/layout#col-attributes" title="" target="">官方文档</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line"></span><br><span class="line">&lt;el-col</span><br><span class="line">        :xs=<span class="string">&quot;&#123; span: 24, offset: 0 &#125;&quot;</span></span><br><span class="line">        :sm=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :md=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :lg=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :xl=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">        :xxl=<span class="string">&quot;&#123; span: 12, offset: 0 &#125;&quot;</span></span><br><span class="line">      &gt;</span><br><span class="line">&lt;/el-col&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/ui1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
 			<div class="article-title"><a href="/2022/10/13/netnote2/" >电脑开启VT的方法</a></div>						
 		</h3>
 	
@@ -170,58 +219,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css7/" >标签添加自动换行的属性</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<blockquote><p>word-wrap:break-word;</p>
-<p>white-space: pre-wrap;</p>
-<p>white-space: -moz-pre-wrap;</p>
-<p>white-space: -pre-wrap;</p>
-<p>white-space:-o-pre-wrap;</p>
-<p>word-wrap: break-word;</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2022/10/13/css7/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/css6/" >wangeditor自带的样式</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">/* table 样式 */</span><br><span class="line">table &#123;</span><br><span class="line">border-top: 1px solid <span class="comment">#ccc;</span></span><br><span class="line">border-left: 1px solid <span class="comment">#ccc;</span></span><br><span class="line">&#125;</span><br><span class="line">table td,</span><br><span class="line">table th &#123;</span><br><span class="line">border-bottom: 1px solid <span class="comment">#ccc;</span></span><br><span class="line">border-right: 1px solid <span class="comment">#ccc;</span></span><br><span class="line">padding: 3px 5px;</span><br><span class="line">&#125;</span><br><span class="line">table th &#123;</span><br><span class="line">border-bottom: 2px solid <span class="comment">#ccc;</span></span><br><span class="line">text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* blockquote 样式 */</span><br><span class="line">blockquote &#123;</span><br><span class="line">display: block;</span><br><span class="line">border-left: 8px solid <span class="comment">#d0e5f2;</span></span><br><span class="line">padding: 5px 10px;</span><br><span class="line">margin: 10px 0;</span><br><span class="line">line-height: 1.4;</span><br><span class="line">font-size: 100%;</span><br><span class="line">background-color: <span class="comment">#f1f1f1;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* code 样式 */</span><br><span class="line">code &#123;</span><br><span class="line">display: inline-block;</span><br><span class="line">*display: inline;</span><br><span class="line">*zoom: 1;</span><br><span class="line">background-color: <span class="comment">#f1f1f1;</span></span><br><span class="line">border-radius: 3px;</span><br><span class="line">padding: 3px 5px;</span><br><span class="line">margin: 0 3px;</span><br><span class="line">&#125;</span><br><span class="line">pre code &#123;</span><br><span class="line">display: block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* ul ol 样式 */</span><br><span class="line">ul, ol &#123;</span><br><span class="line">margin: 10px 0 10px 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/13/css6/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -275,7 +272,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>98</span></a></li>
+			<li><a href="/categories/IT/">IT<span>100</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -294,48 +291,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
 		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
-		
-			<li><a href="/tags/winform/">winform<span>4</span></a></li>
-		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
-		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
-		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
-		
-			<li><a href="/tags/工具/">工具<span>14</span></a></li>
+			<li><a href="/tags/C/">C#<span>1</span></a></li>
 		
 			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
 		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>10</span></a></li>
-		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
 		
 			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>47</span></a></li>
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
+		
+			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+		
+			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>48</span></a></li>
 		 
 		</ul>
 	</div>
@@ -348,6 +345,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/05/supermap4/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode关键类型与成员</a>
+      </li>
+    
+      <li>
         <a href="/2023/06/02/tool12/"  title="除了本身自带的主题外我们可以引入官方css主题" ><i class="fa fa-file-o"></i>Typora 配置主题</a>
       </li>
     
@@ -357,14 +362,6 @@
     
       <li>
         <a href="/2023/06/01/csharp3/" ><i class="fa fa-file-o"></i>Winform中Form_Load函数和他的构造函数 ...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/01/csharp2/" ><i class="fa fa-file-o"></i>Winform中 EnableVisualStyles...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/05/31/supermap2/" ><i class="fa fa-file-o"></i>SuperMap GIS数据组织结构</a>
       </li>
     
   </ul>
