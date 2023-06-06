@@ -98,18 +98,51 @@
 			<div class="mypage">
 				
 
-				<h4>1.<a href="https://blog.csdn.net/m0_65443540/article/details/126311063" title="" target="">IDEA社区版详细安装</a></h4>
-<h4>2.<a href="https://blog.csdn.net/engineer_why/article/details/126278075" title="" target="">JDK8的下载与安装</a></h4>
+				<h4><a href="https://blog.csdn.net/m0_65443540/article/details/126311063" title="" target="">IDEA社区版详细安装</a></h4>
+<h4><a href="https://blog.csdn.net/engineer_why/article/details/126278075" title="" target="">JDK8的下载与安装</a></h4>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">配置环境变量后再cmd中输入javac提示：<span class="string">&#x27;javac&#x27;</span> 不是内部或外部命令，也不是可运行的程序</span><br><span class="line">或批处理文件。</span><br></pre></td></tr></table></figure>
 <h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><blockquote><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zpbolgs/p/15232473.html">https://www.cnblogs.com/zpbolgs/p/15232473.html</a></p>
 </blockquote>
 
-<h4>3.<a href="https://blog.csdn.net/qq_35473192/article/details/128829352" title="" target="">JDK9-JDK17新特性总结</a></h4>
+<h4><a href="https://blog.csdn.net/qq_35473192/article/details/128829352" title="" target="">JDK9-JDK17新特性总结</a></h4>
 
-<h4>4.<a href="https://blog.csdn.net/ACE_U_005A/article/details/114882838" title="" target="">使用ideal创建项目</a></h4>
-<h4>5.<a href="https://blog.csdn.net/xiatutut/article/details/126632928" title="" target="">安装 IntelliJ IDEA 其原理与方法</a></h4>
+<h4><a href="https://blog.csdn.net/ACE_U_005A/article/details/114882838" title="" target="">使用ideal创建项目</a></h4>
+<h4><a href="https://blog.csdn.net/xiatutut/article/details/126632928" title="" target="">安装 IntelliJ IDEA 其原理与方法</a></h4>
+<h4><a href="https://www.jianshu.com/p/1d620ee8c07b" title="" target="">安装 IntelliJ IDEA 旗舰版安装与破解</a></h4>
+需要注意的是拖拽jar包之前，软件不要以管理员的方式启动，否则无法拖拽生效。
+<h4><a href="https://blog.csdn.net/m0_49284219/article/details/121972531" title="" target="">Mysql5.7安装教程</a></h4>
+<h4><a href="https://blog.csdn.net/weixin_43818488/article/details/125910294" title="" target="">Mysql5.7安装教程</a></h4>
+<span id="more"></span>
+安装后启动：net start mysql
+报错提示：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">发生系统错误 3。</span><br><span class="line"></span><br><span class="line">系统找不到指定的文件。</span><br></pre></td></tr></table></figure>
+解决参考：http://www.codebaoku.com/it-db/it-db-17873.html
+之后输入指令：net start mysql
+提示：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MySQL服务无法启动 没有报告任何错误，请键入NET HELPMSG 3534</span><br></pre></td></tr></table></figure>
+这里是由于.ini配置文件中的路径使用的单反斜杠，应该改为双反斜杠
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[mysql]</span><br><span class="line"><span class="comment"># 设置mysql客户端默认字符集</span></span><br><span class="line">default-character-set=utf8</span><br><span class="line">[mysqld]</span><br><span class="line"><span class="comment">#设置3306端口</span></span><br><span class="line">port = 3306</span><br><span class="line"><span class="comment"># 设置mysql的安装目录</span></span><br><span class="line">basedir=D:\\softprogram\\mysql\\install</span><br><span class="line"><span class="comment"># 设置mysql数据库的数据的存放目录</span></span><br><span class="line">datadir=D:\\softprogram\\mysql\data</span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line">max_connections=200</span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为8比特编码的latin1字符集</span></span><br><span class="line">character-set-server=utf8</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+接下来登录提示：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR 1045 (28000): Unknown error 1045</span><br></pre></td></tr></table></figure>
+解决办法：
+https://blog.csdn.net/qq_41221596/article/details/128263736
 
+<p>这里需要注意的是，老版本的mysql修改密码的方式为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update mysql.user <span class="built_in">set</span> authentication_string=password(<span class="string">&#x27;qqq&#x27;</span>) <span class="built_in">where</span> user=<span class="string">&#x27;root&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>否则会报错：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR 1054 (42S22): Unknown error 1054</span><br></pre></td></tr></table></figure>
+<p>登录出现：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MySQL服务器登陆故障ERROR 1820 (HY000)的解决方法</span><br></pre></td></tr></table></figure>
+<p>执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED BY <span class="string">&#x27;password1234&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h4><a href="https://cloud.tencent.com/developer/article/2102772" title="" target="">IDEA创建springboot+mybatis项目全过程</a></h4>
+
+<p>创建完成后，IDEA 启动 项目提示:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error:java: 无效的源发行版: 13</span><br></pre></td></tr></table></figure>
+<p>解决办法：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46341930/article/details/127038729">https://blog.csdn.net/m0_46341930/article/details/127038729</a></p>
+<p>配置maven及阿里镜像：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhang19903848257/article/details/107923791">https://blog.csdn.net/zhang19903848257/article/details/107923791</a></p>
 
 			</div>
 
