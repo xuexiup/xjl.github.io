@@ -143,6 +143,30 @@ https://blog.csdn.net/qq_41221596/article/details/128263736
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error:java: 无效的源发行版: 13</span><br></pre></td></tr></table></figure>
 <p>解决办法：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46341930/article/details/127038729">https://blog.csdn.net/m0_46341930/article/details/127038729</a></p>
 <p>配置maven及阿里镜像：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhang19903848257/article/details/107923791">https://blog.csdn.net/zhang19903848257/article/details/107923791</a></p>
+<h3 id="配置Tomcat"><a href="#配置Tomcat" class="headerlink" title="配置Tomcat"></a>配置Tomcat</h3><blockquote><p>以下是安装 Tomcat 10 的步骤：<br>首先，下载Tomcat 10 的二进制发行版 (tar.gz 或 .zip)，官网下载地址为：<a target="_blank" rel="noopener" href="https://tomcat.apache.org/download-10.cgi">https://tomcat.apache.org/download-10.cgi</a><br>下载后，将压缩文件解压到您想要安装 Tomcat 的目录中。<br>进入到 Tomcat 的 bin 目录。<br>在 bin 目录中找到 startup.sh 或 startup.bat 文件，启动 Tomcat。<br>打开浏览器，访问默认 URL：<a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080/</a> 以确认Tomcat是否成功运行。<br>也可以参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43511299/article/details/119784472">https://blog.csdn.net/qq_43511299/article/details/119784472</a></p>
+</blockquote>
+
+<h3 id="配置-Tomcat-环境变量。"><a href="#配置-Tomcat-环境变量。" class="headerlink" title="配置 Tomcat 环境变量。"></a>配置 Tomcat 环境变量。</h3><blockquote><p>在 Linux 系统中，可以将 Tomcat 的目录路径添加到 PATH 环境变量中：<br>export CATALINA_HOME&#x3D;&#x2F;path&#x2F;to&#x2F;tomcat&#x2F;<br>export PATH&#x3D;$CATALINA_HOME&#x2F;bin:$PATH<br>在 Windows 系统中，可以设置 Tomcat 的目录路径作为系统环境变量：<br>在“控制面板”中打开“系统”。<br>单击“高级系统设置”。<br>单击“环境变量”。<br>在系统变量中找到 PATH，单击“编辑”。<br>在“变量值”中添加 Tomcat 的 bin 目录路径，例如：C:\path\to\tomcat\bin。<br>重新启动命令行或其他调用 Tomcat 的进程。<br>这样，就完成了 Tomcat 10 的安装和配置，可以开始使用 Tomcat 10 运行您的Java Web应用程序了。</p>
+</blockquote>
+
+<h3 id="在IDEA中创建Tomcat启动配置"><a href="#在IDEA中创建Tomcat启动配置" class="headerlink" title="在IDEA中创建Tomcat启动配置"></a>在IDEA中创建Tomcat启动配置</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_30434271/article/details/118730323">https://blog.csdn.net/qq_30434271/article/details/118730323</a></p>
+<p>配置的时候如果出现：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Application server libraries not found</span><br></pre></td></tr></table></figure>
+<p>我这里的问题是，下载配置的Tomcat 10，重新下载配置 Tomcat 9解决问题；</p>
+<h3 id="报错-HTTP状态-500-内部服务器错误-Request-processing-failed-nested-exception-is-org-mybatis-spring-MyBatisSystemException-nested-exception-is-org-apache-ibatis-exceptions-PersistenceException"><a href="#报错-HTTP状态-500-内部服务器错误-Request-processing-failed-nested-exception-is-org-mybatis-spring-MyBatisSystemException-nested-exception-is-org-apache-ibatis-exceptions-PersistenceException" class="headerlink" title="报错 HTTP状态 500 - 内部服务器错误 Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException:"></a>报错 HTTP状态 500 - 内部服务器错误 Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">类型 异常报告</span><br><span class="line">消息 Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException:</span><br><span class="line">描述 服务器遇到一个意外的情况，阻止它完成请求。</span><br></pre></td></tr></table></figure>
+<p><img src="/./../img/article/2023060701.png"></p>
+<p>出现这种问题的原因：</p>
+<blockquote><p>这种错误通常是由于 MyBatis 和数据库交互时出现问题所导致的。</p>
+<p>具体的原因可能有多种可能，例如：</p>
+<p>1.数据库连接问题：请检查数据库连接是否正常，例如数据库地址、端口、用户名、密码等是否正确。<br>2.SQL 语句问题：请检查 SQL 语句是否正确，并确保使用的参数类型和数量与 SQL 语句中的占位符一致。<br>3.映射文件问题：请检查 MyBatis 的 mapper 映射文件是否正确配置，例如表名、字段名是否正确，映射关系是否正确等。<br>4.事务管理问题：请检查事务管理器是否正确配置，是否有需要开启事务的方法没有使用事务等。</p>
+<p>如果以上方法无法解决问题，请查看异常的详细信息，有助于更好地定位问题并解决问题。</p>
+</blockquote>
+
+<h3 id="IDEA如何配置-Spring-boot-与-mysql-链接？"><a href="#IDEA如何配置-Spring-boot-与-mysql-链接？" class="headerlink" title="IDEA如何配置 Spring boot 与 mysql 链接？"></a>IDEA如何配置 Spring boot 与 mysql 链接？</h3><p>在 IntelliJ IDEA 中，配置 Spring 与 MySQL 的链接可以通过以下步骤完成：<br>1.打开项目中的 application.properties 或 application.yml 文件。<br>2.在该文件中添加以下配置信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name?serverTimezone=UTC&amp;useSSL=<span class="literal">false</span></span><br><span class="line">spring.datasource.username=your_username</span><br><span class="line">spring.datasource.password=your_password</span><br><span class="line">spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver</span><br></pre></td></tr></table></figure>
+<p>其中，your_database_name、your_username 和 your_password 需要替换为你 MySQL 数据库的具体信息。<br>3.点击 IDEA 界面右上角的 “Run Configuration” 按钮，选择 Edit Configurations 选项。<br>4.在打开的对话框中，选择你的 Spring Boot 应用程序，然后在 Environment 标签页中添加以下环境变量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SPRING_PROFILES_ACTIVE=dev</span><br></pre></td></tr></table></figure>
+<p>其中，“dev”是你在 application.properties 或 application.yml 文件中定义的你正在使用的 profile 名称。<br>5.点击 “OK” 保存配置信息，重启你的 Spring Boot 应用程序即可。你现在可以在你的 Java 代码中使用 Spring JDBC 连接到 MySQL 数据库</p>
 
 			</div>
 
