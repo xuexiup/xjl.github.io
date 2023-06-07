@@ -38,8 +38,8 @@ blockquote {
     background-color: #EAF2DA !important;
     color: #777777 !important;
 
-    border: 3.5px dotted rgba(0, 0, 0, .15) !important; */     
-    border:none !important;
+    border: 3.5px dotted rgba(0, 0, 0, .15) !important; */
+    border: none !important;
     border-radius: 4px !important;
 }
 
@@ -108,7 +108,7 @@ blockquote {
     /* font-family: Verdana;  */
     /* font-family: Helvetica; */
     /* font-family: Arial; */
-    
+
     /* font-family: Lucida Family; */
 }
 
@@ -123,7 +123,7 @@ h3::after {
 /*修改样式--begin*/
 
 body {
- 
+
     width: 100%;
     height: 100%;
     top: 0;
@@ -175,7 +175,7 @@ body {
 }
 
 .content {
-  
+
     /* background: transparent !important; */
     height: 100vh;
     overflow-y: scroll;
@@ -312,10 +312,11 @@ h3 {
 }
 
 
-.article-title a {    
-    color:#C9D1D9;
-    text-decoration: underline;
-    padding:1px;
+.article-title a {
+    color: #C9D1D9;
+    padding: 1px;
+    font-size:20px;   
+    font-weight: bold; 
 }
 
 .article-title a:hover {
@@ -379,7 +380,7 @@ h3 {
 
 p a {
     color: #AA5500;
-    color:rgba(255, 255, 255, .65);
+    color: rgba(255, 255, 255, .65);
 }
 
 p a:hover {
@@ -394,10 +395,11 @@ p a:hover {
 
 .row h4 a {
     color: #AA5500;
-    color:rgba(255, 255, 255, .65);
+    color: rgba(255, 255, 255, .65);
 }
-.row h4 a:hover{
-    color:#DC925C
+
+.row h4 a:hover {
+    color: #DC925C
 }
 
 .row h4 a:hover {
@@ -465,62 +467,90 @@ a {
 }
 
 /*修改code 样式--begin*/
-.highlight,.bash,.gutter,.code,.code>pre{
+.highlight,
+.bash,
+.gutter,
+.code,
+.code>pre {
     background-color: #FCF5ED !important;
 }
-.highlight .bash{
-    width:100%;
-    padding:0px;
-    margin:0px;
+
+.highlight .bash {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
 }
-.highlight table,.highlight table  tbody td{
+
+.highlight table,
+.highlight table tbody td {
     border: none !important;
     text-align: left !important;
 }
-.code{
-    word-wrap: break-word;    
+
+.code {
+    word-wrap: break-word;
 }
 
-.gutter>pre{
-    background-color: #FCF5ED !important;    
-    border-right: 1px solid rgba(0, 0, 0, .25) !important;  
-    color:rgba(0,0,0,.2)  !important;      
+.gutter>pre {
+    background-color: #FCF5ED !important;
+    border-right: 1px solid rgba(0, 0, 0, .25) !important;
+    color: rgba(0, 0, 0, .2) !important;
 }
 
-.code>pre{
+.code>pre {
     /* color:#A3613D !important; */
-    color: #333333  !important;
-    padding-left:8px;
+    color: #333333 !important;
+    padding-left: 8px;
 }
+
 /*修改code 样式--end*/
 /*修改表格样式-begin*/
-.mypage table{
-    border-top:1px groove rgba(0, 0, 0, .035);    
-    border-left:1px groove rgba(0, 0, 0, .035);  
+.mypage table {
+    border-top: 1px groove rgba(0, 0, 0, .035);
+    border-left: 1px groove rgba(0, 0, 0, .035);
 }
-.mypage table thead{
-    background-color: #E2EFDA; 
+
+.mypage table thead {
+    background-color: #E2EFDA;
     text-align: center;
 }
-.mypage table thead th{
-    border-right:1px groove rgba(0, 0, 0, .035);
+
+.mypage table thead th {
+    border-right: 1px groove rgba(0, 0, 0, .035);
     text-align: center;
-    font-weight: bold;    
+    font-weight: bold;
 }
-.mypage table thead th:last-child{
+
+.mypage table thead th:last-child {
     border-right: none;
 }
-.mypage table tbody tr:nth-child(odd){
+
+.mypage table tbody tr:nth-child(odd) {
     background-color: #FAFAFA;
 }
-.mypage table tbody td{
-    border-bottom:1px groove rgba(0, 0, 0, .035);
-    border-right:1px groove rgba(0, 0, 0, .035);
+
+.mypage table tbody td {
+    border-bottom: 1px groove rgba(0, 0, 0, .035);
+    border-right: 1px groove rgba(0, 0, 0, .035);
     text-align: center;
 }
 
 
 /*修改表格样式-end*/
 
+:not(.fa) {
+  font-size: 16px;
+}
+.entry{
+    
+   
+}
+.articlenums{
+    color:#E5975C;
+}
+.page h3{
+    font-style: none;
+    margin-top: 1.5em;
+}
 
 /*修改样式end*/
