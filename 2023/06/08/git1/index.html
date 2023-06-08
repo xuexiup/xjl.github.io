@@ -114,8 +114,15 @@
 </blockquote>
 
 <p>完成之后，删除.git文件夹，重新执行 1，2，3 步骤，直到 正确无误的生成：SSH key</p>
-<h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3><p>[参考]</p>
-<h4> <a href="https://blog.csdn.net/m0_45806184/article/details/125726269" title="" target="">git使用教程：</a></h4>
+<h3 id="4-通过ssh-方式clone"><a href="#4-通过ssh-方式clone" class="headerlink" title="4. 通过ssh 方式clone"></a>4. 通过ssh 方式clone</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b 分支名 项目地址.git</span><br></pre></td></tr></table></figure>
+<p>第一次clone可能会提示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host <span class="string">&#x27;&#x27;</span> can<span class="string">&#x27;t be established.</span></span><br><span class="line"><span class="string">This key is not known by any other names</span></span><br><span class="line"><span class="string">Are you sure you want to continue connecting (yes/no/[fingerprint])</span></span><br></pre></td></tr></table></figure>
+<p>这是由于<br>这个提示表示 SSH 客户端连接的主机没有在本地 SSH known_hosts 文件中找到对应的条目，因此无法验证主机的身份。这通常是由于第一次连接该主机所致。<br>在这种情况下，你需要考虑是否信任该主机。如果你确定该主机是可信的，可以回答 “yes” 以继续连接。如果你不确定，可以输入 “no” 以中断连接，然后联系主机管理员以确认该主机的身份。<br>如果你选择继续连接，SSH 客户端将会将该主机的公钥添加到本地 known_hosts 文件中，以便在将来的连接中可以比较主机的公钥，从而验证主机的身份。<br>另外，如果你想忽略该主机的身份验证，可以回答 “yes” 后在下一次连接时使用 StrictHostKeyChecking 选项。例如：</p>
+<blockquote><p>ssh -o StrictHostKeyChecking&#x3D;no user@host</p>
+</blockquote>
+<p>但是，忽略该警告将使你的连接受到安全风险的威胁，因此不建议在生产环境中使用该选项。</p>
+<p>[参考]</p>
+<h4> <a href="https://blog.csdn.net/m0_45806184/article/details/125726269" title="" target="">git使用教程</a></h4>
 <h4> <a href="https://zhuanlan.zhihu.com/p/345915480" title="" target="">git切换用户、多用户切换的正确方式 git commit和git push 切换用户：</a></h4>
 <h4> <a href="https://blog.csdn.net/yqh845451078/article/details/116938510" title="" target="">git切换账号和密码。并非是用户和邮箱</a></h4>
 <h4> <a href="https://blog.csdn.net/preserveXing/article/details/128893228" title="" target="">git用户的切换：</a></h4>
