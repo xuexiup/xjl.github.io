@@ -121,12 +121,31 @@
 <blockquote><p>ssh -o StrictHostKeyChecking&#x3D;no user@host</p>
 </blockquote>
 <p>但是，忽略该警告将使你的连接受到安全风险的威胁，因此不建议在生产环境中使用该选项。</p>
+<h3 id="5-通过gitlone-https-的方式拉取代码，如果一下错误"><a href="#5-通过gitlone-https-的方式拉取代码，如果一下错误" class="headerlink" title="5. 通过gitlone https 的方式拉取代码，如果一下错误"></a>5. 通过gitlone https 的方式拉取代码，如果一下错误</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal: unable to access <span class="string">&#x27;https://gitlab.xxx.com/xxx/&#x27;</span>: SSL certificate problem: self signed certificate</span><br></pre></td></tr></table></figure>
+<p>则通过以下命令来设置不验证 https证书</p>
+<blockquote><p>git config –global http.sslVerify false</p>
+</blockquote>
+
+<h3 id="6-在git中项目的分支"><a href="#6-在git中项目的分支" class="headerlink" title="6.在git中项目的分支"></a>6.在git中项目的分支</h3><h2 id="在Git中，可以使用以下命令来查看当前项目中所有的分支"><a href="#在Git中，可以使用以下命令来查看当前项目中所有的分支" class="headerlink" title="在Git中，可以使用以下命令来查看当前项目中所有的分支"></a>在Git中，可以使用以下命令来查看当前项目中所有的分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+<p>这会列出本地仓库中的所有分支，当前活动分支会被标记以一个星号 (*)，如果想查看远程仓库中的所有分支，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -r</span><br></pre></td></tr></table></figure>
+<p>其中 -r 选项表示只列出远程分支。如果想同时查看本地分支和远程分支，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
+<p>其中 -a 选项表示列出所有分支，包括本地分支和远程分支</p>
+<h3 id="7-在git-中切换分支"><a href="#7-在git-中切换分支" class="headerlink" title="7.在git 中切换分支"></a>7.在git 中切换分支</h3><p>在Git中，可以使用以下命令来切换分支：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;branch-name&gt;</span><br></pre></td></tr></table></figure>
+<p>其中 <branch-name> 表示要切换的分支名称。例如，要切换到名为 feature 的分支上，可以执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout feature</span><br></pre></td></tr></table></figure>
+<p>执行此命令后，Git会将工作目录切换到 feature 分支上，并将HEAD指向此分支。<br>在切换分支之前，确保在当前分支下进行提交或保存更改。如果有未提交的更改，切换分支时Git会提示您保存更改或将更改撤销，并将它们带到新分支</p>
 <p>[参考]</p>
 <h4> <a href="https://blog.csdn.net/m0_45806184/article/details/125726269" title="" target="">git使用教程</a></h4>
 <h4> <a href="https://zhuanlan.zhihu.com/p/345915480" title="" target="">git切换用户、多用户切换的正确方式 git commit和git push 切换用户：</a></h4>
 <h4> <a href="https://blog.csdn.net/yqh845451078/article/details/116938510" title="" target="">git切换账号和密码。并非是用户和邮箱</a></h4>
 <h4> <a href="https://blog.csdn.net/preserveXing/article/details/128893228" title="" target="">git用户的切换：</a></h4>
 <h4> <a href="https://blog.csdn.net/Colbyzn/article/details/107957721" title="" target="">如何在git中如何修改SSH密钥的生成路径？</a></h4>
+<h4> <a href="https://www.e-learn.cn/topic/3488614" title="" target="">git设置对某个仓库不验证https证书</a></h4>
+<h4> <a href="https://www.fke6.com/html/96208.html" title="" target="">Git查看仓库详解</a></h4>
+
 
 
 
