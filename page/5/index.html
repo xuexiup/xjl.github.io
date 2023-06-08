@@ -101,6 +101,31 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2023-02-15 </div>
+			<div class="article-title"><a href="/2023/02/15/dotnet6/" >winform知识理解</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Winform的窗体之间的几种传值方法？"><a href="#Winform的窗体之间的几种传值方法？" class="headerlink" title="Winform的窗体之间的几种传值方法？"></a>Winform的窗体之间的几种传值方法？</h2><p> 1、构造函数传值，但这种方法是单向的（推荐)</p>
+<p>上代码，先传值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> private void button2_Click(objectsender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Form3 fr3 = new Form3(<span class="string">&quot;要传的值啊&quot;</span>);</span><br><span class="line">            fr3.ShowDialog();</span><br><span class="line">        &#125;</span><br><span class="line">接值，对了，这里需要重载一个Form3的构造函数，然后将拿到的值显示出来</span><br><span class="line"></span><br><span class="line"> public Form3(string canshu)</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">            label1.Text =canshu;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2023/02/15/dotnet6/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2023-02-09 </div>
 			<div class="article-title"><a href="/2023/02/09/html0/" >前端系列问题</a></div>						
 		</h3>
@@ -198,33 +223,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-08 </div>
-			<div class="article-title"><a href="/2023/02/08/dotnet5/" >.Net Core常用知识大全</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="Net-Core过滤器分类"><a href="#Net-Core过滤器分类" class="headerlink" title=".Net Core过滤器分类"></a>.Net Core过滤器分类</h3><p>过滤器与中间件很相似，能够在某些功能前后执行，由此而形成一个管道</p>
-<p>ASP.NET Core MVC 提供了5种类型的过滤器</p>
-<blockquote><p>AuthorizationFilter：最先执行，用于判断用户是否授权如果未授权直接结束当前请求<br>ResourceFilter：在Authorization后执行，可以用来对请求判断是否执行Action<br>ActionFilter:在Action执行的前后执行，与Resource不同的是，它在模型绑定之后执行。<br>ExceptionFilter：用于捕获异常<br>ResultFilter:在最后执行，可以控制Action执行的结果</p>
-</blockquote>
-<p>以上五种类型过滤器的工作顺序</p>
-	
-	</div>
-  <a type="button" href="/2023/02/08/dotnet5/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -278,7 +276,7 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>100</span></a></li>
+			<li><a href="/categories/IT/">IT<span>101</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
@@ -297,48 +295,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
 		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
 		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
 		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
-		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
-		
-			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
-		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
-		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/超图/">超图<span>4</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/java/">java<span>1</span></a></li>
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
 		
 			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
 			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
 		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
-			<li><a href="/tags/工具/">工具<span>14</span></a></li>
+			<li><a href="/tags/工具/">工具<span>15</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
 		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>48</span></a></li>
+		   <li><a href="/tags">...<span>49</span></a></li>
 		 
 		</ul>
 	</div>
@@ -349,6 +347,10 @@
 <div class="widget">
   <h4>最新文章</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2023/06/08/git1/" ><i class="fa fa-file-o"></i>git使用大全</a>
+      </li>
     
       <li>
         <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
@@ -364,10 +366,6 @@
     
       <li>
         <a href="/2023/06/01/supermap3/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode功能与结构</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/01/csharp3/" ><i class="fa fa-file-o"></i>Winform中Form_Load函数和他的构造函数 ...</a>
       </li>
     
   </ul>

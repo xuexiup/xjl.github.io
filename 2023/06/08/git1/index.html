@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git使用大全 | 月落星辰</title>
+  
+  <meta name="author" content="南疆">
+  
+  <meta name="description" content="IT技术 Vue  Hexo 前端 个人博客 干货 百科知识">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:title" content="git使用大全" />
+  <meta property="og:site_name" content="月落星辰" />
+
+  
+  <meta property="og:image" content="" />
+  
+
+  
+
+  
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon"  href="/img/favicon.ico" style="border-radius: 50%;">
+  
+
+  <!-- CSS 这个css即_config.yml 下的theme 这里是：cerulean -->
+  <!-- <link rel="stylesheet" href="/css/themes/Freemind.css" media="screen" type="text/css"> -->
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <!-- <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css"> -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> git使用大全</h1>
+		</div>		
+	
+
+
+
+
+<!-- 不蒜子统计 -->
+<div id="busuanzi_container_page_pv" class="articlenums">
+	<i class="icon-smile icon"></i>文章已阅读<span id="busuanzi_value_page_pv"></span>次
+</div>
+<div>&nbsp;</div>
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+		
+
+			<!-- content -->
+			<div class="mypage">
+				
+
+				<p>现在一个情况是，本机电脑上有个人账户git，现在要拉取公司的代码，存在的一个问题是个人账号还要继续用，不能直接覆盖<br>这就涉及到账户的切换问题，接下来就看如何拉取公司代码。</p>
+<h3 id="1-拉取代码之前，先创建本地仓库"><a href="#1-拉取代码之前，先创建本地仓库" class="headerlink" title="1.拉取代码之前，先创建本地仓库"></a>1.拉取代码之前，先创建本地仓库</h3><p>首先在我们在作为仓库的文件夹（或新建一个作为存放公司代码的文件夹）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1).右键：Git Bash Here</span><br><span class="line">2).输入命令：git init,回车</span><br></pre></td></tr></table></figure>
+<p>这样会生成一个.git文件夹</p>
+<h3 id="2-更改git-commit的时候用到的用户信息"><a href="#2-更改git-commit的时候用到的用户信息" class="headerlink" title="2.更改git commit的时候用到的用户信息"></a>2.更改git commit的时候用到的用户信息</h3><blockquote><p>git config –local user.name “xxx” &#x2F;&#x2F;公司配备的git 用户名<br>git config –local user.email “xxx” &#x2F;&#x2F;公司配备的git 邮箱</p>
+</blockquote>
+<span id="more"></span>
+<h3 id="3-生成SSH-key"><a href="#3-生成SSH-key" class="headerlink" title="3.生成SSH key"></a>3.生成SSH key</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxemail&quot; //公司配备的git 邮箱</span><br></pre></td></tr></table></figure>
+<p>执行后系统会提示：Enter passphrase(empty for no passphrase)</p>
+<blockquote><p>这是 Git 生成 SSH key 时的提示，需要你设置 SSH key 的 passphrase。Passphrase 可以理解成密码，用于保护你的私钥，增强安全性。如果你设置了 passphrase，每次使用 SSH key 进行 Git clone 和 push 操作时都需要输入 passphrase。<br>如果你希望不设置 passphrase，只需要直接回车即可，留空即可。<br>注意：如果你的机器被多个人共用，请务必为 SSH key 设置 passphrase，以保护你的私钥。如果只有你自己使用，也建议设置 passphrase 增强安全性。</p>
+</blockquote>
+
+<h2 id="这里有一个问题：这里系统会默认将-ssh文件夹，生成到-C-Users-pc-下"><a href="#这里有一个问题：这里系统会默认将-ssh文件夹，生成到-C-Users-pc-下" class="headerlink" title="这里有一个问题：这里系统会默认将.ssh文件夹，生成到 C:\Users\pc\ 下"></a>这里有一个问题：这里系统会默认将.ssh文件夹，生成到 C:\Users\pc\ 下</h2><p>这里我已经存在一个账户，这里也有.ssh文件夹，在不确认这个文件夹还有没用的情况下<br>我不想直接覆盖，所以这里又衍生出一个新的问题（针对多个账户需要公用）</p>
+<h2 id="如何在git中如何修改SSH密钥的生成路径？"><a href="#如何在git中如何修改SSH密钥的生成路径？" class="headerlink" title="如何在git中如何修改SSH密钥的生成路径？"></a>如何在git中如何修改SSH密钥的生成路径？</h2><blockquote><p>这里我们需要新建或修改一个“HOME”类型为用户变量的环境变量<br>将其值改为.ssh存放的文件夹地址：C:\Users\pc\你的文件夹名</p>
+</blockquote>
+
+<p>完成之后，删除.git文件夹，重新执行 1，2，3 步骤，直到 正确无误的生成：SSH key</p>
+<h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3><p>[参考]</p>
+<h4> <a href="https://blog.csdn.net/m0_45806184/article/details/125726269" title="" target="">git使用教程：</a></h4>
+<h4> <a href="https://zhuanlan.zhihu.com/p/345915480" title="" target="">git切换用户、多用户切换的正确方式 git commit和git push 切换用户：</a></h4>
+<h4> <a href="https://blog.csdn.net/yqh845451078/article/details/116938510" title="" target="">git切换账号和密码。并非是用户和邮箱</a></h4>
+<h4> <a href="https://blog.csdn.net/preserveXing/article/details/128893228" title="" target="">git用户的切换：</a></h4>
+<h4> <a href="https://blog.csdn.net/Colbyzn/article/details/107957721" title="" target="">如何在git中如何修改SSH密钥的生成路径？</a></h4>
+
+
+
+
+
+
+			</div>
+
+			<!-- recommended posts -->
+			
+
+			<div>
+				<center>
+					<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>档案</a></li>
+
+		
+		   <li class="next"><a href="/2023/06/05/java1/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+				</center>
+			</div>
+
+			<!-- share -->
+			
+			
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+			
+
+			
+
+			<!-- comment -->
+			
+
+<!-- <section id="comment">
+  <h2 class="title">留言</h2>
+  
+</section> -->
+
+
+
+			
+			<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NzQwMS8zMzg2NQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+			
+		</div> <!-- col-md-9/col-md-12 -->
+
+		
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2023-06-08 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/IT/">IT<span>101</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/工具/">工具<span>15</span></a></li> <li><a href="/tags/git/">git<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+		</div>
+		
+
+
+	</div><!-- row -->
+
+
+	
+    
+      <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top"
+  role="navigation">
+  <div class="container">
+    <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">月落星辰</a>
+    <div class="collapse navbar-collapse nav-menu">
+      <ul class="nav navbar-nav">
+        
+        <li>
+          <a href="/archives" title="所有发表记录">
+            <i class="fa fa-archive"></i>Archives
+          </a>
+        </li>
+        
+        <li>
+          <a href="/note" title="我的速记">
+            <i class="fa fa-user"></i>Note
+          </a>
+        </li>
+        
+        <li>
+          <a href="/mark" title="mark清单">
+            <i class="fa fa-list-ol"></i>Mark
+          </a>
+        </li>
+        
+        <li>
+          <a href="/message" title="messagebord">
+            <i class="fa fa-book"></i>Messagebord
+          </a>
+        </li>
+        
+        <li>
+          <a href="/about" title="关于我">
+            <i class="fa fa-user"></i>About
+          </a>
+        </li>
+        
+
+        <li>
+          <div class="music-player">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0"
+              src="//music.163.com/outchain/player?type=0&id=8218805597&auto=0&height=66"></iframe>
+        </li>
+      </ul>
+    </div>
+  </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+      <div class="container-narrow">
+        <footer> <a class="baurl" target="_blank;" href="https://beian.miit.gov.cn/">蜀ICP备2020030582号</a>
+|
+
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  浏览 <span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  访客 <span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+
+
+<div class="distant_1"></div>
+
+<p style="padding-bottom:3em;">
+  &copy; 2023 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container-narrow">
+    <footer> <a class="baurl" target="_blank;" href="https://beian.miit.gov.cn/">蜀ICP备2020030582号</a>
+|
+
+<!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+  浏览 <span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+  访客 <span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+
+
+<div class="distant_1"></div>
+
+<p style="padding-bottom:3em;">
+  &copy; 2023 南疆
+  
+  with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/"
+    target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.
+</p> </footer>
+  </div> container-narrow -->
+
+  
+
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+
+</body>
+
+</html>

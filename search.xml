@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>git使用大全</title>
+      <link href="/2023/06/08/git1/"/>
+      <url>/2023/06/08/git1/</url>
+      
+        <content type="html"><![CDATA[<p>现在一个情况是，本机电脑上有个人账户git，现在要拉取公司的代码，存在的一个问题是个人账号还要继续用，不能直接覆盖<br>这就涉及到账户的切换问题，接下来就看如何拉取公司代码。</p><h3 id="1-拉取代码之前，先创建本地仓库"><a href="#1-拉取代码之前，先创建本地仓库" class="headerlink" title="1.拉取代码之前，先创建本地仓库"></a>1.拉取代码之前，先创建本地仓库</h3><p>首先在我们在作为仓库的文件夹（或新建一个作为存放公司代码的文件夹）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1).右键：Git Bash Here</span><br><span class="line">2).输入命令：git init,回车</span><br></pre></td></tr></table></figure><p>这样会生成一个.git文件夹</p><h3 id="2-更改git-commit的时候用到的用户信息"><a href="#2-更改git-commit的时候用到的用户信息" class="headerlink" title="2.更改git commit的时候用到的用户信息"></a>2.更改git commit的时候用到的用户信息</h3><blockquote><p>git config –local user.name “xxx” &#x2F;&#x2F;公司配备的git 用户名<br>git config –local user.email “xxx” &#x2F;&#x2F;公司配备的git 邮箱</p></blockquote><span id="more"></span><h3 id="3-生成SSH-key"><a href="#3-生成SSH-key" class="headerlink" title="3.生成SSH key"></a>3.生成SSH key</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxemail&quot; //公司配备的git 邮箱</span><br></pre></td></tr></table></figure><p>执行后系统会提示：Enter passphrase(empty for no passphrase)</p><blockquote><p>这是 Git 生成 SSH key 时的提示，需要你设置 SSH key 的 passphrase。Passphrase 可以理解成密码，用于保护你的私钥，增强安全性。如果你设置了 passphrase，每次使用 SSH key 进行 Git clone 和 push 操作时都需要输入 passphrase。<br>如果你希望不设置 passphrase，只需要直接回车即可，留空即可。<br>注意：如果你的机器被多个人共用，请务必为 SSH key 设置 passphrase，以保护你的私钥。如果只有你自己使用，也建议设置 passphrase 增强安全性。</p></blockquote><h2 id="这里有一个问题：这里系统会默认将-ssh文件夹，生成到-C-Users-pc-下"><a href="#这里有一个问题：这里系统会默认将-ssh文件夹，生成到-C-Users-pc-下" class="headerlink" title="这里有一个问题：这里系统会默认将.ssh文件夹，生成到 C:\Users\pc\ 下"></a>这里有一个问题：这里系统会默认将.ssh文件夹，生成到 C:\Users\pc\ 下</h2><p>这里我已经存在一个账户，这里也有.ssh文件夹，在不确认这个文件夹还有没用的情况下<br>我不想直接覆盖，所以这里又衍生出一个新的问题（针对多个账户需要公用）</p><h2 id="如何在git中如何修改SSH密钥的生成路径？"><a href="#如何在git中如何修改SSH密钥的生成路径？" class="headerlink" title="如何在git中如何修改SSH密钥的生成路径？"></a>如何在git中如何修改SSH密钥的生成路径？</h2><blockquote><p>这里我们需要新建或修改一个“HOME”类型为用户变量的环境变量<br>将其值改为.ssh存放的文件夹地址：C:\Users\pc\你的文件夹名</p></blockquote><p>完成之后，删除.git文件夹，重新执行 1，2，3 步骤，直到 正确无误的生成：SSH key</p><h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3><p>[参考]</p><h4> <a href="https://blog.csdn.net/m0_45806184/article/details/125726269" title="" target="">git使用教程：</a></h4><h4> <a href="https://zhuanlan.zhihu.com/p/345915480" title="" target="">git切换用户、多用户切换的正确方式 git commit和git push 切换用户：</a></h4><h4> <a href="https://blog.csdn.net/yqh845451078/article/details/116938510" title="" target="">git切换账号和密码。并非是用户和邮箱</a></h4><h4> <a href="https://blog.csdn.net/preserveXing/article/details/128893228" title="" target="">git用户的切换：</a></h4><h4> <a href="https://blog.csdn.net/Colbyzn/article/details/107957721" title="" target="">如何在git中如何修改SSH密钥的生成路径？</a></h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> IT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java使用问题大全</title>
       <link href="/2023/06/05/java1/"/>
       <url>/2023/06/05/java1/</url>
