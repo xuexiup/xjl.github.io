@@ -167,6 +167,11 @@ https://blog.csdn.net/qq_41221596/article/details/128263736
 <p>其中，your_database_name、your_username 和 your_password 需要替换为你 MySQL 数据库的具体信息。<br>3.点击 IDEA 界面右上角的 “Run Configuration” 按钮，选择 Edit Configurations 选项。<br>4.在打开的对话框中，选择你的 Spring Boot 应用程序，然后在 Environment 标签页中添加以下环境变量：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SPRING_PROFILES_ACTIVE=dev</span><br></pre></td></tr></table></figure>
 <p>其中，“dev”是你在 application.properties 或 application.yml 文件中定义的你正在使用的 profile 名称。<br>5.点击 “OK” 保存配置信息，重启你的 Spring Boot 应用程序即可。你现在可以在你的 Java 代码中使用 Spring JDBC 连接到 MySQL 数据库</p>
+<h3 id="maven-如何清除本地仓库并重新解析"><a href="#maven-如何清除本地仓库并重新解析" class="headerlink" title="maven 如何清除本地仓库并重新解析"></a>maven 如何清除本地仓库并重新解析</h3><p>切换到包含 Maven 工程的根目录，然后再执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn dependency:purge-local-repository</span><br></pre></td></tr></table></figure>
+<p>如果你不确定当前所在目录是否正确，可以使用以下命令来查看当前目录是否包含 Maven 工程：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> | grep pom.xml</span><br></pre></td></tr></table></figure>
+<p>如果有 pom.xml 文件，则表示当前目录包含 Maven 工程。如果没有，则需要切换到包含 Maven 工程的根目录再执行命令。</p>
 <p>【备注】</p>
 <h4> <a href="https://maven.apache.org/docs/history.html" title="" target="">查看Maven的历史版本</a></h4>
 
