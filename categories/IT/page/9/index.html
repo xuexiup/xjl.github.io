@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style2.css" media="screen" type="text/css">
 
 
   <!--[if lt IE 9]>
@@ -90,6 +90,87 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/javascript5/" >js数组的5种查询方式[find(),findIndex(),indexOf(),lastIndexOf(),include()]</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.find() 返回数组中第一个满足条件的数据</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.find((item, index) =&gt; &#123; <span class="built_in">return</span>...&#125;)</span><br></pre></td></tr></table></figure>
+
+
+<p>2.findIndex() 返回数组中第一个满足条件的索引(从0开始), 不满足返回-1</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.findIndex((item, index) =&gt; &#123; <span class="built_in">return</span>...&#125;)</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/13/javascript5/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/javascript4/" >Js给数组对象（每个）添加一个新元素/字段并赋值</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="1-数组-map"><a href="#1-数组-map" class="headerlink" title="1.数组.map"></a>1.数组.map</h2><p>map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。</p>
+<p>map() 方法按照原始数组元素顺序依次处理元素。</p>
+<p>注意： map() 不会对空数组进行检测。</p>
+<p>注意： map() 不会改变原始数组。</p>
+<p>用法：array.map(function(currentValue,index,arr), thisValue)</p>
+<p>currentValue	必须。当前元素的值<br>index	可选。当前元素的索引值<br>arr	可选。当前元素属于的数组对象</p>
+	
+	</div>
+  <a type="button" href="/2022/10/13/javascript4/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/javascript3/" >Vue中使用base64</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1.安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save js-base64</span><br></pre></td></tr></table></figure>
+
+<p>2.在项目文件中引入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> Base64 = require(<span class="string">&quot;js-base64&quot;</span>).Base64;</span><br></pre></td></tr></table></figure>
+
+<p>3.使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Base64.encode(<span class="string">&#x27;之郎&#x27;</span>) // 5LmL6YOO</span><br><span class="line"></span><br><span class="line">Base64.decode(<span class="string">&#x27;5LmL6YOO&#x27;</span>) // 之郎</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/javascript3/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
 			<div class="article-title"><a href="/2022/10/13/javascript2/" >Typscript与Javascript的对比</a></div>						
 		</h3>
 	
@@ -128,129 +209,6 @@
 	
 	</div>
   <a type="button" href="/2022/10/13/javascript1/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/mongodb4/" >Mongodb的下载与安装</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.去<a href="https://www.mongodb.com/try/download" title="" target="">Mongodb官网</a>下载安装包，选择Community版本就行</p>
-<p>2.下载后解压【建议不放到C盘，节省C盘空间】</p>
-<p>3.由于Mongodb不会自动创建存放数据以及配置文件和日志等路径，需要我们手动创建文件夹：</p>
-<blockquote><p>1）data:用于存放数据库文件数据，并在其下创建一个名为 db 的文件夹<br>2）log:用于存放日志文件</p>
-</blockquote>
-
-<p>data以及log文件夹可以是其它名字，文件夹路径也不一定是在mongodb解压的根路径下【配置文件中指定关联】</p>
-<p>这里我是在解压后的bin目录同级创建的以上文件夹。</p>
-	
-	</div>
-  <a type="button" href="/2022/10/13/mongodb4/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/mongodb3/" >Error: couldn&#39;t connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Erro</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>我们在cmd中输入：mongo如果出现错误提示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: couldn<span class="string">&#x27;t connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Erro</span></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/13/mongodb3/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/mongodb2/" title="下表介绍了各种SQL术语和概念以及相应的MongoDB术语和概念。">SQL到MongoDB的映射图表</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<table>
-<thead>
-<tr>
-<th>SQL术语&#x2F;概念</th>
-<th>MongoDB术语&#x2F;概念</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>database</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/glossary/#term-database">database</a></td>
-</tr>
-<tr>
-<td>table</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/glossary/#term-collection">collection</a></td>
-</tr>
-<tr>
-<td>row</td>
-<td>document or BSON document</td>
-</tr>
-<tr>
-<td>column</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/glossary/#term-field">field</a></td>
-</tr>
-<tr>
-<td>index</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/glossary/#term-index">index</a></td>
-</tr>
-<tr>
-<td>table joins</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/#pipe._S_lookup">$lookup, 嵌入文档</a></td>
-</tr>
-<tr>
-<td>primary key （指定任何唯一的列或列组合作为主键。）</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/glossary/#term-primary-key">primary key （在MongoDB中，主键自动设置为_id字段。）</a></td>
-</tr>
-<tr>
-<td>aggregation (e.g. group by)</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/reference/sql-aggregation-comparison/">aggregation pipeline See the SQL to Aggregation Mapping Chart.</a></td>
-</tr>
-<tr>
-<td>SELECT INTO NEW_TABLE</td>
-<td>$out See the SQL to Aggregation Mapping Chart.</td>
-</tr>
-<tr>
-<td>MERGE INTO TABLE</td>
-<td>$merge (Available starting in MongoDB 4.2) See the SQL to Aggregation Mapping Chart.</td>
-</tr>
-<tr>
-<td>Transactions</td>
-<td><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/core/transactions/">transactions 在许多情况下，非规范化数据模型（嵌入式文档和数组） 将继续是您数据和用例的最佳选择，而不是多文档事务。 也就是说，在许多情况下，对数据进行适当的建模将最 大程度地减少对多文档交易的需求。</a></td>
-</tr>
-</tbody></table>
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/mongodb2/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
 	       
@@ -303,11 +261,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>101</span></a></li>
+			<li><a href="/categories/IT/">IT<span>104</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
-			<li><a href="/categories/数据库/">数据库<span>5</span></a></li>
+			<li><a href="/categories/数据库/">数据库<span>6</span></a></li>
 		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
@@ -322,48 +280,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
 		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
 		
-			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
-		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/java/">java<span>1</span></a></li>
-		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
-		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
-		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
-		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/IDEA/">IDEA<span>2</span></a></li>
-		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
 		
 			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/工具/">工具<span>17</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>2</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/sqlserver/">sqlserver<span>5</span></a></li>
+		
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/c/">c#<span>10</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
+		
+			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+		
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>50</span></a></li>
+		   <li><a href="/tags">...<span>51</span></a></li>
 		 
 		</ul>
 	</div>
@@ -376,23 +334,23 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/03/java2/" ><i class="fa fa-file-o"></i>java中 orElseThrow的用法</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/21/git2/" ><i class="fa fa-file-o"></i>git常用指令</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/12/postgresql1/" ><i class="fa fa-file-o"></i>PostgreSQL 使用大全</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/11/store1/" ><i class="fa fa-file-o"></i>百宝箱</a>
+      </li>
+    
+      <li>
         <a href="/2023/06/09/python1/" ><i class="fa fa-file-o"></i>python使用</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/idea1/" ><i class="fa fa-file-o"></i>IDEA工具使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/git1/" ><i class="fa fa-file-o"></i>git使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/supermap4/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode关键类型与成员</a>
       </li>
     
   </ul>

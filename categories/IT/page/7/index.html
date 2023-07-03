@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style2.css" media="screen" type="text/css">
 
 
   <!--[if lt IE 9]>
@@ -84,6 +84,74 @@
       
          <!-- display as entry -->
 	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-19 </div>
+			<div class="article-title"><a href="/2022/10/19/html8/" >对HTML转义符号转换</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> function escape2Html(str) &#123;</span><br><span class="line">    var arrEntities=&#123;&#x27;lt&#x27;:&#x27;&lt;&#x27;,&#x27;gt&#x27;:&#x27;&gt;&#x27;,&#x27;nbsp&#x27;:&#x27; &#x27;,&#x27;amp&#x27;:&#x27;&amp;&#x27;,&#x27;quot&#x27;:&#x27;&quot;&#x27;&#125;;</span><br><span class="line">   return str.replace(/&amp;(lt|gt|nbsp|amp|quot);/ig,function(all,t)&#123;return arrEntities[t];&#125;);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">var s = escape2Html(&quot;&amp;lt;p&amp;gt;fasfas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;fkasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasfjalsk&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://t12.baidu.com/it/u=2506809329,284241162&amp;amp;amp;fm=76&amp;quot; style=&amp;quot;max-width:100%;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&quot;);</span><br><span class="line"> </span><br><span class="line">alert(s);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2022/10/19/html8/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-18 </div>
+			<div class="article-title"><a href="/2022/10/18/tool11/" >Selenium和Python的区别</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>Python是一门编程语言；<br>Selenium是一个用于Web应用程序测试的工具（IDE）。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样；<br>也就是说 selenium ide是用来录制， 录制完的脚本，通过RC启动不同浏览器运行测试；<br>python+selenium，是需要自己搭框架的，搭完框架后需要自己去写脚本，需要对selenium进行二次封装；<br>总结：Selenium可以用python语言来调用它(Selenium RC)进行测试，这样写脚本会更加灵活，更有效率，可读性强，重复运行稳定性高，而且也易于维护。</p>
+
+	
+	</div>
+  <a type="button" href="/2022/10/18/tool11/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/redis8/" >Redis简介</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。<br>它通常被称为数据结构服务器，因为值（value）支持五种数据类型：</p>
+<blockquote><p>string（字符串）<br>hash（哈希）<br>list（列表）<br>set（集合）<br>zset(sorted set：有序集合)。</p>
+</blockquote>
+
+
+	
+	</div>
+  <a type="button" href="/2022/10/13/redis8/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
 	       
 		     
 	
@@ -212,159 +280,6 @@
 </div>
 
 	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis5/" >Redis五大数据类型的基本使用</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.string</p>
-<p>redis最基本的类型，你可以理解成与Memcached一模一样的类型，一个key对应一个value。</p>
-<p>string类型是二进制安全的。意思是redis的string可以包含任何数据。比如jpg图片或者序列化的对象 。</p>
-<p>string类型是Redis最基本的数据类型，一个键最大能存储512MB。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. redis 127.0.0.1:6379&gt; SET name <span class="string">&quot;redis.net.cn&quot;</span></span><br><span class="line"></span><br><span class="line">2. OK</span><br><span class="line"></span><br><span class="line">3. redis 127.0.0.1:6379&gt; GET name</span><br><span class="line"></span><br><span class="line">4. <span class="string">&quot;redis.net.cn&quot;</span></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis5/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis4/" >Redis五大数据类型的基本相关命令</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.字符串命令</p>
-<table>
-<thead>
-<tr>
-<th>1</th>
-<th><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3544.html">SET key value 设置指定 key 的值</a></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3545.html">GET key 获取指定 key 的值。</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3546.html">GETRANGE key start end 返回 key 中字符串值的子字符</a></td>
-</tr>
-<tr>
-<td>4</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3547.html">GETSET key value 将给定 key 的值设为 value ，并返回 key 的旧值(old value)。</a></td>
-</tr>
-<tr>
-<td>5</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3548.html">GETBIT key offset 对 key 所储存的字符串值，获取指定偏移量上的位(bit)。</a></td>
-</tr>
-<tr>
-<td>6</td>
-<td>[MGET key1 <a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3549.html">key2..] 获取所有(一个或多个)给定 key 的值。</a></td>
-</tr>
-<tr>
-<td>7</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3550.html">SETBIT key offset value 对 key 所储存的字符串值，设置或清除指定偏移量上的位(bit)。</a></td>
-</tr>
-<tr>
-<td>8</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3551.html">SETEX key seconds value 将值 value 关联到 key ，并将 key 的过期时间设为 seconds (以秒为单位)。</a></td>
-</tr>
-<tr>
-<td>9</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3552.html">SETNX key value 只有在 key 不存在时设置 key 的值。</a></td>
-</tr>
-<tr>
-<td>10</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3553.html">SETRANGE key offset value 用 value 参数覆写给定 key 所储存的字符串值，从偏移量 offset 开始。</a></td>
-</tr>
-<tr>
-<td>11</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3554.html">STRLEN key 返回 key 所储存的字符串值的长度。</a></td>
-</tr>
-<tr>
-<td>12</td>
-<td>[MSET key value <a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3555.html">key value …] 同时设置一个或多个 key-value 对。</a></td>
-</tr>
-<tr>
-<td>13</td>
-<td>[MSETNX key value <a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3556.html">key value …] 同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在。</a></td>
-</tr>
-<tr>
-<td>14</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3557.html">PSETEX key milliseconds value 这个命令和 SETEX 命令相似，但它以毫秒为单位设置 key 的生存时间，而不是像 SETEX 命令那样，以秒为单位。</a></td>
-</tr>
-<tr>
-<td>15</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3558.html">INCR key 将 key 中储存的数字值增一。</a></td>
-</tr>
-<tr>
-<td>16</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3559.html">INCRBY key increment 将 key 所储存的值加上给定的增量值（increment） 。</a></td>
-</tr>
-<tr>
-<td>17</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3560.html">INCRBYFLOAT key increment 将 key 所储存的值加上给定的浮点增量值（increment） 。</a></td>
-</tr>
-<tr>
-<td>18</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3561.html">DECR key 将 key 中储存的数字值减一。</a></td>
-</tr>
-<tr>
-<td>19</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3562.html">DECRBY key decrement key 所储存的值减去给定的减量值（decrement） 。</a></td>
-</tr>
-<tr>
-<td>20</td>
-<td><a target="_blank" rel="noopener" href="https://www.redis.net.cn/order/3563.html">APPEND key value 如果 key 已经存在并且是一个字符串， APPEND 命令将 value 追加到 key 原来的值的末尾。</a></td>
-</tr>
-</tbody></table>
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis4/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis3/" >Redis发布订阅</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>Redis 发布订阅(pub&#x2F;sub)是一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。</p>
-<p>Redis 客户端可以订阅任意数量的频道。</p>
-<p>Redis 发布订阅命令</p>
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis3/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
 	     </div>
 	     <div>
 	       <center>
@@ -414,11 +329,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>101</span></a></li>
+			<li><a href="/categories/IT/">IT<span>104</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
-			<li><a href="/categories/数据库/">数据库<span>5</span></a></li>
+			<li><a href="/categories/数据库/">数据库<span>6</span></a></li>
 		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
@@ -433,48 +348,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
-		
-			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
-		
-			<li><a href="/tags/工具/">工具<span>15</span></a></li>
-		
-			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
-		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
-		
 			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
-		
-			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
-		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>10</span></a></li>
 		
 			<li><a href="/tags/超图/">超图<span>4</span></a></li>
 		
-			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
 		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+		
+			<li><a href="/tags/工具/">工具<span>17</span></a></li>
+		
+			<li><a href="/tags/winform/">winform<span>4</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/IDEA/">IDEA<span>2</span></a></li>
+		
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
+		
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
 		
 			<li><a href="/tags/网文/">网文<span>1</span></a></li>
 		
+			<li><a href="/tags/MVC/">MVC<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>50</span></a></li>
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>2</span></a></li>
+		
+			<li><a href="/tags/sqlserver/">sqlserver<span>5</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>51</span></a></li>
 		 
 		</ul>
 	</div>
@@ -487,23 +402,23 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/03/java2/" ><i class="fa fa-file-o"></i>java中 orElseThrow的用法</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/21/git2/" ><i class="fa fa-file-o"></i>git常用指令</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/12/postgresql1/" ><i class="fa fa-file-o"></i>PostgreSQL 使用大全</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/11/store1/" ><i class="fa fa-file-o"></i>百宝箱</a>
+      </li>
+    
+      <li>
         <a href="/2023/06/09/python1/" ><i class="fa fa-file-o"></i>python使用</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/idea1/" ><i class="fa fa-file-o"></i>IDEA工具使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/git1/" ><i class="fa fa-file-o"></i>git使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/supermap4/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode关键类型与成员</a>
       </li>
     
   </ul>

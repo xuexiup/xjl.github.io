@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style2.css" media="screen" type="text/css">
 
 
   <!--[if lt IE 9]>
@@ -84,6 +84,77 @@
       
          <!-- display as entry -->
 	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/javascript6/" >es6新特性有哪些？</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>es6新特性：const与let变量、模板字面量、解构、增强的对象字面量、for…of循环、展开运算符(…)、剩余参数(可变参数)、ES6箭头函数、类的支持、字符串模板、iterator、generator、模块、Symbols等。</p>
+<p>1.let const<br>let 表示申明变量。const 表示申明常量。</p>
+<p>常量定义了就不能改了。对象除外，因为对象指向的地址没变。</p>
+<p>const在申明是必须被赋值。</p>
+<p>两者都为块级作用域。</p>
+<p>块级作用域与函数作用域。任何一对花括号({和｝)中的语句集都属于一个块，在这之中定义的所有变量在代码块外都是不可见的，我们称之为块级作用域。函数作用域就好理解了，定义在函数中的参数和变量在函数外部是不可见的。</p>
+<p>const a &#x3D; 1<br>a &#x3D; 0 &#x2F;&#x2F;报错</p>
+	
+	</div>
+  <a type="button" href="/2023/02/02/javascript6/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/dotnet2/" >ASP.NET.MVC 网站创建流程</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1).创建空解决方案文件夹：Test<br>2).右键Test&#x3D;》添加&#x3D;》新建解决方案文件夹（3个）<br>（1）Common<br>    右键&#x3D;》添加&#x3D;》新建项目&#x3D;》类库(.NET Standard),名为Common,用于存放通用类（连接类，加密算法…）<br>（2）DAL 为其添加2个类库<br>    Domain：添加实体类型数据类型<br>    Severice：存放业务接口<br>（3）Web<br>    右键&#x3D;》添加新建项目&#x3D;》ASP.NET应用程序（.NET Framework）选择MVC，去掉https项，创建MVC网站</p>
+<p>至此 MVC项目网站创建完毕。        </p>
+
+	
+	</div>
+  <a type="button" href="/2023/02/02/dotnet2/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-02 </div>
+			<div class="article-title"><a href="/2023/02/02/dotnet1/" >ASP.NET.MVC中Linq的基本语法</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>LINQ即Language Integrated  Query(语言集成查询)<br>在平常的编写代码中，Linq提供了丰富的查询功能，就是有一点要注意，Linq中 where 的查询与SQL命令中的 Where 作用相似，都是起到范围限定，也就是的过滤作用，而判断条件就是它后面所接的子句<br>一、整理了一下，LINQ的基本语法有8种上下文关键字，注意是关键字，这些关键字的具体说明如下：<br>①from：指定范围变量和数据源<br>②where：根据bool表达式从数据源中筛选数据<br>③select：指定查询结果中的元素所具有的类型或变现形式<br>④group：对查询结果按照键值进行分组<br>⑤into：提供一个标识符，它可以充当对join、group、或者select子句结果的引用<br>⑥orderby：对查询出的元素进行排序<br>⑦join：按照两个指定匹配条件并使用 equals 来连接两个数据源<br>⑧let：产生一个用于储存查询表达式中的子表达式查询结果的变量范围</p>
+	
+	</div>
+  <a type="button" href="/2023/02/02/dotnet1/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
 	       
 		     
 	
@@ -141,74 +212,6 @@
 </div>
 
 	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-19 </div>
-			<div class="article-title"><a href="/2022/10/19/html8/" >对HTML转义符号转换</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> function escape2Html(str) &#123;</span><br><span class="line">    var arrEntities=&#123;&#x27;lt&#x27;:&#x27;&lt;&#x27;,&#x27;gt&#x27;:&#x27;&gt;&#x27;,&#x27;nbsp&#x27;:&#x27; &#x27;,&#x27;amp&#x27;:&#x27;&amp;&#x27;,&#x27;quot&#x27;:&#x27;&quot;&#x27;&#125;;</span><br><span class="line">   return str.replace(/&amp;(lt|gt|nbsp|amp|quot);/ig,function(all,t)&#123;return arrEntities[t];&#125;);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">var s = escape2Html(&quot;&amp;lt;p&amp;gt;fasfas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;fkasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasfjalsk&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;kasjfkas&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://t12.baidu.com/it/u=2506809329,284241162&amp;amp;amp;fm=76&amp;quot; style=&amp;quot;max-width:100%;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&quot;);</span><br><span class="line"> </span><br><span class="line">alert(s);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2022/10/19/html8/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-18 </div>
-			<div class="article-title"><a href="/2022/10/18/tool11/" >Selenium和Python的区别</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>Python是一门编程语言；<br>Selenium是一个用于Web应用程序测试的工具（IDE）。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样；<br>也就是说 selenium ide是用来录制， 录制完的脚本，通过RC启动不同浏览器运行测试；<br>python+selenium，是需要自己搭框架的，搭完框架后需要自己去写脚本，需要对selenium进行二次封装；<br>总结：Selenium可以用python语言来调用它(Selenium RC)进行测试，这样写脚本会更加灵活，更有效率，可读性强，重复运行稳定性高，而且也易于维护。</p>
-
-	
-	</div>
-  <a type="button" href="/2022/10/18/tool11/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/redis8/" >Redis简介</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。<br>它通常被称为数据结构服务器，因为值（value）支持五种数据类型：</p>
-<blockquote><p>string（字符串）<br>hash（哈希）<br>list（列表）<br>set（集合）<br>zset(sorted set：有序集合)。</p>
-</blockquote>
-
-
-	
-	</div>
-  <a type="button" href="/2022/10/13/redis8/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
 	     </div>
 	     <div>
 	       <center>
@@ -258,11 +261,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>101</span></a></li>
+			<li><a href="/categories/IT/">IT<span>104</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
-			<li><a href="/categories/数据库/">数据库<span>5</span></a></li>
+			<li><a href="/categories/数据库/">数据库<span>6</span></a></li>
 		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
@@ -277,48 +280,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
-		
-			<li><a href="/tags/专业术语/">专业术语<span>1</span></a></li>
-		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
-		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/超图/">超图<span>4</span></a></li>
-		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
-		
-			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
 			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
+			<li><a href="/tags/工具/">工具<span>17</span></a></li>
 		
-			<li><a href="/tags/winform/">winform<span>4</span></a></li>
+			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
 		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
+			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
 		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
 		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
-		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
 		
 			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
 		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+		
+			<li><a href="/tags/网摘/">网摘<span>2</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
 		
 			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/IDEA/">IDEA<span>2</span></a></li>
+		
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
+		
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
+		
+			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
+		
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>50</span></a></li>
+		   <li><a href="/tags">...<span>51</span></a></li>
 		 
 		</ul>
 	</div>
@@ -331,23 +334,23 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/03/java2/" ><i class="fa fa-file-o"></i>java中 orElseThrow的用法</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/21/git2/" ><i class="fa fa-file-o"></i>git常用指令</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/12/postgresql1/" ><i class="fa fa-file-o"></i>PostgreSQL 使用大全</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/11/store1/" ><i class="fa fa-file-o"></i>百宝箱</a>
+      </li>
+    
+      <li>
         <a href="/2023/06/09/python1/" ><i class="fa fa-file-o"></i>python使用</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/idea1/" ><i class="fa fa-file-o"></i>IDEA工具使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/git1/" ><i class="fa fa-file-o"></i>git使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/supermap4/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode关键类型与成员</a>
       </li>
     
   </ul>

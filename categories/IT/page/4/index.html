@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style2.css" media="screen" type="text/css">
 
 
   <!--[if lt IE 9]>
@@ -84,6 +84,80 @@
       
          <!-- display as entry -->
 	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-21 </div>
+			<div class="article-title"><a href="/2023/02/21/vue0/" title="本文对 Vue 框架中一些重要的特性、框架的原理以问题的形式进行整理汇总，意在帮助作者及读者掌握 Vue的知识。">vue知识巩固</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>1、说说你对 SPA 单页面的理解，它的优缺点分别是什么？</p>
+<blockquote><p>SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。一旦页面加载完成，SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。<br>优点：<br>用户体验好、快，内容的改变不需要重新加载整个页面，避免了不必要的跳转和重复渲染；<br>基于上面一点，SPA 相对对服务器压力小；<br>前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理；</p>
+<p>缺点：<br>初次加载耗时多：为实现单页 Web 应用功能及显示效果，需要在加载页面的时候将 JavaScript、CSS 统一加载，部分页面按需加载；<br>前进后退路由管理：由于单页应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理；<br>SEO 难度较大：由于所有的内容都在一个页面中动态替换显示，所以在 SEO 上其有着天然的弱势。</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2023/02/21/vue0/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-16 </div>
+			<div class="article-title"><a href="/2023/02/16/dotnet7/" title="资料来源于实践、网络查询">.Net基础十问</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>第一问：C#中变量类型分为哪两种？</p>
+<blockquote><p>值类型和引用类型；值类型变量自身存储数据，引用类型存储的是实际数据的引用，通过引用找到实际的数据。</p>
+</blockquote>        
+
+<p>第二问：Class和Struct的区别？</p>
+<blockquote><p>Class为引用类型，可以被实例化，存储实际的引用；Struct为值类型，值类型自身存储数据。</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2023/02/16/dotnet7/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-15 </div>
+			<div class="article-title"><a href="/2023/02/15/dotnet6/" >winform知识理解</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Winform的窗体之间的几种传值方法？"><a href="#Winform的窗体之间的几种传值方法？" class="headerlink" title="Winform的窗体之间的几种传值方法？"></a>Winform的窗体之间的几种传值方法？</h2><p> 1、构造函数传值，但这种方法是单向的（推荐)</p>
+<p>上代码，先传值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> private void button2_Click(objectsender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Form3 fr3 = new Form3(<span class="string">&quot;要传的值啊&quot;</span>);</span><br><span class="line">            fr3.ShowDialog();</span><br><span class="line">        &#125;</span><br><span class="line">接值，对了，这里需要重载一个Form3的构造函数，然后将拿到的值显示出来</span><br><span class="line"></span><br><span class="line"> public Form3(string canshu)</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">            label1.Text =canshu;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2023/02/15/dotnet6/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
 	       
 		     
 	
@@ -131,76 +205,6 @@
 	
 	</div>
   <a type="button" href="/2023/02/09/html11/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-09 </div>
-			<div class="article-title"><a href="/2023/02/09/vue29/" >axios 和 express的区别</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<blockquote><p>axios是工作在前端，向后端提出申请，等待返回数据的。<br>express，是工作在后端(node环境)，接受前端发出的请求，处理会返回数据的。二者是合作关系。<br>express不只是接收axios的请求，还可以接收其他请求，可以返回HTML，JSON，文件，图片等。<br>express不是用来做请求的~<br>作为node的一个框架，主要作用是开启一个web服务（监听请求的），所以它有路由<br>axios 被用来发送请求（你说的做请求~）<br>它们之间关系可以是  (axios 发送请求)(express 响应请求)<br>当然 express 作为一个框架，也是可以使用 axios 的，用于请求其他web服务<br>这个内部的实现就是 node 的 http&#x2F;https 模块的 request方法</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2023/02/09/vue29/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-09 </div>
-			<div class="article-title"><a href="/2023/02/09/html10/" >Sass的优缺点优点</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>优点：<br>Sass可以帮助您在编程结构中编写简洁，简单且更少的CSS。<br>1）它包含的代码更少，因此您可以更快地编写CSS。<br>2）它是CSS的扩展，因此更加稳定，功能强大和美观。因此，设计人员和开发人员可以更轻松，更高效地进行工作。<br>3）它与所有版本的CSS兼容。因此，您可以使用任何可用的CSS库。<br>4）它提供了嵌套功能，因此您可以使用嵌套语法和有用的函数，例如颜色处理，数学函数和其他值。</p>
-<p>缺点：<br>1）开发人员必须有足够的时间来学习此预处理器中存在的新功能，然后才能使用它。<br>2）使用Sass可能会失去浏览器内置元素检查器的优势。</p>
-
-	
-	</div>
-  <a type="button" href="/2023/02/09/html10/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-08 </div>
-			<div class="article-title"><a href="/2023/02/08/dotnet5/" >.Net Core常用知识大全</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="Net-Core过滤器分类"><a href="#Net-Core过滤器分类" class="headerlink" title=".Net Core过滤器分类"></a>.Net Core过滤器分类</h3><p>过滤器与中间件很相似，能够在某些功能前后执行，由此而形成一个管道</p>
-<p>ASP.NET Core MVC 提供了5种类型的过滤器</p>
-<blockquote><p>AuthorizationFilter：最先执行，用于判断用户是否授权如果未授权直接结束当前请求<br>ResourceFilter：在Authorization后执行，可以用来对请求判断是否执行Action<br>ActionFilter:在Action执行的前后执行，与Resource不同的是，它在模型绑定之后执行。<br>ExceptionFilter：用于捕获异常<br>ResultFilter:在最后执行，可以控制Action执行的结果</p>
-</blockquote>
-<p>以上五种类型过滤器的工作顺序</p>
-	
-	</div>
-  <a type="button" href="/2023/02/08/dotnet5/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
 	       
@@ -253,11 +257,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>101</span></a></li>
+			<li><a href="/categories/IT/">IT<span>104</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
-			<li><a href="/categories/数据库/">数据库<span>5</span></a></li>
+			<li><a href="/categories/数据库/">数据库<span>6</span></a></li>
 		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
@@ -272,48 +276,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
-		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/HTML5/">HTML5<span>19</span></a></li>
-		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
-		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
-		
-			<li><a href="/tags/git/">git<span>1</span></a></li>
-		
-			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
-		
-			<li><a href="/tags/c/">c#<span>10</span></a></li>
-		
-			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
-		
-			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
-		
-			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
-		
-			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
-		
-			<li><a href="/tags/IDEA/">IDEA<span>2</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+			<li><a href="/tags/App/">App<span>1</span></a></li>
 		
 			<li><a href="/tags/Net/">.Net<span>9</span></a></li>
 		
-			<li><a href="/tags/App/">App<span>1</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+			<li><a href="/tags/social-share/">social-share<span>1</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>2</span></a></li>
+		
+			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
 		
 			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
+			<li><a href="/tags/工具/">工具<span>17</span></a></li>
 		
-		   <li><a href="/tags">...<span>50</span></a></li>
+			<li><a href="/tags/IDEA/">IDEA<span>2</span></a></li>
+		
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+			<li><a href="/tags/java/">java<span>2</span></a></li>
+		
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
+		
+			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
+		
+			<li><a href="/tags/UI/">UI<span>3</span></a></li>
+		
+			<li><a href="/tags/PostgreSQL/">PostgreSQL<span>1</span></a></li>
+		
+			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/超图/">超图<span>4</span></a></li>
+		
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>51</span></a></li>
 		 
 		</ul>
 	</div>
@@ -326,23 +330,23 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/03/java2/" ><i class="fa fa-file-o"></i>java中 orElseThrow的用法</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/21/git2/" ><i class="fa fa-file-o"></i>git常用指令</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/12/postgresql1/" ><i class="fa fa-file-o"></i>PostgreSQL 使用大全</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/11/store1/" ><i class="fa fa-file-o"></i>百宝箱</a>
+      </li>
+    
+      <li>
         <a href="/2023/06/09/python1/" ><i class="fa fa-file-o"></i>python使用</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/idea1/" ><i class="fa fa-file-o"></i>IDEA工具使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/git1/" ><i class="fa fa-file-o"></i>git使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/supermap4/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode关键类型与成员</a>
       </li>
     
   </ul>

@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style2.css" media="screen" type="text/css">
 
 
   <!--[if lt IE 9]>
@@ -84,6 +84,53 @@
       
          <!-- display as entry -->
 	     <div class="mypage">
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool7/" >nginx配置的网页刷新 404</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<p>在配置中添加：</p>
+<blockquote><p>try_files $uri $uri&#x2F; &#x2F;index.html; —解决页面刷新404问题 </p>
+</blockquote>
+
+<p>实例：</p>
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool7/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-13 </div>
+			<div class="article-title"><a href="/2022/10/13/tool6/" >uniApp 报错 plus is not defined</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="plus是什么？"><a href="#plus是什么？" class="headerlink" title="plus是什么？"></a>plus是什么？</h3><blockquote><p>plus是5+Runtime的内部对象。<br>就像chrome浏览器里有chrome.开头的一些对象方法，5+runtime内部内置了plus对象。<br>因为plus和mui不一样，plus是引擎级别的，不需要前端框架。而mui是前端框架，所以是要引入mui.js才能使用的。</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2022/10/13/tool6/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
 	       
 		     
 	
@@ -159,55 +206,6 @@
 </div>
 
 	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool2/" >VScode常用的插件集合</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<ol>
-<li>Vetur&#x2F;Volar ：vue&#x2F;vue3语法高亮、智能感知、Emmet等, 包含格式化功能， Alt+Shift+F （格式化全文）</li>
-<li>ESLint : 校验js代码规范</li>
-<li>Prettier - Code formatter ： 格式化js、css代码插件</li>
-<li>open in browser ： 在文件右键 可以选择在浏览器预览</li>
-<li>Auto Rename Tag : 重命名一个HTML &#x2F; XML标签时，自动重命名配对的HTML &#x2F; XML标签
-	
-	</div>
-  <a type="button" href="/2022/10/13/tool2/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
-		     
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-10-13 </div>
-			<div class="article-title"><a href="/2022/10/13/tool1/" >npm 实现一次执行多个指令</a></div>						
-		</h3>
-	
-
-
-		     <div class="entry">
-  <div class="row">
-	
-	
-		<p>现在有这么一个情况是存在以下指令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;dev&quot;</span>: <span class="string">&quot;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;npm run dev&quot;</span>,</span><br><span class="line">    <span class="string">&quot;electron&quot;</span>: <span class="string">&quot;electron-forge start&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;node build/build.js&quot;</span>,       </span><br><span class="line">    <span class="string">&quot;package&quot;</span>:<span class="string">&quot;electron-packager . Electron_Vue应用 --platform=win32 --arch=x64 --icon=favicon.ico --out=./out --asar --app-version=1.0.1 --overwrite --ignore=node_modules&quot;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>我们将要执行start和electron指令，常规的做法是依次npm run start和npm run electron即可；</p>
-	
-	</div>
-  <a type="button" href="/2022/10/13/tool1/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-	       
 	     </div>
 	     <div>
 	       <center>
@@ -221,7 +219,7 @@
         <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
 
 		
-          <li class="next disabled"><a>下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		   <li class="next"> <a href="/tags/工具/page/4/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
         
 	
 </ul>
@@ -257,11 +255,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>101</span></a></li>
+			<li><a href="/categories/IT/">IT<span>104</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
-			<li><a href="/categories/数据库/">数据库<span>5</span></a></li>
+			<li><a href="/categories/数据库/">数据库<span>6</span></a></li>
 		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
@@ -276,48 +274,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Abp/">Abp<span>1</span></a></li>
-		
-			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
-		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
-		
-			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
-		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
-		
-			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
-		
-			<li><a href="/tags/java/">java<span>1</span></a></li>
-		
-			<li><a href="/tags/UI/">UI<span>3</span></a></li>
-		
-			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/NetCore/">.NetCore<span>1</span></a></li>
+			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
 		
 			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+		
+			<li><a href="/tags/sqlserver/">sqlserver<span>5</span></a></li>
+		
+			<li><a href="/tags/App/">App<span>1</span></a></li>
+		
+			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
 		
 			<li><a href="/tags/c/">c#<span>10</span></a></li>
 		
-			<li><a href="/tags/Freemind/">Freemind<span>1</span></a></li>
+			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
 		
-			<li><a href="/tags/npm/">npm<span>3</span></a></li>
+			<li><a href="/tags/java/">java<span>2</span></a></li>
 		
-			<li><a href="/tags/ElementUI/">ElementUI<span>3</span></a></li>
+			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
 		
-			<li><a href="/tags/C/">C#<span>1</span></a></li>
+			<li><a href="/tags/PostgreSQL/">PostgreSQL<span>1</span></a></li>
 		
-			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
+			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+		
+			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
+		
+			<li><a href="/tags/oracle/">oracle<span>1</span></a></li>
+		
+			<li><a href="/tags/IDEA/">IDEA<span>2</span></a></li>
+		
+			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>50</span></a></li>
+		   <li><a href="/tags">...<span>51</span></a></li>
 		 
 		</ul>
 	</div>
@@ -330,23 +328,23 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/03/java2/" ><i class="fa fa-file-o"></i>java中 orElseThrow的用法</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/21/git2/" ><i class="fa fa-file-o"></i>git常用指令</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/12/postgresql1/" ><i class="fa fa-file-o"></i>PostgreSQL 使用大全</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/11/store1/" ><i class="fa fa-file-o"></i>百宝箱</a>
+      </li>
+    
+      <li>
         <a href="/2023/06/09/python1/" ><i class="fa fa-file-o"></i>python使用</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/idea1/" ><i class="fa fa-file-o"></i>IDEA工具使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/git1/" ><i class="fa fa-file-o"></i>git使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/supermap4/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode关键类型与成员</a>
       </li>
     
   </ul>

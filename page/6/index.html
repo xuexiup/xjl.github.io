@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/self-style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/self-style2.css" media="screen" type="text/css">
 
 
   <!--[if lt IE 9]>
@@ -101,6 +101,113 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2023-02-16 </div>
+			<div class="article-title"><a href="/2023/02/16/dotnet7/" title="资料来源于实践、网络查询">.Net基础十问</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>第一问：C#中变量类型分为哪两种？</p>
+<blockquote><p>值类型和引用类型；值类型变量自身存储数据，引用类型存储的是实际数据的引用，通过引用找到实际的数据。</p>
+</blockquote>        
+
+<p>第二问：Class和Struct的区别？</p>
+<blockquote><p>Class为引用类型，可以被实例化，存储实际的引用；Struct为值类型，值类型自身存储数据。</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2023/02/16/dotnet7/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-15 </div>
+			<div class="article-title"><a href="/2023/02/15/dotnet6/" >winform知识理解</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Winform的窗体之间的几种传值方法？"><a href="#Winform的窗体之间的几种传值方法？" class="headerlink" title="Winform的窗体之间的几种传值方法？"></a>Winform的窗体之间的几种传值方法？</h2><p> 1、构造函数传值，但这种方法是单向的（推荐)</p>
+<p>上代码，先传值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> private void button2_Click(objectsender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Form3 fr3 = new Form3(<span class="string">&quot;要传的值啊&quot;</span>);</span><br><span class="line">            fr3.ShowDialog();</span><br><span class="line">        &#125;</span><br><span class="line">接值，对了，这里需要重载一个Form3的构造函数，然后将拿到的值显示出来</span><br><span class="line"></span><br><span class="line"> public Form3(string canshu)</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">            label1.Text =canshu;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2023/02/15/dotnet6/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-09 </div>
+			<div class="article-title"><a href="/2023/02/09/html0/" >前端系列问题</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="typescript跟es6有什么区别？"><a href="#typescript跟es6有什么区别？" class="headerlink" title="typescript跟es6有什么区别？"></a>typescript跟es6有什么区别？</h2><h3 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h3><blockquote><p>TypeScript是一种由微软开发的自由和开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+<p>TypeScript扩展了JavaScript的语法，所以任何现有的JavaScript程序可以不加改变的在TypeScript下工作。TypeScript是为大型应用之开发而设计，而编译时它产生 JavaScript 以确保兼容性。</p>
+<p>TypeScript 支持为已存在的 JavaScript 库添加类型信息的头文件，扩展了它对于流行的库如 jQuery，MongoDB，Node.js和 D3.js 的好处。</p>
+<p>TypeScript 的历史</p>
+<p>Anders Hejlsberg开发了 TypeScript。它于2012 年 10 月 1 日首次向公众推出。经过微软内部两年的开发，2013 年发布了新版 TypeScript 0.9。2019 年 4 月 24 日发布了TypeScript 3.4.5。</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2023/02/09/html0/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2023-02-09 </div>
+			<div class="article-title"><a href="/2023/02/09/html11/" >Sass的常见问题点</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>1)定义SASS？<br>SASS表示语法很棒的样式表。它是一个CSS预处理程序, 用于减少与CSS的重复并节省时间。它为基本语言增添了力量和优雅, 并帮助你添加变量, 嵌套规则, mixin, 内联导入, 继承等, 所有这些都具有与CSS完全兼容的语法。<br>面试必备！常见SASS面试题合集</p>
+<p>2)谁是SASS的发明者？<br>Hampton Catlin被称为SASS的父亲。</p>
+<p>3)使用SASS的原因是什么？<br>以下是SASS受欢迎的一些重要原因。<br>你可以轻松高效地编写代码, 并且易于维护。<br>它是一种预处理语言, 提供了CSS语法。<br>它是CSS的超集, 包含CSS的所有功能, 并且是用Ruby编码的开源预处理器。<br>它是更稳定, 功能更强大的CSS扩展和样式文档, 结构更清晰。<br>它促进了可重用性方法, 逻辑语句以及一些内置功能, 例如颜色处理, 数学和参数列表项。</p>
+	
+	</div>
+  <a type="button" href="/2023/02/09/html11/#more" class="btn btn-default more">阅读更多</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2023-02-09 </div>
 			<div class="article-title"><a href="/2023/02/09/vue29/" >axios 和 express的区别</a></div>						
 		</h3>
@@ -116,118 +223,6 @@
 	
 	</div>
   <a type="button" href="/2023/02/09/vue29/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-09 </div>
-			<div class="article-title"><a href="/2023/02/09/html10/" >Sass的优缺点优点</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>优点：<br>Sass可以帮助您在编程结构中编写简洁，简单且更少的CSS。<br>1）它包含的代码更少，因此您可以更快地编写CSS。<br>2）它是CSS的扩展，因此更加稳定，功能强大和美观。因此，设计人员和开发人员可以更轻松，更高效地进行工作。<br>3）它与所有版本的CSS兼容。因此，您可以使用任何可用的CSS库。<br>4）它提供了嵌套功能，因此您可以使用嵌套语法和有用的函数，例如颜色处理，数学函数和其他值。</p>
-<p>缺点：<br>1）开发人员必须有足够的时间来学习此预处理器中存在的新功能，然后才能使用它。<br>2）使用Sass可能会失去浏览器内置元素检查器的优势。</p>
-
-	
-	</div>
-  <a type="button" href="/2023/02/09/html10/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-08 </div>
-			<div class="article-title"><a href="/2023/02/08/dotnet5/" >.Net Core常用知识大全</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="Net-Core过滤器分类"><a href="#Net-Core过滤器分类" class="headerlink" title=".Net Core过滤器分类"></a>.Net Core过滤器分类</h3><p>过滤器与中间件很相似，能够在某些功能前后执行，由此而形成一个管道</p>
-<p>ASP.NET Core MVC 提供了5种类型的过滤器</p>
-<blockquote><p>AuthorizationFilter：最先执行，用于判断用户是否授权如果未授权直接结束当前请求<br>ResourceFilter：在Authorization后执行，可以用来对请求判断是否执行Action<br>ActionFilter:在Action执行的前后执行，与Resource不同的是，它在模型绑定之后执行。<br>ExceptionFilter：用于捕获异常<br>ResultFilter:在最后执行，可以控制Action执行的结果</p>
-</blockquote>
-<p>以上五种类型过滤器的工作顺序</p>
-	
-	</div>
-  <a type="button" href="/2023/02/08/dotnet5/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-03 </div>
-			<div class="article-title"><a href="/2023/02/03/dotnet0/" >.Net常用知识大全</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="Net中所有内建类型基类是什么？"><a href="#Net中所有内建类型基类是什么？" class="headerlink" title=".Net中所有内建类型基类是什么？"></a>.Net中所有内建类型基类是什么？</h3><p>System.Object</p>
-<h3 id="System-Object-中包含哪些方法，哪些是虚方法？"><a href="#System-Object-中包含哪些方法，哪些是虚方法？" class="headerlink" title="System.Object 中包含哪些方法，哪些是虚方法？"></a>System.Object 中包含哪些方法，哪些是虚方法？</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">virtual bool Equals(object obj);//虚方法</span><br><span class="line">virtual int GetHashCode(object obj);//虚方法</span><br><span class="line">Type GetType();</span><br><span class="line">virtual string ToString();//虚方法</span><br><span class="line"></span><br><span class="line">//public static method</span><br><span class="line">bool Equals(object objA,object objB);</span><br><span class="line">bool RefernceEquals(object objA,object objB);</span><br><span class="line"></span><br><span class="line">//protected</span><br><span class="line">object MemberwiseClone();//浅拷贝</span><br><span class="line">Finalize();//析构方法，用于释放非托管资源</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2023/02/03/dotnet0/#more" class="btn btn-default more">阅读更多</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2023-02-02 </div>
-			<div class="article-title"><a href="/2023/02/02/dotnet3/" >c#中的值类型和引用类型</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>1.1 值类型和引用类型的使用特点</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：变量直接存储值，内存通常在栈中分配</span><br><span class="line">2). 引用类型：变量存储的是一个地址，这个地址对应的空间才真正存储数据(值)，内存通常在堆上分配，</span><br><span class="line">当没有任何变量引用这个地址时，该地址对应的数据空间就成为一个垃圾，由GC来回收</span><br></pre></td></tr></table></figure>
-<p>1.2值类型和引用类型的说明</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1). 值类型：主要有 int（整型），bool（bool型），<span class="built_in">float</span>（单精度浮点数），double（双精度浮点数），</span><br><span class="line">char（字符串类型），struct（结构体），enum（枚举），sbyte，byte，short，ushort，uint，long，ulong</span><br><span class="line">2). 引用类型：主要有 string（字符串），object（对象），list（集合），class（类），interface（接口），</span><br><span class="line">array（数组），delegate（委托）、指针、slice切片、map、管道chan等都是引用类型</span><br></pre></td></tr></table></figure>
-
-<p>指针类型</p>
-<p>在不安全的上下文中，类型可以是指针类型、值类型或引用类型。 指针类型声明采用下列形式之一：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>* identifier;</span><br><span class="line">void* identifier; //allowed but not recommended</span><br></pre></td></tr></table></figure>
-<p>以下任一类型均可为指针类型：</p>
-<p>sbyte、byte、short、ushort、int、uint、long、ulong、char、float、double、decimal 或 bool。</p>
-<p>任何枚举类型。<br>任何指针类型。<br>任何仅包含非托管类型字段的用户定义的结构类型</p>
-<pre><code>
-</code></pre>
-
-	
-	</div>
-  <a type="button" href="/2023/02/02/dotnet3/#more" class="btn btn-default more">阅读更多</a>
 </div>
 
            
@@ -285,11 +280,11 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/IT/">IT<span>101</span></a></li>
+			<li><a href="/categories/IT/">IT<span>104</span></a></li>
 		
 			<li><a href="/categories/学习专栏/">学习专栏<span>6</span></a></li>
 		
-			<li><a href="/categories/数据库/">数据库<span>5</span></a></li>
+			<li><a href="/categories/数据库/">数据库<span>6</span></a></li>
 		
 			<li><a href="/categories/文化角/">文化角<span>1</span></a></li>
 		
@@ -304,48 +299,48 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/SuperMap/">SuperMap<span>1</span></a></li>
+			<li><a href="/tags/nginx/">nginx<span>2</span></a></li>
+		
+			<li><a href="/tags/sqlserver/">sqlserver<span>5</span></a></li>
 		
 			<li><a href="/tags/Vue/">Vue<span>37</span></a></li>
 		
-			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
+			<li><a href="/tags/JavaScript/">JavaScript<span>6</span></a></li>
 		
-			<li><a href="/tags/sqlserver/">sqlserver<span>4</span></a></li>
+			<li><a href="/tags/Electron/">Electron<span>3</span></a></li>
 		
-			<li><a href="/tags/ElementUi/">ElementUi<span>1</span></a></li>
+			<li><a href="/tags/HBuilder-X/">HBuilder X<span>1</span></a></li>
 		
-			<li><a href="/tags/数据库/">数据库<span>4</span></a></li>
-		
-			<li><a href="/tags/网文/">网文<span>1</span></a></li>
-		
-			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
-		
-			<li><a href="/tags/Javascript/">Javascript<span>2</span></a></li>
-		
-			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
-		
-			<li><a href="/tags/超图/">超图<span>4</span></a></li>
-		
-			<li><a href="/tags/HBuilder/">HBuilder<span>1</span></a></li>
+			<li><a href="/tags/AOS动画/">AOS动画<span>1</span></a></li>
 		
 			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
-			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+			<li><a href="/tags/c/">c#<span>10</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/MongoDB/">MongoDB<span>4</span></a></li>
 		
-			<li><a href="/tags/pycharm/">pycharm<span>1</span></a></li>
+			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
 		
-			<li><a href="/tags/Linq/">Linq<span>1</span></a></li>
+			<li><a href="/tags/ASP-Net-MVC/">.ASP.Net MVC<span>1</span></a></li>
 		
-			<li><a href="/tags/uniApp/">uniApp<span>1</span></a></li>
+			<li><a href="/tags/Redis/">Redis<span>8</span></a></li>
+		
+			<li><a href="/tags/百度统计/">百度统计<span>1</span></a></li>
+		
+			<li><a href="/tags/npm/">npm<span>3</span></a></li>
 		
 			<li><a href="/tags/Ant-Design-Vue/">Ant Design Vue<span>3</span></a></li>
 		
-			<li><a href="/tags/CSS3/">CSS3<span>7</span></a></li>
+			<li><a href="/tags/网文/">网文<span>1</span></a></li>
+		
+			<li><a href="/tags/mui/">mui<span>1</span></a></li>
+		
+			<li><a href="/tags/微信公众号开发/">微信公众号开发<span>1</span></a></li>
+		
+			<li><a href="/tags/ABP/">ABP<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>50</span></a></li>
+		   <li><a href="/tags">...<span>51</span></a></li>
 		 
 		</ul>
 	</div>
@@ -358,23 +353,23 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/03/java2/" ><i class="fa fa-file-o"></i>java中 orElseThrow的用法</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/21/git2/" ><i class="fa fa-file-o"></i>git常用指令</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/12/postgresql1/" ><i class="fa fa-file-o"></i>PostgreSQL 使用大全</a>
+      </li>
+    
+      <li>
+        <a href="/2023/06/11/store1/" ><i class="fa fa-file-o"></i>百宝箱</a>
+      </li>
+    
+      <li>
         <a href="/2023/06/09/python1/" ><i class="fa fa-file-o"></i>python使用</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/idea1/" ><i class="fa fa-file-o"></i>IDEA工具使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/08/git1/" ><i class="fa fa-file-o"></i>git使用大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/java1/" ><i class="fa fa-file-o"></i>java使用问题大全</a>
-      </li>
-    
-      <li>
-        <a href="/2023/06/05/supermap4/" ><i class="fa fa-file-o"></i>SuperMap 组件SampleCode关键类型与成员</a>
       </li>
     
   </ul>
